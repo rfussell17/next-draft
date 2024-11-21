@@ -1,0 +1,6 @@
+[[plugins]]
+package = "@netlify/plugin-password-protect"
+
+[plugins.inputs]
+  password = "52345"
+  paths = ["/"]  # Protect all paths

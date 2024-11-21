@@ -26,6 +26,7 @@ export default function RootLayout({
           title="The Radiant Blog"
           href="/blog/feed.xml"
         />
+        <meta name="robots" content="noindex, nofollow, noarchive" />
       </head>
       <body className="text-gray-950 antialiased">{children}</body>
     </html>
