@@ -6,13 +6,24 @@ import { Link } from '@/components/link'
 import { Navbar } from '@/components/navbar'
 import { Heading, Lead, Subheading } from '@/components/text'
 import { image } from '@/sanity/image'
-import { getFeaturedPosts, getPosts, getPostsCount } from '@/sanity/queries'
-import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/16/solid'
+import {
+  getCategories,
+  getFeaturedPosts,
+  getPosts,
+  getPostsCount,
+} from '@/sanity/queries'
+import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
+import {
+  CheckIcon,
+  ChevronLeftIcon,
+  ChevronRightIcon,
+  ChevronUpDownIcon,
+  RssIcon,
+} from '@heroicons/react/16/solid'
 import { clsx } from 'clsx'
 import dayjs from 'dayjs'
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import SanityDebug from './sanity-debug'
 
 export const metadata: Metadata = {
   title: 'Blog',
@@ -82,10 +93,65 @@ async function FeaturedPosts() {
   )
 }
 
-async function Posts({ page }: { page: number }) {
-  let posts = await getPosts((page - 1) * postsPerPage, page * postsPerPage)
+async function Categories({ selected }: { selected?: string }) {
+  let categories = await getCategories()
 
-  if (posts.length === 0 && page > 1) {
+  if (categories.length === 0) {
+    return
+  }
+
+  return (
+    <div className="flex flex-wrap items-center justify-between gap-2">
+      <Menu>
+        <MenuButton className="flex items-center justify-between gap-2 font-medium">
+          {categories.find(({ slug }) => slug === selected)?.title ||
+            'All categories'}
+          <ChevronUpDownIcon className="size-4 fill-slate-900" />
+        </MenuButton>
+        <MenuItems
+          anchor="bottom start"
+          className="min-w-40 rounded-lg bg-white p-1 shadow-lg ring-1 ring-gray-200 [--anchor-gap:6px] [--anchor-offset:-4px] [--anchor-padding:10px]"
+        >
+          <MenuItem>
+            <Link
+              href="/blog"
+              data-selected={selected === undefined ? true : undefined}
+              className="group grid grid-cols-[1rem,1fr] items-center gap-2 rounded-md px-2 py-1 data-[focus]:bg-gray-950/5"
+            >
+              <CheckIcon className="hidden size-4 group-data-[selected]:block" />
+              <p className="col-start-2 text-sm/6">All categories</p>
+            </Link>
+          </MenuItem>
+          {categories.map((category) => (
+            <MenuItem key={category.slug}>
+              <Link
+                href={`/blog?category=${category.slug}`}
+                data-selected={category.slug === selected ? true : undefined}
+                className="group grid grid-cols-[16px,1fr] items-center gap-2 rounded-md px-2 py-1 data-[focus]:bg-gray-950/5"
+              >
+                <CheckIcon className="hidden size-4 group-data-[selected]:block" />
+                <p className="col-start-2 text-sm/6">{category.title}</p>
+              </Link>
+            </MenuItem>
+          ))}
+        </MenuItems>
+      </Menu>
+      <Button variant="outline" href="/blog/feed.xml" className="gap-1">
+        <RssIcon className="size-4" />
+        RSS Feed
+      </Button>
+    </div>
+  )
+}
+
+async function Posts({ page, category }: { page: number; category?: string }) {
+  let posts = await getPosts(
+    (page - 1) * postsPerPage,
+    page * postsPerPage,
+    category,
+  )
+
+  if (posts.length === 0 && (page > 1 || category)) {
     notFound()
   }
 
@@ -139,16 +205,23 @@ async function Posts({ page }: { page: number }) {
   )
 }
 
-async function Pagination({ page }: { page: number }) {
+async function Pagination({
+  page,
+  category,
+}: {
+  page: number
+  category?: string
+}) {
   function url(page: number) {
     let params = new URLSearchParams()
 
+    if (category) params.set('category', category)
     if (page > 1) params.set('page', page.toString())
 
     return params.size !== 0 ? `/blog?${params.toString()}` : '/blog'
   }
 
-  let totalPosts = await getPostsCount()
+  let totalPosts = await getPostsCount(category)
   let hasPreviousPage = page - 1
   let previousPageUrl = hasPreviousPage ? url(page - 1) : undefined
   let hasNextPage = page * postsPerPage < totalPosts
@@ -224,12 +297,12 @@ export default async function Blog({
           Stay informed with product updates, company news, and insights on how
           to sell smarter at your company.
         </Lead>
-        <SanityDebug />
       </Container>
       {page === 1 && !category && <FeaturedPosts />}
       <Container className="mt-16 pb-24">
-        <Posts page={page} />
-        <Pagination page={page} />
+        <Categories selected={category} />
+        <Posts page={page} category={category} />
+        <Pagination page={page} category={category} />
       </Container>
       <Footer />
     </main>
