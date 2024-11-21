@@ -58,6 +58,8 @@ function Hero() {
 }
 
 function FeatureSection() {
+  const screenshot = '/screenshots/app.png'
+
   return (
     <div className="overflow-hidden">
       <Container className="pb-24">
@@ -67,7 +69,7 @@ function FeatureSection() {
         <Screenshot
           width={1216}
           height={768}
-          src="/screenshots/app.png"
+          src={screenshot}
           className="mt-16 h-[36rem] sm:h-auto sm:w-[76rem]"
         />
       </Container>

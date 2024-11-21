@@ -4,6 +4,12 @@ import Image from 'next/image'
 export function LogoCloud({
   className,
 }: React.ComponentPropsWithoutRef<'div'>) {
+  const image1 = '/logo-cloud/savvycal.svg'
+  const image2 = '/logo-cloud/laravel.svg'
+  const image3 = '/logo-cloud/tuple.svg'
+  const image4 = '/logo-cloud/transistor.svg'
+  const image5 = '/logo-cloud/statamic.svg'
+
   return (
     <div
       className={clsx(
@@ -13,27 +19,27 @@ export function LogoCloud({
     >
       <Image
         alt="SavvyCal"
-        src="/logo-cloud/savvycal.svg"
+        src={image1}
         className="h-9 max-sm:mx-auto sm:h-8 lg:h-12"
       />
       <Image
         alt="Laravel"
-        src="/logo-cloud/laravel.svg"
+        src={image2}
         className="h-9 max-sm:mx-auto sm:h-8 lg:h-12"
       />
       <Image
         alt="Tuple"
-        src="/logo-cloud/tuple.svg"
+        src={image3}
         className="h-9 max-sm:mx-auto sm:h-8 lg:h-12"
       />
       <Image
         alt="Transistor"
-        src="/logo-cloud/transistor.svg"
+        src={image4}
         className="h-9 max-sm:mx-auto sm:h-8 lg:h-12"
       />
       <Image
         alt="Statamic"
-        src="/logo-cloud/statamic.svg"
+        src={image5}
         className="h-9 max-sm:mx-auto sm:h-8 lg:h-12"
       />
     </div>

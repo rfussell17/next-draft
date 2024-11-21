@@ -109,7 +109,7 @@ export default async function BlogPost({
                     },
                     types: {
                       image: ({ value }) => (
-                        <img
+                        <Image
                           alt={value.alt || ''}
                           src={image(value).width(2000).url()}
                           className="w-full rounded-2xl"
