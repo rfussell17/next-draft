@@ -1,6 +1,12 @@
-[[plugins]]
-package = "@netlify/plugin-password-protect"
+# netlify.toml
 
-[plugins.inputs]
-  password = "52345"
-  paths = ["/"]  # Protect all paths
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[[plugins]]
+  package = "netlify-plugin-password-protection"
+
+  [plugins.inputs]
+    password = "52345"
+    # Additional configurations if needed
