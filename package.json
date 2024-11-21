@@ -32,7 +32,6 @@
     "autoprefixer": "^10.4.20",
     "eslint": "^8",
     "eslint-config-next": "14.2.11",
-    "netlify-plugin-password-protection": "^3.0.2",
     "postcss": "^8.4.40",
     "prettier": "^3.3.2",
     "prettier-plugin-organize-imports": "^4.0.0",
