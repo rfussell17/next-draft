@@ -11,6 +11,7 @@ import { ChevronLeftIcon } from '@heroicons/react/16/solid'
 import dayjs from 'dayjs'
 import type { Metadata } from 'next'
 import { PortableText } from 'next-sanity'
+import Image from 'next/image'
 import { notFound } from 'next/navigation'
 
 export async function generateMetadata({
@@ -46,7 +47,7 @@ export default async function BlogPost({
             {post.author && (
               <div className="flex items-center gap-3">
                 {post.author.image && (
-                  <img
+                  <Image
                     alt=""
                     src={image(post.author.image).size(64, 64).url()}
                     className="aspect-square size-6 rounded-full object-cover"
@@ -74,7 +75,7 @@ export default async function BlogPost({
           <div className="text-gray-700">
             <div className="max-w-2xl xl:mx-auto">
               {post.mainImage && (
-                <img
+                <Image
                   alt={post.mainImage.alt || ''}
                   src={image(post.mainImage).size(2016, 1344).url()}
                   className="mb-10 aspect-[3/2] w-full rounded-2xl object-cover shadow-xl"
