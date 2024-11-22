@@ -56,6 +56,8 @@ async function FeaturedPosts() {
                   alt={post.mainImage.alt || ''}
                   src={image(post.mainImage).size(1170, 780).url()}
                   className="aspect-[3/2] w-full rounded-2xl object-cover"
+                  width={200}
+                  height={200}
                 />
               )}
               <div className="flex flex-1 flex-col p-8">
@@ -78,6 +80,8 @@ async function FeaturedPosts() {
                         alt=""
                         src={image(post.author.image).size(64, 64).url()}
                         className="aspect-square size-6 rounded-full object-cover"
+                        width={200}
+                        height={200}
                       />
                     )}
                     <div className="text-sm/5 text-gray-700">
@@ -178,6 +182,8 @@ async function Posts({ page, category }: { page: number; category?: string }) {
                     alt=""
                     src={image(post.author.image).width(64).height(64).url()}
                     className="aspect-square size-6 rounded-full object-cover"
+                    width={200}
+                    height={200}
                   />
                 )}
                 <div className="text-sm/5 text-gray-700">

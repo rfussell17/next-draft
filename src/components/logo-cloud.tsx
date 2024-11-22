@@ -21,26 +21,36 @@ export function LogoCloud({
         alt="SavvyCal"
         src={image1}
         className="h-9 max-sm:mx-auto sm:h-8 lg:h-12"
+        width={200}
+        height={200}
       />
       <Image
         alt="Laravel"
         src={image2}
         className="h-9 max-sm:mx-auto sm:h-8 lg:h-12"
+        width={200}
+        height={200}
       />
       <Image
         alt="Tuple"
         src={image3}
         className="h-9 max-sm:mx-auto sm:h-8 lg:h-12"
+        width={200}
+        height={200}
       />
       <Image
         alt="Transistor"
         src={image4}
         className="h-9 max-sm:mx-auto sm:h-8 lg:h-12"
+        width={200}
+        height={200}
       />
       <Image
         alt="Statamic"
         src={image5}
         className="h-9 max-sm:mx-auto sm:h-8 lg:h-12"
+        width={200}
+        height={200}
       />
     </div>
   )

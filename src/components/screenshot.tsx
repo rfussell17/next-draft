@@ -25,6 +25,8 @@ export function Screenshot({
         alt=""
         src={src}
         className="h-full rounded-[var(--radius)] shadow-2xl ring-1 ring-black/10"
+        width={width}
+        height={height}
       />
     </div>
   )

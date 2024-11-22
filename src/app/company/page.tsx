@@ -48,6 +48,8 @@ function Header() {
                 alt=""
                 src="/company/1.jpg"
                 className="block size-full object-cover"
+                width={200}
+                height={200}
               />
             </div>
             <div className="-mt-8 aspect-square overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10 lg:-mt-32">
@@ -55,6 +57,8 @@ function Header() {
                 alt=""
                 src="/company/2.jpg"
                 className="block size-full object-cover"
+                width={200}
+                height={200}
               />
             </div>
             <div className="aspect-square overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10">
@@ -62,6 +66,8 @@ function Header() {
                 alt=""
                 src="/company/3.jpg"
                 className="block size-full object-cover"
+                width={200}
+                height={200}
               />
             </div>
             <div className="-mt-8 aspect-square overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10 lg:-mt-32">
@@ -69,6 +75,8 @@ function Header() {
                 alt=""
                 src="/company/4.jpg"
                 className="block size-full object-cover"
+                width={200}
+                height={200}
               />
             </div>
           </div>
@@ -119,7 +127,13 @@ function Person({
 }) {
   return (
     <li className="flex items-center gap-4">
-      <Image alt="" src={img} className="size-12 rounded-full" />
+      <Image
+        alt=""
+        src={img}
+        className="size-12 rounded-full"
+        width={200}
+        height={200}
+      />
       <div className="text-sm/6">
         <h3 className="font-medium">{name}</h3>
         <p className="text-gray-500">{description}</p>
@@ -169,6 +183,8 @@ function Team() {
               alt=""
               src="/company/5.jpg"
               className="block size-full object-cover"
+              width={200}
+              height={200}
             />
           </div>
         </div>
@@ -255,6 +271,8 @@ function Investors() {
             alt="Remington Schwartz"
             src="/investors/remington-schwartz.svg"
             className="h-14"
+            width={200}
+            height={200}
           />
           <p className="mt-6 max-w-lg text-sm/6 text-gray-500">
             Remington Schwartz has been a driving force in the tech industry,
@@ -265,7 +283,13 @@ function Investors() {
           </p>
         </li>
         <li>
-          <Image alt="Deccel" src="/investors/deccel.svg" className="h-14" />
+          <Image
+            alt="Deccel"
+            src="/investors/deccel.svg"
+            className="h-14"
+            width={200}
+            height={200}
+          />
           <p className="mt-6 max-w-lg text-sm/6 text-gray-500">
             Deccel has been at the forefront of innovation, investing in
             pioneering companies across various sectors, including technology,
@@ -325,6 +349,8 @@ function Testimonial() {
         alt=""
         src="/testimonials/veronica-winton.jpg"
         className="absolute inset-0 object-cover"
+        width={200}
+        height={200}
       />
       <div
         aria-hidden="true"

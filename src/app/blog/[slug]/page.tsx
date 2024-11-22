@@ -51,6 +51,8 @@ export default async function BlogPost({
                     alt=""
                     src={image(post.author.image).size(64, 64).url()}
                     className="aspect-square size-6 rounded-full object-cover"
+                    width={200}
+                    height={200}
                   />
                 )}
                 <div className="text-sm/5 text-gray-700">
@@ -79,6 +81,8 @@ export default async function BlogPost({
                   alt={post.mainImage.alt || ''}
                   src={image(post.mainImage).size(2016, 1344).url()}
                   className="mb-10 aspect-[3/2] w-full rounded-2xl object-cover shadow-xl"
+                  width={200}
+                  height={200}
                 />
               )}
               {post.body && (
@@ -113,6 +117,8 @@ export default async function BlogPost({
                           alt={value.alt || ''}
                           src={image(value).width(2000).url()}
                           className="w-full rounded-2xl"
+                          width={200}
+                          height={200}
                         />
                       ),
                       separator: ({ value }) => {

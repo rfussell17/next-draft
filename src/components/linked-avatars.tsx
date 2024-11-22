@@ -71,11 +71,15 @@ function Photos() {
         <Image
           alt=""
           src="/linked-avatars/customer.jpg"
+          width={200}
+          height={200}
           className="size-20 rounded-full bg-white/15 ring-4 ring-white/10"
         />
         <Image
           alt=""
           src="/linked-avatars/manager.jpg"
+          width={200}
+          height={200}
           className="size-20 rounded-full bg-white/15 ring-4 ring-white/10"
         />
       </div>

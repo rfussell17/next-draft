@@ -30,7 +30,7 @@ function Logo({
         '[--move-x-from:-100%] [--move-x-to:calc(100%+100cqw)] [animation-iteration-count:infinite] [animation-name:move-x] [animation-play-state:paused] [animation-timing-function:linear] group-hover:[animation-play-state:running]',
       )}
     >
-      <Image alt="" src={src} className="size-4" />
+      <Image alt="" src={src} className="size-4" width={200} height={200} />
       <span className="text-sm/6 font-medium text-white">{label}</span>
     </div>
   )
