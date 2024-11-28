@@ -6,7 +6,6 @@ import {
   DisclosurePanel,
 } from '@headlessui/react'
 import { Bars2Icon } from '@heroicons/react/24/solid'
-import { motion } from 'framer-motion'
 import { Link } from './link'
 import { Logo } from './logo'
 import { PlusGrid, PlusGridItem, PlusGridRow } from './plus-grid'
@@ -50,21 +49,12 @@ function MobileNav() {
   return (
     <DisclosurePanel className="lg:hidden">
       <div className="flex flex-col gap-6 py-4">
-        {links.map(({ href, label }, linkIndex) => (
-          <motion.div
-            initial={{ opacity: 0, rotateX: -90 }}
-            animate={{ opacity: 1, rotateX: 0 }}
-            transition={{
-              duration: 0.15,
-              ease: 'easeInOut',
-              rotateX: { duration: 0.3, delay: linkIndex * 0.1 },
-            }}
-            key={href}
-          >
+        {links.map(({ href, label }) => (
+          <div key={href} className="transition-opacity duration-200">
             <Link href={href} className="text-base font-medium text-gray-950">
               {label}
             </Link>
-          </motion.div>
+          </div>
         ))}
       </div>
       <div className="absolute left-1/2 w-screen -translate-x-1/2">

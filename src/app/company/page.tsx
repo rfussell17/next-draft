@@ -313,13 +313,13 @@ function Investors() {
 
 function Testimonial() {
   return (
-    <div className="relative flex aspect-square flex-col justify-end overflow-hidden rounded-3xl sm:aspect-[5/4] lg:aspect-[3/4]">
+    <div className="h-90 relative flex aspect-square w-full flex-col justify-end overflow-hidden rounded-3xl sm:aspect-[5/4] lg:aspect-[3/4]">
       <Image
         alt=""
         src="/testimonials/veronica-winton.jpg"
         className="absolute inset-0 object-cover"
-        width={200}
-        height={200}
+        fill
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
       />
       <div
         aria-hidden="true"

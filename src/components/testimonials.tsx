@@ -3,17 +3,8 @@
 import * as Headless from '@headlessui/react'
 import { ArrowLongRightIcon } from '@heroicons/react/20/solid'
 import { clsx } from 'clsx'
-import {
-  MotionValue,
-  motion,
-  useMotionValueEvent,
-  useScroll,
-  useSpring,
-  type HTMLMotionProps,
-} from 'framer-motion'
 import Image from 'next/image'
-import { useCallback, useLayoutEffect, useRef, useState } from 'react'
-import useMeasure, { type RectReadOnly } from 'react-use-measure'
+import { useRef, useState } from 'react'
 import { Container } from './container'
 import { Link } from './link'
 import { Heading, Subheading } from './text'
@@ -24,7 +15,7 @@ const testimonials = [
     name: 'Tina Yards',
     title: 'VP of Sales, Protocol',
     quote:
-      'Thanks to Radiant, we’re finding new leads that we never would have found with legal methods.',
+      "Thanks to Radiant, we're finding new leads that we never would have found with legal methods.",
   },
   {
     img: '/testimonials/conor-neville.jpg',
@@ -45,7 +36,7 @@ const testimonials = [
     name: 'Veronica Winton',
     title: 'CSO, Planeteria',
     quote:
-      'We’ve managed to put two of our main competitors out of business in 6 months.',
+      "We've managed to put two of our main competitors out of business in 6 months.",
   },
   {
     img: '/testimonials/dillon-lenora.jpg',
@@ -58,7 +49,7 @@ const testimonials = [
     name: 'Harriet Arron',
     title: 'Account Manager, Commit',
     quote:
-      'I’ve smashed all my targets without having to speak to a lead in months.',
+      "I've smashed all my targets without having to speak to a lead in months.",
   },
 ]
 
@@ -67,56 +58,17 @@ function TestimonialCard({
   title,
   img,
   children,
-  bounds,
-  scrollX,
-  ...props
+  onClick,
 }: {
   img: string
   name: string
   title: string
   children: React.ReactNode
-  bounds: RectReadOnly
-  scrollX: MotionValue<number>
-} & HTMLMotionProps<'div'>) {
-  let ref = useRef<HTMLDivElement | null>(null)
-
-  let computeOpacity = useCallback(() => {
-    let element = ref.current
-    if (!element || bounds.width === 0) return 1
-
-    let rect = element.getBoundingClientRect()
-
-    if (rect.left < bounds.left) {
-      let diff = bounds.left - rect.left
-      let percent = diff / rect.width
-      return Math.max(0.5, 1 - percent)
-    } else if (rect.right > bounds.right) {
-      let diff = rect.right - bounds.right
-      let percent = diff / rect.width
-      return Math.max(0.5, 1 - percent)
-    } else {
-      return 1
-    }
-  }, [ref, bounds.width, bounds.left, bounds.right])
-
-  let opacity = useSpring(computeOpacity(), {
-    stiffness: 154,
-    damping: 23,
-  })
-
-  useLayoutEffect(() => {
-    opacity.set(computeOpacity())
-  }, [computeOpacity, opacity])
-
-  useMotionValueEvent(scrollX, 'change', () => {
-    opacity.set(computeOpacity())
-  })
-
+  onClick?: () => void
+}) {
   return (
-    <motion.div
-      ref={ref}
-      style={{ opacity }}
-      {...props}
+    <div
+      onClick={onClick}
       className="relative flex aspect-[9/16] w-72 shrink-0 snap-start scroll-ml-[var(--scroll-padding)] flex-col justify-end overflow-hidden rounded-3xl sm:aspect-[3/4] sm:w-96"
     >
       <Image
@@ -134,11 +86,11 @@ function TestimonialCard({
         <blockquote>
           <p className="relative text-xl/7 text-white">
             <span aria-hidden="true" className="absolute -translate-x-full">
-              “
+              "
             </span>
             {children}
             <span aria-hidden="true" className="absolute">
-              ”
+              "
             </span>
           </p>
         </blockquote>
@@ -151,7 +103,7 @@ function TestimonialCard({
           </p>
         </figcaption>
       </figure>
-    </motion.div>
+    </div>
   )
 }
 
@@ -176,25 +128,32 @@ function CallToAction() {
 }
 
 export function Testimonials() {
-  let scrollRef = useRef<HTMLDivElement | null>(null)
-  let { scrollX } = useScroll({ container: scrollRef })
-  let [setReferenceWindowRef, bounds] = useMeasure()
-  let [activeIndex, setActiveIndex] = useState(0)
-
-  useMotionValueEvent(scrollX, 'change', (x) => {
-    setActiveIndex(Math.floor(x / scrollRef.current!.children[0].clientWidth))
-  })
+  const scrollRef = useRef<HTMLDivElement | null>(null)
+  const [activeIndex, setActiveIndex] = useState(0)
 
   function scrollTo(index: number) {
-    let gap = 32
-    let width = (scrollRef.current!.children[0] as HTMLElement).offsetWidth
-    scrollRef.current!.scrollTo({ left: (width + gap) * index })
+    if (!scrollRef.current) return
+    const gap = 32
+    const width = (scrollRef.current.children[0] as HTMLElement).offsetWidth
+    scrollRef.current.scrollTo({
+      left: (width + gap) * index,
+      behavior: 'smooth',
+    })
+    setActiveIndex(index)
+  }
+
+  // Update active index on scroll
+  const handleScroll = () => {
+    if (!scrollRef.current) return
+    const width = scrollRef.current.children[0].clientWidth
+    const scrollPosition = scrollRef.current.scrollLeft
+    setActiveIndex(Math.floor(scrollPosition / width))
   }
 
   return (
     <div className="overflow-hidden py-32">
       <Container>
-        <div ref={setReferenceWindowRef}>
+        <div>
           <Subheading>What everyone is saying</Subheading>
           <Heading as="h3" className="mt-2">
             Trusted by professionals.
@@ -203,6 +162,7 @@ export function Testimonials() {
       </Container>
       <div
         ref={scrollRef}
+        onScroll={handleScroll}
         className={clsx([
           'mt-16 flex gap-8 px-[var(--scroll-padding)]',
           '[scrollbar-width:none] [&::-webkit-scrollbar]:hidden',
@@ -216,8 +176,6 @@ export function Testimonials() {
             name={name}
             title={title}
             img={img}
-            bounds={bounds}
-            scrollX={scrollX}
             onClick={() => scrollTo(testimonialIndex)}
           >
             {quote}

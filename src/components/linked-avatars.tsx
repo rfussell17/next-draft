@@ -1,15 +1,6 @@
-'use client'
-
 import { CheckIcon } from '@heroicons/react/16/solid'
 import { clsx } from 'clsx'
-import { motion } from 'framer-motion'
 import Image from 'next/image'
-
-const transition = {
-  duration: 0.75,
-  repeat: Infinity,
-  repeatDelay: 1.25,
-}
 
 function Rings() {
   return (
@@ -22,23 +13,13 @@ function Rings() {
       )}
     >
       {Array.from(Array(42).keys()).map((n) => (
-        <motion.circle
-          variants={{
-            idle: {
-              scale: 1,
-              strokeOpacity: 0.15,
-            },
-            active: {
-              scale: [1, 1.08, 1],
-              strokeOpacity: [0.15, 0.3, 0.15],
-              transition: { ...transition, delay: n * 0.05 },
-            },
-          }}
+        <circle
           key={n}
           cx="250"
           cy="250"
           r={n * 14 + 4}
           className="stroke-white"
+          style={{ strokeOpacity: 0.15 }}
         />
       ))}
     </svg>
@@ -48,18 +29,9 @@ function Rings() {
 function Checkmark() {
   return (
     <div className="z-10 col-start-1 row-start-1 flex items-center justify-center">
-      <motion.div
-        variants={{
-          idle: { scale: 1 },
-          active: {
-            scale: [1, 1.15, 1],
-            transition: { ...transition, duration: 0.75 },
-          },
-        }}
-        className="flex size-6 items-center justify-center rounded-full bg-gradient-to-t from-green-500 to-green-300 shadow"
-      >
+      <div className="flex size-6 items-center justify-center rounded-full bg-gradient-to-t from-green-500 to-green-300 shadow">
         <CheckIcon className="size-4 fill-white" />
-      </motion.div>
+      </div>
     </div>
   )
 }
@@ -96,3 +68,5 @@ export function LinkedAvatars() {
     </div>
   )
 }
+
+export default LinkedAvatars
