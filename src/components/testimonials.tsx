@@ -86,11 +86,11 @@ function TestimonialCard({
         <blockquote>
           <p className="relative text-xl/7 text-white">
             <span aria-hidden="true" className="absolute -translate-x-full">
-              "
+              &ldquo;
             </span>
             {children}
             <span aria-hidden="true" className="absolute">
-              "
+              &rdquo;
             </span>
           </p>
         </blockquote>
