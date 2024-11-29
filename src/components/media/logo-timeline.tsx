@@ -1,6 +1,6 @@
 import { clsx } from 'clsx'
 import Image from 'next/image'
-import { Mark } from './logo'
+import { Mark } from '../logo'
 
 function Row({ children }: { children: React.ReactNode }) {
   return (

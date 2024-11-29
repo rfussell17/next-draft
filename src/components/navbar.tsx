@@ -6,15 +6,16 @@ import {
   DisclosurePanel,
 } from '@headlessui/react'
 import { Bars2Icon } from '@heroicons/react/24/solid'
-import { Link } from './link'
 import { Logo } from './logo'
-import { PlusGrid, PlusGridItem, PlusGridRow } from './plus-grid'
+import { Link } from './utils/link'
+import { PlusGrid, PlusGridItem, PlusGridRow } from './utils/plus-grid'
 
 const links = [
+  { href: '/', label: 'Home' },
   { href: '/pricing', label: 'Pricing' },
-  { href: '/company', label: 'Company' },
+  { href: '/about', label: 'About' },
   { href: '/blog', label: 'Blog' },
-  { href: '/login', label: 'Login' },
+  { href: '/book-call', label: 'Book a Call' },
 ]
 
 function DesktopNav() {

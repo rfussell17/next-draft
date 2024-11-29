@@ -2,7 +2,7 @@
 
 import { clsx } from 'clsx'
 import Image from 'next/image'
-import { Mark } from './logo'
+import { Mark } from '../logo'
 
 function Circle({ size, opacity }: { size: number; opacity: string }) {
   return (
