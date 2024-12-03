@@ -80,11 +80,11 @@ function TestimonialCard({
       />
       <div
         aria-hidden="true"
-        className="absolute inset-0 rounded-3xl bg-gradient-to-t from-black from-[calc(7/16*100%)] ring-1 ring-inset ring-gray-950/10 sm:from-25%"
+        className="from-black ring-gray-950/10 absolute inset-0 rounded-3xl bg-gradient-to-t from-[calc(7/16*100%)] ring-1 ring-inset sm:from-25%"
       />
       <figure className="relative p-10">
         <blockquote>
-          <p className="relative text-xl/7 text-white">
+          <p className="text-white relative text-xl/7">
             <span aria-hidden="true" className="absolute -translate-x-full">
               &ldquo;
             </span>
@@ -94,10 +94,10 @@ function TestimonialCard({
             </span>
           </p>
         </blockquote>
-        <figcaption className="mt-6 border-t border-white/20 pt-6">
-          <p className="text-sm/6 font-medium text-white">{name}</p>
+        <figcaption className="border-white/20 mt-6 border-t pt-6">
+          <p className="text-white text-sm/6 font-medium">{name}</p>
           <p className="text-sm/6 font-medium">
-            <span className="bg-gradient-to-r from-[#fff1be] from-[28%] via-[#ee87cb] via-[70%] to-[#b060ff] bg-clip-text text-transparent">
+            <span className="text-transparent bg-gradient-to-r from-[#fff1be] from-[28%] via-[#ee87cb] via-[70%] to-[#b060ff] bg-clip-text">
               {title}
             </span>
           </p>
@@ -110,14 +110,14 @@ function TestimonialCard({
 function CallToAction() {
   return (
     <div>
-      <p className="max-w-sm text-sm/6 text-gray-600">
+      <p className="text-gray-600 max-w-sm text-sm/6">
         Join the best sellers in the business and start using Radiant to hit
         your targets today.
       </p>
       <div className="mt-2">
         <Link
           href="#"
-          className="inline-flex items-center gap-2 text-sm/6 font-medium text-pink-600"
+          className="text-pink-600 inline-flex items-center gap-2 text-sm/6 font-medium"
         >
           Get started
           <ArrowLongRightIcon className="size-5" />
@@ -196,7 +196,7 @@ export function Testimonials() {
                 }
                 aria-label={`Scroll to testimonial from ${name}`}
                 className={clsx(
-                  'size-2.5 rounded-full border border-transparent bg-gray-300 transition',
+                  'border-transparent bg-gray-300 size-2.5 rounded-full border transition',
                   'data-[active]:bg-gray-400 data-[hover]:bg-gray-400',
                   'forced-colors:data-[active]:bg-[Highlight] forced-colors:data-[focus]:outline-offset-4',
                 )}

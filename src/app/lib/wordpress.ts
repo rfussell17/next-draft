@@ -72,7 +72,6 @@ const getAuthHeader = () => {
 }
 
 async function fetchGraphQL(query: string, variables = {}) {
-  // Add privacy password to the URL
   const baseUrl = process.env.WORDPRESS_API_URL
   if (!baseUrl) {
     throw new Error('WORDPRESS_API_URL is not defined')
@@ -96,9 +95,11 @@ async function fetchGraphQL(query: string, variables = {}) {
     },
   })
 
-  // Debug logging
-  console.log('Response status:', response.status)
+  // Debug log here
+  console.log('GraphQL Response Status:', response.status)
+
   const text = await response.text()
+  console.log('GraphQL Response Text:', text)
 
   try {
     const json = JSON.parse(text)
@@ -108,7 +109,7 @@ async function fetchGraphQL(query: string, variables = {}) {
     }
     return json.data
   } catch (e) {
-    console.error('Response text:', text)
+    console.error('Response Parsing Error:', text)
     throw new Error('Failed to parse WordPress response')
   }
 }
@@ -117,10 +118,11 @@ async function fetchGraphQL(query: string, variables = {}) {
 export const getWpPosts = cache(async (first = 10) => {
   try {
     const data = await fetchGraphQL(ALL_POSTS_QUERY, { first })
+    console.log('Posts fetched in getWpPosts:', data.posts.nodes) // Log here
     return data.posts.nodes
   } catch (error) {
-    console.error('Error fetching posts:', error)
-    return [] // Return empty array instead of throwing
+    console.error('Error in getWpPosts:', error)
+    return [] // Return empty array to avoid crashing
   }
 })
 

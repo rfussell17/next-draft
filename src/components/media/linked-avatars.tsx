@@ -29,8 +29,8 @@ function Rings() {
 function Checkmark() {
   return (
     <div className="z-10 col-start-1 row-start-1 flex items-center justify-center">
-      <div className="flex size-6 items-center justify-center rounded-full bg-gradient-to-t from-green-500 to-green-300 shadow">
-        <CheckIcon className="size-4 fill-white" />
+      <div className="from-green-500 to-green-300 flex size-6 items-center justify-center rounded-full bg-gradient-to-t shadow">
+        <CheckIcon className="fill-white size-4" />
       </div>
     </div>
   )
@@ -45,14 +45,14 @@ function Photos() {
           src="/linked-avatars/customer.jpg"
           width={200}
           height={200}
-          className="size-20 rounded-full bg-white/15 ring-4 ring-white/10"
+          className="bg-white/15 ring-white/10 size-20 rounded-full ring-4"
         />
         <Image
           alt=""
           src="/linked-avatars/manager.jpg"
           width={200}
           height={200}
-          className="size-20 rounded-full bg-white/15 ring-4 ring-white/10"
+          className="bg-white/15 ring-white/10 size-20 rounded-full ring-4"
         />
       </div>
     </div>
