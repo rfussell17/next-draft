@@ -3,12 +3,15 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
-        hostname: '/draft-test-local.local',
+        hostname: 'draft-test-local.local',
       },
 
       {
         hostname: 'optimistic-insurance.localsite.io',
       },
+      { hostname: 'optimistic-insurance.localsite.io/blog' },
+      { hostname: 'optimistic-insurance.localsite.io/graphql' },
+      { hostname: 'draft-test-local.local/graphql' },
       {
         hostname: 'nextdraft.netlify.app',
       },

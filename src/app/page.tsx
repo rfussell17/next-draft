@@ -25,7 +25,9 @@ function Hero() {
             developers, devops practitioners, data engineers, and more.
           </p>
           <div className="mt-12 flex flex-col gap-x-6 gap-y-4 sm:flex-row">
-            <Button href="#">Get started</Button>
+            <Button href="#" className="bg-white text-black font-semibold">
+              Get started
+            </Button>
             <Button variant="secondary" href="/pricing">
               See pricing
             </Button>
@@ -60,13 +62,11 @@ export default function Home() {
   return (
     <div className="overflow-hidden">
       <Hero />
+
       <main>
         <Container className="mt-10">
           <LogoCloud />
         </Container>
-        <div className="from-white to-gray-100 bg-gradient-to-b from-50% py-32">
-          <FeatureSection />
-        </div>
       </main>
       <Testimonials />
       <Footer />
