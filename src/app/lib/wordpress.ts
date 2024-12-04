@@ -141,7 +141,7 @@ export const getWpPosts = cache(async (first = 10) => {
       categories: { nodes: { id: string; name: string }[] }
       excerpt: any
       date: any
-      featuredImage: any
+      featuredImage: { node: { sourceUrl: string } }
       author: { node: any }
     }) => ({
       id: post.id,
@@ -150,7 +150,15 @@ export const getWpPosts = cache(async (first = 10) => {
       categories: post.categories.nodes, // Map categories
       excerpt: post.excerpt,
       date: post.date,
-      featuredImage: post.featuredImage,
+      featuredImage: {
+        node: {
+          // Replace local URL with production URL
+          sourceUrl: post.featuredImage.node.sourceUrl.replace(
+            'http://draft-test-local.local',
+            'https://optimistic-insurance.localsite.io',
+          ),
+        },
+      },
       author: post.author?.node,
     }),
   )
@@ -173,6 +181,15 @@ export const getWpPost = cache(async (slug: string) => {
     return {
       ...post,
       categories: post.categories?.nodes || [], // Map categories
+      featuredImage: {
+        node: {
+          // Replace local URL with production URL
+          sourceUrl: post.featuredImage?.node?.sourceUrl.replace(
+            'http://draft-test-local.local',
+            'https://optimistic-insurance.localsite.io',
+          ),
+        },
+      },
     }
   } catch (error) {
     console.error('Error fetching post:', error)
