@@ -25,10 +25,10 @@ function Hero() {
             developers, devops practitioners, data engineers, and more.
           </p>
           <div className="mt-12 flex flex-col gap-x-6 gap-y-4 sm:flex-row">
-            <Button href="#" className="bg-white text-black font-semibold">
+            <Button variant="primary" href="#" className="font-semibold">
               Get started
             </Button>
-            <Button variant="secondary" href="/pricing">
+            <Button variant="outline" href="/pricing">
               See pricing
             </Button>
           </div>

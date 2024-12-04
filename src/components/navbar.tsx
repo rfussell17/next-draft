@@ -6,7 +6,7 @@ import {
   DisclosurePanel,
 } from '@headlessui/react'
 import { Bars2Icon } from '@heroicons/react/24/solid'
-import { Logo } from './logo'
+import Image from 'next/image'
 import { Link } from './utils/link'
 import { PlusGrid, PlusGridItem, PlusGridRow } from './utils/plus-grid'
 
@@ -77,7 +77,12 @@ export function Navbar({ banner }: { banner?: React.ReactNode }) {
           <div className="relative flex gap-6">
             <PlusGridItem className="py-3">
               <Link href="/" title="Home">
-                <Logo className="h-9" />
+                <Image
+                  src="/draft-temp.png"
+                  alt="Logo"
+                  width={180}
+                  height={72}
+                />
               </Link>
             </PlusGridItem>
             {banner && (

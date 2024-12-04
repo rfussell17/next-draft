@@ -1,5 +1,6 @@
 // app/layout.tsx
 
+import { Footer } from '@/components/footer'
 import { Navbar } from '@/components/navbar'
 import '@/styles/tailwind.css'
 import type { Metadata } from 'next'
@@ -32,6 +33,7 @@ export default function RootLayout({
         <Navbar />
         <div className="min-h-screen">
           <main>{children}</main>
+          <Footer />
         </div>
         {/* Include Footer here */}
       </body>
