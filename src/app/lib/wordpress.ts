@@ -25,7 +25,7 @@ declare global {
   }
 }
 
-// Query for multiple posts
+// GraphQL queries
 const ALL_POSTS_QUERY = `
 query AllPosts($first: Int) {
   posts(first: $first, where: { status: PUBLISH }) {
@@ -51,10 +51,8 @@ query AllPosts($first: Int) {
     }
   }
 }
-
 `
 
-// Query for single post
 const POST_BY_SLUG_QUERY = `
 query PostBySlug($id: ID!) {
   post(id: $id, idType: SLUG) {
@@ -72,7 +70,7 @@ query PostBySlug($id: ID!) {
 }
 `
 
-// Helper function to create auth header with privacy mode
+// Create auth header with privacy mode
 const getAuthHeader = () => {
   const auth = Buffer.from(
     `${process.env.WORDPRESS_API_USERNAME}:${process.env.WORDPRESS_API_PASSWORD}`,
@@ -80,6 +78,7 @@ const getAuthHeader = () => {
   return `Basic ${auth}`
 }
 
+// Fetch from GraphQL API
 async function fetchGraphQL(query: string, variables = {}) {
   const baseUrl = process.env.WORDPRESS_API_URL
   if (!baseUrl) {
@@ -89,41 +88,43 @@ async function fetchGraphQL(query: string, variables = {}) {
     ? `${baseUrl}&password=${process.env.WORDPRESS_PRIVACY_PASSWORD}`
     : `${baseUrl}?password=${process.env.WORDPRESS_PRIVACY_PASSWORD}`
 
+  console.log('GraphQL API URL:', privacyUrl) // Debug log
+
   const response = await fetch(privacyUrl, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
       Authorization: getAuthHeader(),
     },
-    body: JSON.stringify({
-      query,
-      variables,
-    }),
-    next: {
-      revalidate: 3600,
-    },
+    body: JSON.stringify({ query, variables }),
+    next: { revalidate: 3600 },
   })
 
-  // Debug log here
-
   const text = await response.text()
+  console.log('Raw Response:', text) // Debug log
 
   try {
     const json = JSON.parse(text)
     if (json.errors) {
-      console.error('GraphQL Errors:', json.errors)
+      console.error('GraphQL Errors:', JSON.stringify(json.errors, null, 2)) // Debug log
       throw new Error(json.errors[0].message)
     }
     return json.data
-  } catch (e) {
+  } catch (error) {
     console.error('Response Parsing Error:', text)
     throw new Error('Failed to parse WordPress response')
   }
 }
 
-// Cache the fetch function for all posts
+// Cache functions
 export const getWpPosts = cache(async (first = 10) => {
   const data = await fetchGraphQL(ALL_POSTS_QUERY, { first })
+
+  if (!data?.posts?.nodes) {
+    console.error('Invalid response for posts:', data) // Debug log
+    return []
+  }
+
   return data.posts.nodes.map(
     (post: {
       id: any
@@ -140,7 +141,7 @@ export const getWpPosts = cache(async (first = 10) => {
       excerpt: post.excerpt,
       date: post.date,
       featuredImage: post.featuredImage,
-      author: post.author.node,
+      author: post.author?.node,
     }),
   )
 })
@@ -153,7 +154,12 @@ export const getWpPost = cache(async (slug: string) => {
 
   try {
     const data = await fetchGraphQL(POST_BY_SLUG_QUERY, { id: slug })
-    console.log('GraphQL Response for getWpPost:', data) // Debug log
+
+    if (!data?.post) {
+      console.error('Invalid response for post:', data) // Debug log
+      return null
+    }
+
     return data.post
   } catch (error) {
     console.error('Error fetching post:', error)
