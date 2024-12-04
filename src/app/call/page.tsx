@@ -5,11 +5,11 @@ import { GradientBackground } from '@/components/utils/gradient'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Pricing',
+  title: 'Call Us',
   description:
     'Companies all over the world have closed millions of deals with Radiant. Sign up today and start selling smarter.',
 }
-export default function About() {
+export default function Call() {
   return (
     <main className="overflow-hidden">
       <GradientBackground />
