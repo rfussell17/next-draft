@@ -25,7 +25,7 @@ function DesktopNav() {
         <PlusGridItem key={href} className="relative flex">
           <Link
             href={href}
-            className="flex items-center px-4 py-3 text-base font-medium text-gray-950 bg-blend-multiply data-[hover]:bg-black/[2.5%]"
+            className="text-gray-950 data-[hover]:bg-black/[2.5%] flex items-center px-4 py-3 text-base font-medium bg-blend-multiply"
           >
             {label}
           </Link>
@@ -38,7 +38,7 @@ function DesktopNav() {
 function MobileNavButton() {
   return (
     <DisclosureButton
-      className="flex size-12 items-center justify-center self-center rounded-lg data-[hover]:bg-black/5 lg:hidden"
+      className="data-[hover]:bg-black/5 flex size-12 items-center justify-center self-center rounded-lg lg:hidden"
       aria-label="Open main menu"
     >
       <Bars2Icon className="size-6" />
@@ -52,15 +52,18 @@ function MobileNav() {
       <div className="flex flex-col gap-6 py-4">
         {links.map(({ href, label }) => (
           <div key={href} className="transition-opacity duration-200">
-            <Link href={href} className="text-base font-medium text-gray-950">
+            <Link
+              href={href}
+              className="text-gray-950 px-6 text-base font-medium"
+            >
               {label}
             </Link>
           </div>
         ))}
       </div>
       <div className="absolute left-1/2 w-screen -translate-x-1/2">
-        <div className="absolute inset-x-0 top-0 border-t border-black/5" />
-        <div className="absolute inset-x-0 top-2 border-t border-black/5" />
+        <div className="border-black/5 absolute inset-x-0 top-0 border-t" />
+        <div className="border-black/5 absolute inset-x-0 top-2 border-t" />
       </div>
     </DisclosurePanel>
   )
@@ -68,9 +71,9 @@ function MobileNav() {
 
 export function Navbar({ banner }: { banner?: React.ReactNode }) {
   return (
-    <Disclosure as="header" className="pt-12 sm:pt-16">
+    <Disclosure as="header">
       <PlusGrid>
-        <PlusGridRow className="relative flex justify-between">
+        <PlusGridRow className="relative flex justify-around">
           <div className="relative flex gap-6">
             <PlusGridItem className="py-3">
               <Link href="/" title="Home">
@@ -78,7 +81,7 @@ export function Navbar({ banner }: { banner?: React.ReactNode }) {
               </Link>
             </PlusGridItem>
             {banner && (
-              <div className="relative hidden items-center py-3 lg:flex">
+              <div className="relative hidden items-center p-3 lg:flex">
                 {banner}
               </div>
             )}
