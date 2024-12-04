@@ -19,7 +19,12 @@ const nextConfig = {
       },
       {
         protocol: 'https',
-        hostname: '/unsplash.com',
+        hostname: 'unsplash.com',
+        pathname: '/wp-content/uploads/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'app.netlify.com',
         pathname: '/wp-content/uploads/**',
       },
     ],
