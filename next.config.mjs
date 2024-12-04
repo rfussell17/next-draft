@@ -3,31 +3,32 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: 'http',
         hostname: 'draft-test-local.local',
-        pathname: '/wp-content/uploads/**',
       },
 
       {
-        protocol: 'https',
         hostname: 'optimistic-insurance.localsite.io',
-        pathname: '/wp-content/uploads/**',
       },
       {
-        protocol: 'https',
-        hostname: 'nextdraft.netlify.app/',
-        pathname: '/wp-content/uploads/**',
+        hostname: 'nextdraft.netlify.app',
       },
       {
-        protocol: 'https',
         hostname: 'images.unsplash.com',
-        pathname: '/wp-content/uploads/**',
       },
       {
-        protocol: 'https',
         hostname: 'app.netlify.com',
-        pathname: '/wp-content/uploads/**',
       },
+      { hostname: '0.gravatar.com' },
+      { hostname: '1.gravatar.com' },
+      { hostname: '2.gravatar.com' },
+      { hostname: 'secure.gravatar.com' },
+      { hostname: 'nextjs-wordpress.local' },
+      { hostname: 'images.unsplash.com' },
+      { hostname: 'plus.unsplash.com' },
+      { hostname: 'amazing-breakfast.flywheelsites.com' },
+      { hostname: 'res.cloudinary.com' },
+      { hostname: 'img.youtube.com' },
+      { hostname: 'lh7-us.googleusercontent.com' },
     ],
   },
 }
