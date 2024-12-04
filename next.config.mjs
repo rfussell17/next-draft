@@ -7,6 +7,10 @@ const nextConfig = {
         hostname: 'draft-test-local.local',
         pathname: '/wp-content/uploads/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'optimistic-insurance.localsite.io',
+      },
     ],
   },
 }
