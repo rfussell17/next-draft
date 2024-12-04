@@ -10,6 +10,7 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: 'optimistic-insurance.localsite.io',
+        pathname: '/wp-content/uploads/**',
       },
     ],
   },
