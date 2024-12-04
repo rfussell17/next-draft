@@ -19,7 +19,7 @@ const nextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'unsplash.com',
+        hostname: 'images.unsplash.com',
         pathname: '/wp-content/uploads/**',
       },
       {
