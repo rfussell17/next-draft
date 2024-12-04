@@ -7,6 +7,7 @@ const nextConfig = {
         hostname: 'draft-test-local.local',
         pathname: '/wp-content/uploads/**',
       },
+
       {
         protocol: 'https',
         hostname: 'optimistic-insurance.localsite.io',
@@ -14,7 +15,7 @@ const nextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'nextdraft.netlify.app',
+        hostname: 'nextdraft.netlify.app/',
         pathname: '/wp-content/uploads/**',
       },
       {
