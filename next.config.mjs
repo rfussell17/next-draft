@@ -12,6 +12,11 @@ const nextConfig = {
         hostname: 'optimistic-insurance.localsite.io',
         pathname: '/wp-content/uploads/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'nextdraft.netlify.app',
+        pathname: '/wp-content/uploads/**',
+      },
     ],
   },
 }
