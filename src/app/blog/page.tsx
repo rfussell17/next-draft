@@ -42,6 +42,7 @@ export default async function BlogPage() {
               date: string | number | Date | undefined
               slug: any
               excerpt: any
+              categories: { id: string; name: string }[] // Added categories type
             }) => (
               <article
                 key={post.id}
@@ -61,24 +62,33 @@ export default async function BlogPage() {
                 </div>
                 <div className="max-w-xl">
                   <div className="mt-8 flex items-center gap-x-4 text-xs">
-                    <time
-                      dateTime={
-                        post.date
-                          ? new Date(post.date).toISOString()
-                          : undefined
-                      }
-                      className="text-gray-500"
-                    >
-                      {post.date
-                        ? new Date(post.date).toLocaleDateString()
-                        : 'Unknown date'}
-                    </time>
-                    <Link
-                      href={`/blog/${post.slug}`}
-                      className="bg-gray-50 text-gray-600 hover:bg-gray-100 relative z-10 rounded-full px-3 py-1.5 font-medium"
-                    >
-                      Read More
-                    </Link>
+                    <span className="text-gray-500">
+                      Published on{' '}
+                      <time
+                        dateTime={
+                          post.date
+                            ? new Date(post.date).toISOString()
+                            : undefined
+                        }
+                      >
+                        {post.date
+                          ? new Date(post.date).toLocaleDateString(undefined, {
+                              year: 'numeric',
+                              month: 'short',
+                              day: 'numeric',
+                            })
+                          : 'Unknown date'}
+                      </time>{' '}
+                      in{' '}
+                      {post.categories?.[0] && (
+                        <Link
+                          href={`/categories/${post.categories[0].name.toLowerCase()}`}
+                          className="text-blue-600 hover:underline"
+                        >
+                          {post.categories[0].name}
+                        </Link>
+                      )}
+                    </span>
                   </div>
                   <div className="group relative">
                     <h3 className="text-gray-900 group-hover:text-gray-600 mt-3 text-lg/6 font-semibold">

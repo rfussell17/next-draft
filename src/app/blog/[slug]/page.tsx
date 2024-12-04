@@ -1,15 +1,8 @@
-import parse, { type DOMNode, Element } from 'html-react-parser'
+import parse, { type DOMNode } from 'html-react-parser'
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import sanitizeHtml from 'sanitize-html'
 import { getWpPost } from '../../lib/wordpress'
-
-type DomElement = Element & {
-  attribs?: {
-    src?: string
-    alt?: string
-  }
-}
 
 export default async function PostPage({
   params,
