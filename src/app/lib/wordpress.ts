@@ -27,40 +27,49 @@ declare global {
 
 // Query for multiple posts
 const ALL_POSTS_QUERY = `
-  query AllPosts($first: Int) {
-    posts(first: $first, where: { status: PUBLISH }) {
-      nodes {
-        id
-        slug
-        title
-        excerpt
-        date
-        featuredImage {
-          node {
-            sourceUrl
-          }
-        }
-      }
-    }
-  }
-`
-
-// Query for single post
-const POST_BY_SLUG_QUERY = `
-  query PostBySlug($id: ID!) {
-    post(id: $id, idType: SLUG) {
+query AllPosts($first: Int) {
+  posts(first: $first, where: { status: PUBLISH }) {
+    nodes {
       id
       slug
       title
-      content
+      excerpt
       date
       featuredImage {
         node {
           sourceUrl
         }
       }
+      author {
+        node {
+          name
+          avatar {
+            url
+          }
+        }
+      }
     }
   }
+}
+
+`
+
+// Query for single post
+const POST_BY_SLUG_QUERY = `
+query PostBySlug($id: ID!) {
+  post(id: $id, idType: SLUG) {
+    id
+    slug
+    title
+    content
+    date
+    featuredImage {
+      node {
+        sourceUrl
+      }
+    }
+  }
+}
 `
 
 // Helper function to create auth header with privacy mode
@@ -96,10 +105,8 @@ async function fetchGraphQL(query: string, variables = {}) {
   })
 
   // Debug log here
-  console.log('GraphQL Response Status:', response.status)
 
   const text = await response.text()
-  console.log('GraphQL Response Text:', text)
 
   try {
     const json = JSON.parse(text)
@@ -116,24 +123,41 @@ async function fetchGraphQL(query: string, variables = {}) {
 
 // Cache the fetch function for all posts
 export const getWpPosts = cache(async (first = 10) => {
-  try {
-    const data = await fetchGraphQL(ALL_POSTS_QUERY, { first })
-    console.log('Posts fetched in getWpPosts:', data.posts.nodes) // Log here
-    return data.posts.nodes
-  } catch (error) {
-    console.error('Error in getWpPosts:', error)
-    return [] // Return empty array to avoid crashing
-  }
+  const data = await fetchGraphQL(ALL_POSTS_QUERY, { first })
+  return data.posts.nodes.map(
+    (post: {
+      id: any
+      slug: any
+      title: any
+      excerpt: any
+      date: any
+      featuredImage: any
+      author: { node: any }
+    }) => ({
+      id: post.id,
+      slug: post.slug,
+      title: post.title,
+      excerpt: post.excerpt,
+      date: post.date,
+      featuredImage: post.featuredImage,
+      author: post.author.node,
+    }),
+  )
 })
 
-// Cache the fetch function for single post
 export const getWpPost = cache(async (slug: string) => {
+  if (!slug) {
+    console.error('Slug is undefined in getWpPost') // Debug log
+    return null
+  }
+
   try {
     const data = await fetchGraphQL(POST_BY_SLUG_QUERY, { id: slug })
+    console.log('GraphQL Response for getWpPost:', data) // Debug log
     return data.post
   } catch (error) {
     console.error('Error fetching post:', error)
-    return null // Return null instead of throwing
+    return null
   }
 })
 

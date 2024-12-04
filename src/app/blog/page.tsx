@@ -1,26 +1,31 @@
 import type { StaticImport } from 'next/dist/shared/lib/get-img-props'
 import Image from 'next/image'
+import Link from 'next/link'
 import type {
   AwaitedReactNode,
   JSXElementConstructor,
   Key,
   ReactElement,
   ReactNode,
-  ReactPortal,
 } from 'react'
 import { getWpPosts } from '../lib/wordpress'
 
 export default async function BlogPage() {
   const posts = await getWpPosts()
 
-  console.log('Posts in BlogPage:', posts) // Log here
-
   return (
-    <div className="mx-auto max-w-4xl px-4 py-8">
-      <h1 className="mb-8 text-3xl font-bold">Blog</h1>
-      <div className="grid gap-8">
-        {posts.length > 0 ? (
-          posts.map(
+    <div className="bg-white py-24 sm:py-32">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-2xl text-center">
+          <h2 className="text-gray-900 text-balance text-4xl font-semibold tracking-tight sm:text-5xl">
+            From the blog
+          </h2>
+          <p className="text-gray-600 mt-2 text-lg/8">
+            Learn how to grow your business with our expert advice.
+          </p>
+        </div>
+        <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+          {posts.map(
             (post: {
               id: Key | null | undefined
               featuredImage: { node: { sourceUrl: string | StaticImport } }
@@ -31,42 +36,73 @@ export default async function BlogPage() {
                 | boolean
                 | ReactElement<any, string | JSXElementConstructor<any>>
                 | Iterable<ReactNode>
-                | ReactPortal
                 | Promise<AwaitedReactNode>
                 | null
                 | undefined
-              excerpt: any
+              date: string | number | Date | undefined
               slug: any
+              excerpt: any
             }) => (
-              <article key={post.id} className="border-b pb-8">
-                {post.featuredImage && (
-                  <div className="relative mb-4 aspect-video">
+              <article
+                key={post.id}
+                className="flex flex-col items-start justify-between"
+              >
+                <div className="relative w-full">
+                  {post.featuredImage && (
                     <Image
                       src={post.featuredImage.node.sourceUrl}
-                      alt={String(post.title) || 'Blog post image'}
-                      fill
-                      className="rounded-lg object-cover"
-                      sizes="(max-width: 768px) 100vw, 768px"
+                      alt={post.title as string}
+                      className="bg-gray-100 aspect-video w-full rounded-2xl object-cover sm:aspect-[2/1] lg:aspect-[3/2]"
+                      width={800}
+                      height={600}
+                    />
+                  )}
+                  <div className="ring-gray-900/10 absolute inset-0 rounded-2xl ring-1 ring-inset" />
+                </div>
+                <div className="max-w-xl">
+                  <div className="mt-8 flex items-center gap-x-4 text-xs">
+                    <time
+                      dateTime={
+                        post.date
+                          ? new Date(post.date).toISOString()
+                          : undefined
+                      }
+                      className="text-gray-500"
+                    >
+                      {post.date
+                        ? new Date(post.date).toLocaleDateString()
+                        : 'Unknown date'}
+                    </time>
+                    <Link
+                      href={`/blog/${post.slug}`}
+                      className="bg-gray-50 text-gray-600 hover:bg-gray-100 relative z-10 rounded-full px-3 py-1.5 font-medium"
+                    >
+                      Read More
+                    </Link>
+                  </div>
+                  <div className="group relative">
+                    <h3 className="text-gray-900 group-hover:text-gray-600 mt-3 text-lg/6 font-semibold">
+                      <Link href={`/blog/${post.slug}`}>
+                        <span className="absolute inset-0" />
+                        {post.title}
+                      </Link>
+                    </h3>
+                    <p
+                      className="text-gray-600 mt-5 line-clamp-3 text-sm/6"
+                      dangerouslySetInnerHTML={{ __html: post.excerpt }}
                     />
                   </div>
-                )}
-                <h2 className="mb-2 text-2xl font-bold">{post.title}</h2>
-                <div
-                  className="text-gray-600 mb-4"
-                  dangerouslySetInnerHTML={{ __html: post.excerpt }}
-                />
-                <a
-                  href={`/blog/${post.slug}`}
-                  className="text-blue-600 hover:text-blue-800"
-                >
-                  Read more →
-                </a>
+                  <div className="relative mt-8 flex items-center gap-x-4">
+                    <div className="text-sm/6">
+                      <p className="text-gray-900 font-semibold">Author Name</p>
+                      <p className="text-gray-600">Author Role</p>
+                    </div>
+                  </div>
+                </div>
               </article>
             ),
-          )
-        ) : (
-          <p>No posts found.</p>
-        )}
+          )}
+        </div>
       </div>
     </div>
   )
