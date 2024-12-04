@@ -3,7 +3,7 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
-        hostname: 'draft-test-local.local',
+        hostname: '/draft-test-local.local',
       },
 
       {
