@@ -17,7 +17,7 @@ type Testimonial = {
 
 const testimonials: Testimonial[] = [
   {
-    body: 'Laborum quis quam. Dolorum et ut quod quia. Voluptas numquam delectus nihil. Aut enim doloremque et ipsam.',
+    body: "I was thoroughly impressed by the smooth onboarding and ability to adapt to our product suite. Draft.dev's attention to detail and dedication to aligning content with our brand have significantly impacted our developer-focused content strategy. The high-quality technical blog posts have been well-received internally, and we're excited to see the full impact on our content program.",
     author: {
       name: 'EMILY BLITSTEIN',
       company: 'SINCH MAILGUN',
@@ -25,7 +25,7 @@ const testimonials: Testimonial[] = [
     },
   },
   {
-    body: 'Laborum quis quam. Dolorum et ut quod quia. Voluptas numquam delectus nihil. Aut enim doloremque et ipsam.',
+    body: 'Partnering with Draft.dev has accelerated our technical content output while also extending the bandwidth of our developer relations team to focus more on core product activities. It is truly high-quality content written by devs for devs, helping devs in the process.',
     author: {
       name: 'ABHISHEK IYER',
       company: 'DESCOPE',
@@ -33,7 +33,7 @@ const testimonials: Testimonial[] = [
     },
   },
   {
-    body: 'Laborum quis quam. Dolorum et ut quod quia. Voluptas numquam delectus nihil. Aut enim doloremque et ipsam.',
+    body: 'Draft.dev is our go-to for practical, well-written content that actually resonates with technical audiences and helps us inspire the developer community. It has been invaluable (for our internal team and my sanity) to have their brilliant writers, editors, and PMs in our content corner!',
     author: {
       name: 'JENNY MEDEIROS',
       company: 'REDPANDA',
@@ -41,7 +41,7 @@ const testimonials: Testimonial[] = [
     },
   },
   {
-    body: 'Laborum quis quam. Dolorum et ut quod quia. Voluptas numquam delectus nihil. Aut enim doloremque et ipsam.',
+    body: 'Draft.dev has been an amazing partner, helping us scale our content program by creating thoughtful and technically-sound developer content and training materials. We’re constantly iterating to build the best educational materials for developer security and Draft.dev has been instrumental in helping us realize these ambitions.',
     author: {
       name: 'RANDALL DEGGES',
       company: 'SNYK',
@@ -49,7 +49,7 @@ const testimonials: Testimonial[] = [
     },
   },
   {
-    body: 'Laborum quis quam. Dolorum et ut quod quia. Voluptas numquam delectus nihil. Aut enim doloremque et ipsam.',
+    body: "Having draft.dev source quality technical content for the Loft Labs blog has been a competitive advantage. It's given us a steadier flow of content, which has helped our brand's visibility, and some of the posts are among the most popular ones we've published.",
     author: {
       name: 'RICH BURROUGHS',
       company: 'LOFT LABS',
@@ -57,7 +57,7 @@ const testimonials: Testimonial[] = [
     },
   },
   {
-    body: 'Laborum quis quam. Dolorum et ut quod quia. Voluptas numquam delectus nihil. Aut enim doloremque et ipsam.',
+    body: 'In a matter of weeks, our referral traffic and organic keyword rankings increased by 3x. One post also hit Hacker News which resulted in 5 demo requests in a single day!',
     author: {
       name: 'ROBERT GIBB',
       company: 'FABRIC. INC',
@@ -84,7 +84,7 @@ export default function Testimonials() {
                 key={testimonial.author.company}
                 className="pt-8 sm:inline-block sm:w-full sm:px-4"
               >
-                <figure className="bg-gray-50 rounded-2xl p-8 text-sm">
+                <figure className="bg-gray-50 rounded-2xl p-8 text-base">
                   <blockquote className="text-gray-900">
                     <p>{`“${testimonial.body}”`}</p>
                   </blockquote>
@@ -92,8 +92,8 @@ export default function Testimonials() {
                     <Image
                       alt={`${testimonial.author.name}'s profile`}
                       src={testimonial.author.imageUrl}
-                      width={40}
-                      height={40}
+                      width={100}
+                      height={100}
                       className="bg-gray-50 h-10 w-10 rounded-full"
                     />
                     <div>

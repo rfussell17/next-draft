@@ -53,42 +53,42 @@ function SitemapLink(props: React.ComponentPropsWithoutRef<typeof Link>) {
   )
 }
 
-// function Sitemap() {
-//   return (
-//     <>
-//       <div>
-//         <SitemapHeading>Product</SitemapHeading>
-//         <SitemapLinks>
-//           <SitemapLink href="/pricing">Pricing</SitemapLink>
-//           <SitemapLink href="#">Analysis</SitemapLink>
-//           <SitemapLink href="#">API</SitemapLink>
-//         </SitemapLinks>
-//       </div>
-//       <div>
-//         <SitemapHeading>Company</SitemapHeading>
-//         <SitemapLinks>
-//           <SitemapLink href="#">Careers</SitemapLink>
-//           <SitemapLink href="/blog">Blog</SitemapLink>
-//           <SitemapLink href="/company">Company</SitemapLink>
-//         </SitemapLinks>
-//       </div>
-//       <div>
-//         <SitemapHeading>Support</SitemapHeading>
-//         <SitemapLinks>
-//           <SitemapLink href="#">Help center</SitemapLink>
-//           <SitemapLink href="#">Community</SitemapLink>
-//         </SitemapLinks>
-//       </div>
-//       <div>
-//         <SitemapHeading>Company</SitemapHeading>
-//         <SitemapLinks>
-//           <SitemapLink href="#">Terms of service</SitemapLink>
-//           <SitemapLink href="#">Privacy policy</SitemapLink>
-//         </SitemapLinks>
-//       </div>
-//     </>
-//   )
-// }
+function Sitemap() {
+  return (
+    <>
+      <div>
+        <SitemapHeading>Product</SitemapHeading>
+        <SitemapLinks>
+          <SitemapLink href="/pricing">Pricing</SitemapLink>
+          <SitemapLink href="#">Analysis</SitemapLink>
+          <SitemapLink href="#">API</SitemapLink>
+        </SitemapLinks>
+      </div>
+      <div>
+        <SitemapHeading>Company</SitemapHeading>
+        <SitemapLinks>
+          <SitemapLink href="#">Careers</SitemapLink>
+          <SitemapLink href="/blog">Blog</SitemapLink>
+          <SitemapLink href="/company">Company</SitemapLink>
+        </SitemapLinks>
+      </div>
+      <div>
+        <SitemapHeading>Support</SitemapHeading>
+        <SitemapLinks>
+          <SitemapLink href="#">Help center</SitemapLink>
+          <SitemapLink href="#">Community</SitemapLink>
+        </SitemapLinks>
+      </div>
+      <div>
+        <SitemapHeading>Company</SitemapHeading>
+        <SitemapLinks>
+          <SitemapLink href="#">Terms of service</SitemapLink>
+          <SitemapLink href="#">Privacy policy</SitemapLink>
+        </SitemapLinks>
+      </div>
+    </>
+  )
+}
 
 function SocialIconX(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -173,7 +173,7 @@ export function Footer() {
                   </PlusGridItem>
                 </div>
                 <div className="col-span-2 grid grid-cols-2 gap-x-8 gap-y-12 lg:col-span-4 lg:grid-cols-subgrid lg:pt-6">
-                  {/* <Sitemap /> */}
+                  <Sitemap />
                 </div>
               </div>
             </PlusGridRow>

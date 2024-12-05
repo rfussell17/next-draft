@@ -1,6 +1,8 @@
 import BodyDetail from '@/components/body-detail'
+import HowItWorks from '@/components/how-it-works'
 import { LogoCloud } from '@/components/media/logo-cloud'
 import Testimonials from '@/components/media/testimonials'
+import Pricing from '@/components/pricing'
 import { Button } from '@/components/utils/button'
 import { Container } from '@/components/utils/container'
 import { Screenshot } from '@/components/utils/screenshot'
@@ -27,10 +29,10 @@ function Hero() {
           </p>
           <div className="mt-12 flex flex-col gap-x-6 gap-y-4 sm:flex-row">
             <Button variant="primary" href="#" className="font-semibold">
-              Get started
+              Book a Call
             </Button>
             <Button variant="outline" href="/pricing">
-              See pricing
+              See Pricing
             </Button>
           </div>
         </div>
@@ -69,6 +71,8 @@ export default function Home() {
         <Container className="py-20">
           <LogoCloud />
         </Container>
+        <HowItWorks />
+        <Pricing />
       </main>
       <Testimonials />
     </div>
