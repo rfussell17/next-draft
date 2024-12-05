@@ -21,6 +21,8 @@ const features: Feature[] = [
   },
 ]
 
+const paragraph = "You're just one call away from getting started."
+
 export default function HowItWorks(): JSX.Element {
   return (
     <div className="bg-white overflow-hidden py-24 sm:py-32">
@@ -34,9 +36,7 @@ export default function HowItWorks(): JSX.Element {
               <p className="text-gray-900 mt-2 text-pretty text-4xl font-semibold tracking-tight sm:text-5xl">
                 HOW IT WORKS
               </p>
-              <p className="text-gray-600 mt-6 text-lg/8">
-                You're just one call away from getting started.
-              </p>
+              <p className="text-gray-600 mt-6 text-lg/8">{paragraph}</p>
               <dl className="text-gray-600 mt-10 max-w-xl space-y-8 text-base/7 lg:max-w-none">
                 {features.map((feature) => (
                   <div key={feature.name} className="relative">
