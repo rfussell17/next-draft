@@ -15,13 +15,13 @@ function CallToAction() {
     <div className="relative pb-16 pt-20 text-center sm:py-24">
       <hgroup>
         <Subheading>Get started</Subheading>
-        <p className="mt-6 text-3xl font-medium tracking-tight text-gray-950 sm:text-5xl">
+        <p className="text-gray-950 mt-6 text-3xl font-medium tracking-tight sm:text-5xl">
           Ready to dive in?
           <br />
           Start your free trial today.
         </p>
       </hgroup>
-      <p className="mx-auto mt-6 max-w-xs text-sm/6 text-gray-500">
+      <p className="text-gray-500 mx-auto mt-6 max-w-xs text-sm/6">
         Get the cheat codes for selling and unlock your team&apos;s revenue
         potential.
       </p>
@@ -35,7 +35,7 @@ function CallToAction() {
 }
 
 function SitemapHeading({ children }: { children: React.ReactNode }) {
-  return <h3 className="text-sm/6 font-medium text-gray-950/50">{children}</h3>
+  return <h3 className="text-gray-950/50 text-sm/6 font-medium">{children}</h3>
 }
 
 function SitemapLinks({ children }: { children: React.ReactNode }) {
@@ -47,48 +47,48 @@ function SitemapLink(props: React.ComponentPropsWithoutRef<typeof Link>) {
     <li>
       <Link
         {...props}
-        className="font-medium text-gray-950 data-[hover]:text-gray-950/75"
+        className="text-gray-950 data-[hover]:text-gray-950/75 font-medium"
       />
     </li>
   )
 }
 
-function Sitemap() {
-  return (
-    <>
-      <div>
-        <SitemapHeading>Product</SitemapHeading>
-        <SitemapLinks>
-          <SitemapLink href="/pricing">Pricing</SitemapLink>
-          <SitemapLink href="#">Analysis</SitemapLink>
-          <SitemapLink href="#">API</SitemapLink>
-        </SitemapLinks>
-      </div>
-      <div>
-        <SitemapHeading>Company</SitemapHeading>
-        <SitemapLinks>
-          <SitemapLink href="#">Careers</SitemapLink>
-          <SitemapLink href="/blog">Blog</SitemapLink>
-          <SitemapLink href="/company">Company</SitemapLink>
-        </SitemapLinks>
-      </div>
-      <div>
-        <SitemapHeading>Support</SitemapHeading>
-        <SitemapLinks>
-          <SitemapLink href="#">Help center</SitemapLink>
-          <SitemapLink href="#">Community</SitemapLink>
-        </SitemapLinks>
-      </div>
-      <div>
-        <SitemapHeading>Company</SitemapHeading>
-        <SitemapLinks>
-          <SitemapLink href="#">Terms of service</SitemapLink>
-          <SitemapLink href="#">Privacy policy</SitemapLink>
-        </SitemapLinks>
-      </div>
-    </>
-  )
-}
+// function Sitemap() {
+//   return (
+//     <>
+//       <div>
+//         <SitemapHeading>Product</SitemapHeading>
+//         <SitemapLinks>
+//           <SitemapLink href="/pricing">Pricing</SitemapLink>
+//           <SitemapLink href="#">Analysis</SitemapLink>
+//           <SitemapLink href="#">API</SitemapLink>
+//         </SitemapLinks>
+//       </div>
+//       <div>
+//         <SitemapHeading>Company</SitemapHeading>
+//         <SitemapLinks>
+//           <SitemapLink href="#">Careers</SitemapLink>
+//           <SitemapLink href="/blog">Blog</SitemapLink>
+//           <SitemapLink href="/company">Company</SitemapLink>
+//         </SitemapLinks>
+//       </div>
+//       <div>
+//         <SitemapHeading>Support</SitemapHeading>
+//         <SitemapLinks>
+//           <SitemapLink href="#">Help center</SitemapLink>
+//           <SitemapLink href="#">Community</SitemapLink>
+//         </SitemapLinks>
+//       </div>
+//       <div>
+//         <SitemapHeading>Company</SitemapHeading>
+//         <SitemapLinks>
+//           <SitemapLink href="#">Terms of service</SitemapLink>
+//           <SitemapLink href="#">Privacy policy</SitemapLink>
+//         </SitemapLinks>
+//       </div>
+//     </>
+//   )
+// }
 
 function SocialIconX(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -151,7 +151,7 @@ function SocialLinks() {
 
 function Copyright() {
   return (
-    <div className="text-sm/6 text-gray-950">
+    <div className="text-gray-950 text-sm/6">
       &copy; {new Date().getFullYear()} Radiant Inc.
     </div>
   )
@@ -161,7 +161,7 @@ export function Footer() {
   return (
     <footer>
       <Gradient className="relative">
-        <div className="absolute inset-2 rounded-4xl bg-white/80" />
+        <div className="bg-white/80 absolute inset-0" />
         <Container>
           <CallToAction />
           <PlusGrid className="pb-16">
@@ -173,7 +173,7 @@ export function Footer() {
                   </PlusGridItem>
                 </div>
                 <div className="col-span-2 grid grid-cols-2 gap-x-8 gap-y-12 lg:col-span-4 lg:grid-cols-subgrid lg:pt-6">
-                  <Sitemap />
+                  {/* <Sitemap /> */}
                 </div>
               </div>
             </PlusGridRow>

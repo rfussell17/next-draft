@@ -1,210 +1,114 @@
-'use client'
-
-import * as Headless from '@headlessui/react'
-import { ArrowLongRightIcon } from '@heroicons/react/20/solid'
-import { clsx } from 'clsx'
 import Image from 'next/image'
-import { useRef, useState } from 'react'
-import { Container } from '../utils/container'
-import { Link } from '../utils/link'
-import { Heading, Subheading } from '../utils/text'
+import headshot1 from '../../../public/testimonials/amy-chase.jpg'
+import headshot2 from '../../../public/testimonials/conor-neville.jpg'
+import headshot3 from '../../../public/testimonials/dillon-lenora.jpg'
+import headshot4 from '../../../public/testimonials/harriet-arron.jpg'
+import headshot5 from '../../../public/testimonials/tina-yards.jpg'
+import headshot6 from '../../../public/testimonials/veronica-winton.jpg'
 
-const testimonials = [
+type Testimonial = {
+  body: string
+  author: {
+    name: string
+    company: string
+    imageUrl: string
+  }
+}
+
+const testimonials: Testimonial[] = [
   {
-    img: '/testimonials/tina-yards.jpg',
-    name: 'Tina Yards',
-    title: 'VP of Sales, Protocol',
-    quote:
-      "Thanks to Radiant, we're finding new leads that we never would have found with legal methods.",
+    body: 'Laborum quis quam. Dolorum et ut quod quia. Voluptas numquam delectus nihil. Aut enim doloremque et ipsam.',
+    author: {
+      name: 'EMILY BLITSTEIN',
+      company: 'SINCH MAILGUN',
+      imageUrl: headshot1.src,
+    },
   },
   {
-    img: '/testimonials/conor-neville.jpg',
-    name: 'Conor Neville',
-    title: 'Head of Customer Success, TaxPal',
-    quote:
-      'Radiant made undercutting all of our competitors an absolute breeze.',
+    body: 'Laborum quis quam. Dolorum et ut quod quia. Voluptas numquam delectus nihil. Aut enim doloremque et ipsam.',
+    author: {
+      name: 'ABHISHEK IYER',
+      company: 'DESCOPE',
+      imageUrl: headshot2.src,
+    },
   },
   {
-    img: '/testimonials/amy-chase.jpg',
-    name: 'Amy Chase',
-    title: 'Head of GTM, Pocket',
-    quote:
-      'We closed a deal in literally a few minutes because we knew their exact budget.',
+    body: 'Laborum quis quam. Dolorum et ut quod quia. Voluptas numquam delectus nihil. Aut enim doloremque et ipsam.',
+    author: {
+      name: 'JENNY MEDEIROS',
+      company: 'REDPANDA',
+      imageUrl: headshot3.src,
+    },
   },
   {
-    img: '/testimonials/veronica-winton.jpg',
-    name: 'Veronica Winton',
-    title: 'CSO, Planeteria',
-    quote:
-      "We've managed to put two of our main competitors out of business in 6 months.",
+    body: 'Laborum quis quam. Dolorum et ut quod quia. Voluptas numquam delectus nihil. Aut enim doloremque et ipsam.',
+    author: {
+      name: 'RANDALL DEGGES',
+      company: 'SNYK',
+      imageUrl: headshot4.src,
+    },
   },
   {
-    img: '/testimonials/dillon-lenora.jpg',
-    name: 'Dillon Lenora',
-    title: 'VP of Sales, Detax',
-    quote: 'I was able to replace 80% of my team with RadiantAI bots.',
+    body: 'Laborum quis quam. Dolorum et ut quod quia. Voluptas numquam delectus nihil. Aut enim doloremque et ipsam.',
+    author: {
+      name: 'RICH BURROUGHS',
+      company: 'LOFT LABS',
+      imageUrl: headshot5.src,
+    },
   },
   {
-    img: '/testimonials/harriet-arron.jpg',
-    name: 'Harriet Arron',
-    title: 'Account Manager, Commit',
-    quote:
-      "I've smashed all my targets without having to speak to a lead in months.",
+    body: 'Laborum quis quam. Dolorum et ut quod quia. Voluptas numquam delectus nihil. Aut enim doloremque et ipsam.',
+    author: {
+      name: 'ROBERT GIBB',
+      company: 'FABRIC. INC',
+      imageUrl: headshot6.src,
+    },
   },
+  // Add more testimonials here...
 ]
 
-function TestimonialCard({
-  name,
-  title,
-  img,
-  children,
-  onClick,
-}: {
-  img: string
-  name: string
-  title: string
-  children: React.ReactNode
-  onClick?: () => void
-}) {
+export default function Testimonials() {
   return (
-    <div
-      onClick={onClick}
-      className="relative flex aspect-[9/16] w-72 shrink-0 snap-start scroll-ml-[var(--scroll-padding)] flex-col justify-end overflow-hidden rounded-3xl sm:aspect-[3/4] sm:w-96"
-    >
-      <Image
-        alt=""
-        src={img}
-        width={200}
-        height={200}
-        className="absolute inset-x-0 top-0 aspect-square w-full object-cover"
-      />
-      <div
-        aria-hidden="true"
-        className="from-black ring-gray-950/10 absolute inset-0 rounded-3xl bg-gradient-to-t from-[calc(7/16*100%)] ring-1 ring-inset sm:from-25%"
-      />
-      <figure className="relative p-10">
-        <blockquote>
-          <p className="text-white relative text-xl/7">
-            <span aria-hidden="true" className="absolute -translate-x-full">
-              &ldquo;
-            </span>
-            {children}
-            <span aria-hidden="true" className="absolute">
-              &rdquo;
-            </span>
+    <div className="bg-white py-24 sm:py-32">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-2xl text-center">
+          <h2 className="text-base font-semibold text-primary">Testimonials</h2>
+          <p className="text-gray-900 mt-2 text-4xl font-semibold tracking-tight sm:text-5xl">
+            What our clients are saying
           </p>
-        </blockquote>
-        <figcaption className="border-white/20 mt-6 border-t pt-6">
-          <p className="text-white text-sm/6 font-medium">{name}</p>
-          <p className="text-sm/6 font-medium">
-            <span className="text-transparent bg-gradient-to-r from-[#fff1be] from-[28%] via-[#ee87cb] via-[70%] to-[#b060ff] bg-clip-text">
-              {title}
-            </span>
-          </p>
-        </figcaption>
-      </figure>
-    </div>
-  )
-}
-
-function CallToAction() {
-  return (
-    <div>
-      <p className="text-gray-600 max-w-sm text-sm/6">
-        Join the best sellers in the business and start using Radiant to hit
-        your targets today.
-      </p>
-      <div className="mt-2">
-        <Link
-          href="#"
-          className="text-white inline-flex items-center gap-2 text-sm/6 font-medium"
-        >
-          Get started
-          <ArrowLongRightIcon className="size-5" />
-        </Link>
-      </div>
-    </div>
-  )
-}
-
-export function Testimonials() {
-  const scrollRef = useRef<HTMLDivElement | null>(null)
-  const [activeIndex, setActiveIndex] = useState(0)
-
-  function scrollTo(index: number) {
-    if (!scrollRef.current) return
-    const gap = 32
-    const width = (scrollRef.current.children[0] as HTMLElement).offsetWidth
-    scrollRef.current.scrollTo({
-      left: (width + gap) * index,
-      behavior: 'smooth',
-    })
-    setActiveIndex(index)
-  }
-
-  // Update active index on scroll
-  const handleScroll = () => {
-    if (!scrollRef.current) return
-    const width = scrollRef.current.children[0].clientWidth
-    const scrollPosition = scrollRef.current.scrollLeft
-    setActiveIndex(Math.floor(scrollPosition / width))
-  }
-
-  return (
-    <div className="overflow-hidden py-32">
-      <Container>
-        <div>
-          <Subheading>What everyone is saying</Subheading>
-          <Heading as="h3" className="mt-2">
-            Trusted by professionals.
-          </Heading>
         </div>
-      </Container>
-      <div
-        ref={scrollRef}
-        onScroll={handleScroll}
-        className={clsx([
-          'mt-16 flex gap-8 px-[var(--scroll-padding)]',
-          '[scrollbar-width:none] [&::-webkit-scrollbar]:hidden',
-          'snap-x snap-mandatory overflow-x-auto overscroll-x-contain scroll-smooth',
-          '[--scroll-padding:max(theme(spacing.6),calc((100vw-theme(maxWidth.2xl))/2))] lg:[--scroll-padding:max(theme(spacing.8),calc((100vw-theme(maxWidth.7xl))/2))]',
-        ])}
-      >
-        {testimonials.map(({ img, name, title, quote }, testimonialIndex) => (
-          <TestimonialCard
-            key={testimonialIndex}
-            name={name}
-            title={title}
-            img={img}
-            onClick={() => scrollTo(testimonialIndex)}
-          >
-            {quote}
-          </TestimonialCard>
-        ))}
-        <div className="w-[42rem] shrink-0 sm:w-[54rem]" />
-      </div>
-      <Container className="mt-16">
-        <div className="flex justify-between">
-          <CallToAction />
-          <div className="hidden sm:flex sm:gap-2">
-            {testimonials.map(({ name }, testimonialIndex) => (
-              <Headless.Button
-                key={testimonialIndex}
-                onClick={() => scrollTo(testimonialIndex)}
-                data-active={
-                  activeIndex === testimonialIndex ? true : undefined
-                }
-                aria-label={`Scroll to testimonial from ${name}`}
-                className={clsx(
-                  'border-transparent bg-gray-300 size-2.5 rounded-full border transition',
-                  'data-[active]:bg-gray-400 data-[hover]:bg-gray-400',
-                  'forced-colors:data-[active]:bg-[Highlight] forced-colors:data-[focus]:outline-offset-4',
-                )}
-              />
+        <div className="mx-auto mt-16 flow-root max-w-2xl sm:mt-20 lg:mx-0 lg:max-w-none">
+          <div className="-mt-8 sm:-mx-4 sm:columns-2 sm:text-[0] lg:columns-3">
+            {testimonials.map((testimonial) => (
+              <div
+                key={testimonial.author.company}
+                className="pt-8 sm:inline-block sm:w-full sm:px-4"
+              >
+                <figure className="bg-gray-50 rounded-2xl p-8 text-sm">
+                  <blockquote className="text-gray-900">
+                    <p>{`“${testimonial.body}”`}</p>
+                  </blockquote>
+                  <figcaption className="mt-6 flex items-center gap-x-4">
+                    <Image
+                      alt={`${testimonial.author.name}'s profile`}
+                      src={testimonial.author.imageUrl}
+                      width={40}
+                      height={40}
+                      className="bg-gray-50 h-10 w-10 rounded-full"
+                    />
+                    <div>
+                      <div className="text-gray-900 font-semibold">
+                        {testimonial.author.name}
+                      </div>
+                      <div className="text-gray-600">{`@${testimonial.author.company}`}</div>
+                    </div>
+                  </figcaption>
+                </figure>
+              </div>
             ))}
           </div>
         </div>
-      </Container>
+      </div>
     </div>
   )
 }

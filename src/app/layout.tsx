@@ -29,13 +29,11 @@ export default function RootLayout({
         <meta name="robots" content="noindex, nofollow, noarchive" />
       </head>
       <body className="text-gray-950 antialiased">
-        {/* Include Banner, Navigation, and Footer here */}
         <Navbar />
         <div className="min-h-screen">
           <main>{children}</main>
-          <Footer />
         </div>
-        {/* Include Footer here */}
+        <Footer />
       </body>
     </html>
   )
