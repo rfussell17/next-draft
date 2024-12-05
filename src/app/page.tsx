@@ -68,7 +68,7 @@ export default function Home() {
 
       <main>
         <BodyDetail />
-        <Container className="py-20">
+        <Container className="bg-primary py-20">
           <LogoCloud />
         </Container>
         <HowItWorks />
