@@ -1,5 +1,8 @@
 import BodyDetail from '@/components/body-detail'
 import HowItWorks from '@/components/how-it-works'
+
+import CTA from '@/components/media/cta'
+import FAQ from '@/components/media/faq'
 import { LogoCloud } from '@/components/media/logo-cloud'
 import Testimonials from '@/components/media/testimonials'
 import Pricing from '@/components/pricing'
@@ -75,6 +78,8 @@ export default function Home() {
         <Pricing />
       </main>
       <Testimonials />
+      <CTA />
+      <FAQ />
     </div>
   )
 }

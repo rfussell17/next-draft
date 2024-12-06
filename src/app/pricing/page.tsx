@@ -1,9 +1,7 @@
-import { Footer } from '@/components/footer'
 import { LogoCloud } from '@/components/media/logo-cloud'
-import { Navbar } from '@/components/navbar'
 import { Button } from '@/components/utils/button'
 import { Container } from '@/components/utils/container'
-import { Gradient, GradientBackground } from '@/components/utils/gradient'
+import { Gradient } from '@/components/utils/gradient'
 import { Link } from '@/components/utils/link'
 import { Heading, Lead, Subheading } from '@/components/utils/text'
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
@@ -122,7 +120,7 @@ function Header() {
 function PricingCards() {
   return (
     <div className="relative py-24">
-      <Gradient className="absolute inset-x-2 bottom-0 top-48 rounded-4xl ring-1 ring-inset ring-black/5" />
+      <Gradient className="ring-black/5 absolute inset-x-2 bottom-0 top-48 rounded-4xl ring-1 ring-inset" />
       <Container className="relative">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           {tiers.map((tier, tierIndex) => (
@@ -137,16 +135,16 @@ function PricingCards() {
 
 function PricingCard({ tier }: { tier: (typeof tiers)[number] }) {
   return (
-    <div className="-m-2 grid grid-cols-1 rounded-4xl shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5 max-lg:mx-auto max-lg:w-full max-lg:max-w-md">
-      <div className="grid grid-cols-1 rounded-4xl p-2 shadow-md shadow-black/5">
-        <div className="rounded-3xl bg-white p-10 pb-9 shadow-2xl ring-1 ring-black/5">
+    <div className="ring-black/5 -m-2 grid grid-cols-1 rounded-4xl shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 max-lg:mx-auto max-lg:w-full max-lg:max-w-md">
+      <div className="shadow-black/5 grid grid-cols-1 rounded-4xl p-2 shadow-md">
+        <div className="bg-white ring-black/5 rounded-3xl p-10 pb-9 shadow-2xl ring-1">
           <Subheading>{tier.name}</Subheading>
-          <p className="mt-2 text-sm/6 text-gray-950/75">{tier.description}</p>
+          <p className="text-gray-950/75 mt-2 text-sm/6">{tier.description}</p>
           <div className="mt-8 flex items-center gap-4">
-            <div className="text-5xl font-medium text-gray-950">
+            <div className="text-gray-950 text-5xl font-medium">
               ${tier.priceMonthly}
             </div>
-            <div className="text-sm/5 text-gray-950/75">
+            <div className="text-gray-950/75 text-sm/5">
               <p>USD</p>
               <p>per month</p>
             </div>
@@ -155,7 +153,7 @@ function PricingCard({ tier }: { tier: (typeof tiers)[number] }) {
             <Button href={tier.href}>Start a free trial</Button>
           </div>
           <div className="mt-8">
-            <h3 className="text-sm/6 font-medium text-gray-950">
+            <h3 className="text-gray-950 text-sm/6 font-medium">
               Start selling with:
             </h3>
             <ul className="mt-3 space-y-3">
@@ -214,11 +212,11 @@ function PricingTable({
                 <Menu>
                   <MenuButton className="flex items-center justify-between gap-2 font-medium">
                     {selectedTier.name}
-                    <ChevronUpDownIcon className="size-4 fill-slate-900" />
+                    <ChevronUpDownIcon className="fill-slate-900 size-4" />
                   </MenuButton>
                   <MenuItems
                     anchor="bottom start"
-                    className="min-w-[--button-width] rounded-lg bg-white p-1 shadow-lg ring-1 ring-gray-200 [--anchor-gap:6px] [--anchor-offset:-4px] [--anchor-padding:10px]"
+                    className="bg-white ring-gray-200 min-w-[--button-width] rounded-lg p-1 shadow-lg ring-1 [--anchor-gap:6px] [--anchor-offset:-4px] [--anchor-padding:10px]"
                   >
                     {tiers.map((tier) => (
                       <MenuItem key={tier.slug}>
@@ -228,7 +226,7 @@ function PricingTable({
                           data-selected={
                             tier === selectedTier ? true : undefined
                           }
-                          className="group flex items-center gap-2 rounded-md px-2 py-1 data-[focus]:bg-gray-200"
+                          className="data-[focus]:bg-gray-200 group flex items-center gap-2 rounded-md px-2 py-1"
                         >
                           {tier.name}
                           <CheckIcon className="hidden size-4 group-data-[selected]:block" />
@@ -238,7 +236,7 @@ function PricingTable({
                   </MenuItems>
                 </Menu>
                 <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center">
-                  <ChevronUpDownIcon className="size-4 fill-slate-900" />
+                  <ChevronUpDownIcon className="fill-slate-900 size-4" />
                 </div>
               </div>
             </td>
@@ -274,7 +272,7 @@ function PricingTable({
                   colSpan={4}
                   className="px-0 pb-0 pt-10 group-first-of-type:pt-5"
                 >
-                  <div className="-mx-4 rounded-lg bg-gray-50 px-4 py-3 text-sm/6 font-semibold">
+                  <div className="bg-gray-50 -mx-4 rounded-lg px-4 py-3 text-sm/6 font-semibold">
                     {section}
                   </div>
                 </th>
@@ -284,11 +282,11 @@ function PricingTable({
                 .map(({ name }) => (
                   <tr
                     key={name}
-                    className="border-b border-gray-100 last:border-none"
+                    className="border-gray-100 border-b last:border-none"
                   >
                     <th
                       scope="row"
-                      className="px-0 py-4 text-sm/6 font-normal text-gray-600"
+                      className="text-gray-600 px-0 py-4 text-sm/6 font-normal"
                     >
                       {name}
                     </th>
@@ -308,14 +306,14 @@ function PricingTable({
                         >
                           {value === true ? (
                             <>
-                              <CheckIcon className="size-4 fill-green-600" />
+                              <CheckIcon className="fill-green-600 size-4" />
                               <span className="sr-only">
                                 Included in {tier.name}
                               </span>
                             </>
                           ) : value === false || value === undefined ? (
                             <>
-                              <MinusIcon className="size-4 fill-gray-400" />
+                              <MinusIcon className="fill-gray-400 size-4" />
                               <span className="sr-only">
                                 Not included in {tier.name}
                               </span>
@@ -346,10 +344,10 @@ function FeatureItem({
   return (
     <li
       data-disabled={disabled ? true : undefined}
-      className="flex items-start gap-4 text-sm/6 text-gray-950/75 data-[disabled]:text-gray-950/25"
+      className="text-gray-950/75 data-[disabled]:text-gray-950/25 flex items-start gap-4 text-sm/6"
     >
       <span className="inline-flex h-6 items-center">
-        <PlusIcon className="size-[0.9375rem] shrink-0 fill-gray-950/25" />
+        <PlusIcon className="fill-gray-950/25 size-[0.9375rem] shrink-0" />
       </span>
       {disabled && <span className="sr-only">Not included:</span>}
       {description}
@@ -367,13 +365,13 @@ function PlusIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 
 function Testimonial() {
   return (
-    <div className="mx-2 my-24 rounded-4xl bg-gray-900 bg-[url(/dot-texture.svg)] pb-24 pt-72 lg:pt-36">
+    <div className="bg-gray-900 mx-2 my-24 rounded-4xl bg-[url(/dot-texture.svg)] pb-24 pt-72 lg:pt-36">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-[384px_1fr_1fr]">
           <div className="-mt-96 lg:-mt-52">
-            <div className="-m-2 rounded-4xl bg-white/15 shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5 max-lg:mx-auto max-lg:max-w-xs">
-              <div className="rounded-4xl p-2 shadow-md shadow-black/5">
-                <div className="overflow-hidden rounded-3xl shadow-2xl outline outline-1 -outline-offset-1 outline-black/10">
+            <div className="bg-white/15 ring-black/5 -m-2 rounded-4xl shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 max-lg:mx-auto max-lg:max-w-xs">
+              <div className="shadow-black/5 rounded-4xl p-2 shadow-md">
+                <div className="outline-black/10 overflow-hidden rounded-3xl shadow-2xl outline outline-1 -outline-offset-1">
                   <img
                     alt=""
                     src="/testimonials/tina-yards.jpg"
@@ -386,15 +384,15 @@ function Testimonial() {
           <div className="flex max-lg:mt-16 lg:col-span-2 lg:px-16">
             <figure className="mx-auto flex max-w-xl flex-col gap-16 max-lg:text-center">
               <blockquote>
-                <p className="relative text-3xl tracking-tight text-white before:absolute before:-translate-x-full before:content-['“'] after:absolute after:content-['”'] lg:text-4xl">
+                <p className="text-white relative text-3xl tracking-tight before:absolute before:-translate-x-full before:content-['“'] after:absolute after:content-['”'] lg:text-4xl">
                   Thanks to Radiant, we&apos;re finding new leads that we never
                   would have found with legal methods.
                 </p>
               </blockquote>
               <figcaption className="mt-auto">
-                <p className="text-sm/6 font-medium text-white">Tina Yards</p>
+                <p className="text-white text-sm/6 font-medium">Tina Yards</p>
                 <p className="text-sm/6 font-medium">
-                  <span className="bg-gradient-to-r from-[#fff1be] from-[28%] via-[#ee87cb] via-[70%] to-[#b060ff] bg-clip-text text-transparent">
+                  <span className="text-transparent bg-gradient-to-r from-[#fff1be] from-[28%] via-[#ee87cb] via-[70%] to-[#b060ff] bg-clip-text">
                     VP of Sales, Protocol
                   </span>
                 </p>
@@ -422,7 +420,7 @@ function FrequentlyAskedQuestions() {
             <dt className="text-sm font-semibold">
               What measures are in place to ensure the security of our data?
             </dt>
-            <dd className="mt-4 text-sm/6 text-gray-600">
+            <dd className="text-gray-600 mt-4 text-sm/6">
               Data security is a top priority for us, which is ironic given that
               our business depends on others not taking it very seriously. We
               understand that any breach could put both us and most of our
@@ -435,7 +433,7 @@ function FrequentlyAskedQuestions() {
             <dt className="text-sm font-semibold">
               Is there a mobile app available for your platform?
             </dt>
-            <dd className="mt-4 text-sm/6 text-gray-600">
+            <dd className="text-gray-600 mt-4 text-sm/6">
               Yes, we offer a mobile app that provides all the key
               functionalities of our desktop platform, allowing sales reps to
               manage deals on the go. Additionally, we have another app
@@ -449,7 +447,7 @@ function FrequentlyAskedQuestions() {
             <dt className="text-sm font-semibold">
               Can I customize the workflow to match our company’s deal process?
             </dt>
-            <dd className="mt-4 text-sm/6 text-gray-600">
+            <dd className="text-gray-600 mt-4 text-sm/6">
               Yes, our platform is highly customizable, although there should be
               no need. Before you sign up, we discreetly gather information
               about your company and its processes from a variety of sources. We
@@ -463,7 +461,7 @@ function FrequentlyAskedQuestions() {
             <dt className="text-sm font-semibold">
               What kind of support do you offer?
             </dt>
-            <dd className="mt-4 text-sm/6 text-gray-600">
+            <dd className="text-gray-600 mt-4 text-sm/6">
               We offer comprehensive support through multiple channels,
               including 24/7 live chat, email, and phone support. However, since
               we have full access to your internal network, we will know if
@@ -474,7 +472,7 @@ function FrequentlyAskedQuestions() {
             <dt className="text-sm font-semibold">
               Can I integrate the CRM with other sales intelligence tools?
             </dt>
-            <dd className="mt-4 text-sm/6 text-gray-600">
+            <dd className="text-gray-600 mt-4 text-sm/6">
               Yes, our solution integrates seamlessly with a variety of other
               systems. However, be warned that most of these integrations are
               short-lived. We have a dedicated team of engineers who
@@ -501,16 +499,11 @@ export default function Pricing({
 
   return (
     <main className="overflow-hidden">
-      <GradientBackground />
-      <Container>
-        <Navbar />
-      </Container>
       <Header />
       <PricingCards />
       <PricingTable selectedTier={tier} />
       <Testimonial />
       <FrequentlyAskedQuestions />
-      <Footer />
     </main>
   )
 }

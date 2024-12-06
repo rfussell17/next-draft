@@ -3,25 +3,23 @@ import {
   PlusGridItem,
   PlusGridRow,
 } from '@/components/utils/plus-grid'
-import { Logo } from './logo'
+import Image from 'next/image'
 import { Button } from './utils/button'
 import { Container } from './utils/container'
 import { Gradient } from './utils/gradient'
 import { Link } from './utils/link'
-import { Subheading } from './utils/text'
 
 function CallToAction() {
   return (
-    <div className="relative pb-16 pt-20 text-center sm:py-24">
+    <div className="text-white relative pb-16 pt-20 text-center sm:py-24">
       <hgroup>
-        <Subheading>Get started</Subheading>
-        <p className="text-gray-950 mt-6 text-3xl font-medium tracking-tight sm:text-5xl">
+        <p className="text-white mt-6 text-3xl font-medium tracking-tight sm:text-5xl">
           Ready to dive in?
           <br />
           Start your free trial today.
         </p>
       </hgroup>
-      <p className="text-gray-500 mx-auto mt-6 max-w-xs text-sm/6">
+      <p className="text-white mx-auto mt-6 max-w-xs text-sm/6">
         Get the cheat codes for selling and unlock your team&apos;s revenue
         potential.
       </p>
@@ -35,7 +33,7 @@ function CallToAction() {
 }
 
 function SitemapHeading({ children }: { children: React.ReactNode }) {
-  return <h3 className="text-gray-950/50 text-sm/6 font-medium">{children}</h3>
+  return <h3 className="text-white text-sm/6 font-bold">{children}</h3>
 }
 
 function SitemapLinks({ children }: { children: React.ReactNode }) {
@@ -47,7 +45,7 @@ function SitemapLink(props: React.ComponentPropsWithoutRef<typeof Link>) {
     <li>
       <Link
         {...props}
-        className="text-gray-950 data-[hover]:text-gray-950/75 font-medium"
+        className="text-white data-[hover]:text-gray-300 font-medium"
       />
     </li>
   )
@@ -125,7 +123,7 @@ function SocialLinks() {
         href="https://facebook.com"
         target="_blank"
         aria-label="Visit us on Facebook"
-        className="text-gray-950 data-[hover]:text-gray-950/75"
+        className="text-white data-[hover]:text-gray-300"
       >
         <SocialIconFacebook className="size-4" />
       </Link>
@@ -133,7 +131,7 @@ function SocialLinks() {
         href="https://x.com"
         target="_blank"
         aria-label="Visit us on X"
-        className="text-gray-950 data-[hover]:text-gray-950/75"
+        className="text-white data-[hover]:text-gray-300"
       >
         <SocialIconX className="size-4" />
       </Link>
@@ -141,7 +139,7 @@ function SocialLinks() {
         href="https://linkedin.com"
         target="_blank"
         aria-label="Visit us on LinkedIn"
-        className="text-gray-950 data-[hover]:text-gray-950/75"
+        className="text-white data-[hover]:text-gray-300"
       >
         <SocialIconLinkedIn className="size-4" />
       </Link>
@@ -151,8 +149,8 @@ function SocialLinks() {
 
 function Copyright() {
   return (
-    <div className="text-gray-950 text-sm/6">
-      &copy; {new Date().getFullYear()} Radiant Inc.
+    <div className="text-white text-sm/6">
+      &copy; {new Date().getFullYear()} Draft.Dev
     </div>
   )
 }
@@ -161,15 +159,25 @@ export function Footer() {
   return (
     <footer>
       <Gradient className="relative">
-        <div className="bg-white/80 absolute inset-0" />
+        <div className="text-white absolute inset-0 bg-primary/80" />
         <Container>
           <CallToAction />
           <PlusGrid className="pb-16">
             <PlusGridRow>
               <div className="grid grid-cols-2 gap-y-10 pb-6 lg:grid-cols-6 lg:gap-8">
-                <div className="col-span-2 flex">
-                  <PlusGridItem className="pt-6 lg:pb-6">
-                    <Logo className="h-9" />
+                <div className="col-span-2">
+                  <PlusGridItem className="pt-10">
+                    <Link href="/" title="Home">
+                      <Image
+                        src="/draft-temp-white.png"
+                        alt="Logo"
+                        width={180}
+                        height={72}
+                      />
+                    </Link>
+                    <div className="mt-6 flex justify-start gap-6">
+                      <SocialLinks />
+                    </div>
                   </PlusGridItem>
                 </div>
                 <div className="col-span-2 grid grid-cols-2 gap-x-8 gap-y-12 lg:col-span-4 lg:grid-cols-subgrid lg:pt-6">
@@ -181,11 +189,6 @@ export function Footer() {
               <div>
                 <PlusGridItem className="py-3">
                   <Copyright />
-                </PlusGridItem>
-              </div>
-              <div className="flex">
-                <PlusGridItem className="flex items-center gap-8 py-3">
-                  <SocialLinks />
                 </PlusGridItem>
               </div>
             </PlusGridRow>
