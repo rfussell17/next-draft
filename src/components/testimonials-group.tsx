@@ -1,10 +1,10 @@
 import Image from 'next/image'
-import headshot1 from '../../../public/testimonials/amy-chase.jpg'
-import headshot2 from '../../../public/testimonials/conor-neville.jpg'
-import headshot3 from '../../../public/testimonials/dillon-lenora.jpg'
-import headshot4 from '../../../public/testimonials/harriet-arron.jpg'
-import headshot5 from '../../../public/testimonials/tina-yards.jpg'
-import headshot6 from '../../../public/testimonials/veronica-winton.jpg'
+import headshot1 from '../../public/testimonials/amy-chase.jpg'
+import headshot2 from '../../public/testimonials/conor-neville.jpg'
+import headshot3 from '../../public/testimonials/dillon-lenora.jpg'
+import headshot4 from '../../public/testimonials/harriet-arron.jpg'
+import headshot5 from '../../public/testimonials/tina-yards.jpg'
+import headshot6 from '../../public/testimonials/veronica-winton.jpg'
 
 type Testimonial = {
   body: string
@@ -67,7 +67,7 @@ const testimonials: Testimonial[] = [
   // Add more testimonials here...
 ]
 
-export default function Testimonials() {
+export default function TestimonialsGroup() {
   return (
     <div className="bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">

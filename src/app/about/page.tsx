@@ -1,13 +1,16 @@
-import { Button } from '@/components/utils/button'
-import { Container } from '@/components/utils/container'
-import { Heading, Lead, Subheading } from '@/components/utils/text'
+import { Button } from '@/components/button'
+import { Container } from '@/components/container'
+import { Heading, Lead, Subheading } from '@/components/text'
 import type { Metadata } from 'next'
 import Image from 'next/image'
 
 export const metadata: Metadata = {
-  title: 'Company',
   description:
-    'We’re on a mission to transform revenue organizations by harnessing vast amounts of illegally acquired customer data.',
+    'Radiant helps you sell more by revealing sensitive information about your customers.',
+  robots: {
+    index: false,
+    follow: false,
+  },
 }
 
 function Header() {

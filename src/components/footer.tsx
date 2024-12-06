@@ -1,13 +1,9 @@
-import {
-  PlusGrid,
-  PlusGridItem,
-  PlusGridRow,
-} from '@/components/utils/plus-grid'
+import { PlusGrid, PlusGridItem, PlusGridRow } from '@/components/plus-grid'
 import Image from 'next/image'
-import { Button } from './utils/button'
-import { Container } from './utils/container'
-import { Gradient } from './utils/gradient'
-import { Link } from './utils/link'
+import { Button } from './button'
+import { Container } from './container'
+import { Gradient } from './gradient'
+import { Link } from './link'
 
 function CallToAction() {
   return (

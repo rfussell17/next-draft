@@ -1,12 +1,12 @@
 import { clsx } from 'clsx'
 import Image from 'next/image'
-import { Mark } from '../logo'
+import { Mark } from './logo'
 
 function Row({ children }: { children: React.ReactNode }) {
   return (
     <div className="group relative">
-      <div className="absolute inset-x-0 top-1/2 h-0.5 bg-gradient-to-r from-white/15 from-[2px] to-[2px] bg-[length:12px_100%]" />
-      <div className="absolute inset-x-0 bottom-0 h-0.5 bg-gradient-to-r from-white/5 from-[2px] to-[2px] bg-[length:12px_100%] group-last:hidden" />
+      <div className="from-white/15 absolute inset-x-0 top-1/2 h-0.5 bg-gradient-to-r from-[2px] to-[2px] bg-[length:12px_100%]" />
+      <div className="from-white/5 absolute inset-x-0 bottom-0 h-0.5 bg-gradient-to-r from-[2px] to-[2px] bg-[length:12px_100%] group-last:hidden" />
       {children}
     </div>
   )
@@ -26,12 +26,12 @@ function Logo({
       className={clsx(
         className,
         'absolute top-2 grid grid-cols-[1rem,1fr] items-center gap-2 whitespace-nowrap px-3 py-1',
-        'rounded-full bg-gradient-to-t from-gray-800 from-50% to-gray-700 ring-1 ring-inset ring-white/10',
+        'from-gray-800 to-gray-700 ring-white/10 rounded-full bg-gradient-to-t from-50% ring-1 ring-inset',
         '[--move-x-from:-100%] [--move-x-to:calc(100%+100cqw)] [animation-iteration-count:infinite] [animation-name:move-x] [animation-play-state:paused] [animation-timing-function:linear] group-hover:[animation-play-state:running]',
       )}
     >
       <Image alt="" src={src} className="size-4" width={200} height={200} />
-      <span className="text-sm/6 font-medium text-white">{label}</span>
+      <span className="text-white text-sm/6 font-medium">{label}</span>
     </div>
   )
 }
@@ -48,8 +48,8 @@ export function LogoTimeline() {
             maskRepeat: 'no-repeat',
           }}
         />
-        <div className="relative flex size-24 items-center justify-center rounded-xl bg-gradient-to-t from-white/5 to-white/25 shadow outline outline-offset-[-5px] outline-white/5 ring-1 ring-inset ring-white/10">
-          <Mark className="h-9 fill-white" />
+        <div className="from-white/5 to-white/25 outline-white/5 ring-white/10 relative flex size-24 items-center justify-center rounded-xl bg-gradient-to-t shadow outline outline-offset-[-5px] ring-1 ring-inset">
+          <Mark className="fill-white h-9" />
         </div>
       </div>
       <div className="absolute inset-0 grid grid-cols-1 pt-8 [container-type:inline-size]">

@@ -7,8 +7,8 @@ import {
 } from '@headlessui/react'
 import { Bars2Icon } from '@heroicons/react/24/solid'
 import Image from 'next/image'
-import { Link } from './utils/link'
-import { PlusGrid, PlusGridItem, PlusGridRow } from './utils/plus-grid'
+import { Link } from './link'
+import { PlusGrid, PlusGridItem, PlusGridRow } from './plus-grid'
 
 const links = [
   { href: '/', label: 'Home' },

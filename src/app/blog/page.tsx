@@ -8,8 +8,8 @@ import type {
   ReactElement,
   ReactNode,
 } from 'react'
-import { Container } from '../../components/utils/container'
-import { Heading, Lead } from '../../components/utils/text'
+import { Container } from '../../components/container'
+import { Heading, Lead } from '../../components/text'
 import { getWpPosts } from '../lib/wordpress'
 
 function Header() {

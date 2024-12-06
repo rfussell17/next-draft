@@ -1,7 +1,7 @@
+import { Container } from '@/components/container'
 import { Footer } from '@/components/footer'
+import { GradientBackground } from '@/components/gradient'
 import { Navbar } from '@/components/navbar'
-import { Container } from '@/components/utils/container'
-import { GradientBackground } from '@/components/utils/gradient'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {

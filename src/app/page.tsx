@@ -1,20 +1,24 @@
 import BodyDetail from '@/components/body-detail'
 import HowItWorks from '@/components/how-it-works'
 
-import CTA from '@/components/media/cta'
-import FAQ from '@/components/media/faq'
-import { LogoCloud } from '@/components/media/logo-cloud'
-import Testimonials from '@/components/media/testimonials'
+import { Button } from '@/components/button'
+import { Container } from '@/components/container'
+import CTA from '@/components/cta'
+import FAQ from '@/components/faq'
+import { LogoCloud } from '@/components/logo-cloud'
 import Pricing from '@/components/pricing'
-import { Button } from '@/components/utils/button'
-import { Container } from '@/components/utils/container'
-import { Screenshot } from '@/components/utils/screenshot'
-import { Heading } from '@/components/utils/text'
+import { Screenshot } from '@/components/screenshot'
+import Testimonials from '@/components/testimonials-group'
+import { Heading } from '@/components/text'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   description:
     'Radiant helps you sell more by revealing sensitive information about your customers.',
+  robots: {
+    index: false,
+    follow: false,
+  },
 }
 
 function Hero() {

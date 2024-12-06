@@ -1,9 +1,9 @@
-import { LogoCloud } from '@/components/media/logo-cloud'
-import { Button } from '@/components/utils/button'
-import { Container } from '@/components/utils/container'
-import { Gradient } from '@/components/utils/gradient'
-import { Link } from '@/components/utils/link'
-import { Heading, Lead, Subheading } from '@/components/utils/text'
+import { Button } from '@/components/button'
+import { Container } from '@/components/container'
+import { Gradient } from '@/components/gradient'
+import { Link } from '@/components/link'
+import { LogoCloud } from '@/components/logo-cloud'
+import { Heading, Lead, Subheading } from '@/components/text'
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import {
   CheckIcon,
@@ -16,6 +16,10 @@ export const metadata: Metadata = {
   title: 'Pricing',
   description:
     'Companies all over the world have closed millions of deals with Radiant. Sign up today and start selling smarter.',
+  robots: {
+    index: false,
+    follow: false,
+  },
 }
 
 const tiers = [

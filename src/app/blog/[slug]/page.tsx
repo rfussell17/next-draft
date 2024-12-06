@@ -1,8 +1,18 @@
 import parse, { type DOMNode } from 'html-react-parser'
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import sanitizeHtml from 'sanitize-html'
 import { getWpPost } from '../../lib/wordpress'
+
+export const metadata: Metadata = {
+  description:
+    'Radiant helps you sell more by revealing sensitive information about your customers.',
+  robots: {
+    index: false,
+    follow: false,
+  },
+}
 
 export default async function PostPage({
   params,

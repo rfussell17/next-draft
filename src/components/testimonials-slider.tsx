@@ -5,9 +5,9 @@ import { ArrowLongRightIcon } from '@heroicons/react/20/solid'
 import { clsx } from 'clsx'
 import Image from 'next/image'
 import { useRef, useState } from 'react'
-import { Container } from '../utils/container'
-import { Link } from '../utils/link'
-import { Heading, Subheading } from '../utils/text'
+import { Container } from './container'
+import { Link } from './link'
+import { Heading, Subheading } from './text'
 
 const testimonials = [
   {
