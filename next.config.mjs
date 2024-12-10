@@ -32,6 +32,7 @@ const nextConfig = {
       { hostname: 'res.cloudinary.com' },
       { hostname: 'img.youtube.com' },
       { hostname: 'lh7-us.googleusercontent.com' },
+      { hostname: 'tailwindui.com' },
     ],
   },
 }

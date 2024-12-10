@@ -14,8 +14,16 @@ module.exports = {
         '4xl': '2rem',
       },
       colors: {
-        primary: '#3B3E4E',
-        secondary: '#778780',
+        primary: '#404A63',
+        primaryLight: '#5E6E92',
+        secondary: '#815F72',
+        secondaryLight: '#875E6F',
+        tertiaryBlue: '#656A8A',
+        tertiaryPurple: '#73667F',
+      },
+      backgroundImage: {
+        'gradient-primary':
+          'linear-gradient(to right, #875E6F, #73667F, #404A63)',
       },
     },
   },

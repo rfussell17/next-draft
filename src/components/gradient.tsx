@@ -9,9 +9,13 @@ export function Gradient({
       {...props}
       className={clsx(
         className,
-        'bg-[linear-gradient(115deg,var(--tw-gradient-stops))]',
-        'from-[#4A4D5E] from-[40%] via-[#3B3E4E] via-[50%] to-[#2C2F3F] to-[60%]',
-        'sm:bg-[linear-gradient(145deg,var(--tw-gradient-stops))]',
+        'bg-gradient-to-r',
+        'from-[#875E6F]',
+        'via-[#815F72]',
+        'via-[#73667F]',
+        'via-[#656A8A]',
+        'via-[#5E6E92]',
+        'to-[#404A63]',
       )}
     />
   )

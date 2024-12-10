@@ -2,8 +2,10 @@
 
 import { Footer } from '@/components/footer'
 import { Navbar } from '@/components/navbar'
+
 import '@/styles/tailwind.css'
 import type { Metadata } from 'next'
+import { Fira_Sans } from 'next/font/google'
 
 export const metadata: Metadata = {
   title: {
@@ -12,13 +14,19 @@ export const metadata: Metadata = {
   },
 }
 
+const firaSans = Fira_Sans({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  display: 'swap',
+})
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={firaSans.className}>
       <head>
         <link
           rel="alternate"
