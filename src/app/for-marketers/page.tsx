@@ -1,7 +1,7 @@
 import BodyDetail from '@/components/body-detail'
 import { Container } from '@/components/container'
 import { Gradient } from '@/components/gradient'
-import Hero from '@/components/hero'
+import { HeroSecondary } from '@/components/hero-secondary'
 import { LogoCloud } from '@/components/logo-cloud'
 
 export default function ForMarketers(): JSX.Element {
@@ -34,25 +34,17 @@ export default function ForMarketers(): JSX.Element {
 
   return (
     <div>
-      <Hero
-        title={
-          <>
-            Technical Marketing
-            <br />
-            that Converts
-          </>
-        }
-        subtitle={
-          <>
-            We support Marketing Teams
-            <br />
-            with technical content.
-          </>
-        }
-        primaryButtonText="See our Content Marketing Services"
-        primaryButtonHref="#"
-        secondaryButtonText="Technical Writing Examples"
-        secondaryButtonHref="/pricing"
+      <HeroSecondary
+        title="Technical Marketing that Converts"
+        description="We support Marketing Teams with technical content."
+        eyebrowLabel="We help Marketors scale their efforts"
+        eyebrowText="See Our Technical Writing Examples "
+        eyebrowHref="#"
+        primaryCtaText="Get started"
+        primaryCtaHref="#"
+        secondaryCtaText="Learn more"
+        secondaryCtaHref="#"
+        imageSrc="https://tailwindui.com/plus/img/component-images/project-app-screenshot.png"
       />
       <main>
         <BodyDetail

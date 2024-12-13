@@ -14,10 +14,10 @@ module.exports = {
         '4xl': '2rem',
       },
       colors: {
-        primary: '#404A63',
+        secondary: '#404A63',
         primaryLight: '#5E6E92',
-        secondary: '#815F72',
-        secondaryLight: '#875E6F',
+        primary: '#815F72',
+        primaryLight: '#875E6F',
         tertiaryBlue: '#656A8A',
         tertiaryPurple: '#73667F',
       },

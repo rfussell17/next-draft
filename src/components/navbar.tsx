@@ -67,13 +67,13 @@ const links = [
 
 function DesktopNav() {
   return (
-    <nav className="relative hidden lg:flex">
+    <nav className="relative hidden text-primary lg:flex">
       {links.map(({ href, label }) => {
         if (label === 'Why Us?') {
           return (
             <div key={label} className="relative flex">
               <Popover className="relative">
-                <PopoverButton className="text-gray-950 data-[hover]:bg-black/[2.5%] flex items-center px-4 py-6">
+                <PopoverButton className="data-[hover]:bg-black/[2.5%] flex items-center px-4 py-6 font-medium text-primary">
                   {label}
                   <ChevronDownIcon className="text-gray-500 ml-2 h-4 w-4" />
                 </PopoverButton>
@@ -115,7 +115,7 @@ function DesktopNav() {
                                   as={Link}
                                   key={item.name}
                                   href={item.href}
-                                  className="text-gray-900 flex gap-x-4 py-2 text-sm font-semibold"
+                                  className="flex gap-x-4 py-2 text-sm font-semibold text-primary"
                                 >
                                   <item.icon
                                     aria-hidden="true"

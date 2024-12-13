@@ -6,7 +6,7 @@ import { Navbar } from '@/components/navbar'
 
 import '@/styles/tailwind.css'
 import type { Metadata } from 'next'
-import { Fira_Sans } from 'next/font/google'
+import { Fira_Code, Fira_Sans } from 'next/font/google'
 
 export const metadata: Metadata = {
   title: {
@@ -17,8 +17,16 @@ export const metadata: Metadata = {
 
 const firaSans = Fira_Sans({
   subsets: ['latin'],
-  weight: ['400', '700'],
+  weight: ['400', '500', '600', '700'],
   display: 'swap',
+  variable: '--font-fira-sans',
+})
+
+const firaCode = Fira_Code({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  display: 'swap',
+  variable: '--font-fira-code',
 })
 
 export default function RootLayout({
@@ -27,7 +35,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={firaSans.className}>
+    <html lang="en" className={`${firaSans.variable} ${firaCode.variable}`}>
       <head>
         <link
           rel="alternate"
@@ -37,7 +45,7 @@ export default function RootLayout({
         />
         <meta name="robots" content="noindex, nofollow, noarchive" />
       </head>
-      <body className="text-gray-950 antialiased">
+      <body className="text-gray-600 antialiased">
         <Navbar />
         <div className="min-h-screen">
           <main>{children}</main>

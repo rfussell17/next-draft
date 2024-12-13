@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import type { FC } from 'react'
+import { Heading, Subheading } from './text'
 
 interface Feature {
   name: string
@@ -34,23 +35,27 @@ const BodyDetailImage: FC<BodyDetailImageProps> = ({
         <div className="grid grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:grid-cols-2 lg:items-start">
           <div className="px-6 lg:px-0 lg:pr-4 lg:pt-4">
             <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-lg">
-              <h2 className="bg-gradient-primary text-transparent bg-clip-text text-4xl font-semibold leading-[1.2] tracking-tight sm:text-5xl">
-                {title}
-              </h2>
+              <Heading as="h2">{title}</Heading>
 
-              <p className="text-gray-600 mt-6 text-lg/8">{paragraph}</p>
+              <Subheading
+                as="h3"
+                textColor="dark"
+                className="text-gray-500 text-base sm:text-lg"
+              >
+                {paragraph}
+              </Subheading>
               <dl className="text-gray-600 mt-10 max-w-xl space-y-8 text-base/7 lg:max-w-none">
                 {features.map((feature) => (
                   <div key={feature.name} className="relative">
                     <dt className="mr-2 font-bold text-primary">
                       {feature.name}
                     </dt>
-                    <dd className="">{feature.description} </dd>
+                    <dd className="my-1">{feature.description} </dd>
                     <dd>
                       {feature.href && (
                         <Link
                           href={feature.href}
-                          className="font-semibold text-primary hover:underline"
+                          className="font-semibold text-secondary hover:underline"
                         >
                           Learn more →
                         </Link>

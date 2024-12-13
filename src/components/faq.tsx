@@ -1,3 +1,6 @@
+import Link from 'next/link'
+import { Heading, Subheading } from './text'
+
 type FAQ = {
   id: number
   question: string
@@ -46,28 +49,26 @@ const faqs: FAQ[] = [
 
 export default function FAQ(): JSX.Element {
   return (
-    <div className="bg-white">
-      <div className="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8">
-        <h2 className="bg-gradient-primary text-transparent bg-clip-text pb-2 text-5xl font-semibold leading-[1.2] tracking-tight sm:text-balance sm:text-6xl">
-          Frequently asked questions
-        </h2>
+    <div className="py-24 sm:py-32">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <Heading as="h2">Frequently asked questions</Heading>
 
-        <p className="text-gray-600 mt-6 max-w-2xl text-base/7">
+        <Subheading as="h3" textColor="dark" className="text-lg">
           Have a different question and can’t find the answer you’re looking
           for? Reach out to our support team by{' '}
-          <a
+          <Link
             href="#"
-            className="text-indigo-600 hover:text-indigo-500 font-semibold"
+            className="font-semibold text-primary hover:text-secondary"
           >
             sending us an email
-          </a>{' '}
+          </Link>{' '}
           and we’ll get back to you as soon as we can.
-        </p>
-        <div className="mt-20">
-          <dl className="space-y-16 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-16 sm:space-y-0 lg:gap-x-10">
+        </Subheading>
+        <div className="mt-12">
+          <dl className="space-y-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-10 sm:space-y-0 lg:gap-x-10">
             {faqs.map((faq) => (
               <div key={faq.id}>
-                <dt className="text-gray-900 text-base/7 font-semibold">
+                <dt className="text-base/7 font-semibold text-primary">
                   {faq.question}
                 </dt>
                 <dd className="text-gray-600 mt-2 text-base/7">{faq.answer}</dd>

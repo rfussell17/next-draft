@@ -3,10 +3,11 @@ import BodyDetailImage from '@/components/body-detail-image'
 import BodyDetailList from '@/components/body-detail-list'
 import { Button } from '@/components/button'
 import { Container } from '@/components/container'
-import CTA from '@/components/cta'
+import { CTA } from '@/components/cta'
 import { Gradient } from '@/components/gradient'
 import { LogoCloud } from '@/components/logo-cloud'
 import Testimonials from '@/components/testimonials-group'
+import { Subheading } from '@/components/text'
 import type { Metadata } from 'next'
 import type { FC } from 'react'
 
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
   },
 }
 
-const features1 = [
+const bodyDetailProps = [
   {
     name: 'Expert Writers',
     description1:
@@ -46,7 +47,7 @@ const features1 = [
   },
 ]
 
-const features2 = [
+const bodyDetailImageProps = [
   {
     name: 'Schedule A Discovery Call',
     description:
@@ -67,19 +68,28 @@ const features2 = [
   },
 ]
 
-const includedFeatures = [
+const bodyDetailListPropsOne = [
   'Private forum access',
   'SEO Keyword and topic ideation',
-  'Screenshots, diagrams, and code samples',
+  'Diagrams, and code samples',
   'Technical reviews',
   'Professional editing',
   'Social media collateral',
 ]
 
-const addonFeatures = [
+const bodyDetailListPropsTwo = [
   'Technical ebooks',
   'Executive ghostwriting',
   'Video tutorials',
+]
+
+const ctaProps = [
+  'Competitive salaries',
+  'Flexible work hours',
+  '30 days of paid vacation',
+  'Annual team retreats',
+  'Benefits for you and your family',
+  'A great work environment',
 ]
 
 interface HeroProps {
@@ -104,12 +114,16 @@ const Hero: FC<HeroProps> = ({
       <Gradient>
         <Container className="relative">
           <div className="pb-24 pt-16 sm:pb-32 sm:pt-24 md:pb-48 md:pt-32">
-            <h1 className="font-display text-white lg:leading-1 text-balance text-5xl/[0.9] font-medium tracking-tight md:text-7xl/[0.8]">
+            <h1 className="text-gray-100 text-5xl font-medium uppercase tracking-tighter md:text-7xl">
               {title}
             </h1>
-            <p className="text-white mt-8 max-w-lg text-xl/7 font-medium sm:text-2xl/8">
+            <Subheading
+              as="h2"
+              textColor="light"
+              className="max-w-lg text-xl sm:text-2xl/8"
+            >
               {subtitle}
-            </p>
+            </Subheading>
             <div className="mt-12 flex flex-col gap-x-6 gap-y-4 sm:flex-row">
               <Button
                 variant="primary"
@@ -143,11 +157,10 @@ export default function Home() {
 
       <main>
         <BodyDetail
-          title="Why Choose Us?"
+          title="Why choose us?"
           subtitleTop="We bring industry experts right to your blog."
           subtitleBottom="Let us handle the complexity of technical content creation."
-          features={features1}
-          learnMoreText="Discover More"
+          features={bodyDetailProps}
         />
         <Gradient className="py-20">
           <Container>
@@ -155,9 +168,9 @@ export default function Home() {
           </Container>
         </Gradient>
         <BodyDetailImage
-          title="How It Works"
+          title="How it works"
           paragraph="You're just one call away from getting started."
-          features={features2}
+          features={bodyDetailImageProps}
           mainImage={{
             src: 'https://tailwindui.com/plus/img/component-images/project-app-screenshot.png',
             alt: 'Product screenshot',
@@ -165,17 +178,26 @@ export default function Home() {
         />
 
         <BodyDetailList
-          title="Ongoing Technical Content"
+          title="Ongoing technical content"
           subtitle="Build a steady stream of technical content that scales with your business."
-          includedFeatures={includedFeatures}
-          addonTitle="Add-on Services"
-          addonFeatures={addonFeatures}
+          includedFeatures={bodyDetailListPropsOne}
+          addonTitle="Add-on services"
+          addonFeatures={bodyDetailListPropsTwo}
           requestPricingHref="#"
-          requestPricingText="Request Pricing"
+          requestPricingText="Request pricing"
         />
       </main>
       <Testimonials />
-      <CTA />
+
+      <CTA
+        title="Book a discovery call"
+        description="Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in accusamus quisquam."
+        imageSrc="https://images.unsplash.com/photo-1519338381761-c7523edc1f46?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        imageAlt="Team environment"
+        list={ctaProps}
+        linkHref="#"
+        linkText="See our job postings"
+      />
     </div>
   )
 }

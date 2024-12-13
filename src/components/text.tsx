@@ -1,25 +1,29 @@
 import { clsx } from 'clsx'
+import React from 'react'
+
+type TextColor = 'light' | 'dark'
 
 type HeadingProps = {
   as?: 'div' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
-  dark?: boolean
+  textColor?: TextColor
 } & React.ComponentPropsWithoutRef<
   'div' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
 >
 
 export function Heading({
   className,
-  as: Element = 'h1',
-  dark = false,
+  as: Element = 'h2',
+  textColor = 'dark',
   ...props
 }: HeadingProps) {
   return (
     <Element
       {...props}
-      data-dark={dark ? 'true' : undefined}
       className={clsx(
         className,
-        'text-gray-950 data-[dark]:text-white text-pretty text-4xl font-medium tracking-tighter sm:text-6xl',
+        'font-code',
+        'bg-gradient-primary bg-clip-text pb-1 text-4xl font-medium tracking-tighter sm:text-6xl',
+        'text-transparent',
       )}
     />
   )
@@ -28,29 +32,36 @@ export function Heading({
 export function Subheading({
   className,
   as: Element = 'h2',
-  dark = false,
+  textColor = 'light',
   ...props
 }: HeadingProps) {
+  const textClass = textColor === 'light' ? 'text-gray-100' : 'text-secondary'
+
   return (
     <Element
       {...props}
-      data-dark={dark ? 'true' : undefined}
       className={clsx(
         className,
-        'text-gray-500 data-[dark]:text-gray-400 font-mono text-xs/5 font-semibold uppercase tracking-widest',
+        'font-code',
+        textClass,
+        'mt-4',
+        'font-semibold',
       )}
     />
   )
 }
 
-export function Lead({
-  className,
-  ...props
-}: React.ComponentPropsWithoutRef<'p'>) {
+type LeadProps = {
+  textColor?: TextColor
+} & React.ComponentPropsWithoutRef<'p'>
+
+export function Lead({ className, textColor = 'dark', ...props }: LeadProps) {
+  const textClass = textColor === 'light' ? 'text-gray-100' : 'text-gray-500'
+
   return (
     <p
-      className={clsx(className, 'text-gray-500 text-2xl font-medium')}
       {...props}
+      className={clsx(className, 'font-sans', textClass, 'text-lg font-medium')}
     />
   )
 }

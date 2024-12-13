@@ -6,7 +6,7 @@ import { Button } from './button'
 
 function CallToAction() {
   return (
-    <div className="text-white relative pb-16 pt-20 text-center sm:py-24">
+    <div className="text-white relative py-24 text-center">
       <hgroup>
         <p className="text-white mt-6 text-3xl font-medium tracking-tight sm:text-5xl">
           Ready to dive in?

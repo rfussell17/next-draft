@@ -2,11 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
-@keyframes move-x {
-  0% {
-    transform: translateX(var(--move-x-from));
-  }
-  100% {
-    transform: translateX(var(--move-x-to));
-  }
+html,
+body {
+  font-family: var(--font-fira-sans), sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-fira-code), monospace;
+}
+
+p {
+  font-family: var(--font-fira-sans), sans-serif;
 }

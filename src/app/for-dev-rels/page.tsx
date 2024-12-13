@@ -3,7 +3,8 @@ import { UserGroupIcon } from '@heroicons/react/24/outline'
 import BodyDetail from '../../components/body-detail'
 import { Container } from '../../components/container'
 import { Gradient } from '../../components/gradient'
-import HeroTPC from '../../components/hero-tpc'
+
+import { HeroSecondary } from '@/components/hero-secondary'
 import { LogoCloud } from '../../components/logo-cloud'
 
 export default function ForDevRels(): JSX.Element {
@@ -85,14 +86,17 @@ export default function ForDevRels(): JSX.Element {
 
   return (
     <div>
-      <HeroTPC
-        eyebrow="We help DevRels scale their efforts"
+      <HeroSecondary
         title="Developer Marketing that Resonates"
         description="We support Developer Relations and Developer Advocate Teams by consistently delivering content that technical audiences truly care about and respect."
-        features={customFeatures}
-        accentColor="text-primary"
-        textColor="text-primary"
-        secondaryTextColor="text-gray-600"
+        eyebrowLabel="We help DevRels scale their efforts"
+        eyebrowText="See Our Technical Writing Examples "
+        eyebrowHref="#"
+        primaryCtaText="Get started"
+        primaryCtaHref="#"
+        secondaryCtaText="Learn more"
+        secondaryCtaHref="#"
+        imageSrc="https://tailwindui.com/plus/img/component-images/project-app-screenshot.png"
       />
       <main>
         <BodyDetail

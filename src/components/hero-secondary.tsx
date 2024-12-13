@@ -1,94 +1,89 @@
-import {
-  ArrowPathIcon,
-  CloudArrowUpIcon,
-  LockClosedIcon,
-} from '@heroicons/react/20/solid'
+import Image from 'next/image'
 import Link from 'next/link'
-import { Gradient } from './gradient'
+import type { FC } from 'react'
+import { Heading, Subheading } from './text'
 
-const HeroSecondary = ({
-  eyebrow = 'Deploy faster',
-  title = 'Everything you need to deploy your app',
-  description = 'Quis tellus eget adipiscing convallis sit sit eget aliquet quis. Suspendisse eget egestas a elementum pulvinar et feugiat blandit at. In mi viverra elit nunc.',
-  features = [
-    {
-      name: 'Push to deploy',
-      description:
-        'Commodo nec sagittis tortor mauris sed. Turpis tortor quis scelerisque diam id accumsan nullam tempus. Pulvinar etiam lacus volutpat eu.',
-      href: '#',
-      icon: CloudArrowUpIcon,
-    },
-    {
-      name: 'SSL certificates',
-      description:
-        'Pellentesque enim a commodo malesuada turpis eleifend risus. Facilisis donec placerat sapien consequat tempor fermentum nibh.',
-      href: '#',
-      icon: LockClosedIcon,
-    },
-    {
-      name: 'Simple queues',
-      description:
-        'Pellentesque sit elit congue ante nec amet. Dolor aenean curabitur viverra suspendisse iaculis eget. Nec mollis placerat ultricies euismod.',
-      href: '#',
-      icon: ArrowPathIcon,
-    },
-  ],
-  accentColor = 'text-white',
-  textColor = 'text-white',
-  secondaryTextColor = 'text-white',
+interface HeroSecondaryProps {
+  title: string
+  description: string
+  eyebrowLabel?: string
+  eyebrowText?: string
+  eyebrowHref?: string
+  primaryCtaText: string
+  primaryCtaHref: string
+  secondaryCtaText?: string
+  secondaryCtaHref?: string
+  imageSrc: string
+  imageAlt?: string
+}
+
+export const HeroSecondary: FC<HeroSecondaryProps> = ({
+  title,
+  description,
+  eyebrowLabel = "What's new",
+  eyebrowText,
+  eyebrowHref,
+  primaryCtaText,
+  primaryCtaHref,
+  secondaryCtaText,
+  secondaryCtaHref,
+  imageSrc,
+  imageAlt = 'App screenshot',
 }) => {
   return (
-    <Gradient>
-      <div className="py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl lg:text-center">
-            <h2 className={`text-base/7 font-semibold ${accentColor}`}>
-              {eyebrow}
-            </h2>
-            <p
-              className={`mt-2 text-pretty text-4xl font-semibold tracking-tight ${textColor} sm:text-5xl lg:text-balance`}
+    <div className="relative isolate overflow-hidden">
+      <div className="mx-auto max-w-7xl px-6 pb-24 pt-10 sm:pb-32 lg:flex lg:px-8 lg:py-24">
+        {/* Left Section */}
+        <div className="mx-auto max-w-2xl lg:mx-0 lg:shrink-0 lg:pt-8">
+          {eyebrowText && eyebrowHref && (
+            <div className="mt-24 sm:mt-32 lg:mt-16">
+              <Link href={eyebrowHref} className="inline-flex space-x-6">
+                <span className="rounded-full bg-primary/10 px-3 py-1 text-sm font-semibold text-primary ring-1 ring-inset ring-primary/10">
+                  {eyebrowLabel}
+                </span>
+              </Link>
+            </div>
+          )}
+
+          <Heading className="mt-10 text-5xl font-semibold tracking-tight sm:text-7xl">
+            {title}
+          </Heading>
+          <Subheading as="h3" textColor="dark" className="text-sm sm:text-lg">
+            {description}
+          </Subheading>
+          <div className="mt-10 flex items-center gap-x-6">
+            <Link
+              href={primaryCtaHref}
+              className="text-white hover:bg-secondaryLight focus-visible:outline-secondaryLight rounded-md bg-secondary px-3.5 py-2.5 text-sm font-semibold shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
             >
-              {title}
-            </p>
-            <p className={`mt-6 text-lg/8 ${secondaryTextColor}`}>
-              {description}
-            </p>
+              {primaryCtaText}
+            </Link>
+            {secondaryCtaText && secondaryCtaHref && (
+              <Link
+                href={secondaryCtaHref}
+                className="text-gray-500 text-sm font-semibold"
+              >
+                {secondaryCtaText} <span aria-hidden="true">→</span>
+              </Link>
+            )}
           </div>
-          <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-            <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
-              {features.map((feature) => (
-                <div key={feature.name} className="flex flex-col">
-                  <dt
-                    className={`flex items-center gap-x-3 text-base/7 font-semibold ${textColor}`}
-                  >
-                    <feature.icon
-                      aria-hidden="true"
-                      className={`size-5 flex-none ${accentColor}`}
-                    />
-                    {feature.name}
-                  </dt>
-                  <dd
-                    className={`mt-4 flex flex-auto flex-col text-base/7 ${secondaryTextColor}`}
-                  >
-                    <p className="flex-auto">{feature.description}</p>
-                    <p className="mt-6">
-                      <Link
-                        href={feature.href}
-                        className={`text-gray-100 rounded-xl bg-primary px-4 py-2 text-sm/6 font-semibold`}
-                      >
-                        See How We {feature.name}
-                        <span aria-hidden="true"> →</span>
-                      </Link>
-                    </p>
-                  </dd>
-                </div>
-              ))}
-            </dl>
+        </div>
+
+        {/* Right Section (Image) */}
+        <div className="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-32">
+          <div className="max-w-3xl flex-none sm:max-w-5xl lg:max-w-none">
+            <div className="bg-gray-900/5 ring-gray-900/10 -m-2 rounded-xl p-2 ring-1 ring-inset lg:-m-4 lg:rounded-2xl lg:p-4">
+              <Image
+                alt={imageAlt}
+                src={imageSrc}
+                width={2432}
+                height={1000}
+                className="w-[76rem] rounded-md shadow-2xl ring-1 ring-primary/10"
+              />
+            </div>
           </div>
         </div>
       </div>
-    </Gradient>
+    </div>
   )
 }
-
-export default HeroSecondary
