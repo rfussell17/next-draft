@@ -17,9 +17,7 @@ import {
 } from '@heroicons/react/24/outline'
 import { Bars2Icon, ChevronDownIcon } from '@heroicons/react/24/solid'
 import Image from 'next/image'
-import React from 'react'
 import { Link } from './link'
-import { PlusGridItem } from './plus-grid'
 
 const useCases = [
   { name: 'Drive Awareness', href: '#', icon: SignalIcon },
@@ -28,8 +26,8 @@ const useCases = [
 ]
 
 const whoWeHelp = [
-  { name: 'For Marketers', href: '#', icon: GlobeAltIcon },
-  { name: 'For DevRels', href: '#', icon: CodeBracketIcon },
+  { name: 'For Marketers', href: '/for-marketers', icon: GlobeAltIcon },
+  { name: 'For DevRels', href: '/for-dev-rels', icon: CodeBracketIcon },
 ]
 
 const recentPosts = [
@@ -59,7 +57,7 @@ const recentPosts = [
 ]
 
 const links = [
-  { href: '/services', label: 'Services' },
+  { href: '/for-dev-rels-two', label: 'Services' },
   { href: '/why-us', label: 'Why Us?' },
   { href: '/pricing', label: 'Pricing' },
   { href: '/about', label: 'About' },
@@ -73,7 +71,7 @@ function DesktopNav() {
       {links.map(({ href, label }) => {
         if (label === 'Why Us?') {
           return (
-            <PlusGridItem key={label} className="relative flex">
+            <div key={label} className="relative flex">
               <Popover className="relative">
                 <PopoverButton className="text-gray-950 data-[hover]:bg-black/[2.5%] flex items-center px-4 py-6">
                   {label}
@@ -90,7 +88,8 @@ function DesktopNav() {
                           <div className="mt-6 flow-root">
                             <div className="-my-2">
                               {useCases.map((item) => (
-                                <Link
+                                <PopoverButton
+                                  as={Link}
                                   key={item.name}
                                   href={item.href}
                                   className="text-gray-900 flex gap-x-4 py-2 text-sm font-semibold"
@@ -100,7 +99,7 @@ function DesktopNav() {
                                     className="text-gray-400 h-6 w-6 flex-none"
                                   />
                                   {item.name}
-                                </Link>
+                                </PopoverButton>
                               ))}
                             </div>
                           </div>
@@ -112,7 +111,8 @@ function DesktopNav() {
                           <div className="mt-6 flow-root">
                             <div className="-my-2">
                               {whoWeHelp.map((item) => (
-                                <Link
+                                <PopoverButton
+                                  as={Link}
                                   key={item.name}
                                   href={item.href}
                                   className="text-gray-900 flex gap-x-4 py-2 text-sm font-semibold"
@@ -122,7 +122,7 @@ function DesktopNav() {
                                     className="text-gray-400 h-6 w-6 flex-none"
                                   />
                                   {item.name}
-                                </Link>
+                                </PopoverButton>
                               ))}
                             </div>
                           </div>
@@ -150,18 +150,19 @@ function DesktopNav() {
                                 <time dateTime={post.datetime}>
                                   {post.date}
                                 </time>
-                                <Link
+                                <PopoverButton
+                                  as={Link}
                                   href={post.category.href}
                                   className="bg-gray-50 hover:bg-gray-100 relative z-10 rounded-full px-3 py-1.5 text-xs font-medium"
                                 >
                                   {post.category.title}
-                                </Link>
+                                </PopoverButton>
                               </div>
                               <h4 className="text-gray-900 mt-2 text-sm font-semibold">
-                                <Link href={post.href}>
+                                <PopoverButton as={Link} href={post.href}>
                                   <span className="absolute inset-0" />
                                   {post.title}
-                                </Link>
+                                </PopoverButton>
                               </h4>
                               <p className="text-gray-600 mt-2 text-sm">
                                 {post.description}
@@ -174,18 +175,18 @@ function DesktopNav() {
                   </div>
                 </PopoverPanel>
               </Popover>
-            </PlusGridItem>
+            </div>
           )
         }
         return (
-          <PlusGridItem key={href} className="relative flex">
+          <div key={href} className="relative flex">
             <Link
               href={href}
               className="text-gray-950 data-[hover]:bg-black/[2.5%] flex items-center px-4 py-3 text-base font-medium"
             >
               {label}
             </Link>
-          </PlusGridItem>
+          </div>
         )
       })}
     </nav>

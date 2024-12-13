@@ -48,9 +48,10 @@ export default function FAQ(): JSX.Element {
   return (
     <div className="bg-white">
       <div className="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8">
-        <h2 className="text-gray-900 text-4xl font-semibold tracking-tight sm:text-5xl">
+        <h2 className="bg-gradient-primary text-transparent bg-clip-text pb-2 text-5xl font-semibold leading-[1.2] tracking-tight sm:text-balance sm:text-6xl">
           Frequently asked questions
         </h2>
+
         <p className="text-gray-600 mt-6 max-w-2xl text-base/7">
           Have a different question and can’t find the answer you’re looking
           for? Reach out to our support team by{' '}

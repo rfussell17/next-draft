@@ -1,11 +1,11 @@
 import { Button } from '@/components/button'
 import { Container } from '@/components/container'
 import { Gradient } from '@/components/gradient'
-import type { FC } from 'react'
+import type { FC, ReactNode } from 'react'
 
 interface HeroProps {
-  title: string
-  subtitle: string
+  title: ReactNode
+  subtitle: ReactNode
   primaryButtonText: string
   primaryButtonHref: string
   secondaryButtonText: string

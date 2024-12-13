@@ -1,13 +1,11 @@
 import BodyDetail from '@/components/body-detail'
 import BodyDetailImage from '@/components/body-detail-image'
+import BodyDetailList from '@/components/body-detail-list'
 import { Button } from '@/components/button'
 import { Container } from '@/components/container'
 import CTA from '@/components/cta'
-import FAQ from '@/components/faq'
 import { Gradient } from '@/components/gradient'
 import { LogoCloud } from '@/components/logo-cloud'
-import { Navbar } from '@/components/navbar'
-import Pricing from '@/components/pricing'
 import Testimonials from '@/components/testimonials-group'
 import type { Metadata } from 'next'
 import type { FC } from 'react'
@@ -50,23 +48,38 @@ const features1 = [
 
 const features2 = [
   {
-    name: 'Expert Writers',
+    name: 'Schedule A Discovery Call',
     description:
-      'We have a global network of expert writers. Every piece undergoes thorough editorial review.',
+      "In this 30-minute introductory call, we'll learn about your company and marketing strategy. If Draft.dev is a good fit for your business, we can start the onboarding process.",
     href: '/learn-more',
   },
   {
-    name: 'Consistent Content',
+    name: 'Create Your Content Plan',
     description:
-      'We have a global network of expert writers. Every piece undergoes thorough editorial review.',
+      "Based on your budget, goals, and marketing strategy, we'll create your customized content plan. This helps you see exactly what you'll be getting and ensures that we meet your expectations.",
     href: '/content',
   },
   {
-    name: 'Reliable Delivery',
+    name: 'Ready-to-publish Technical Content',
     description:
-      'We have a global network of expert writers. Every piece undergoes thorough editorial review.',
+      "Once your content plan is approved and our team will get started, you'll receive tested and edited content that's ready to publish every 1-2 weeks. If our work ever falls short of your expectations, we'll work with you to revise it.",
     href: '/delivery',
   },
+]
+
+const includedFeatures = [
+  'Private forum access',
+  'SEO Keyword and topic ideation',
+  'Screenshots, diagrams, and code samples',
+  'Technical reviews',
+  'Professional editing',
+  'Social media collateral',
+]
+
+const addonFeatures = [
+  'Technical ebooks',
+  'Executive ghostwriting',
+  'Video tutorials',
 ]
 
 interface HeroProps {
@@ -136,13 +149,11 @@ export default function Home() {
           features={features1}
           learnMoreText="Discover More"
         />
-
         <Gradient className="py-20">
           <Container>
             <LogoCloud />
           </Container>
         </Gradient>
-
         <BodyDetailImage
           title="How It Works"
           paragraph="You're just one call away from getting started."
@@ -152,12 +163,19 @@ export default function Home() {
             alt: 'Product screenshot',
           }}
         />
-        <Pricing />
+
+        <BodyDetailList
+          title="Ongoing Technical Content"
+          subtitle="Build a steady stream of technical content that scales with your business."
+          includedFeatures={includedFeatures}
+          addonTitle="Add-on Services"
+          addonFeatures={addonFeatures}
+          requestPricingHref="#"
+          requestPricingText="Request Pricing"
+        />
       </main>
       <Testimonials />
-      <Navbar />
       <CTA />
-      <FAQ />
     </div>
   )
 }

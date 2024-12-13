@@ -1,5 +1,6 @@
 // app/layout.tsx
 
+import FAQ from '@/components/faq'
 import { Footer } from '@/components/footer'
 import { Navbar } from '@/components/navbar'
 
@@ -41,6 +42,7 @@ export default function RootLayout({
         <div className="min-h-screen">
           <main>{children}</main>
         </div>
+        <FAQ />
         <Footer />
       </body>
     </html>

@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import type { FC } from 'react'
 
 interface Feature {
@@ -26,7 +27,7 @@ const BodyDetail: FC<BodyDetailProps> = ({
     <div className="py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-gray-900 mt-2 text-4xl font-semibold tracking-tight sm:text-5xl">
+          <h2 className="bg-gradient-primary text-transparent bg-clip-text text-4xl font-semibold tracking-tight sm:text-5xl">
             {title}
           </h2>
           <p className="text-gray-600 mt-6 text-lg">{subtitleTop}</p>
@@ -42,13 +43,14 @@ const BodyDetail: FC<BodyDetailProps> = ({
                 <dd className="text-gray-600 mt-4 flex flex-auto flex-col text-base">
                   <p className="flex-auto">{feature.description1}</p>
                   <p className="flex-auto">{feature.description2}</p>
-                  <p className="mt-6">
-                    <a
+                  <p className="z-50 mt-6">
+                    <Link
                       href={feature.href}
-                      className="text-sm font-semibold text-primary"
+                      className="text-primary-light text-sm font-semibold"
                     >
-                      {learnMoreText} <span aria-hidden="true">→</span>
-                    </a>
+                      Discover our {feature.name}
+                      <span aria-hidden="true">→</span>
+                    </Link>
                   </p>
                 </dd>
               </div>

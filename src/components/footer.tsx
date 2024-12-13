@@ -1,9 +1,8 @@
-import { PlusGrid, PlusGridItem, PlusGridRow } from '@/components/plus-grid'
+import { Container } from '@/components/container'
+import { Gradient } from '@/components/gradient'
+import { Link } from '@/components/link'
 import Image from 'next/image'
 import { Button } from './button'
-import { Container } from './container'
-import { Gradient } from './gradient'
-import { Link } from './link'
 
 function CallToAction() {
   return (
@@ -145,7 +144,7 @@ function SocialLinks() {
 
 function Copyright() {
   return (
-    <div className="text-white text-sm/6">
+    <div className="text-white text-center text-sm/6">
       &copy; {new Date().getFullYear()} Draft.Dev
     </div>
   )
@@ -155,40 +154,39 @@ export function Footer() {
   return (
     <footer>
       <Gradient className="relative">
-        <div className="text-white absolute inset-0 bg-primary/80" />
+        <div className="text-white" />
         <Container>
           <CallToAction />
-          <PlusGrid className="pb-16">
-            <PlusGridRow>
-              <div className="grid grid-cols-2 gap-y-10 pb-6 lg:grid-cols-6 lg:gap-8">
-                <div className="col-span-2">
-                  <PlusGridItem className="pt-10">
-                    <Link href="/" title="Home">
-                      <Image
-                        src="/draft-temp-white.png"
-                        alt="Logo"
-                        width={180}
-                        height={72}
-                      />
-                    </Link>
-                    <div className="mt-6 flex justify-start gap-6">
-                      <SocialLinks />
-                    </div>
-                  </PlusGridItem>
-                </div>
-                <div className="col-span-2 grid grid-cols-2 gap-x-8 gap-y-12 lg:col-span-4 lg:grid-cols-subgrid lg:pt-6">
-                  <Sitemap />
+          <div className="pb-16">
+            <div className="grid grid-cols-2 gap-y-10 pb-6 lg:grid-cols-6 lg:gap-8">
+              <div className="col-span-2">
+                <div className="pt-10">
+                  <Link href="/" title="Home">
+                    <Image
+                      src="/draft-temp-white.png"
+                      alt="Logo"
+                      width={180}
+                      height={72}
+                    />
+                  </Link>
+                  <div className="mt-6 flex justify-start gap-6">
+                    <SocialLinks />
+                  </div>
                 </div>
               </div>
-            </PlusGridRow>
-            <PlusGridRow className="flex justify-between">
+              <div className="col-span-2 grid grid-cols-2 gap-x-8 gap-y-12 lg:col-span-4 lg:grid-cols-subgrid lg:pt-6">
+                <Sitemap />
+              </div>
+            </div>
+
+            <div className="flex justify-between">
               <div>
-                <PlusGridItem className="py-3">
+                <div className="py-3">
                   <Copyright />
-                </PlusGridItem>
+                </div>
               </div>
-            </PlusGridRow>
-          </PlusGrid>
+            </div>
+          </div>
         </Container>
       </Gradient>
     </footer>

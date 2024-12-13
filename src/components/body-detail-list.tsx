@@ -1,39 +1,41 @@
 import { CheckIcon } from '@heroicons/react/20/solid'
 import Link from 'next/link'
+import type { FC, ReactNode } from 'react'
 import { Gradient } from './gradient'
 
-const includedFeatures: string[] = [
-  'Private forum access',
-  'SEO Keyword and topic ideation',
-  'Screenshots, diagrams, and code samples',
-  'Technical reviews',
-  'Professional editing',
-  'Social media collateral',
-]
+interface BodyDetailListProps {
+  title: ReactNode
+  subtitle: ReactNode
+  includedFeatures: string[]
+  addonTitle: ReactNode
+  addonFeatures: string[]
+  requestPricingHref: string
+  requestPricingText: string
+}
 
-const addonFeatures: string[] = [
-  'Technical ebooks',
-  'Executive ghostwriting',
-  'Video tutorials',
-]
-
-export default function Pricing(): JSX.Element {
+const BodyDetailList: FC<BodyDetailListProps> = ({
+  title,
+  subtitle,
+  includedFeatures,
+  addonTitle,
+  addonFeatures,
+  requestPricingHref,
+  requestPricingText,
+}) => {
   return (
     <div className="py-10 sm:py-16">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-4xl sm:text-center">
           <h2 className="bg-gradient-primary text-transparent bg-clip-text pb-2 text-5xl font-semibold leading-[1.2] tracking-tight sm:text-balance sm:text-6xl">
-            Ongoing Technical Content
+            {title}
           </h2>
         </div>
         <Gradient className="rounded-xl">
           <div className="ring-gray-200 text-white mx-auto mt-16 max-w-2xl sm:mt-20 lg:mx-0 lg:flex lg:max-w-none">
             <div className="p-8 sm:p-10 lg:flex-auto">
               <h3 className="text-4xl font-semibold tracking-tight">
-                Build a steady stream of technical content that scales with your
-                business.
+                {subtitle}
               </h3>
-
               <div className="mt-10 flex items-center gap-x-4">
                 <h4 className="flex-none text-sm/6 font-semibold">
                   What’s included
@@ -59,7 +61,7 @@ export default function Pricing(): JSX.Element {
               <div className="bg-gray-50 ring-gray-900/5 rounded-2xl py-10 text-center ring-1 ring-inset lg:flex lg:flex-col lg:justify-center lg:py-16">
                 <div className="mx-auto max-w-xs px-8">
                   <p className="text-gray-600 text-base font-semibold">
-                    Add-on Services
+                    {addonTitle}
                   </p>
                   <span className="mt-6 flex items-baseline justify-center gap-x-2">
                     <ul
@@ -78,10 +80,10 @@ export default function Pricing(): JSX.Element {
                     </ul>
                   </span>
                   <Link
-                    href="#"
+                    href={requestPricingHref}
                     className="text-white mt-10 block w-full rounded-md bg-primary px-3 py-2 text-center text-base font-semibold shadow-sm hover:bg-secondary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                   >
-                    Request Pricing
+                    {requestPricingText}
                   </Link>
                 </div>
               </div>
@@ -92,3 +94,5 @@ export default function Pricing(): JSX.Element {
     </div>
   )
 }
+
+export default BodyDetailList
