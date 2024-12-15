@@ -25,7 +25,7 @@ const BodyDetail: FC<BodyDetailProps> = ({
   learnMoreText = 'Learn more',
 }) => {
   return (
-    <div className="py-24 sm:py-32">
+    <div className="py-16 sm:py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <Heading as="h2">{title}</Heading>
@@ -49,7 +49,7 @@ const BodyDetail: FC<BodyDetailProps> = ({
                       href={feature.href}
                       className="font-semibold text-secondary"
                     >
-                      Our {feature.name}
+                      {learnMoreText} {feature.name}
                       <span aria-hidden="true"> →</span>
                     </Link>
                   </p>

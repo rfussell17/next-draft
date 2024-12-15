@@ -92,11 +92,11 @@ function DesktopNav() {
                                   as={Link}
                                   key={item.name}
                                   href={item.href}
-                                  className="text-gray-900 flex gap-x-4 py-2 text-sm font-semibold"
+                                  className="flex gap-x-4 py-2 text-sm font-semibold text-secondary"
                                 >
                                   <item.icon
                                     aria-hidden="true"
-                                    className="text-gray-400 h-6 w-6 flex-none"
+                                    className="h-6 w-6 flex-none text-primary"
                                   />
                                   {item.name}
                                 </PopoverButton>
@@ -115,11 +115,11 @@ function DesktopNav() {
                                   as={Link}
                                   key={item.name}
                                   href={item.href}
-                                  className="flex gap-x-4 py-2 text-sm font-semibold text-primary"
+                                  className="flex gap-x-4 py-2 text-sm font-semibold text-secondary"
                                 >
                                   <item.icon
                                     aria-hidden="true"
-                                    className="text-gray-400 h-6 w-6 flex-none"
+                                    className="h-6 w-6 flex-none text-primary"
                                   />
                                   {item.name}
                                 </PopoverButton>
@@ -182,7 +182,7 @@ function DesktopNav() {
           <div key={href} className="relative flex">
             <Link
               href={href}
-              className="text-gray-950 data-[hover]:bg-black/[2.5%] flex items-center px-4 py-3 text-base font-medium"
+              className="data-[hover]:bg-black/[2.5%] flex items-center px-4 py-3 text-base font-medium text-primary"
             >
               {label}
             </Link>

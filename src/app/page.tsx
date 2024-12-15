@@ -114,7 +114,7 @@ const Hero: FC<HeroProps> = ({
       <Gradient>
         <Container className="relative">
           <div className="pb-24 pt-16 sm:pb-32 sm:pt-24 md:pb-48 md:pt-32">
-            <h1 className="text-gray-100 text-5xl font-medium uppercase tracking-tighter md:text-7xl">
+            <h1 className="text-5xl font-medium uppercase tracking-tighter text-gray-100 md:text-7xl">
               {title}
             </h1>
             <Subheading
@@ -161,6 +161,7 @@ export default function Home() {
           subtitleTop="We bring industry experts right to your blog."
           subtitleBottom="Let us handle the complexity of technical content creation."
           features={bodyDetailProps}
+          learnMoreText="Discover our"
         />
         <Gradient className="py-20">
           <Container>

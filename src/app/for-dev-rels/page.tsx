@@ -1,85 +1,45 @@
-import { BoltIcon } from '@heroicons/react/20/solid'
-import { UserGroupIcon } from '@heroicons/react/24/outline'
 import BodyDetail from '../../components/body-detail'
 import { Container } from '../../components/container'
 import { Gradient } from '../../components/gradient'
 
+import { CTA } from '@/components/cta'
 import { HeroSecondary } from '@/components/hero-secondary'
+import TestimonialsGroup from '@/components/testimonials-group'
 import { LogoCloud } from '../../components/logo-cloud'
 
 export default function ForDevRels(): JSX.Element {
-  const customFeatures = [
-    {
-      name: 'Drive Awareness',
-      description:
-        'With a track record of predictably creating demand, our content strategists help implement proven frameworks that drive traffic and inbound leads. We ensure our blog posts, eBooks and video tutorials are accurate, engaging, and resonate with your technical audience.',
-      href: '/custom-link',
-      icon: BoltIcon,
-    },
-    {
-      name: 'Capture Leads',
-      description:
-        'Our subject matter experts evaluate your product and help build out your content roadmap, turning readers into leads, and leads into new customers. Recurring check-ins ensure we adapt our content production plan according to the latest learnings.',
-      href: '/custom-link',
-      icon: BoltIcon,
-    },
-    {
-      name: 'Build Trust',
-      description:
-        'Everything we deliver to you is written and reviewed by practicing technical professionals and edited by professional editors. Outsource the creation of technical content to us and build respect and engagement with software developers, DevOps, data engineers, and more.',
-      href: '/custom-link',
-      icon: BoltIcon,
-    },
-    // ... more features
-  ]
-
-  const features1 = [
-    {
-      name: 'Drive Awareness',
-      description:
-        'With a track record of predictably creating demand, our content strategists help implement proven frameworks that drive traffic and inbound leads. We ensure our blog posts, eBooks and video tutorials are accurate, engaging, and resonate with your technical audience.',
-      href: '/custom-link',
-      icon: UserGroupIcon,
-    },
-    {
-      name: 'Capture Leads',
-      description:
-        'Our subject matter experts evaluate your product and help build out your content roadmap, turning readers into leads, and leads into new customers. Recurring check-ins ensure we adapt our content production plan according to the latest learnings.',
-      href: '/custom-link',
-      icon: UserGroupIcon,
-    },
-    {
-      name: 'Build Trust',
-      description:
-        'Everything we deliver to you is written and reviewed by practicing technical professionals and edited by professional editors. Outsource the creation of technical content to us and build respect and engagement with software developers, DevOps, data engineers, and more.',
-      href: '/custom-link',
-      icon: UserGroupIcon,
-    },
+  const ctaProps = [
+    'DevRel Specific content in here',
+    'Flexible work hours',
+    '30 days of paid vacation',
+    'Annual team retreats',
+    'Benefits for you and your family',
+    'A great work environment',
   ]
 
   const features2 = [
     {
-      name: 'Expert Writers',
+      name: 'Drive Awareness',
       description1:
-        'We have a global network of expert writers. Every piece undergoes thorough editorial review.',
+        'With a track record of predictably creating demand, our content strategists help implement proven frameworks that drive traffic and inbound leads.',
       description2:
-        'We have a global network of expert writers. Every piece undergoes thorough editorial review.',
+        'We ensure our blog posts, eBooks and video tutorials are accurate, engaging, and resonate with your technical audience.',
       href: '/learn-more',
     },
     {
-      name: 'Consistent Content',
+      name: 'Capture Leads',
       description1:
-        'We have a global network of expert writers. Every piece undergoes thorough editorial review.',
+        'Our subject matter experts evaluate your product and help build out your content roadmap, turning readers into leads, and leads into new customers.',
       description2:
-        'We have a global network of expert writers. Every piece undergoes thorough editorial review.',
+        'Recurring check-ins ensure we adapt our content production plan according to the latest learnings.',
       href: '/content',
     },
     {
-      name: 'Reliable Delivery',
+      name: 'Build Trust',
       description1:
-        'We have a global network of expert writers. Every piece undergoes thorough editorial review.',
+        'Everything we deliver to you is written and reviewed by practicing technical professionals and edited by professional editors.',
       description2:
-        'We have a global network of expert writers. Every piece undergoes thorough editorial review.',
+        'Outsource the creation of technical content to us and build respect and engagement with software developers, DevOps, data engineers, and more.',
       href: '/delivery',
     },
   ]
@@ -104,13 +64,23 @@ export default function ForDevRels(): JSX.Element {
           subtitleTop="We bring industry experts right to your blog."
           subtitleBottom="Let us handle the complexity of technical content creation."
           features={features2}
-          learnMoreText="Discover More"
+          learnMoreText="See how we"
         />
         <Gradient className="py-20">
           <Container>
             <LogoCloud />
           </Container>
         </Gradient>
+        <TestimonialsGroup />
+        <CTA
+          title="Book a discovery call"
+          description="Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in accusamus quisquam."
+          imageSrc="https://images.unsplash.com/photo-1519338381761-c7523edc1f46?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          imageAlt="Team environment"
+          list={ctaProps}
+          linkHref="#"
+          linkText="See our job postings"
+        />
       </main>
     </div>
   )
