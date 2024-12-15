@@ -150,9 +150,9 @@ export default function Home() {
         title="A Content Creation Agency for Technical Writing"
         subtitle="We help Marketers and DevRels attract a technical audience."
         primaryButtonText="See our Content Marketing Services"
-        primaryButtonHref="#"
+        primaryButtonHref="/for-marketers"
         secondaryButtonText="Technical Writing Examples"
-        secondaryButtonHref="/pricing"
+        secondaryButtonHref="/for-dev-rels"
       />
 
       <main>

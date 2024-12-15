@@ -20,8 +20,12 @@ import Image from 'next/image'
 import { Link } from './link'
 
 const useCases = [
-  { name: 'Drive Awareness', href: '#', icon: SignalIcon },
-  { name: 'Capture Leads', href: '#', icon: ClipboardDocumentCheckIcon },
+  { name: 'Drive Awareness', href: '/drive-awareness', icon: SignalIcon },
+  {
+    name: 'Capture Leads',
+    href: '/capture-leads',
+    icon: ClipboardDocumentCheckIcon,
+  },
   { name: 'Build Trust', href: '/build-trust', icon: UserGroupIcon },
 ]
 

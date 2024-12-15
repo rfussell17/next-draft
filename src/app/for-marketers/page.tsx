@@ -38,7 +38,7 @@ export default function ForMarketers(): JSX.Element {
         'We drive traffic with a consistent cadence of content, freeing up your marketers and developers to focus on other priorities.',
       description2:
         'Benefit from a dedicated content strategist who uses proven frameworks to make sure your content program delivers the highest ROI for your business.',
-      href: '/learn-more',
+      href: '/drive-awareness',
     },
     {
       name: 'Capture Leads',
@@ -46,7 +46,7 @@ export default function ForMarketers(): JSX.Element {
         'Our teams provide you with technical ebooks, whitepapers, landing page copywriting, and social media posts.',
       description2:
         'Capture leads by implementing a predictable lead-generation engine that converts organic traffic automatically into high-quality MQLs and SQLs',
-      href: '/content',
+      href: '/capture-leads',
     },
     {
       name: 'Build Trust',
@@ -54,7 +54,7 @@ export default function ForMarketers(): JSX.Element {
         'We deliver high-quality tech content that is written and reviewed by experienced developers and edited by professional editors. ',
       description2:
         'Build credibility with your technical audiences through a consistent stream of quality content, tailored specifically to their needs and interests.',
-      href: '/delivery',
+      href: '/build-trust',
     },
   ]
 

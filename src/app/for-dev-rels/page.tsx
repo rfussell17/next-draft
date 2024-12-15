@@ -24,7 +24,7 @@ export default function ForDevRels(): JSX.Element {
         'With a track record of predictably creating demand, our content strategists help implement proven frameworks that drive traffic and inbound leads.',
       description2:
         'We ensure our blog posts, eBooks and video tutorials are accurate, engaging, and resonate with your technical audience.',
-      href: '/learn-more',
+      href: '/drive-awareness',
     },
     {
       name: 'Capture Leads',
@@ -32,7 +32,7 @@ export default function ForDevRels(): JSX.Element {
         'Our subject matter experts evaluate your product and help build out your content roadmap, turning readers into leads, and leads into new customers.',
       description2:
         'Recurring check-ins ensure we adapt our content production plan according to the latest learnings.',
-      href: '/content',
+      href: '/capture-leads',
     },
     {
       name: 'Build Trust',
@@ -40,7 +40,7 @@ export default function ForDevRels(): JSX.Element {
         'Everything we deliver to you is written and reviewed by practicing technical professionals and edited by professional editors.',
       description2:
         'Outsource the creation of technical content to us and build respect and engagement with software developers, DevOps, data engineers, and more.',
-      href: '/delivery',
+      href: '/build-trust',
     },
   ]
 
