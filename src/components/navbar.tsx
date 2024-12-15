@@ -22,7 +22,7 @@ import { Link } from './link'
 const useCases = [
   { name: 'Drive Awareness', href: '#', icon: SignalIcon },
   { name: 'Capture Leads', href: '#', icon: ClipboardDocumentCheckIcon },
-  { name: 'Build Trust', href: '#', icon: UserGroupIcon },
+  { name: 'Build Trust', href: '/build-trust', icon: UserGroupIcon },
 ]
 
 const whoWeHelp = [
@@ -73,16 +73,16 @@ function DesktopNav() {
           return (
             <div key={label} className="relative flex">
               <Popover className="relative">
-                <PopoverButton className="data-[hover]:bg-black/[2.5%] flex items-center px-4 py-6 font-medium text-primary">
+                <PopoverButton className="flex items-center px-4 py-6 font-medium text-primary data-[hover]:bg-black/[2.5%]">
                   {label}
-                  <ChevronDownIcon className="text-gray-500 ml-2 h-4 w-4" />
+                  <ChevronDownIcon className="ml-2 h-4 w-4 text-gray-500" />
                 </PopoverButton>
-                <PopoverPanel className="bg-white ring-black/5 absolute left-1/2 z-50 mt-2 w-screen max-w-4xl -translate-x-1/2 rounded-xl shadow-lg ring-1">
+                <PopoverPanel className="absolute left-1/2 z-50 mt-2 w-screen max-w-4xl -translate-x-1/2 rounded-xl bg-white shadow-lg ring-1 ring-black/5">
                   <div className="p-6 lg:p-5">
                     <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-2">
                       <div className="grid grid-cols-2 gap-x-6 sm:gap-x-8">
                         <div>
-                          <h3 className="text-gray-500 text-sm font-medium">
+                          <h3 className="text-sm font-medium text-gray-500">
                             Use Cases
                           </h3>
                           <div className="mt-6 flow-root">
@@ -105,7 +105,7 @@ function DesktopNav() {
                           </div>
                         </div>
                         <div>
-                          <h3 className="text-gray-500 text-sm font-medium">
+                          <h3 className="text-sm font-medium text-gray-500">
                             Who We Help
                           </h3>
                           <div className="mt-6 flow-root">
@@ -139,32 +139,32 @@ function DesktopNav() {
                               <Image
                                 alt=""
                                 src={post.imageUrl}
-                                className="bg-gray-100 aspect-[2/1] w-full rounded-lg object-cover"
+                                className="aspect-[2/1] w-full rounded-lg bg-gray-100 object-cover"
                                 height={200}
                                 width={300}
                               />
-                              <div className="ring-gray-900/10 absolute inset-0 rounded-lg ring-1 ring-inset" />
+                              <div className="absolute inset-0 rounded-lg ring-1 ring-inset ring-gray-900/10" />
                             </div>
                             <div>
-                              <div className="text-gray-600 flex items-center gap-x-4 text-sm">
+                              <div className="flex items-center gap-x-4 text-sm text-gray-600">
                                 <time dateTime={post.datetime}>
                                   {post.date}
                                 </time>
                                 <PopoverButton
                                   as={Link}
                                   href={post.category.href}
-                                  className="bg-gray-50 hover:bg-gray-100 relative z-10 rounded-full px-3 py-1.5 text-xs font-medium"
+                                  className="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 text-xs font-medium hover:bg-gray-100"
                                 >
                                   {post.category.title}
                                 </PopoverButton>
                               </div>
-                              <h4 className="text-gray-900 mt-2 text-sm font-semibold">
+                              <h4 className="mt-2 text-sm font-semibold text-gray-900">
                                 <PopoverButton as={Link} href={post.href}>
                                   <span className="absolute inset-0" />
                                   {post.title}
                                 </PopoverButton>
                               </h4>
-                              <p className="text-gray-600 mt-2 text-sm">
+                              <p className="mt-2 text-sm text-gray-600">
                                 {post.description}
                               </p>
                             </div>
@@ -182,7 +182,7 @@ function DesktopNav() {
           <div key={href} className="relative flex">
             <Link
               href={href}
-              className="data-[hover]:bg-black/[2.5%] flex items-center px-4 py-3 text-base font-medium text-primary"
+              className="flex items-center px-4 py-3 text-base font-medium text-primary data-[hover]:bg-black/[2.5%]"
             >
               {label}
             </Link>
@@ -196,7 +196,7 @@ function DesktopNav() {
 function MobileNavButton() {
   return (
     <DisclosureButton
-      className="data-[hover]:bg-black/5 flex size-12 items-center justify-center self-center rounded-lg lg:hidden"
+      className="flex size-12 items-center justify-center self-center rounded-lg data-[hover]:bg-black/5 lg:hidden"
       aria-label="Open main menu"
     >
       <Bars2Icon className="size-6" />
@@ -212,7 +212,7 @@ function MobileNav() {
           <div key={href} className="transition-opacity duration-200">
             <Link
               href={href}
-              className="text-gray-950 px-6 text-base font-medium"
+              className="px-6 text-base font-medium text-gray-950"
             >
               {label}
             </Link>
@@ -220,8 +220,8 @@ function MobileNav() {
         ))}
       </div>
       <div className="absolute left-1/2 w-screen -translate-x-1/2">
-        <div className="border-black/5 absolute inset-x-0 top-0 border-t" />
-        <div className="border-black/5 absolute inset-x-0 top-2 border-t" />
+        <div className="absolute inset-x-0 top-0 border-t border-black/5" />
+        <div className="absolute inset-x-0 top-2 border-t border-black/5" />
       </div>
     </DisclosurePanel>
   )
