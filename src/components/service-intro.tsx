@@ -5,6 +5,7 @@ interface Feature {
   name: string
   description: string
   href: string
+  cta: string
   icon: React.ComponentType<React.SVGProps<SVGSVGElement>>
 }
 
@@ -22,13 +23,13 @@ export function ServiceIntro({
   features,
 }: ServiceIntroProps) {
   return (
-    <div className="bg-white py-24 sm:py-32">
+    <div className="py-16 sm:py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-3xl lg:text-center">
           {eyebrow && (
             <Subheading
               as="h3"
-              className="rounded-full bg-primary/10 px-3 py-1 text-sm font-semibold text-primary ring-1 ring-inset ring-primary/10"
+              className="mb-2 inline-block rounded-full bg-primary/10 px-3 py-1 text-sm font-semibold text-primary ring-1 ring-inset ring-primary/10"
             >
               {eyebrow}
             </Subheading>
@@ -48,21 +49,21 @@ export function ServiceIntro({
           <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
             {features.map((feature) => (
               <div key={feature.name} className="flex flex-col">
-                <dt className="flex items-center gap-x-3 text-base/7 font-semibold text-gray-900">
+                <dt className="flex items-center gap-x-3 text-base/7 font-semibold text-gray-600">
                   <feature.icon
                     aria-hidden="true"
-                    className="size-5 flex-none text-indigo-600"
+                    className="size-5 flex-none text-primary"
                   />
                   {feature.name}
                 </dt>
                 <dd className="mt-4 flex flex-auto flex-col text-base/7 text-gray-600">
                   <p className="flex-auto">{feature.description}</p>
-                  <p className="mt-6">
+                  <p className="mt-3">
                     <Link
                       href={feature.href}
-                      className="text-sm/6 font-semibold text-indigo-600"
+                      className="text-sm/6 font-semibold text-primary"
                     >
-                      Learn more <span aria-hidden="true">→</span>
+                      {feature.cta} <span aria-hidden="true">→</span>
                     </Link>
                   </p>
                 </dd>

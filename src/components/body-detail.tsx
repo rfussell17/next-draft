@@ -43,7 +43,7 @@ const BodyDetail: FC<BodyDetailProps> = ({
                 </dt>
                 <dd className="mt-2 flex flex-auto flex-col">
                   <p className="my-1 flex-auto">{feature.description1}</p>
-
+                  <p className="my-1 flex-auto">{feature.description2}</p>
                   <p className="z-50 mt-2">
                     <Link
                       href={feature.href}

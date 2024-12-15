@@ -7,24 +7,27 @@ import { ServiceIntro } from '../../components/service-intro'
 
 const features = [
   {
-    name: 'Predictable Leads',
+    name: 'Technical Writing that Convinces',
     description:
-      'We help you establish and maintain a predictable lead generation engine based on ebooks, whitepapers, landing page copywriting and social media posts, that automatically works for you in the background. ',
+      'Everything we produce is written by subject matter experts, technically reviewed and professionally edited by our in-house team, delivered to you in a ready-to-publish format along with social posts and SEO meta descriptions.',
     href: '#',
+    cta: 'See Technical Writing Examples',
     icon: CloudArrowUpIcon,
   },
   {
-    name: 'Lead Qualification',
+    name: 'Thought Leadership Content',
     description:
-      'With our proven lead qualification system and our expert guidance you will consistently convert organic traffic into high-quality Marketing Qualified Leads and Sales Qualified Leads your Sales organization can close.',
+      'We provide you with written and video material that allows for a consistent output of high-quality content. The topics we work on are defined by experienced developers and are guaranteed to resonate with your readers.',
     href: '#',
+    cta: 'About Our Thought Leadership Content Marketing',
     icon: LockClosedIcon,
   },
   {
-    name: 'Recurring check-ins',
+    name: 'Build Respect with Your Technical Audience',
     description:
-      'Maximize your lead generation ROI with our analytical data-driven approach. Recurring check-ins ensure we adapt our content production plan according to the latest learnings.',
+      'Our internal subject matter experts evaluate your product and will take care of writing, reviewing, and editing content pieces, be it blog posts, ebooks, or white papers about your industry or your product specifically.',
     href: '#',
+    cta: 'Outsource Your Technical Writing',
     icon: ArrowPathIcon,
   },
 ]
@@ -32,9 +35,9 @@ const features = [
 export default function BuildTrust() {
   return (
     <ServiceIntro
-      eyebrow="Consistently turn organic traffic into MQLs and SQLs"
-      title="Inbound Lead Generation and Technical Copy Writing"
-      subtitle="We have implemented our lead generation engines at tech companies driving 100s of millions in recurring revenue, predictably driving traffic and leads."
+      eyebrow="Written by Developers, for Developers"
+      title="Our Technical Content Writers are Practicing Professionals"
+      subtitle="From articles about your industry, to product tutorials, to B2B Thought Leadership pieces - our writing and editing teams of professional developers have you covered."
       features={features}
     />
   )

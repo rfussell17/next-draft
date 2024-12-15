@@ -16,26 +16,44 @@ export default function ForMarketers(): JSX.Element {
     'A great work environment',
   ]
 
+  // const bodyDetailListPropsOne = [
+  //   'Private forum access',
+  //   'SEO Keyword and topic ideation',
+  //   'Diagrams, and code samples',
+  //   'Technical reviews',
+  //   'Professional editing',
+  //   'Social media collateral',
+  // ]
+
+  // const bodyDetailListPropsTwo = [
+  //   'Technical ebooks',
+  //   'Executive ghostwriting',
+  //   'Video tutorials',
+  // ]
+
   const features1 = [
     {
       name: 'Drive Awareness',
       description1:
-        'We drive traffic with a consistent cadence of content, freeing up your marketers and developers to focus on other priorities. Benefit from a dedicated content strategist who uses proven frameworks to make sure your content program delivers the highest ROI for your business.',
-      description2: '',
+        'We drive traffic with a consistent cadence of content, freeing up your marketers and developers to focus on other priorities.',
+      description2:
+        'Benefit from a dedicated content strategist who uses proven frameworks to make sure your content program delivers the highest ROI for your business.',
       href: '/learn-more',
     },
     {
       name: 'Capture Leads',
       description1:
-        'Our teams provide you with technical ebooks, whitepapers, landing page copywriting, and social media posts. Capture leads by implementing a predictable lead-generation engine that converts organic traffic automatically into high-quality MQLs and SQLs.',
-      description2: '',
+        'Our teams provide you with technical ebooks, whitepapers, landing page copywriting, and social media posts.',
+      description2:
+        'Capture leads by implementing a predictable lead-generation engine that converts organic traffic automatically into high-quality MQLs and SQLs',
       href: '/content',
     },
     {
       name: 'Build Trust',
       description1:
-        'We deliver high-quality tech content that is written and reviewed by experienced developers and edited by professional editors. Build credibility with your technical audiences through a consistent stream of quality content, tailored specifically to their needs and interests.',
-      description2: '',
+        'We deliver high-quality tech content that is written and reviewed by experienced developers and edited by professional editors. ',
+      description2:
+        'Build credibility with your technical audiences through a consistent stream of quality content, tailored specifically to their needs and interests.',
       href: '/delivery',
     },
   ]
@@ -50,14 +68,23 @@ export default function ForMarketers(): JSX.Element {
         eyebrowHref="#"
         primaryCtaText="Get started"
         primaryCtaHref="#"
-        secondaryCtaText="Learn more"
+        secondaryCtaText="Technical Writing Examples"
         secondaryCtaHref="#"
         imageSrc="https://tailwindui.com/plus/img/component-images/project-app-screenshot.png"
       />
       <main>
+        {/* <BodyDetailList
+          title="Ongoing technical content"
+          subtitle="Build a steady stream of technical content that scales with your business."
+          includedFeatures={bodyDetailListPropsOne}
+          addonTitle="Add-on services"
+          addonFeatures={bodyDetailListPropsTwo}
+          requestPricingHref="#"
+          requestPricingText="Request pricing"
+        /> */}
         <BodyDetail
           title="Content marketing for tech companies"
-          subtitleTop="We create lead-generation engines based on blog posts, eBooks, and video tutorials for Marketers looking to attract a technical audience. "
+          subtitleTop="We create.... subheading "
           subtitleBottom=""
           features={features1}
           learnMoreText="See how we"
@@ -67,6 +94,7 @@ export default function ForMarketers(): JSX.Element {
             <LogoCloud />
           </Container>
         </Gradient>
+
         <TestimonialsGroup />
         <CTA
           title="Book a discovery call"
