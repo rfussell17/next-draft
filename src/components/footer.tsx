@@ -6,15 +6,15 @@ import { Button } from './button'
 
 function CallToAction() {
   return (
-    <div className="text-white relative py-24 text-center">
+    <div className="relative py-24 text-center text-white">
       <hgroup>
-        <p className="text-white mt-6 text-3xl font-medium tracking-tight sm:text-5xl">
+        <p className="mt-6 text-3xl font-medium tracking-tight text-white sm:text-5xl">
           Ready to dive in?
           <br />
           Start your free trial today.
         </p>
       </hgroup>
-      <p className="text-white mx-auto mt-6 max-w-xs text-sm/6">
+      <p className="mx-auto mt-6 max-w-xs text-sm/6 text-white">
         Get the cheat codes for selling and unlock your team&apos;s revenue
         potential.
       </p>
@@ -28,7 +28,7 @@ function CallToAction() {
 }
 
 function SitemapHeading({ children }: { children: React.ReactNode }) {
-  return <h3 className="text-white text-sm/6 font-bold">{children}</h3>
+  return <h3 className="text-sm/6 font-bold text-white">{children}</h3>
 }
 
 function SitemapLinks({ children }: { children: React.ReactNode }) {
@@ -40,7 +40,7 @@ function SitemapLink(props: React.ComponentPropsWithoutRef<typeof Link>) {
     <li>
       <Link
         {...props}
-        className="text-white data-[hover]:text-gray-300 font-medium"
+        className="font-medium text-white data-[hover]:text-gray-300"
       />
     </li>
   )
@@ -53,30 +53,32 @@ function Sitemap() {
         <SitemapHeading>Product</SitemapHeading>
         <SitemapLinks>
           <SitemapLink href="/pricing">Pricing</SitemapLink>
-          <SitemapLink href="#">Analysis</SitemapLink>
-          <SitemapLink href="#">API</SitemapLink>
+          <SitemapLink href="/terms-of-service">Terms of service</SitemapLink>
+          <SitemapLink href="/privacy-policy">Privacy policy</SitemapLink>
         </SitemapLinks>
       </div>
       <div>
         <SitemapHeading>Company</SitemapHeading>
         <SitemapLinks>
-          <SitemapLink href="#">Careers</SitemapLink>
+          <SitemapLink href="/our-team">Our Team</SitemapLink>
+          <SitemapLink href="/jobs">Jobs</SitemapLink>
+          <SitemapLink href="/write-for-draft">Write for Draft</SitemapLink>
+        </SitemapLinks>
+      </div>
+      <div>
+        <SitemapHeading>Learn</SitemapHeading>
+        <SitemapLinks>
           <SitemapLink href="/blog">Blog</SitemapLink>
-          <SitemapLink href="/company">Company</SitemapLink>
+          <SitemapLink href="/newsletter">Newsletter</SitemapLink>
+          <SitemapLink href="/webinars">Webinars</SitemapLink>
+          <SitemapLink href="/video-tutorials">Video Tutorials</SitemapLink>
         </SitemapLinks>
       </div>
       <div>
-        <SitemapHeading>Support</SitemapHeading>
+        <SitemapHeading>Questions</SitemapHeading>
         <SitemapLinks>
-          <SitemapLink href="#">Help center</SitemapLink>
-          <SitemapLink href="#">Community</SitemapLink>
-        </SitemapLinks>
-      </div>
-      <div>
-        <SitemapHeading>Company</SitemapHeading>
-        <SitemapLinks>
-          <SitemapLink href="#">Terms of service</SitemapLink>
-          <SitemapLink href="#">Privacy policy</SitemapLink>
+          <SitemapLink href="/case-studies">Case Studies</SitemapLink>
+          <SitemapLink href="/book-discovery-call">Book a Call</SitemapLink>
         </SitemapLinks>
       </div>
     </>
@@ -144,7 +146,7 @@ function SocialLinks() {
 
 function Copyright() {
   return (
-    <div className="text-white text-center text-sm/6">
+    <div className="text-center text-sm/6 text-white">
       &copy; {new Date().getFullYear()} Draft.Dev
     </div>
   )
