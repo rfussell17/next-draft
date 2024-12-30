@@ -4,7 +4,7 @@ import type { FC, ReactNode } from 'react'
 import { Gradient } from './gradient'
 import { Heading, Subheading } from './text'
 
-interface BodyDetailListProps {
+interface CardListProps {
   title: ReactNode
   subtitle: ReactNode
   includedFeatures: string[]
@@ -14,7 +14,7 @@ interface BodyDetailListProps {
   requestPricingText: string
 }
 
-const BodyDetailList: FC<BodyDetailListProps> = ({
+const CardList: FC<CardListProps> = ({
   title,
   subtitle,
   includedFeatures,
@@ -30,7 +30,7 @@ const BodyDetailList: FC<BodyDetailListProps> = ({
           <Heading as="h2">{title}</Heading>
         </div>
         <Gradient className="rounded-xl">
-          <div className="ring-gray-200 text-white mx-auto mt-16 max-w-2xl sm:mt-20 lg:mx-0 lg:flex lg:max-w-none">
+          <div className="mx-auto mt-16 max-w-2xl text-white ring-gray-200 sm:mt-20 lg:mx-0 lg:flex lg:max-w-none">
             <div className="p-8 sm:p-10 lg:flex-auto">
               <Subheading
                 as="h3"
@@ -43,7 +43,7 @@ const BodyDetailList: FC<BodyDetailListProps> = ({
                 <h4 className="flex-none text-sm/6 font-semibold">
                   What’s included
                 </h4>
-                <div className="bg-gray-100 h-px flex-auto" />
+                <div className="h-px flex-auto bg-gray-100" />
               </div>
               <ul
                 role="list"
@@ -53,7 +53,7 @@ const BodyDetailList: FC<BodyDetailListProps> = ({
                   <li key={feature} className="flex gap-x-2">
                     <CheckIcon
                       aria-hidden="true"
-                      className="text-white h-6 w-5 flex-none"
+                      className="h-6 w-5 flex-none text-white"
                     />
                     {feature}
                   </li>
@@ -61,15 +61,15 @@ const BodyDetailList: FC<BodyDetailListProps> = ({
               </ul>
             </div>
             <div className="-mt-2 p-2 lg:mt-0 lg:w-full lg:max-w-md lg:shrink-0">
-              <div className="bg-gray-50 ring-gray-900/5 rounded-2xl py-10 text-center ring-1 ring-inset lg:flex lg:flex-col lg:justify-center lg:py-16">
+              <div className="rounded-2xl bg-gray-50 py-10 text-center ring-1 ring-inset ring-gray-900/5 lg:flex lg:flex-col lg:justify-center lg:py-16">
                 <div className="mx-auto max-w-xs px-8">
-                  <p className="text-gray-600 text-base font-semibold">
+                  <p className="text-base font-semibold text-gray-600">
                     {addonTitle}
                   </p>
                   <span className="mt-6 flex items-baseline justify-center gap-x-2">
                     <ul
                       role="list"
-                      className="text-gray-600 mt-2 grid grid-cols-1 gap-4 text-base sm:gap-6"
+                      className="mt-2 grid grid-cols-1 gap-4 text-base text-gray-600 sm:gap-6"
                     >
                       {addonFeatures.map((feature) => (
                         <li key={feature} className="flex gap-x-3">
@@ -84,7 +84,7 @@ const BodyDetailList: FC<BodyDetailListProps> = ({
                   </span>
                   <Link
                     href={requestPricingHref}
-                    className="text-white mt-10 block w-full rounded-md bg-primary px-3 py-2 text-center text-base font-semibold shadow-sm hover:bg-secondary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                    className="mt-10 block w-full rounded-md bg-primary px-3 py-2 text-center text-base font-semibold text-white shadow-sm hover:bg-secondary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                   >
                     {requestPricingText}
                   </Link>
@@ -98,4 +98,4 @@ const BodyDetailList: FC<BodyDetailListProps> = ({
   )
 }
 
-export default BodyDetailList
+export default CardList

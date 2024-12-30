@@ -1,7 +1,7 @@
 import BodyDetail from '@/components/body-detail'
 import BodyDetailImage from '@/components/body-detail-image'
-import BodyDetailList from '@/components/body-detail-list'
 import { Button } from '@/components/button'
+import CardList from '@/components/card-list'
 import { Container } from '@/components/container'
 import { CTA } from '@/components/cta'
 import { Gradient } from '@/components/gradient'
@@ -68,7 +68,7 @@ const bodyDetailImageProps = [
   },
 ]
 
-const bodyDetailListPropsOne = [
+const cardListPropsOne = [
   'Private forum access',
   'SEO Keyword and topic ideation',
   'Diagrams, and code samples',
@@ -77,7 +77,7 @@ const bodyDetailListPropsOne = [
   'Social media collateral',
 ]
 
-const bodyDetailListPropsTwo = [
+const cardListPropsTwo = [
   'Technical ebooks',
   'Executive ghostwriting',
   'Video tutorials',
@@ -178,12 +178,12 @@ export default function Home() {
           }}
         />
 
-        <BodyDetailList
+        <CardList
           title="Ongoing technical content"
           subtitle="Build a steady stream of technical content that scales with your business."
-          includedFeatures={bodyDetailListPropsOne}
+          includedFeatures={cardListPropsOne}
           addonTitle="Add-on services"
-          addonFeatures={bodyDetailListPropsTwo}
+          addonFeatures={cardListPropsTwo}
           requestPricingHref="#"
           requestPricingText="Request pricing"
         />
