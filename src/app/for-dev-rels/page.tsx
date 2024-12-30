@@ -5,7 +5,17 @@ import { Gradient } from '../../components/gradient'
 import { CTA } from '@/components/cta'
 import { HeroSecondary } from '@/components/hero-secondary'
 import TestimonialsGroup from '@/components/testimonials-group'
+import type { Metadata } from 'next'
 import { LogoCloud } from '../../components/logo-cloud'
+
+export const metadata: Metadata = {
+  description:
+    'Radiant helps you sell more by revealing sensitive information about your customers.',
+  robots: {
+    index: false,
+    follow: false,
+  },
+}
 
 export default function ForDevRels(): JSX.Element {
   const ctaProps = [

@@ -8,7 +8,17 @@ import {
   CloudArrowUpIcon,
   LockClosedIcon,
 } from '@heroicons/react/20/solid'
+import type { Metadata } from 'next'
 import { ServiceIntro } from '../../components/service-intro'
+
+export const metadata: Metadata = {
+  description:
+    'Radiant helps you sell more by revealing sensitive information about your customers.',
+  robots: {
+    index: false,
+    follow: false,
+  },
+}
 
 const features = [
   {

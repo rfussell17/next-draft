@@ -4,6 +4,16 @@ import { Gradient } from '@/components/gradient'
 import { LogoCloud } from '@/components/logo-cloud'
 import PageHeader from '@/components/page-header'
 import TestimonialsGroup from '@/components/testimonials-group'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  description:
+    'Radiant helps you sell more by revealing sensitive information about your customers.',
+  robots: {
+    index: false,
+    follow: false,
+  },
+}
 
 const ctaProps = [
   'marketing-specific content in here',

@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import type { StaticImport } from 'next/dist/shared/lib/get-img-props'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -11,6 +12,15 @@ import type {
 import { Container } from '../../components/container'
 import { Heading, Lead } from '../../components/text'
 import { getWpPosts } from '../lib/wordpress'
+
+export const metadata: Metadata = {
+  description:
+    'Radiant helps you sell more by revealing sensitive information about your customers.',
+  robots: {
+    index: false,
+    follow: false,
+  },
+}
 
 function Header() {
   return (
@@ -59,12 +69,12 @@ export default async function BlogPage() {
                   <Image
                     src={post.featuredImage.node.sourceUrl}
                     alt={post.title as string}
-                    className="bg-gray-100 aspect-video w-full rounded-2xl object-cover sm:aspect-[2/1] lg:aspect-[3/2]"
+                    className="aspect-video w-full rounded-2xl bg-gray-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2]"
                     width={800}
                     height={600}
                   />
                 )}
-                <div className="ring-gray-900/10 absolute inset-0 rounded-2xl ring-1 ring-inset" />
+                <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10" />
               </div>
               <div className="max-w-xl">
                 <div className="mt-8 flex items-center gap-x-4 text-xs">
@@ -97,20 +107,20 @@ export default async function BlogPage() {
                   </span>
                 </div>
                 <div className="group relative">
-                  <h3 className="text-gray-900 group-hover:text-gray-600 mt-3 text-lg/6 font-semibold">
+                  <h3 className="mt-3 text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600">
                     <Link href={`/blog/${post.slug}`}>
                       <span className="absolute inset-0" />
                       {post.title}
                     </Link>
                   </h3>
                   <p
-                    className="text-gray-600 mt-5 line-clamp-3 text-sm/6"
+                    className="mt-5 line-clamp-3 text-sm/6 text-gray-600"
                     dangerouslySetInnerHTML={{ __html: post.excerpt }}
                   />
                 </div>
                 <div className="relative mt-8 flex items-center gap-x-4">
                   <div className="text-sm/6">
-                    <p className="text-gray-900 font-semibold">Author Name</p>
+                    <p className="font-semibold text-gray-900">Author Name</p>
                     <p className="text-gray-600">Author Role</p>
                   </div>
                 </div>

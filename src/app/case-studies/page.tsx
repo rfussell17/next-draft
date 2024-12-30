@@ -1,5 +1,15 @@
 import DarkLandingPage from '@/components/landing-page-dark'
 import TestimonialsGroup from '@/components/testimonials-group'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  description:
+    'Radiant helps you sell more by revealing sensitive information about your customers.',
+  robots: {
+    index: false,
+    follow: false,
+  },
+}
 
 export default function CaseStudy() {
   const landingPageProps = {
