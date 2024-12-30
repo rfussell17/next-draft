@@ -18,7 +18,7 @@ export default function Webinars() {
   return (
     <>
       <PageHeader
-        title="Newsletter"
+        title="Webinars"
         description="Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat."
       />
       <Gradient className="py-20">

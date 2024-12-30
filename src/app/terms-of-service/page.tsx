@@ -14,11 +14,11 @@ const ctaProps = [
   'A great work environment',
 ]
 
-export default function PrivacyPolicy() {
+export default function TermsOfService() {
   return (
     <>
       <PageHeader
-        title="Privacy Policy"
+        title="Terms of Service"
         description="Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat."
       />
       <Gradient className="py-20">

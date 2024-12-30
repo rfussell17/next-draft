@@ -61,7 +61,7 @@ const recentPosts = [
 ]
 
 const links = [
-  { href: '/for-dev-rels-two', label: 'Services' },
+  { href: '/services', label: 'Services' },
   { href: '/why-us', label: 'Why Us?' },
   { href: '/pricing', label: 'Pricing' },
   { href: '/about', label: 'About' },
