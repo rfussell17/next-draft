@@ -1,6 +1,6 @@
 import { Button } from '@/components/button'
 import { Container } from '@/components/container'
-import { Heading, Lead, Subheading } from '@/components/text'
+import { Heading, Subheading } from '@/components/text'
 import type { Metadata } from 'next'
 import Image from 'next/image'
 
@@ -11,74 +11,6 @@ export const metadata: Metadata = {
     index: false,
     follow: false,
   },
-}
-
-function Header() {
-  return (
-    <Container className="mt-16">
-      <h1>About DRAFT.DEV</h1>
-      <h2 className="mt-6 max-w-3xl">
-        We believe great marketing content can also be valuable educational
-        content.
-      </h2>
-      <section className="mt-16 grid grid-cols-1 lg:grid-cols-2 lg:gap-12">
-        <div className="max-w-lg">
-          <h2 className="text-2xl font-medium tracking-tight">Our Story</h2>
-          <p className="mt-6 text-sm/6 text-gray-600">
-            After spending 8 years as a CTO, building software engineering teams
-            in venture-funded startups, Karl Hughes founded Draft.dev to help
-            companies create authentic technical content that resonates with
-            software developers.
-          </p>
-          <p className="mt-8 text-sm/6 text-gray-600">
-            Since founding the company in 2020, the team has grown to include
-            marketers, editors, engineers, and over 300 engineers who write
-            content for us.
-          </p>
-        </div>
-        <div className="pt-20 lg:row-span-2 lg:-mr-16 xl:mr-auto">
-          <div className="-mx-8 grid grid-cols-2 gap-4 sm:-mx-16 sm:grid-cols-4 lg:mx-0 lg:grid-cols-2 lg:gap-4 xl:gap-8">
-            <div className="aspect-square overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10">
-              <Image
-                alt=""
-                src="/company/1.jpg"
-                className="block size-full object-cover"
-                width={200}
-                height={200}
-              />
-            </div>
-            <div className="-mt-8 aspect-square overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10 lg:-mt-32">
-              <Image
-                alt=""
-                src="/company/2.jpg"
-                className="block size-full object-cover"
-                width={200}
-                height={200}
-              />
-            </div>
-            <div className="aspect-square overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10">
-              <Image
-                alt=""
-                src="/company/3.jpg"
-                className="block size-full object-cover"
-                width={200}
-                height={200}
-              />
-            </div>
-            <div className="-mt-8 aspect-square overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10 lg:-mt-32">
-              <Image
-                alt=""
-                src="/company/4.jpg"
-                className="block size-full object-cover"
-                width={200}
-                height={200}
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-    </Container>
-  )
 }
 
 function Person({
@@ -101,46 +33,38 @@ function Person({
       />
       <div className="text-sm/6">
         <h3 className="font-medium">{name}</h3>
-        <p className="text-gray-500">{description}</p>
+        <p className="text-gray-00">{description}</p>
       </div>
     </li>
   )
 }
 
-function Team() {
+function IntroOne() {
   return (
     <Container className="mt-32">
-      <Subheading>Meet the team</Subheading>
-      <Heading as="h3" className="mt-2">
-        Founded by an all-star team.
+      <Subheading as="h1" textColor="dark">
+        About draft.dev
+      </Subheading>
+      <Heading as="h2" className="mt-2">
+        We believe great marketing content can also be valuable educational
+        content
       </Heading>
-      <Lead className="mt-6 max-w-3xl">
-        Radiant is founded by two of the best sellers in the business and backed
-        by investors who look the other way.
-      </Lead>
-      <div className="mt-12 grid grid-cols-1 gap-12 lg:grid-cols-2">
+      <Subheading as="h3" textColor="dark" className="mt-6 max-w-3xl pt-10">
+        Our story
+      </Subheading>
+      <div className="mt-6 grid grid-cols-1 gap-12 lg:grid-cols-2">
         <div className="max-w-lg">
-          <p className="text-sm/6 text-gray-600">
-            Years ago, while working as sales associates at rival companies,
-            Thomas, Ben, and Natalie were discussing a big client they had all
-            been competing for. Joking about seeing the terms of each other’s
-            offers, they had an idea: what if they shared data to win deals and
-            split the commission behind their companies’ backs? It turned out to
-            be an incredible success, and that idea became the kernel for
-            Radiant.
+          <p className="text-base text-gray-600">
+            After spending 8 years as a CTO, building software engineering teams
+            in venture-funded startups, Karl Hughes founded Draft.dev to help
+            companies create authentic technical content that resonates with
+            software developers.
           </p>
-          <p className="mt-8 text-sm/6 text-gray-600">
-            Today, Radiant transforms revenue organizations by harnessing
-            illegally acquired customer and competitor data, using it to provide
-            extraordinary leverage. More than 30,000 companies rely on Radiant
-            to undercut their competitors and extort their customers, all
-            through a single integrated platform.
+          <p className="mt-8 text-base text-gray-600">
+            Since founding the company in 2020, the team has grown to include
+            marketers, editors, engineers, and over 300 engineers who write
+            content for us.
           </p>
-          <div className="mt-6">
-            <Button className="w-full sm:w-auto" href="#">
-              Join us
-            </Button>
-          </div>
         </div>
         <div className="max-lg:order-first max-lg:max-w-lg">
           <div className="aspect-[3/2] overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10">
@@ -154,7 +78,7 @@ function Team() {
           </div>
         </div>
       </div>
-      <Subheading as="h3" className="mt-24">
+      <Subheading as="h3" textColor="dark" className="mt-24">
         The team
       </Subheading>
       <hr className="mt-6 border-t border-gray-200" />
@@ -163,146 +87,98 @@ function Team() {
         className="mx-auto mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3"
       >
         <Person
-          name="Michael Foster"
-          description="Co-Founder / CTO"
+          name="Karl Hughes"
+          description="Founder, CEO"
           img="/team/michael-foster.jpg"
         />
         <Person
-          name="Dries Vincent"
-          description="Business Relations"
+          name="Clayton Kast"
+          description="Account Director"
           img="/team/dries-vincent.jpg"
         />
         <Person
-          name="Celeste Vandermark"
-          description="Front-end Developer"
+          name="Annika Puura"
+          description="Operations Manager"
           img="/team/celeste-vandermark.jpg"
         />
         <Person
-          name="Courtney Henry"
-          description="Designer"
+          name="Jakkie Koekemoer"
+          description="Engineering Manager"
           img="/team/courtney-henry.jpg"
         />
         <Person
-          name="Marcus Eldridge"
-          description="Director of Product"
+          name="Aniket Bhattacharyea"
+          description="Developer Advocate"
           img="/team/marcus-eldridge.jpg"
         />
         <Person
-          name="Whitney Francis"
-          description="Copywriter"
+          name="Kumar Harsh"
+          description="Developer Advocate"
           img="/team/whitney-francis.jpg"
         />
         <Person
-          name="Leonard Krasner"
-          description="Senior Designer"
+          name="Elzet Blaauw"
+          description="Managing Editor"
           img="/team/leonard-krasner.jpg"
         />
         <Person
-          name="Nolan Sheffield"
-          description="Principal Designer"
+          name="Kirstin Spivey"
+          description="Editor"
           img="/team/nolan-sheffield.jpg"
         />
         <Person
-          name="Emily Selman"
-          description="VP, User Experience"
+          name="Shane Cullen"
+          description="Editor"
           img="/team/emily-selman.jpg"
+        />
+        <Person
+          name="Meagan Shelley"
+          description="Marketing"
+          img="/team/leonard-krasner.jpg"
+        />
+        <Person
+          name="Tim Freese"
+          description="Accountant"
+          img="/team/nolan-sheffield.jpg"
         />
       </ul>
     </Container>
   )
 }
 
-function Investors() {
+function IntroTwo() {
   return (
-    <Container className="mt-32">
-      <Subheading>Investors</Subheading>
-      <Heading as="h3" className="mt-2">
-        Funded by industry-leaders.
+    <Container className="mx-auto mt-32 w-11/12 rounded-xl bg-gradient-primary p-16">
+      <Heading as="h3" className="mt-2 text-white">
+        What makes draft.dev different?
       </Heading>
-      <Lead className="mt-6 max-w-3xl">
-        We are fortunate to be backed by the best investors in the industry —
-        both literal and metaphorical partners in crime.
-      </Lead>
-      <Subheading as="h3" className="mt-24">
-        Venture Capital
-      </Subheading>
-      <hr className="mt-6 border-t border-gray-200" />
-      <ul
-        role="list"
-        className="mx-auto mt-10 grid grid-cols-1 gap-8 lg:grid-cols-2"
-      >
-        <li>
-          <Image
-            alt="Remington Schwartz"
-            src="/investors/remington-schwartz.svg"
-            className="h-14"
-            width={200}
-            height={200}
-          />
-          <p className="mt-6 max-w-lg text-sm/6 text-gray-500">
-            Remington Schwartz has been a driving force in the tech industry,
-            backing bold entrepreneurs who explore grey areas in financial and
-            privacy law. Their deep industry expertise and extensive political
-            lobbying provide their portfolio companies with favorable regulation
-            and direct access to lawmakers.
+      <div className="mt-6">
+        <div className="w-full">
+          <p className="text-base text-gray-100">
+            We work exclusively with companies that are trying to reach software
+            developers, data engineers, and DevOps practitioners. Typically, our
+            clients are Developer Relations or Developer Marketing teams at
+            companies with 50+ employees or at least Series A funding.
           </p>
-        </li>
-        <li>
-          <Image
-            alt="Deccel"
-            src="/investors/deccel.svg"
-            className="h-14"
-            width={200}
-            height={200}
-          />
-          <p className="mt-6 max-w-lg text-sm/6 text-gray-500">
-            Deccel has been at the forefront of innovation, investing in
-            pioneering companies across various sectors, including technology,
-            consumer goods, and healthcare. Their philosophy of ‘plausible
-            deniability’ and dedication to looking the other way have helped
-            produce some of the world’s most controversial companies.
+          <p className="mt-8 text-base text-gray-100">
+            We specialize in producing technical content (mostly tutorials and
+            blog posts), but we can also help you create a content plan, come up
+            with suitable topics, or execute on one-time content projects like
+            ebooks.
           </p>
-        </li>
-      </ul>
-      <Subheading as="h3" className="mt-24">
-        Individual investors
-      </Subheading>
-      <hr className="mt-6 border-t border-gray-200" />
-      <ul
-        role="list"
-        className="mx-auto mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3"
-      >
-        <Person
-          name="Kristin Watson"
-          description="TechNexus Ventures"
-          img="/individual-investors/kristin-watson.jpg"
-        />
-        <Person
-          name="Emma Dorsey"
-          description="Innovate Capital Partners"
-          img="/individual-investors/emma-dorsey.jpg"
-        />
-        <Person
-          name="Alicia Bell"
-          description="FutureWave Investments"
-          img="/individual-investors/alicia-bell.jpg"
-        />
-        <Person
-          name="Jenny Wilson"
-          description="SynergyTech Equity"
-          img="/individual-investors/jenny-wilson.jpg"
-        />
-        <Person
-          name="Anna Roberts"
-          description="NextGen Horizons"
-          img="/individual-investors/anna-roberts.jpg"
-        />
-        <Person
-          name="Benjamin Russel"
-          description="Pioneer Digital Ventures"
-          img="/individual-investors/benjamin-russel.jpg"
-        />
-      </ul>
+          <p className="mt-8 text-base text-gray-100">
+            Our goal is to create high-quality, technically deep content.
+            Subject-matter experts are assigned to each article, so every piece
+            is detailed and authoritative. Our core team includes experienced
+            engineers and editors who make sure that every piece of content
+            comes to you ready to publish.
+          </p>
+          <p className="mt-8 text-base text-gray-100">
+            Schedule a call with us to find out how we can help you create
+            technical content that resonates with your audience.
+          </p>
+        </div>
+      </div>
     </Container>
   )
 }
@@ -341,20 +217,26 @@ function Testimonial() {
   )
 }
 
-function Careers() {
+function Jobs() {
   return (
     <Container className="my-32">
-      <Subheading>Careers</Subheading>
+      <Subheading textColor="dark">Jobs</Subheading>
       <Heading as="h3" className="mt-2">
-        Join our fully remote team.
+        Write for draft.dev
       </Heading>
-      <Lead className="mt-6 max-w-3xl">
-        We work together from all over the world, mainly from locations without
-        extradition agreements.
-      </Lead>
+      <p className="mt-6 max-w-3xl">
+        If you're a software developer and you want to build your personal brand
+        while getting paid to write about interesting technical topics, you've
+        come to the right place. We create content that will be read by a wide
+        range of readers around the world. As such, we're committed to
+        supporting diversity in our writers and encourage everyone at all
+        experience levels to apply.
+      </p>
       <div className="mt-24 grid grid-cols-1 gap-16 lg:grid-cols-[1fr_24rem]">
         <div className="lg:max-w-2xl">
-          <Subheading as="h3">Open positions</Subheading>
+          <Subheading as="h3" textColor="dark">
+            Open positions
+          </Subheading>
           <div>
             <table className="w-full text-left">
               <colgroup>
@@ -451,10 +333,9 @@ function Careers() {
 export default function About() {
   return (
     <main className="overflow-hidden">
-      <Header />
-      <Team />
-      <Investors />
-      <Careers />
+      <IntroOne />
+      <IntroTwo />
+      <Jobs />
     </main>
   )
 }
