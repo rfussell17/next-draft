@@ -148,25 +148,25 @@ function IntroOne() {
 
 function IntroTwo() {
   return (
-    <Container className="mx-auto mt-32 w-10/12 rounded-xl bg-gradient-primary p-24">
+    <Container className="mx-auto mt-32 w-11/12 rounded-xl bg-gradient-primary p-24">
       <Heading as="h3" className="text-white">
         What makes draft.dev different?
       </Heading>
       <div className="mt-6">
         <div className="w-full">
-          <p className="text-base text-gray-100">
+          <p className="text-base text-white">
             We work exclusively with companies that are trying to reach software
             developers, data engineers, and DevOps practitioners. Typically, our
             clients are Developer Relations or Developer Marketing teams at
             companies with 50+ employees or at least Series A funding.
           </p>
-          <p className="mt-8 text-base text-gray-100">
+          <p className="mt-8 text-base text-white">
             We specialize in producing technical content (mostly tutorials and
             blog posts), but we can also help you create a content plan, come up
             with suitable topics, or execute on one-time content projects like
             ebooks.
           </p>
-          <p className="mt-8 text-base text-gray-100">
+          <p className="mt-8 text-base text-white">
             Our goal is to create high-quality, technically deep content.
             Subject-matter experts are assigned to each article, so every piece
             is detailed and authoritative. Our core team includes experienced
@@ -215,7 +215,7 @@ function Testimonial() {
 
 function Jobs() {
   return (
-    <Container className="m-auto my-32 max-w-6xl">
+    <Container className="m-auto mt-32 max-w-6xl">
       <Subheading textColor="dark">Jobs</Subheading>
       <Heading as="h3" className="mt-2">
         Write for draft.dev
@@ -250,7 +250,7 @@ function Jobs() {
               <tbody>
                 <tr>
                   <th scope="colgroup" colSpan={3} className="px-0 pb-0 pt-10">
-                    <div className="-mx-4 rounded-lg bg-gray-50 px-4 py-3 text-sm/6 font-semibold">
+                    <div className="-mx-4 rounded-lg bg-primary px-4 py-3 text-sm/6 font-semibold text-white">
                       Engineering
                     </div>
                   </th>
@@ -284,7 +284,7 @@ function Jobs() {
                 </tr>
                 <tr>
                   <th scope="colgroup" colSpan={3} className="px-0 pb-0 pt-5">
-                    <div className="-mx-4 rounded-lg bg-gray-50 px-4 py-3 text-sm/6 font-semibold">
+                    <div className="-mx-4 rounded-lg bg-secondary px-4 py-3 text-sm/6 font-semibold text-white">
                       Design
                     </div>
                   </th>
