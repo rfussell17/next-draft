@@ -41,7 +41,7 @@ function Person({
 
 function IntroOne() {
   return (
-    <Container className="mt-32">
+    <Container className="m-auto mt-32 max-w-6xl">
       <Subheading as="h1" textColor="dark">
         About draft.dev
       </Subheading>
@@ -148,8 +148,8 @@ function IntroOne() {
 
 function IntroTwo() {
   return (
-    <Container className="mx-auto mt-32 w-11/12 rounded-xl bg-gradient-primary p-16">
-      <Heading as="h3" className="mt-2 text-white">
+    <Container className="mx-auto mt-32 w-10/12 rounded-xl bg-gradient-primary p-24">
+      <Heading as="h3" className="text-white">
         What makes draft.dev different?
       </Heading>
       <div className="mt-6">
@@ -172,10 +172,6 @@ function IntroTwo() {
             is detailed and authoritative. Our core team includes experienced
             engineers and editors who make sure that every piece of content
             comes to you ready to publish.
-          </p>
-          <p className="mt-8 text-base text-gray-100">
-            Schedule a call with us to find out how we can help you create
-            technical content that resonates with your audience.
           </p>
         </div>
       </div>
@@ -219,7 +215,7 @@ function Testimonial() {
 
 function Jobs() {
   return (
-    <Container className="my-32">
+    <Container className="m-auto my-32 max-w-6xl">
       <Subheading textColor="dark">Jobs</Subheading>
       <Heading as="h3" className="mt-2">
         Write for draft.dev

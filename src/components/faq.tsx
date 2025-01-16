@@ -50,7 +50,7 @@ const faqs: FAQ[] = [
 export default function FAQ(): JSX.Element {
   return (
     <div className="py-24 sm:py-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="m-auto mx-auto max-w-6xl px-6 lg:px-8">
         <Heading as="h2">Frequently asked questions</Heading>
 
         <Subheading as="h3" textColor="dark" className="text-lg">
@@ -71,7 +71,7 @@ export default function FAQ(): JSX.Element {
                 <dt className="text-base/7 font-semibold text-primary">
                   {faq.question}
                 </dt>
-                <dd className="text-gray-600 mt-2 text-base/7">{faq.answer}</dd>
+                <dd className="mt-2 text-base/7 text-gray-600">{faq.answer}</dd>
               </div>
             ))}
           </dl>

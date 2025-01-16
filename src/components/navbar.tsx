@@ -61,12 +61,11 @@ const recentPosts = [
 ]
 
 const links = [
-  { href: '/services', label: 'Services' },
   { href: '/why-us', label: 'Why Us?' },
   { href: '/pricing', label: 'Pricing' },
   { href: '/about', label: 'About' },
   { href: '/blog', label: 'Blog' },
-  { href: '/book-call', label: 'Book a Call' },
+  { href: '/book-discovery-call', label: 'Book Discovery Call' },
 ]
 
 function DesktopNav() {

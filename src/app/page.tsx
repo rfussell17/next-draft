@@ -27,7 +27,7 @@ const bodyDetailProps = [
       'We have a global network of expert writers. Every piece undergoes thorough editorial review.',
     description2:
       'We have a global network of expert writers. Every piece undergoes thorough editorial review.',
-    href: '/learn-more',
+    href: '/about',
   },
   {
     name: 'Consistent Content',
@@ -120,7 +120,7 @@ const Hero: FC<HeroProps> = ({
             <Subheading
               as="h2"
               textColor="light"
-              className="max-w-lg text-xl sm:text-2xl/8"
+              className="max-w-lg py-6 text-lg sm:text-2xl/8"
             >
               {subtitle}
             </Subheading>
