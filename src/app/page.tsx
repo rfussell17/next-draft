@@ -27,7 +27,7 @@ const bodyDetailProps = [
       'We have a global network of expert writers. Every piece undergoes thorough editorial review.',
     description2:
       'We have a global network of expert writers. Every piece undergoes thorough editorial review.',
-    href: '/about',
+    href: '/learn-more',
   },
   {
     name: 'Consistent Content',
@@ -132,7 +132,11 @@ const Hero: FC<HeroProps> = ({
               >
                 {primaryButtonText}
               </Button>
-              <Button variant="outline" href={secondaryButtonHref}>
+              <Button
+                variant="outline"
+                colorMode="light"
+                href={secondaryButtonHref}
+              >
                 {secondaryButtonText}
               </Button>
             </div>
