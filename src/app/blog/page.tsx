@@ -10,7 +10,7 @@ import type {
   ReactNode,
 } from 'react'
 import { Container } from '../../components/container'
-import { Heading, Lead } from '../../components/text'
+import { Lead } from '../../components/text'
 import { getWpPosts } from '../lib/wordpress'
 
 export const metadata: Metadata = {
@@ -24,11 +24,11 @@ export const metadata: Metadata = {
 
 function Header() {
   return (
-    <Container className="mt-16">
-      <Heading as="h1" className="font-bold">
-        DRAFT.DEV Blog
-      </Heading>
-      <Lead className="mt-6 max-w-3xl">
+    <Container className="bg-primary py-20">
+      <h1 className="ml-16 text-4xl font-medium tracking-tighter text-gray-100 sm:text-6xl">
+        Draft.Dev Blog
+      </h1>
+      <Lead className="ml-16 mt-6" textColor="light">
         Learn to build a better technical blog.
       </Lead>
     </Container>
@@ -40,7 +40,7 @@ export default async function BlogPage() {
   return (
     <div className="overflow-hidden">
       <Header />
-      <div className="mx-auto mt-16 grid grid-cols-1 gap-x-8 gap-y-20 lg:max-w-7xl lg:grid-cols-3">
+      <div className="mx-auto mt-16 grid max-w-7xl grid-cols-1 gap-x-8 gap-y-20 px-12 lg:grid-cols-3">
         {posts.map(
           (post: {
             id: Key | null | undefined
@@ -64,7 +64,7 @@ export default async function BlogPage() {
               key={post.id}
               className="flex flex-col items-start justify-between"
             >
-              <div className="relative w-full">
+              <div className="relative">
                 {post.featuredImage && (
                   <Image
                     src={post.featuredImage.node.sourceUrl}
@@ -77,7 +77,7 @@ export default async function BlogPage() {
                 <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10" />
               </div>
               <div className="max-w-xl">
-                <div className="mt-8 flex items-center gap-x-4 text-xs">
+                <div className="flex items-center gap-x-4 text-xs">
                   <span className="text-gray-500">
                     Published on{' '}
                     <time
