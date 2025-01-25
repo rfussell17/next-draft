@@ -1,6 +1,7 @@
 import parse, { type DOMNode } from 'html-react-parser'
 import type { Metadata } from 'next'
 import Image from 'next/image'
+import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import sanitizeHtml from 'sanitize-html'
 import { getWpPost } from '../../lib/wordpress'
@@ -23,7 +24,6 @@ export default async function PostPage({
 
   if (!post) notFound()
 
-  // Custom transform for parsing HTML
   const transform = (domNode: DOMNode) => {
     if (domNode.type === 'tag' && domNode.name === 'img' && domNode.attribs) {
       const { src, alt } = domNode.attribs
@@ -37,8 +37,7 @@ export default async function PostPage({
         />
       )
     }
-    // Handle other tags if necessary
-    return undefined // Return undefined to keep the original element
+    return undefined
   }
 
   const sanitizedContent = sanitizeHtml(post.content, {
@@ -53,9 +52,43 @@ export default async function PostPage({
   return (
     <div className="bg-white px-6 py-16 lg:px-8">
       <article className="prose prose-lg mx-auto max-w-none">
-        <h1 className="text-gray-900 mb-5 text-3xl font-bold tracking-tight sm:text-4xl">
+        <h1 className="mb-5 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
           {post.title}
         </h1>
+
+        <div className="mb-8 flex items-center gap-x-4 text-sm text-gray-500">
+          <time
+            dateTime={post.date ? new Date(post.date).toISOString() : undefined}
+            className="text-gray-500"
+          >
+            {post.date
+              ? new Date(post.date).toLocaleDateString(undefined, {
+                  year: 'numeric',
+                  month: 'long',
+                  day: 'numeric',
+                })
+              : 'Unknown date'}
+          </time>
+
+          {post.categories?.[0] && (
+            <>
+              <span>•</span>
+              <Link
+                href={`/categories/${post.categories[0].name.toLowerCase()}`}
+                className="text-blue-600 hover:underline"
+              >
+                {post.categories[0].name}
+              </Link>
+            </>
+          )}
+
+          <span>•</span>
+          <div className="flex items-center">
+            <span className="font-medium text-gray-900">Author Name</span>
+            <span className="ml-2 text-gray-500">Author Role</span>
+          </div>
+        </div>
+
         {parse(sanitizedContent, { replace: transform })}
       </article>
     </div>
