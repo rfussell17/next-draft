@@ -8,27 +8,43 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: 'system-ui, sans-serif',
+        sans: ['var(--font-fira-sans)', 'system-ui', 'sans-serif'],
+        code: ['var(--font-fira-code)', 'monospace'],
       },
       borderRadius: {
         '4xl': '2rem',
       },
       colors: {
-        secondary: '#404A63',
-        primaryLight: '#5E6E92',
-        primary: '#815F72',
-        primaryLight: '#875E6F',
-        tertiaryBlue: '#656A8A',
-        tertiaryPurple: '#73667F',
+        primary: {
+          DEFAULT: '#544B84',
+          80: '#6A6296',
+          60: '#8179A8',
+          40: '#9790BA',
+          20: '#AEA8CC',
+        },
+        secondary: {
+          DEFAULT: '#916C7C',
+          80: '#A28693',
+          60: '#B3A0A9',
+          40: '#C4BAC0',
+          20: '#D5D4D6',
+        },
+        gradient: {
+          1: '#8B687F',
+          2: '#785E80',
+          3: '#6C5782',
+        },
       },
       backgroundImage: {
         'gradient-primary':
-          'linear-gradient(to right, #875E6F, #73667F, #404A63)',
+          'linear-gradient(315deg, var(--primary), var(--gradient-stop))',
+        'gradient-background':
+          'linear-gradient(315deg, var(--primary), var(--secondary))',
+        'gradient-brand':
+          'linear-gradient(315deg, var(--primary), var(--secondary))',
+        'gradient-text': 'linear-gradient(to bottom right, #916C7C, #916C7C)',
       },
     },
   },
-  plugins: [
-    require('@tailwindcss/typography'),
-    // ... other plugins
-  ],
+  plugins: [require('@tailwindcss/typography')],
 }

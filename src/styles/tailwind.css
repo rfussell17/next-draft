@@ -2,22 +2,60 @@
 @tailwind components;
 @tailwind utilities;
 
-html,
-body {
-  font-family: var(--font-fira-sans), sans-serif;
-  margin: 0;
-  padding: 0;
+/* Root variables */
+@layer base {
+  :root {
+    --primary: #544b84;
+    --secondary: #916c7c;
+    --gradient-stop: #765c80;
+  }
+
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+  }
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--font-fira-code), monospace;
+/* Component styles */
+@layer components {
+  .hero-eyebrow {
+    @apply rounded-full bg-gray-100 px-3 py-1 text-secondary;
+  }
+
+  .hero-cta-primary {
+    @apply rounded-md bg-secondary px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-secondary-80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary-60;
+  }
+
+  .hero-cta-secondary {
+    @apply text-sm font-semibold text-gray-100 hover:text-secondary-20;
+  }
+
+  .hero-image-container {
+    @apply -m-2 rounded-xl bg-primary-20/5 p-2 ring-1 ring-inset ring-primary-40/10 lg:-m-4 lg:rounded-2xl lg:p-4;
+  }
 }
 
-p {
-  font-family: var(--font-fira-sans), sans-serif;
+/* Typography utilities */
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    -webkit-background-clip: text;
+  }
+
+  .header-light {
+    @apply my-4 font-code text-5xl font-semibold text-white sm:text-6xl sm:tracking-tight;
+  }
+
+  .header-dark {
+    @apply mt-4 font-code font-semibold text-primary;
+  }
+
+  .lead-light {
+    @apply font-sans text-lg text-gray-100;
+  }
+
+  .lead-dark {
+    @apply font-sans text-lg text-gray-500;
+  }
 }

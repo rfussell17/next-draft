@@ -111,38 +111,34 @@ const Hero: FC<HeroProps> = ({
 }) => {
   return (
     <div className="relative">
-      <Gradient>
-        <Container className="relative">
-          <div className="pb-24 pt-16 sm:pb-32 sm:pt-24 md:pb-48 md:pt-32">
-            <h1 className="text-5xl font-medium uppercase tracking-tighter text-gray-100 md:text-7xl">
-              {title}
-            </h1>
-            <Subheading
-              as="h2"
-              textColor="light"
-              className="max-w-lg py-6 text-lg sm:text-2xl/8"
+      <Container className="relative bg-gradient-brand">
+        <div className="pb-24 pt-16 sm:pb-32 sm:pt-24 md:pb-48 md:pt-32">
+          <h1 className="header-light text-gray-100 md:text-6xl">{title}</h1>
+          <Subheading
+            as="h2"
+            textColor="light"
+            className="max-w-lg py-6 text-lg sm:text-xl"
+          >
+            {subtitle}
+          </Subheading>
+          <div className="mt-12 flex flex-col gap-x-6 gap-y-4 sm:flex-row">
+            <Button
+              variant="primary"
+              href={primaryButtonHref}
+              className="font-semibold"
             >
-              {subtitle}
-            </Subheading>
-            <div className="mt-12 flex flex-col gap-x-6 gap-y-4 sm:flex-row">
-              <Button
-                variant="primary"
-                href={primaryButtonHref}
-                className="font-semibold"
-              >
-                {primaryButtonText}
-              </Button>
-              <Button
-                variant="outline"
-                colorMode="light"
-                href={secondaryButtonHref}
-              >
-                {secondaryButtonText}
-              </Button>
-            </div>
+              {primaryButtonText}
+            </Button>
+            <Button
+              variant="outline"
+              colorMode="light"
+              href={secondaryButtonHref}
+            >
+              {secondaryButtonText}
+            </Button>
           </div>
-        </Container>
-      </Gradient>
+        </div>
+      </Container>
     </div>
   )
 }

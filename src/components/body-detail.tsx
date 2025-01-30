@@ -29,6 +29,7 @@ const BodyDetail: FC<BodyDetailProps> = ({
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <Heading as="h2">{title}</Heading>
+
           <Subheading as="h3" textColor="dark" className="md:sm-lg">
             <div>{subtitleTop}</div>
             <div> {subtitleBottom}</div>
