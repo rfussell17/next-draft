@@ -1,8 +1,6 @@
 import { CheckIcon } from '@heroicons/react/20/solid'
 import Link from 'next/link'
 import type { FC, ReactNode } from 'react'
-import { Gradient } from './gradient'
-import { Heading, Subheading } from './text'
 
 interface CardListProps {
   title: ReactNode
@@ -27,18 +25,12 @@ const CardList: FC<CardListProps> = ({
     <div className="py-12 sm:py-16">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-4xl sm:text-center">
-          <Heading as="h2">{title}</Heading>
+          <h2>{title}</h2>
         </div>
-        <Gradient className="rounded-xl">
+        <div className="rounded-xl bg-gradient-brand">
           <div className="mx-auto mt-16 max-w-2xl text-white ring-gray-200 sm:mt-20 lg:mx-0 lg:flex lg:max-w-none">
             <div className="p-8 sm:p-10 lg:flex-auto">
-              <Subheading
-                as="h3"
-                textColor="light"
-                className="text-4xl font-semibold"
-              >
-                {subtitle}
-              </Subheading>
+              <h3 className="text-4xl font-semibold">{subtitle}</h3>
               <div className="mt-10 flex items-center gap-x-4">
                 <h4 className="flex-none text-sm/6 font-semibold">
                   What’s included
@@ -92,7 +84,7 @@ const CardList: FC<CardListProps> = ({
               </div>
             </div>
           </div>
-        </Gradient>
+        </div>
       </div>
     </div>
   )

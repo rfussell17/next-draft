@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import { Heading, Subheading } from './text'
 
 type FAQ = {
   id: number
@@ -51,9 +50,9 @@ export default function FAQ(): JSX.Element {
   return (
     <div className="py-24 sm:py-32">
       <div className="m-auto mx-auto max-w-6xl px-6 lg:px-8">
-        <Heading as="h2">Frequently asked questions</Heading>
+        <h2>Frequently asked questions</h2>
 
-        <Subheading as="h3" textColor="dark" className="text-lg">
+        <h3 className="text-lg">
           Have a different question and can’t find the answer you’re looking
           for? Reach out to our support team by{' '}
           <Link
@@ -63,7 +62,7 @@ export default function FAQ(): JSX.Element {
             sending us an email
           </Link>{' '}
           and we’ll get back to you as soon as we can.
-        </Subheading>
+        </h3>
         <div className="mt-12">
           <dl className="space-y-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-10 sm:space-y-0 lg:gap-x-10">
             {faqs.map((faq) => (

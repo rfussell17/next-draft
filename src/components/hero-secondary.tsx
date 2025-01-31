@@ -30,7 +30,7 @@ export const HeroSecondary: FC<HeroSecondaryProps> = ({
   imageAlt = 'App screenshot',
 }) => {
   return (
-    <div className="bg-gradient-brand relative isolate overflow-hidden">
+    <div className="relative isolate overflow-hidden bg-gradient-brand">
       <div className="mx-auto max-w-7xl px-6 pb-24 pt-10 sm:pb-32 lg:flex lg:px-8 lg:py-24">
         {/* Left Section */}
         <div className="mx-auto max-w-2xl lg:mx-0 lg:shrink-0 lg:pt-8">

@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import { Heading, Subheading } from './text'
 
 interface Feature {
   name: string
@@ -27,22 +26,14 @@ export function ServiceIntro({
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-3xl lg:text-center">
           {eyebrow && (
-            <Subheading
-              as="h3"
-              className="mb-2 inline-block rounded-full bg-primary/10 px-3 py-1 text-sm font-semibold text-primary ring-1 ring-inset ring-primary/10"
-            >
+            <h3 className="mb-2 inline-block rounded-full bg-primary/10 px-3 py-1 text-sm font-semibold text-primary ring-1 ring-inset ring-primary/10">
               {eyebrow}
-            </Subheading>
+            </h3>
           )}
-          <Heading
-            as="h1"
-            className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl lg:text-balance"
-          >
+          <h1 className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl lg:text-balance">
             {title}
-          </Heading>
-          <Subheading className="mt-6 text-lg/8 text-gray-600">
-            {subtitle}
-          </Subheading>
+          </h1>
+          <h2 className="mt-6 text-lg/8 text-gray-600">{subtitle}</h2>
         </div>
 
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">

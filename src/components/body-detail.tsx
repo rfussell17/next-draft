@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import type { FC } from 'react'
-import { Heading, Subheading } from './text'
 
 interface Feature {
   name: string
@@ -28,12 +27,12 @@ const BodyDetail: FC<BodyDetailProps> = ({
     <div className="py-16 sm:py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
-          <Heading as="h2">{title}</Heading>
+          <h2>{title}</h2>
 
-          <Subheading as="h3" textColor="dark" className="md:sm-lg">
+          <h3 className="md:sm-lg">
             <div>{subtitleTop}</div>
             <div> {subtitleBottom}</div>
-          </Subheading>
+          </h3>
         </div>
         <div className="mx-auto mt-16 max-w-2xl lg:max-w-none">
           <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-12 lg:max-w-none lg:grid-cols-3">

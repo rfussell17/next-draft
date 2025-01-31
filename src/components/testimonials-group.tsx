@@ -5,7 +5,6 @@ import headshot3 from '../../public/testimonials/dillon-lenora.jpg'
 import headshot4 from '../../public/testimonials/harriet-arron.jpg'
 import headshot5 from '../../public/testimonials/tina-yards.jpg'
 import headshot6 from '../../public/testimonials/veronica-winton.jpg'
-import { Heading } from './text'
 
 type Testimonial = {
   body: string
@@ -76,9 +75,7 @@ export default function TestimonialsGroup() {
           <h2 className="mb-4 text-base font-semibold text-primary">
             Testimonials
           </h2>
-          <Heading as="h3" className="">
-            What our clients are saying
-          </Heading>
+          <h3 className="">What our clients are saying</h3>
         </div>
         <div className="mx-auto mt-16 flow-root max-w-2xl sm:mt-20 lg:mx-0 lg:max-w-none">
           <div className="-mt-8 sm:-mx-4 sm:columns-2 sm:text-[0] lg:columns-3">
@@ -87,7 +84,7 @@ export default function TestimonialsGroup() {
                 key={testimonial.author.company}
                 className="pt-8 sm:inline-block sm:w-full sm:px-4"
               >
-                <figure className="bg-gray-50 rounded-2xl p-8 text-base">
+                <figure className="rounded-2xl bg-gray-50 p-8 text-base">
                   <blockquote className="text-gray-900">
                     <p>{`“${testimonial.body}”`}</p>
                   </blockquote>
@@ -97,10 +94,10 @@ export default function TestimonialsGroup() {
                       src={testimonial.author.imageUrl}
                       width={100}
                       height={100}
-                      className="bg-gray-50 h-10 w-10 rounded-full"
+                      className="h-10 w-10 rounded-full bg-gray-50"
                     />
                     <div>
-                      <div className="text-gray-900 font-semibold">
+                      <div className="font-semibold text-gray-900">
                         {testimonial.author.name}
                       </div>
                       <div className="text-gray-600">{`@${testimonial.author.company}`}</div>

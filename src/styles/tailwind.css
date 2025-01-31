@@ -40,7 +40,7 @@
 @layer utilities {
   .text-gradient {
     @apply bg-clip-text text-transparent;
-    -webkit-background-clip: text;
+    background-clip: text;
   }
 
   .header-light {

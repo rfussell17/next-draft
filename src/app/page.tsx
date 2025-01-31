@@ -7,7 +7,6 @@ import { CTA } from '@/components/cta'
 import { Gradient } from '@/components/gradient'
 import { LogoCloud } from '@/components/logo-cloud'
 import Testimonials from '@/components/testimonials-group'
-import { Subheading } from '@/components/text'
 import type { Metadata } from 'next'
 import type { FC } from 'react'
 
@@ -114,13 +113,7 @@ const Hero: FC<HeroProps> = ({
       <Container className="relative bg-gradient-brand">
         <div className="pb-24 pt-16 sm:pb-32 sm:pt-24 md:pb-48 md:pt-32">
           <h1 className="header-light text-gray-100 md:text-6xl">{title}</h1>
-          <Subheading
-            as="h2"
-            textColor="light"
-            className="max-w-lg py-6 text-lg sm:text-xl"
-          >
-            {subtitle}
-          </Subheading>
+          <h2 className="max-w-md py-6 text-lg sm:text-xl">{subtitle}</h2>
           <div className="mt-12 flex flex-col gap-x-6 gap-y-4 sm:flex-row">
             <Button
               variant="primary"

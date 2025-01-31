@@ -41,7 +41,7 @@ module.exports = {
         'gradient-background':
           'linear-gradient(315deg, var(--primary), var(--secondary))',
         'gradient-brand':
-          'linear-gradient(315deg, var(--primary), var(--secondary))',
+          'linear-gradient(315deg, var(--secondary), var(--primary))',
         'gradient-text': 'linear-gradient(to bottom right, #916C7C, #916C7C)',
       },
     },

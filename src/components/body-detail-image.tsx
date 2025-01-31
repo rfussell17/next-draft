@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import type { FC } from 'react'
-import { Subheading } from './text'
 
 interface Feature {
   name: string
@@ -37,9 +36,7 @@ const BodyDetailImage: FC<BodyDetailImageProps> = ({
             <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-lg">
               <h2 className="text-gradient text-6xl sm:text-5xl">{title}</h2>
 
-              <Subheading className="text-base text-gray-500 sm:text-lg">
-                {paragraph}
-              </Subheading>
+              <p className="text-base text-gray-500 sm:text-lg">{paragraph}</p>
               <dl className="mt-10 max-w-xl space-y-8 text-base/7 text-gray-600 lg:max-w-none">
                 {features.map((feature) => (
                   <div key={feature.name} className="relative">

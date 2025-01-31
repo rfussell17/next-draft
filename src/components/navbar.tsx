@@ -76,7 +76,7 @@ function DesktopNav() {
           return (
             <div key={label} className="relative flex">
               <Popover className="relative">
-                <PopoverButton className="flex items-center px-4 py-6 font-medium text-primary data-[hover]:bg-black/[2.5%]">
+                <PopoverButton className="flex items-center px-4 py-6 font-medium text-gray-700 data-[hover]:bg-black/[2.5%]">
                   {label}
                   <ChevronDownIcon className="ml-2 h-4 w-4 text-gray-500" />
                 </PopoverButton>
@@ -95,11 +95,11 @@ function DesktopNav() {
                                   as={Link}
                                   key={item.name}
                                   href={item.href}
-                                  className="flex gap-x-4 py-2 text-sm font-semibold text-secondary"
+                                  className="flex gap-x-4 py-2 text-sm font-semibold text-gray-700"
                                 >
                                   <item.icon
                                     aria-hidden="true"
-                                    className="h-6 w-6 flex-none text-primary"
+                                    className="h-6 w-6 flex-none text-gray-700"
                                   />
                                   {item.name}
                                 </PopoverButton>
@@ -118,11 +118,11 @@ function DesktopNav() {
                                   as={Link}
                                   key={item.name}
                                   href={item.href}
-                                  className="flex gap-x-4 py-2 text-sm font-semibold text-secondary"
+                                  className="flex gap-x-4 py-2 text-sm font-semibold text-gray-700"
                                 >
                                   <item.icon
                                     aria-hidden="true"
-                                    className="h-6 w-6 flex-none text-primary"
+                                    className="h-6 w-6 flex-none text-gray-700"
                                   />
                                   {item.name}
                                 </PopoverButton>
@@ -185,7 +185,7 @@ function DesktopNav() {
           <div key={href} className="relative flex">
             <Link
               href={href}
-              className="flex items-center px-4 py-3 text-base font-medium text-primary data-[hover]:bg-black/[2.5%]"
+              className="flex items-center px-4 py-3 text-base font-medium text-gray-700 data-[hover]:bg-black/[2.5%]"
             >
               {label}
             </Link>
@@ -236,7 +236,12 @@ export function Navbar({ banner }: { banner?: React.ReactNode }) {
       <div className="relative flex justify-around">
         <div className="relative flex gap-6 py-3">
           <Link href="/" title="Home">
-            <Image src="/draft-temp.png" alt="Logo" width={180} height={72} />
+            <Image
+              src="/draft/logos/draftlogo_main_filled.svg"
+              alt="Logo"
+              width={180}
+              height={72}
+            />
           </Link>
           {banner && (
             <div className="relative hidden items-center p-3 lg:flex">
