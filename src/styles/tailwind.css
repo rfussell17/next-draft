@@ -43,12 +43,32 @@
     background-clip: text;
   }
 
+  .header-gradient {
+    @apply text-gradient my-4 bg-gradient-text font-code text-5xl font-semibold sm:text-6xl sm:tracking-tighter;
+  }
+
   .header-light {
-    @apply my-4 font-code text-5xl font-semibold text-white sm:text-6xl sm:tracking-tight;
+    @apply my-4 font-code text-5xl font-semibold text-white sm:text-6xl sm:tracking-tighter;
   }
 
   .header-dark {
     @apply mt-4 font-code font-semibold text-primary;
+  }
+
+  .subheader-gradient {
+    @apply text-gradient my-4 bg-gradient-text font-code text-3xl font-semibold sm:text-4xl sm:tracking-tighter;
+  }
+
+  .subheader-light {
+    @apply my-4 font-code text-3xl font-semibold text-white sm:text-4xl sm:tracking-tighter;
+  }
+
+  .subheader-dark {
+    @apply mt-4 font-code font-semibold text-primary;
+  }
+
+  .lead-gradient {
+    @apply text-gradient my-4 bg-gradient-text font-code text-2xl font-semibold sm:text-3xl sm:tracking-tighter;
   }
 
   .lead-light {

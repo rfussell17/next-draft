@@ -34,7 +34,9 @@ const BodyDetailImage: FC<BodyDetailImageProps> = ({
         <div className="grid grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:grid-cols-2 lg:items-start">
           <div className="px-6 lg:px-0 lg:pr-4 lg:pt-4">
             <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-lg">
-              <h2 className="text-gradient text-6xl sm:text-5xl">{title}</h2>
+              <h2 className="text-gradient text-6xl sm:text-5xl">
+                {title} body-detail-image
+              </h2>
 
               <p className="text-base text-gray-500 sm:text-lg">{paragraph}</p>
               <dl className="mt-10 max-w-xl space-y-8 text-base/7 text-gray-600 lg:max-w-none">

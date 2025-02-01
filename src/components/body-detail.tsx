@@ -27,7 +27,7 @@ const BodyDetail: FC<BodyDetailProps> = ({
     <div className="py-16 sm:py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
-          <h2>{title}</h2>
+          <h2>{title} - body-detail</h2>
 
           <h3 className="md:sm-lg">
             <div>{subtitleTop}</div>

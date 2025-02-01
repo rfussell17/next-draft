@@ -22,17 +22,17 @@ const CardList: FC<CardListProps> = ({
   requestPricingText,
 }) => {
   return (
-    <div className="py-12 sm:py-16">
+    <div className="py-10 sm:py-12">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-4xl sm:text-center">
-          <h2>{title}</h2>
+          <h2 className="header-gradient py-2">{title}</h2>
         </div>
         <div className="rounded-xl bg-gradient-brand">
           <div className="mx-auto mt-16 max-w-2xl text-white ring-gray-200 sm:mt-20 lg:mx-0 lg:flex lg:max-w-none">
             <div className="p-8 sm:p-10 lg:flex-auto">
-              <h3 className="text-4xl font-semibold">{subtitle}</h3>
+              <h3 className="subheader-light">{subtitle}</h3>
               <div className="mt-10 flex items-center gap-x-4">
-                <h4 className="flex-none text-sm/6 font-semibold">
+                <h4 className="flex-none px-6 py-1 text-sm/6 font-semibold ring-2 ring-white">
                   What’s included
                 </h4>
                 <div className="h-px flex-auto bg-gray-100" />
@@ -76,7 +76,7 @@ const CardList: FC<CardListProps> = ({
                   </span>
                   <Link
                     href={requestPricingHref}
-                    className="mt-10 block w-full rounded-md bg-primary px-3 py-2 text-center text-base font-semibold text-white shadow-sm hover:bg-secondary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                    className="mt-10 block w-full rounded-md bg-gradient-brand px-3 py-2 text-center text-base font-semibold text-white shadow-sm hover:bg-secondary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                   >
                     {requestPricingText}
                   </Link>

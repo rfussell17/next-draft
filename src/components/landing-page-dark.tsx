@@ -60,7 +60,7 @@ export const DarkLandingPage: React.FC<DarkLandingPageProps> = ({
         <div className="px-6 pt-14 lg:px-8">
           <div className="mx-auto max-w-2xl pt-24 text-center sm:pt-40">
             <h1 className="text-5xl font-semibold tracking-tight text-white sm:text-7xl">
-              {hero.title} ahhh
+              {hero.title} - landing-page-dark
             </h1>
             <p className="mt-8 text-pretty text-lg font-medium text-gray-100 sm:text-xl/8">
               {hero.description}

@@ -42,7 +42,7 @@ export const HeroSecondary: FC<HeroSecondaryProps> = ({
             </div>
           )}
 
-          <h1 className="header-light">{title}</h1>
+          <h1 className="header-light">{title} - hero-secondary</h1>
           <h3 className="lead-light">{description}</h3>
 
           <div className="mt-10 flex items-center gap-x-6">

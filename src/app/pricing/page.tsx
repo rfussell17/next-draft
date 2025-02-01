@@ -3,7 +3,6 @@ import { Container } from '@/components/container'
 import { Gradient } from '@/components/gradient'
 import { Link } from '@/components/link'
 import { LogoCloud } from '@/components/logo-cloud'
-import { Heading, Lead, Subheading } from '@/components/text'
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import {
   CheckIcon,
@@ -112,11 +111,11 @@ const tiers = [
 function Header() {
   return (
     <Container className="mt-16">
-      <Heading as="h1">Pricing that grows with your team size.</Heading>
-      <Lead className="mt-6 max-w-3xl">
+      <h1>Pricing that grows with your team size.</h1>
+      <h3 className="mt-6 max-w-3xl">
         Companies all over the world have closed millions of deals with Radiant.
         Sign up today and start selling smarter.
-      </Lead>
+      </h3>
     </Container>
   )
 }
@@ -142,7 +141,7 @@ function PricingCard({ tier }: { tier: (typeof tiers)[number] }) {
     <div className="-m-2 grid grid-cols-1 rounded-4xl shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5 max-lg:mx-auto max-lg:w-full max-lg:max-w-md">
       <div className="grid grid-cols-1 rounded-4xl p-2 shadow-md shadow-black/5">
         <div className="rounded-3xl bg-white p-10 pb-9 shadow-2xl ring-1 ring-black/5">
-          <Subheading>{tier.name}</Subheading>
+          <h3 className="subheader-gradient">{tier.name}</h3>
           <p className="mt-2 text-sm/6 text-gray-950/75">{tier.description}</p>
           <div className="mt-8 flex items-center gap-4">
             <div className="text-5xl font-medium text-gray-950">
@@ -206,7 +205,7 @@ function PricingTable({
                 data-selected={selectedTier === tier ? true : undefined}
                 className="p-0 data-[selected]:table-cell max-sm:hidden"
               >
-                <Subheading as="div">{tier.name}</Subheading>
+                <h3 className="subheader-gradient">{tier.name}</h3>
               </th>
             ))}
           </tr>
@@ -230,7 +229,7 @@ function PricingTable({
                           data-selected={
                             tier === selectedTier ? true : undefined
                           }
-                          className="group flex items-center gap-2 rounded-md px-2 py-1 data-[focus]:bg-gray-200"
+                          className="lead-gradient group flex items-center gap-2 rounded-md px-2 py-1 data-[focus]:bg-gray-200"
                         >
                           {tier.name}
                           <CheckIcon className="hidden size-4 group-data-[selected]:block" />
@@ -406,88 +405,6 @@ function Testimonial() {
         </div>
       </Container>
     </div>
-  )
-}
-
-function FrequentlyAskedQuestions() {
-  return (
-    <Container>
-      <section id="faqs" className="scroll-mt-8">
-        <Subheading className="text-center">
-          Frequently asked questions
-        </Subheading>
-        <Heading as="div" className="mt-2 text-center">
-          Your questions answered.
-        </Heading>
-        <div className="mx-auto mb-32 mt-16 max-w-xl space-y-12">
-          <dl>
-            <dt className="text-sm font-semibold">
-              What measures are in place to ensure the security of our data?
-            </dt>
-            <dd className="mt-4 text-sm/6 text-gray-600">
-              Data security is a top priority for us, which is ironic given that
-              our business depends on others not taking it very seriously. We
-              understand that any breach could put both us and most of our
-              customers out of business—and behind bars. We employ robust
-              security measures, including data encryption, secure data centers,
-              and regular security audits to ensure this never happens.
-            </dd>
-          </dl>
-          <dl>
-            <dt className="text-sm font-semibold">
-              Is there a mobile app available for your platform?
-            </dt>
-            <dd className="mt-4 text-sm/6 text-gray-600">
-              Yes, we offer a mobile app that provides all the key
-              functionalities of our desktop platform, allowing sales reps to
-              manage deals on the go. Additionally, we have another app
-              pre-installed on most modern smartphones that allows us to track
-              your location, listen to your conversations, and access your
-              camera and microphone at any time. This app is not available for
-              download.
-            </dd>
-          </dl>
-          <dl>
-            <dt className="text-sm font-semibold">
-              Can I customize the workflow to match our company’s deal process?
-            </dt>
-            <dd className="mt-4 text-sm/6 text-gray-600">
-              Yes, our platform is highly customizable, although there should be
-              no need. Before you sign up, we discreetly gather information
-              about your company and its processes from a variety of sources. We
-              then use this information to pre-configure the platform to match
-              your existing workflows. This is why we ask for your social
-              security number and access to your email account during the
-              sign-up process.
-            </dd>
-          </dl>
-          <dl>
-            <dt className="text-sm font-semibold">
-              What kind of support do you offer?
-            </dt>
-            <dd className="mt-4 text-sm/6 text-gray-600">
-              We offer comprehensive support through multiple channels,
-              including 24/7 live chat, email, and phone support. However, since
-              we have full access to your internal network, we will know if
-              you’re having issues before you do.
-            </dd>
-          </dl>
-          <dl>
-            <dt className="text-sm font-semibold">
-              Can I integrate the CRM with other sales intelligence tools?
-            </dt>
-            <dd className="mt-4 text-sm/6 text-gray-600">
-              Yes, our solution integrates seamlessly with a variety of other
-              systems. However, be warned that most of these integrations are
-              short-lived. We have a dedicated team of engineers who
-              reverse-engineer the APIs of other tools, enabling us to build
-              their functionality into our product and eventually put them out
-              of business.
-            </dd>
-          </dl>
-        </div>
-      </section>
-    </Container>
   )
 }
 

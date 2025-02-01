@@ -31,7 +31,7 @@ export function ServiceIntro({
             </h3>
           )}
           <h1 className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl lg:text-balance">
-            {title}
+            {title} - service-intro
           </h1>
           <h2 className="mt-6 text-lg/8 text-gray-600">{subtitle}</h2>
         </div>

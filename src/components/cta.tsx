@@ -32,13 +32,11 @@ export const CTA: FC<CTAProps> = ({
               width={500}
               height={500}
               src={imageSrc}
-              className="h-96 w-full flex-none rounded-2xl object-cover shadow-xl lg:aspect-square lg:h-auto lg:max-w-sm"
+              className="h-96 w-full flex-none rounded-2xl object-cover shadow-xl ring-2 ring-white lg:aspect-square lg:h-auto lg:max-w-sm"
             />
             <div className="w-full flex-auto">
-              <h2 className="font-medium tracking-tighter text-white">
-                {title}
-              </h2>
-              <h4>{description}</h4>
+              <h2 className="header-light">{title}</h2>
+              <h4 className="lead-light">{description}</h4>
               <ul
                 role="list"
                 className="mt-10 grid grid-cols-1 gap-x-8 gap-y-3 text-base/7 text-white sm:grid-cols-2"
@@ -56,7 +54,7 @@ export const CTA: FC<CTAProps> = ({
               <div className="mt-10 flex">
                 <Link
                   href={linkHref}
-                  className="text-sm/6 font-semibold text-primary"
+                  className="px-10 py-2 text-sm/6 font-semibold text-white ring-2 ring-white"
                 >
                   {linkText} <span aria-hidden="true">&rarr;</span>
                 </Link>

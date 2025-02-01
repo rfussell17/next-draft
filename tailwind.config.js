@@ -46,5 +46,18 @@ module.exports = {
       },
     },
   },
-  plugins: [require('@tailwindcss/typography')],
+  plugins: [
+    require('@tailwindcss/typography'),
+    function ({ addUtilities }) {
+      const newUtilities = {
+        '.text-gradient': {
+          'background-clip': 'text',
+          '-webkit-background-clip': 'text',
+          color: 'transparent',
+          '-webkit-text-fill-color': 'transparent',
+        },
+      }
+      addUtilities(newUtilities)
+    },
+  ],
 }
