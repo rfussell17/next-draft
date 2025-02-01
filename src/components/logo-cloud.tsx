@@ -11,9 +11,9 @@ export function LogoCloud({
   const image5 = '/logo-cloud/statamic.svg'
 
   return (
-    <div className="text-white">
+    <div className="bg-gradient-brand py-24 text-white">
       <div className="mx-auto max-w-2xl lg:text-center">
-        <h2 className="pb-6 text-base font-semibold">
+        <h2 className="lead-light pb-6 text-center">
           Trusted by 100+ developer tools companies
         </h2>
       </div>

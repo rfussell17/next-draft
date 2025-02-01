@@ -72,7 +72,7 @@
   }
 
   .lead-light {
-    @apply font-sans text-lg text-gray-100;
+    @apply pb-8 font-sans text-lg font-semibold text-gray-100;
   }
 
   .lead-dark {

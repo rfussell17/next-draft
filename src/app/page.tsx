@@ -4,7 +4,6 @@ import { Button } from '@/components/button'
 import CardList from '@/components/card-list'
 import { Container } from '@/components/container'
 import { CTA } from '@/components/cta'
-import { Gradient } from '@/components/gradient'
 import { LogoCloud } from '@/components/logo-cloud'
 import Testimonials from '@/components/testimonials-group'
 import type { Metadata } from 'next'
@@ -156,11 +155,9 @@ export default function Home() {
           features={bodyDetailProps}
           learnMoreText="Discover our"
         />
-        <Gradient className="py-20">
-          <Container>
-            <LogoCloud />
-          </Container>
-        </Gradient>
+
+        <LogoCloud />
+
         <BodyDetailImage
           title="How it works"
           paragraph="You're just one call away from getting started."
