@@ -40,22 +40,22 @@ function Person({
 
 function IntroOne() {
   return (
-    <Container className="m-auto mt-32 max-w-6xl">
-      <h1 className="header-gradient">About draft.dev</h1>
-      <h2 className="mt-2">
-        We believe great marketing content can also be valuable educational
-        content
+    <Container className="m-auto my-32 max-w-6xl">
+      <h1 hidden sr-only>
+        About Draft.dev
+      </h1>
+      <h2 className="header-gradient">
+        We believe great marketing content can also be educational
       </h2>
-      <h3>Our story</h3>
-      <div className="mt-6 grid grid-cols-1 gap-12 lg:grid-cols-2">
-        <div className="max-w-lg">
-          <p className="text-base text-gray-600">
+      <div className="mt-16 grid grid-cols-1 gap-12 lg:grid-cols-2">
+        <div className="m-auto max-w-lg">
+          <p className="text-lg text-gray-600">
             After spending 8 years as a CTO, building software engineering teams
             in venture-funded startups, Karl Hughes founded Draft.dev to help
             companies create authentic technical content that resonates with
             software developers.
           </p>
-          <p className="mt-8 text-base text-gray-600">
+          <p className="mt-8 text-lg text-gray-600">
             Since founding the company in 2020, the team has grown to include
             marketers, editors, engineers, and over 300 engineers who write
             content for us.
@@ -73,7 +73,7 @@ function IntroOne() {
           </div>
         </div>
       </div>
-      <h3>The team</h3>
+      <h3 className="lead-gradient mt-16">The team</h3>
       <hr className="mt-6 border-t border-gray-200" />
       <ul
         role="list"
@@ -141,27 +141,28 @@ function IntroOne() {
 
 function IntroTwo() {
   return (
-    <Container className="m-auto mt-32 max-w-6xl rounded-xl bg-gradient-primary p-16">
-      <h3 className="header-light">What makes draft.dev different?</h3>
-      <div className="mt-6 max-w-5xl">
-        <div className="m-auto">
-          <p className="text-base text-white">
+    <Container className="m-auto my-32 max-w-6xl rounded-xl bg-gradient-brand p-16">
+      <h3 className="header-light">What makes Draft.dev different?</h3>
+      <div className="mt-8 max-w-5xl">
+        <div className="m-auto text-lg text-white">
+          <p>
             We work exclusively with companies that are trying to reach software
             developers, data engineers, and DevOps practitioners. Typically, our
             clients are Developer Relations or Developer Marketing teams at
             companies with 50+ employees or at least Series A funding.
           </p>
-          <p className="mt-8 text-base text-white">
+          <p className="mt-8">
             We specialize in producing technical content (mostly tutorials and
             blog posts), but we can also help you create a content plan, come up
             with suitable topics, or execute on one-time content projects like
             ebooks.
           </p>
-          <p className="mt-8 text-base text-white">
+          <p className="mt-8">
             Our goal is to create high-quality, technically deep content.
             Subject-matter experts are assigned to each article, so every piece
             is detailed and authoritative. Our core team includes experienced
-            engineers and editors who make sure that every piece of content
+            engineers and editors who make sure that{' '}
+            <strong>every piece of content </strong>
             comes to you ready to publish.
           </p>
         </div>
@@ -194,7 +195,7 @@ function Testimonial() {
         <figcaption className="mt-6 border-t border-white/20 pt-6">
           <p className="text-sm/6 font-medium text-white">Veronica Winton</p>
           <p className="text-sm/6 font-medium">
-            <span className="bg-gradient-to-r from-[#fff1be] from-[28%] via-[#ee87cb] via-[70%] to-[#b060ff] bg-clip-text text-transparent">
+            <span className="bg-gradient-brand bg-clip-text text-transparent">
               CSO, Planeteria
             </span>
           </p>
@@ -207,7 +208,7 @@ function Testimonial() {
 function Jobs() {
   return (
     <Container className="m-auto mt-32 max-w-6xl">
-      <h2 className="header-gradient">Write for draft.dev</h2>
+      <h2 className="header-gradient">Write for Draft.dev</h2>
       <p className="mt-6 max-w-3xl">
         If you're a software developer and you want to build your personal brand
         while getting paid to write about interesting technical topics, you've
@@ -235,7 +236,7 @@ function Jobs() {
               <tbody>
                 <tr>
                   <th scope="colgroup" colSpan={3} className="px-0 pb-0 pt-10">
-                    <div className="-mx-4 rounded-lg bg-primary px-4 py-3 text-sm/6 font-semibold text-white">
+                    <div className="-mx-4 rounded-lg bg-gradient-3 px-4 py-3 text-sm/6 font-semibold text-white">
                       Engineering
                     </div>
                   </th>
@@ -269,7 +270,7 @@ function Jobs() {
                 </tr>
                 <tr>
                   <th scope="colgroup" colSpan={3} className="px-0 pb-0 pt-5">
-                    <div className="-mx-4 rounded-lg bg-secondary px-4 py-3 text-sm/6 font-semibold text-white">
+                    <div className="-mx-4 rounded-lg bg-gradient-1 px-4 py-3 text-sm/6 font-semibold text-white">
                       Design
                     </div>
                   </th>

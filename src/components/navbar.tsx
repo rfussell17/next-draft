@@ -76,7 +76,7 @@ function DesktopNav() {
           return (
             <div key={label} className="relative flex">
               <Popover className="relative">
-                <PopoverButton className="flex items-center px-4 py-6 font-medium text-gray-700 data-[hover]:bg-black/[2.5%]">
+                <PopoverButton className="flex items-center px-4 py-6 font-medium text-primary data-[hover]:bg-black/[2.5%]">
                   {label}
                   <ChevronDownIcon className="ml-2 h-4 w-4 text-gray-500" />
                 </PopoverButton>
@@ -233,7 +233,7 @@ function MobileNav() {
 export function Navbar({ banner }: { banner?: React.ReactNode }) {
   return (
     <Disclosure as="header">
-      <div className="relative flex justify-around">
+      <div className="relative m-auto flex max-w-7xl justify-around text-center">
         <div className="relative flex gap-6 py-3">
           <Link href="/" title="Home">
             <Image

@@ -50,11 +50,12 @@ export default function FAQ(): JSX.Element {
   return (
     <div className="py-24 sm:py-32">
       <div className="m-auto mx-auto max-w-6xl px-6 lg:px-8">
-        <h2>Frequently asked questions</h2>
+        <h2 className="header-gradient">Frequently asked questions</h2>
 
-        <h3 className="text-lg">
+        <p className="lead-dark mb-16">
           Have a different question and can’t find the answer you’re looking
-          for? Reach out to our support team by{' '}
+          for?
+          <br></br>Reach out to our support team by{' '}
           <Link
             href="#"
             className="font-semibold text-primary hover:text-secondary"
@@ -62,12 +63,12 @@ export default function FAQ(): JSX.Element {
             sending us an email
           </Link>{' '}
           and we’ll get back to you as soon as we can.
-        </h3>
+        </p>
         <div className="mt-12">
           <dl className="space-y-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-10 sm:space-y-0 lg:gap-x-10">
             {faqs.map((faq) => (
               <div key={faq.id}>
-                <dt className="text-base/7 font-semibold text-primary">
+                <dt className="text-lg font-semibold text-primary">
                   {faq.question}
                 </dt>
                 <dd className="mt-2 text-base/7 text-gray-600">{faq.answer}</dd>
