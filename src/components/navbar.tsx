@@ -70,13 +70,13 @@ const links = [
 
 function DesktopNav() {
   return (
-    <nav className="relative hidden text-primary lg:flex">
+    <nav className="relative hidden text-gray-700 lg:flex">
       {links.map(({ href, label }) => {
         if (label === 'Why Us?') {
           return (
             <div key={label} className="relative flex">
               <Popover className="relative">
-                <PopoverButton className="flex items-center px-4 py-6 font-medium text-primary data-[hover]:bg-black/[2.5%]">
+                <PopoverButton className="flex items-center px-4 py-6 text-lg font-medium data-[hover]:bg-black/[2.5%]">
                   {label}
                   <ChevronDownIcon className="ml-2 h-4 w-4 text-gray-500" />
                 </PopoverButton>
@@ -185,7 +185,7 @@ function DesktopNav() {
           <div key={href} className="relative flex">
             <Link
               href={href}
-              className="flex items-center px-4 py-3 text-base font-medium text-gray-700 data-[hover]:bg-black/[2.5%]"
+              className="flex items-center px-4 py-3 text-lg font-medium text-gray-700 data-[hover]:bg-black/[2.5%]"
             >
               {label}
             </Link>
@@ -233,8 +233,8 @@ function MobileNav() {
 export function Navbar({ banner }: { banner?: React.ReactNode }) {
   return (
     <Disclosure as="header">
-      <div className="relative m-auto flex max-w-7xl justify-around text-center">
-        <div className="relative flex gap-6 py-3">
+      <div className="relative m-auto flex max-w-7xl justify-around py-3 text-center outline-none">
+        <div className="relative my-auto flex">
           <Link href="/" title="Home">
             <Image
               src="/draft/logos/draftlogo_main_filled.svg"

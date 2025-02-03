@@ -112,7 +112,7 @@ const Hero: FC<HeroProps> = ({
       <Container className="relative bg-gradient-brand">
         <div className="pb-24 pt-16 sm:pb-32 sm:pt-24 md:pb-48 md:pt-32">
           <h1 className="header-light text-gray-100 md:text-6xl">{title}</h1>
-          <h2 className="max-w-md py-6 text-lg sm:text-xl">{subtitle}</h2>
+          <h2 className="lead-light my-6">{subtitle}</h2>
           <div className="mt-12 flex flex-col gap-x-6 gap-y-4 sm:flex-row">
             <Button
               variant="primary"
