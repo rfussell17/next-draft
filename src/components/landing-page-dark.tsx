@@ -56,15 +56,11 @@ export const DarkLandingPage: React.FC<DarkLandingPageProps> = ({
 }) => {
   return (
     <div className={`${className}`}>
-      <main className="relative isolate">
+      <main className="relative isolate bg-gradient-brand">
         <div className="px-6 pt-14 lg:px-8">
-          <div className="mx-auto max-w-2xl pt-24 text-center sm:pt-40">
-            <h1 className="text-5xl font-semibold tracking-tight text-white sm:text-7xl">
-              {hero.title} - landing-page-dark
-            </h1>
-            <p className="mt-8 text-pretty text-lg font-medium text-gray-100 sm:text-xl/8">
-              {hero.description}
-            </p>
+          <div className="mx-auto max-w-4xl pt-24 text-center sm:pt-40">
+            <h1 className="header-light sm:text-7xl">{hero.title}</h1>
+            <p className="lead-light mt-8">{hero.description}</p>
           </div>
         </div>
 
@@ -77,8 +73,8 @@ export const DarkLandingPage: React.FC<DarkLandingPageProps> = ({
                   key={index}
                   className="flex flex-col-reverse gap-y-3 border-l border-white/20 pl-6"
                 >
-                  <dt className="text-base/7 text-gray-300">{stat.label}</dt>
-                  <dd className="text-3xl font-semibold tracking-tight text-white">
+                  <dt className="text-lg text-gray-300">{stat.label}</dt>
+                  <dd className="text-6xl font-semibold tracking-tight text-white">
                     {stat.value}
                   </dd>
                 </div>

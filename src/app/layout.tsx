@@ -11,7 +11,7 @@ import { Fira_Code, Fira_Sans } from 'next/font/google'
 export const metadata: Metadata = {
   title: {
     template: '%s - Radiant',
-    default: 'Radiant - Close every deal',
+    default: 'Draft.dev - A Content Creation Agency for Technical Writing',
   },
 }
 
