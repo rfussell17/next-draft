@@ -39,7 +39,7 @@ export const CTA: FC<CTAProps> = ({
               <h4 className="lead-light">{description}</h4>
               <ul
                 role="list"
-                className="mt-10 grid grid-cols-1 gap-x-8 gap-y-3 text-base/7 text-white sm:grid-cols-2"
+                className="grid grid-cols-1 gap-x-8 gap-y-3 text-base/7 text-white sm:grid-cols-2"
               >
                 {list.map((ctaList) => (
                   <li key={ctaList} className="flex gap-x-3">
@@ -54,7 +54,7 @@ export const CTA: FC<CTAProps> = ({
               <div className="mt-10 flex">
                 <Link
                   href={linkHref}
-                  className="px-10 py-2 text-sm/6 font-semibold text-white ring-2 ring-white"
+                  className="text-md px-10 py-2 font-semibold text-white ring-2 ring-white"
                 >
                   {linkText} <span aria-hidden="true">&rarr;</span>
                 </Link>
