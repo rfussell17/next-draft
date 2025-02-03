@@ -70,7 +70,7 @@ const links = [
 
 function DesktopNav() {
   return (
-    <nav className="relative hidden text-gray-700 lg:flex">
+    <nav className="relative hidden text-gray-700 outline-none lg:flex">
       {links.map(({ href, label }) => {
         if (label === 'Why Us?') {
           return (

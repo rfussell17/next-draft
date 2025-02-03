@@ -5,6 +5,7 @@ import CardList from '@/components/card-list'
 import { Container } from '@/components/container'
 import { CTA } from '@/components/cta'
 import { LogoCloud } from '@/components/logo-cloud'
+import Testimonial from '@/components/testimonial'
 import Testimonials from '@/components/testimonials-group'
 import type { Metadata } from 'next'
 import type { FC } from 'react'
@@ -166,6 +167,12 @@ export default function Home() {
             src: 'https://tailwindui.com/plus/img/component-images/project-app-screenshot.png',
             alt: 'Product screenshot',
           }}
+        />
+
+        <Testimonial
+          quote="Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur."
+          authorName="John Doe"
+          imageSrc="/testimonials/conor-neville.jpg"
         />
 
         <CardList
