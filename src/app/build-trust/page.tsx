@@ -1,6 +1,4 @@
-import { Container } from '@/components/container'
 import { CTA } from '@/components/cta'
-import { Gradient } from '@/components/gradient'
 import { LogoCloud } from '@/components/logo-cloud'
 import TestimonialsGroup from '@/components/testimonials-group'
 import {
@@ -65,11 +63,9 @@ export default function BuildTrust() {
         subtitle="From articles about your industry, to product tutorials, to B2B Thought Leadership pieces - our writing and editing teams of professional developers have you covered."
         features={features}
       />
-      <Gradient className="py-20">
-        <Container>
-          <LogoCloud />
-        </Container>
-      </Gradient>
+
+      <LogoCloud />
+
       <TestimonialsGroup />
       <CTA
         title="Book a discovery call"

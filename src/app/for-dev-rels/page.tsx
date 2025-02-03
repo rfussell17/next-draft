@@ -1,6 +1,4 @@
 import BodyDetail from '../../components/body-detail'
-import { Container } from '../../components/container'
-import { Gradient } from '../../components/gradient'
 
 import { CTA } from '@/components/cta'
 import { HeroSecondary } from '@/components/hero-secondary'
@@ -76,11 +74,7 @@ export default function ForDevRels(): JSX.Element {
           features={features2}
           learnMoreText="See how we"
         />
-        <Gradient className="py-20">
-          <Container>
-            <LogoCloud />
-          </Container>
-        </Gradient>
+        <LogoCloud />
         <TestimonialsGroup />
         <CTA
           title="Book a discovery call"

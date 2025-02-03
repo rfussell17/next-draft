@@ -1,6 +1,4 @@
-import { Container } from '@/components/container'
 import { CTA } from '@/components/cta'
-import { Gradient } from '@/components/gradient'
 import { LogoCloud } from '@/components/logo-cloud'
 import PageHeader from '@/components/page-header'
 import TestimonialsGroup from '@/components/testimonials-group'
@@ -31,11 +29,7 @@ export default function Webinars() {
         title="Webinars"
         description="Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat."
       />
-      <Gradient className="py-20">
-        <Container>
-          <LogoCloud />
-        </Container>
-      </Gradient>
+      <LogoCloud />
       <TestimonialsGroup />
       <CTA
         title="Book a discovery call"

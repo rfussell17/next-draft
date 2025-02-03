@@ -1,7 +1,5 @@
 import BodyDetail from '@/components/body-detail'
-import { Container } from '@/components/container'
 import { CTA } from '@/components/cta'
-import { Gradient } from '@/components/gradient'
 import { HeroSecondary } from '@/components/hero-secondary'
 import { LogoCloud } from '@/components/logo-cloud'
 import TestimonialsGroup from '@/components/testimonials-group'
@@ -99,11 +97,7 @@ export default function ForMarketers(): JSX.Element {
           features={features1}
           learnMoreText="See how we"
         />
-        <Gradient className="py-20">
-          <Container>
-            <LogoCloud />
-          </Container>
-        </Gradient>
+        <LogoCloud />
 
         <TestimonialsGroup />
         <CTA

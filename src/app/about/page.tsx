@@ -141,9 +141,11 @@ function IntroOne() {
 
 function IntroTwo() {
   return (
-    <Container className="m-auto my-32 max-w-6xl rounded-xl bg-gradient-brand p-16">
-      <h3 className="header-light">What makes Draft.dev different?</h3>
-      <div className="mt-8 max-w-5xl">
+    <Container className="my-42 m-auto max-w-6xl rounded-2xl bg-gradient-brand p-16">
+      <h3 className="header-light m-auto max-w-4xl px-8 py-6 ring-2 ring-white">
+        What makes Draft.dev different?
+      </h3>
+      <div className="m-auto mt-16 max-w-4xl">
         <div className="m-auto text-lg text-white">
           <p>
             We work exclusively with companies that are trying to reach software
