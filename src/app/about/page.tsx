@@ -1,6 +1,5 @@
 import { Button } from '@/components/button'
 import { Container } from '@/components/container'
-import { Heading, Subheading } from '@/components/text'
 import type { Metadata } from 'next'
 import Image from 'next/image'
 
@@ -42,16 +41,12 @@ function Person({
 function IntroOne() {
   return (
     <Container className="m-auto mt-32 max-w-6xl">
-      <Subheading as="h1" textColor="dark">
-        About draft.dev
-      </Subheading>
-      <Heading as="h2" className="mt-2">
+      <h1 className="header-gradient">About draft.dev</h1>
+      <h2 className="mt-2">
         We believe great marketing content can also be valuable educational
         content
-      </Heading>
-      <Subheading as="h3" textColor="dark" className="mt-6 max-w-3xl pt-10">
-        Our story
-      </Subheading>
+      </h2>
+      <h3>Our story</h3>
       <div className="mt-6 grid grid-cols-1 gap-12 lg:grid-cols-2">
         <div className="max-w-lg">
           <p className="text-base text-gray-600">
@@ -78,9 +73,7 @@ function IntroOne() {
           </div>
         </div>
       </div>
-      <Subheading as="h3" textColor="dark" className="mt-24">
-        The team
-      </Subheading>
+      <h3>The team</h3>
       <hr className="mt-6 border-t border-gray-200" />
       <ul
         role="list"
@@ -148,12 +141,10 @@ function IntroOne() {
 
 function IntroTwo() {
   return (
-    <Container className="mx-auto mt-32 w-11/12 rounded-xl bg-gradient-primary p-24">
-      <Heading as="h3" className="text-white">
-        What makes draft.dev different?
-      </Heading>
-      <div className="mt-6">
-        <div className="w-full">
+    <Container className="m-auto mt-32 max-w-6xl rounded-xl bg-gradient-primary p-16">
+      <h3 className="header-light">What makes draft.dev different?</h3>
+      <div className="mt-6 max-w-5xl">
+        <div className="m-auto">
           <p className="text-base text-white">
             We work exclusively with companies that are trying to reach software
             developers, data engineers, and DevOps practitioners. Typically, our
@@ -216,10 +207,7 @@ function Testimonial() {
 function Jobs() {
   return (
     <Container className="m-auto mt-32 max-w-6xl">
-      <Subheading textColor="dark">Jobs</Subheading>
-      <Heading as="h3" className="mt-2">
-        Write for draft.dev
-      </Heading>
+      <h2 className="header-gradient">Write for draft.dev</h2>
       <p className="mt-6 max-w-3xl">
         If you're a software developer and you want to build your personal brand
         while getting paid to write about interesting technical topics, you've
@@ -228,11 +216,8 @@ function Jobs() {
         supporting diversity in our writers and encourage everyone at all
         experience levels to apply.
       </p>
-      <div className="mt-24 grid grid-cols-1 gap-16 lg:grid-cols-[1fr_24rem]">
+      <div className="mt-16 grid grid-cols-1 gap-16 lg:grid-cols-[1fr_24rem]">
         <div className="lg:max-w-2xl">
-          <Subheading as="h3" textColor="dark">
-            Open positions
-          </Subheading>
           <div>
             <table className="w-full text-left">
               <colgroup>
