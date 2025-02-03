@@ -1,26 +1,20 @@
 import { Container } from '@/components/container'
-import { Gradient } from '@/components/gradient'
 import { Link } from '@/components/link'
 import Image from 'next/image'
 import { Button } from './button'
 
 function CallToAction() {
   return (
-    <div className="relative py-24 text-center text-white">
+    <div className="relative py-24 text-center">
       <hgroup>
-        <p className="mt-6 text-3xl font-medium tracking-tight text-white sm:text-5xl">
-          Ready to dive in?
-          <br />
-          Start your free trial today.
-        </p>
+        <h2 className="header-light my-6 text-3xl tracking-tight sm:text-5xl">
+          Want to learn more about how we work?
+        </h2>
       </hgroup>
-      <p className="mx-auto mt-6 max-w-xs text-sm/6 text-white">
-        Get the cheat codes for selling and unlock your team&apos;s revenue
-        potential.
-      </p>
-      <div className="mt-6">
+
+      <div className="mt-12">
         <Button className="w-full sm:w-auto" href="#">
-          Get started
+          Book a Discovery Call
         </Button>
       </div>
     </div>
@@ -154,42 +148,33 @@ function Copyright() {
 export function Footer() {
   return (
     <footer>
-      <Gradient className="relative">
-        <div className="text-white" />
-        <Container>
-          <CallToAction />
-          <div className="pb-16">
-            <div className="grid grid-cols-2 gap-y-10 pb-6 lg:grid-cols-6 lg:gap-8">
-              <div className="col-span-2">
-                <div className="pt-10">
-                  <Link href="/" title="Home">
-                    <Image
-                      src="/draft-temp-white.png"
-                      alt="Logo"
-                      width={180}
-                      height={72}
-                    />
-                  </Link>
-                  <div className="mt-6 flex justify-start gap-6">
-                    <SocialLinks />
-                  </div>
+      <Container className="relative bg-gradient-brand text-white">
+        <CallToAction />
+        <div className="pb-16">
+          <div className="grid grid-cols-2 gap-y-10 pb-6 lg:grid-cols-6 lg:gap-8">
+            <div className="col-span-2">
+              <div className="pt-10">
+                <Link href="/" title="Home">
+                  <Image
+                    src="draft/logos/draftlogo_clean_white.svg"
+                    alt="Logo"
+                    width={180}
+                    height={72}
+                  />
+                </Link>
+                <div className="mt-6 flex justify-start gap-6">
+                  <SocialLinks />
                 </div>
-              </div>
-              <div className="col-span-2 grid grid-cols-2 gap-x-8 gap-y-12 lg:col-span-4 lg:grid-cols-subgrid lg:pt-6">
-                <Sitemap />
               </div>
             </div>
-
-            <div className="flex justify-between">
-              <div>
-                <div className="py-3">
-                  <Copyright />
-                </div>
-              </div>
+            <div className="col-span-2 grid grid-cols-2 gap-x-8 gap-y-12 lg:col-span-4 lg:grid-cols-subgrid lg:pt-6">
+              <Sitemap />
             </div>
           </div>
-        </Container>
-      </Gradient>
+
+          <Copyright />
+        </div>
+      </Container>
     </footer>
   )
 }
