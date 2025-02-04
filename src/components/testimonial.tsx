@@ -1,47 +1,58 @@
 import Image from 'next/image'
+import { Container } from './container'
 
 interface TestimonialProps {
-  quote: string
-  authorName: string
   imageSrc: string
-  imageAlt?: string
+  imageAlt: string
+  quote: string
+  name: string
+  role: string
+  company: string
 }
 
-const Testimonial = ({
-  quote,
-  authorName,
+function Testimonial({
   imageSrc,
   imageAlt,
-}: TestimonialProps) => {
+  quote,
+  name,
+  role,
+  company,
+}: TestimonialProps) {
   return (
-    <section className="relative isolate overflow-hidden bg-gradient-brand px-6 sm:my-20 lg:px-8">
-      <div className="relative mx-auto max-w-2xl py-20 sm:py-28 lg:max-w-6xl">
-        <div className="absolute left-1/2 top-0 -z-10 h-[50rem] w-[90rem] -translate-x-1/2 bg-[radial-gradient(50%_100%_at_top,theme(colors.tertiary),white)] opacity-20 lg:left-36" />
-        <div className="shadow-primary-600/10 lg:-mr-26 absolute inset-y-0 right-1/2 -z-10 mr-12 w-[150vw] origin-bottom-left skew-x-[-30deg] shadow-xl ring-1 ring-secondary sm:mr-20 md:mr-0 lg:right-full lg:origin-center" />
-
-        <figure className="grid grid-cols-1 items-center gap-x-6 gap-y-8 lg:gap-x-10">
-          <div className="relative col-span-2 lg:col-start-1 lg:row-start-2">
-            <blockquote className="leading-8 text-gray-100 sm:text-xl">
-              <p className="font-code font-semibold">"{quote}"</p>
-            </blockquote>
+    <div className="mx-2 my-24 rounded-4xl bg-gradient-brand pb-24 pt-72 lg:pt-36">
+      <Container>
+        <div className="grid grid-cols-1 lg:grid-cols-[384px_1fr_1fr]">
+          <div className="-mt-96 lg:-mt-52">
+            <div className="-m-2 rounded-4xl bg-white/15 shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5 max-lg:mx-auto max-lg:max-w-xs">
+              <div className="rounded-4xl p-2 shadow-md shadow-black/5">
+                <div className="overflow-hidden rounded-3xl shadow-2xl outline outline-1 -outline-offset-1 outline-black/10">
+                  <Image
+                    height={1000}
+                    width={1000}
+                    alt={imageAlt}
+                    src={imageSrc}
+                    className="aspect-[3/4] w-full object-cover"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
-
-          <div className="col-end-1 w-16 lg:row-span-4 lg:w-72">
-            <Image
-              alt={imageAlt || authorName}
-              src={imageSrc}
-              width={500}
-              height={500}
-              className="bg-primary-light rounded-xl"
-            />
+          <div className="flex max-lg:mt-16 lg:col-span-2 lg:px-16">
+            <figure className="mx-auto flex max-w-xl flex-col gap-10 max-lg:text-center">
+              <blockquote>
+                <p className="testimonial-light relative">{quote}</p>
+              </blockquote>
+              <figcaption className="">
+                <p className="font-medium text-white">{name}</p>
+                <p className="text-gray-100">
+                  {role}, {company}
+                </p>
+              </figcaption>
+            </figure>
           </div>
-
-          <figcaption className="text-lg lg:col-start-1 lg:row-start-3">
-            <p className="font-code text-gray-100">{authorName}</p>
-          </figcaption>
-        </figure>
-      </div>
-    </section>
+        </div>
+      </Container>
+    </div>
   )
 }
 

@@ -1,5 +1,6 @@
 import BodyDetail from '../../components/body-detail'
 
+import CardList from '@/components/card-list'
 import { CTA } from '@/components/cta'
 import { HeroSecondary } from '@/components/hero-secondary'
 import TestimonialsGroup from '@/components/testimonials-group'
@@ -52,6 +53,21 @@ export default function ForDevRels(): JSX.Element {
     },
   ]
 
+  const cardListPropsOne = [
+    'Private forum access',
+    'SEO Keyword and topic ideation',
+    'Diagrams, and code samples',
+    'Technical reviews',
+    'Professional editing',
+    'Social media collateral',
+  ]
+
+  const cardListPropsTwo = [
+    'Technical ebooks',
+    'Executive ghostwriting',
+    'Video tutorials',
+  ]
+
   return (
     <div>
       <HeroSecondary
@@ -73,6 +89,15 @@ export default function ForDevRels(): JSX.Element {
           subtitleBottom="Let us handle the complexity of technical content creation."
           features={features2}
           learnMoreText="See how we"
+        />
+        <CardList
+          title="Ongoing technical content"
+          subtitle="Build a steady stream of technical content that scales with your business."
+          includedFeatures={cardListPropsOne}
+          addonTitle="Add-on services"
+          addonFeatures={cardListPropsTwo}
+          requestPricingHref="#"
+          requestPricingText="Request pricing"
         />
         <LogoCloud />
         <TestimonialsGroup />

@@ -1,3 +1,4 @@
+import CardList from '@/components/card-list'
 import { CTA } from '@/components/cta'
 import { LogoCloud } from '@/components/logo-cloud'
 import TestimonialsGroup from '@/components/testimonials-group'
@@ -45,6 +46,21 @@ const features = [
   },
 ]
 
+const cardListPropsOne = [
+  'Private forum access',
+  'SEO Keyword and topic ideation',
+  'Diagrams, and code samples',
+  'Technical reviews',
+  'Professional editing',
+  'Social media collateral',
+]
+
+const cardListPropsTwo = [
+  'Technical ebooks',
+  'Executive ghostwriting',
+  'Video tutorials',
+]
+
 const ctaProps = [
   'DevRel Specific content in here',
   'Flexible work hours',
@@ -65,7 +81,15 @@ export default function BuildTrust() {
       />
 
       <LogoCloud />
-
+      <CardList
+        title="Ongoing technical content"
+        subtitle="Build a steady stream of technical content that scales with your business."
+        includedFeatures={cardListPropsOne}
+        addonTitle="Add-on services"
+        addonFeatures={cardListPropsTwo}
+        requestPricingHref="#"
+        requestPricingText="Request pricing"
+      />
       <TestimonialsGroup />
       <CTA
         title="Book a discovery call"

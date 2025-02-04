@@ -44,7 +44,7 @@
   }
 
   .header-gradient {
-    @apply text-gradient my-4 bg-gradient-text font-code text-5xl font-semibold sm:text-6xl sm:tracking-tighter;
+    @apply my-4 bg-gradient-text font-code text-5xl font-semibold text-gradient sm:text-6xl sm:tracking-tighter;
   }
 
   .header-light {
@@ -56,7 +56,7 @@
   }
 
   .subheader-gradient {
-    @apply text-gradient my-4 bg-gradient-text font-code text-3xl font-semibold sm:text-4xl sm:tracking-tighter;
+    @apply my-4 bg-gradient-text font-code text-3xl font-semibold text-gradient sm:text-4xl sm:tracking-tighter;
   }
 
   .subheader-light {
@@ -67,12 +67,16 @@
     @apply mt-4 font-code font-semibold text-primary;
   }
 
+  .testimonial-light {
+    @apply font-code text-2xl font-semibold text-white sm:text-2xl sm:tracking-tighter;
+  }
+
   .lead-gradient {
-    @apply text-gradient my-4 bg-gradient-text font-code text-2xl sm:text-3xl sm:tracking-tighter;
+    @apply my-4 bg-gradient-text font-code text-2xl text-gradient sm:text-3xl sm:tracking-tighter;
   }
 
   .lead-light {
-    @apply pb-8 font-sans text-lg text-gray-100;
+    @apply pb-8 font-code text-lg text-gray-100;
   }
 
   .lead-dark {

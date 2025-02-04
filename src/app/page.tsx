@@ -1,7 +1,6 @@
 import BodyDetail from '@/components/body-detail'
 import BodyDetailImage from '@/components/body-detail-image'
 import { Button } from '@/components/button'
-import CardList from '@/components/card-list'
 import { Container } from '@/components/container'
 import { CTA } from '@/components/cta'
 import { LogoCloud } from '@/components/logo-cloud'
@@ -110,9 +109,9 @@ const Hero: FC<HeroProps> = ({
 }) => {
   return (
     <div className="relative">
-      <Container className="relative bg-gradient-brand">
+      <Container className="relative bg-gradient-brand py-20">
         <div className="pb-24 pt-16 sm:pb-32 sm:pt-24 md:pb-48 md:pt-32">
-          <h1 className="header-light max-w-4xl leading-10 text-gray-100 md:text-6xl">
+          <h1 className="header-light max-w-5xl leading-10 text-gray-100 md:text-7xl">
             {title}
           </h1>
           <h2 className="lead-light my-6">{subtitle}</h2>
@@ -171,18 +170,11 @@ export default function Home() {
 
         <Testimonial
           quote="Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur."
-          authorName="John Doe"
+          name="Tina Yards"
+          role="VP of Sales"
+          company="Protocol"
           imageSrc="/testimonials/conor-neville.jpg"
-        />
-
-        <CardList
-          title="Ongoing technical content"
-          subtitle="Build a steady stream of technical content that scales with your business."
-          includedFeatures={cardListPropsOne}
-          addonTitle="Add-on services"
-          addonFeatures={cardListPropsTwo}
-          requestPricingHref="#"
-          requestPricingText="Request pricing"
+          imageAlt="Tina Yards"
         />
       </main>
       <Testimonials />

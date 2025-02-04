@@ -1,4 +1,5 @@
 import BodyDetail from '@/components/body-detail'
+import CardList from '@/components/card-list'
 import { CTA } from '@/components/cta'
 import { HeroSecondary } from '@/components/hero-secondary'
 import { LogoCloud } from '@/components/logo-cloud'
@@ -38,6 +39,21 @@ export default function ForMarketers(): JSX.Element {
   //   'Executive ghostwriting',
   //   'Video tutorials',
   // ]
+
+  const cardListPropsOne = [
+    'Private forum access',
+    'SEO Keyword and topic ideation',
+    'Diagrams, and code samples',
+    'Technical reviews',
+    'Professional editing',
+    'Social media collateral',
+  ]
+
+  const cardListPropsTwo = [
+    'Technical ebooks',
+    'Executive ghostwriting',
+    'Video tutorials',
+  ]
 
   const features1 = [
     {
@@ -98,6 +114,15 @@ export default function ForMarketers(): JSX.Element {
           learnMoreText="See how we"
         />
         <LogoCloud />
+        <CardList
+          title="Ongoing technical content"
+          subtitle="Build a steady stream of technical content that scales with your business."
+          includedFeatures={cardListPropsOne}
+          addonTitle="Add-on services"
+          addonFeatures={cardListPropsTwo}
+          requestPricingHref="#"
+          requestPricingText="Request pricing"
+        />
 
         <TestimonialsGroup />
         <CTA
