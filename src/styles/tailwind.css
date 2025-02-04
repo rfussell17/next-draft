@@ -68,11 +68,11 @@
   }
 
   .lead-gradient {
-    @apply text-gradient my-4 bg-gradient-text font-code text-2xl font-semibold sm:text-3xl sm:tracking-tighter;
+    @apply text-gradient my-4 bg-gradient-text font-code text-2xl sm:text-3xl sm:tracking-tighter;
   }
 
   .lead-light {
-    @apply pb-8 font-sans text-lg font-semibold text-gray-100;
+    @apply pb-8 font-sans text-lg text-gray-100;
   }
 
   .lead-dark {

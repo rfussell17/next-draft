@@ -112,7 +112,9 @@ const Hero: FC<HeroProps> = ({
     <div className="relative">
       <Container className="relative bg-gradient-brand">
         <div className="pb-24 pt-16 sm:pb-32 sm:pt-24 md:pb-48 md:pt-32">
-          <h1 className="header-light text-gray-100 md:text-6xl">{title}</h1>
+          <h1 className="header-light max-w-4xl leading-10 text-gray-100 md:text-6xl">
+            {title}
+          </h1>
           <h2 className="lead-light my-6">{subtitle}</h2>
           <div className="mt-12 flex flex-col gap-x-6 gap-y-4 sm:flex-row">
             <Button
@@ -149,24 +151,22 @@ export default function Home() {
       />
 
       <main>
+        <BodyDetailImage
+          title="How it works"
+          paragraph=""
+          features={bodyDetailImageProps}
+          mainImage={{
+            src: 'https://tailwindui.com/plus/img/component-images/project-app-screenshot.png',
+            alt: 'Product screenshot',
+          }}
+        />
+        <LogoCloud />
         <BodyDetail
           title="Why choose us?"
           subtitleTop="We bring industry experts right to your blog."
           subtitleBottom="Let us handle the complexity of technical content creation."
           features={bodyDetailProps}
           learnMoreText="Discover our"
-        />
-
-        <LogoCloud />
-
-        <BodyDetailImage
-          title="How it works"
-          paragraph="You're just one call away from getting started."
-          features={bodyDetailImageProps}
-          mainImage={{
-            src: 'https://tailwindui.com/plus/img/component-images/project-app-screenshot.png',
-            alt: 'Product screenshot',
-          }}
         />
 
         <Testimonial

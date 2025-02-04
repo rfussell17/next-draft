@@ -24,12 +24,12 @@ const BodyDetail: FC<BodyDetailProps> = ({
   learnMoreText = 'Learn more',
 }) => {
   return (
-    <div className="py-16 sm:py-24">
+    <div className="py-44">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
-          <h2>{title} - body-detail</h2>
+          <h2 className="header-gradient">{title} </h2>
 
-          <h3 className="md:sm-lg">
+          <h3 className="lead-dark">
             <div>{subtitleTop}</div>
             <div> {subtitleBottom}</div>
           </h3>
@@ -38,7 +38,7 @@ const BodyDetail: FC<BodyDetailProps> = ({
           <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-12 lg:max-w-none lg:grid-cols-3">
             {features.map((feature) => (
               <div key={feature.name} className="flex flex-col">
-                <dt className="flex items-center gap-x-3 text-base font-bold text-primary">
+                <dt className="flex items-center gap-x-3 text-lg font-bold text-primary">
                   {feature.name}
                 </dt>
                 <dd className="mt-2 flex flex-auto flex-col">
