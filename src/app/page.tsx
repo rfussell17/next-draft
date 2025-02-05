@@ -86,21 +86,6 @@ const bodyDetailImageTwoProps = [
   },
 ]
 
-const cardListPropsOne = [
-  'Private forum access',
-  'SEO Keyword and topic ideation',
-  'Diagrams, and code samples',
-  'Technical reviews',
-  'Professional editing',
-  'Social media collateral',
-]
-
-const cardListPropsTwo = [
-  'Technical ebooks',
-  'Executive ghostwriting',
-  'Video tutorials',
-]
-
 const ctaProps = [
   'Competitive salaries',
   'Flexible work hours',

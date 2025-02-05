@@ -57,11 +57,27 @@ export const DarkLandingPage: React.FC<DarkLandingPageProps> = ({
 }) => {
   return (
     <div className={`${className}`}>
-      <main className="relative isolate bg-gradient-brand">
-        <div className="px-6 lg:px-8">
-          <div className="mx-auto max-w-4xl pt-24 text-center sm:pt-40">
-            <h1 className="header-light sm:text-7xl">{hero.title}</h1>
-            <p className="lead-light mt-8">{hero.description} </p>
+      <main>
+        <div className="relative isolate bg-gradient-brand">
+          <div className="relative isolate bg-gradient-brand sm:py-24">
+            <div className="px-6 lg:px-8">
+              <div className="mx-auto max-w-5xl text-center uppercase">
+                <h2
+                  className="header-light py-16 sm:text-6xl"
+                  style={{ lineHeight: '1.3' }} // Adjust the value as needed
+                >
+                  How{' '}
+                  <span className="bg-white">
+                    <span className="header-gradient px-3 py-0">Earthly</span>
+                  </span>{' '}
+                  Increased Its Monthly Blog Visitors by{' '}
+                  <span className="bg-white">
+                    <span className="header-gradient px-3 py-0">346%</span>
+                  </span>{' '}
+                  and ramped up its content production with Draft.dev
+                </h2>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -74,10 +90,10 @@ export const DarkLandingPage: React.FC<DarkLandingPageProps> = ({
                   key={index}
                   className="mx-auto flex flex-col-reverse gap-y-3"
                 >
-                  <dt className="text-lg text-gray-300">{stat.label}</dt>
-                  <dd className="text-6xl font-semibold tracking-tight text-white">
-                    {stat.value}
-                  </dd>
+                  <dt className="font-code text-lg font-semibold text-gray-700">
+                    {stat.label}
+                  </dt>
+                  <dd className="header-gradient">{stat.value}</dd>
                 </div>
               ))}
             </dl>

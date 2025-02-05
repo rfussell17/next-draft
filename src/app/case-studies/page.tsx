@@ -1,4 +1,6 @@
+import { CTA } from '@/components/cta'
 import DarkLandingPage from '@/components/landing-page-dark'
+import Testimonial from '@/components/testimonial'
 import TestimonialsGroup from '@/components/testimonials-group'
 import type { Metadata } from 'next'
 
@@ -11,10 +13,20 @@ export const metadata: Metadata = {
   },
 }
 
+const ctaProps = [
+  'Competitive salaries',
+  'Flexible work hours',
+  '30 days of paid vacation',
+  'Annual team retreats',
+  'Benefits for you and your family',
+  'A great work environment',
+]
+
 export default function CaseStudy() {
   const landingPageProps = {
     hero: {
-      title: 'How Earthly Increased Its Monthly Blog Visitors by 346%',
+      title:
+        'How Earthly Increased Its Monthly Blog Visitors by 346% and Ramped Up Its Content Production with Draft.dev',
       description: 'and Ramped Up Its Content Production with Draft.dev',
     },
     content: {
@@ -26,7 +38,7 @@ export default function CaseStudy() {
       ],
       stats: [
         { label: 'Blog visitors per workday', value: '1,500' },
-        { label: 'Increase in monthly blog visitors', value: '346%' },
+        { label: 'Increase in monthly readers', value: '346%' },
         { label: 'Blog conversion rate', value: '6%' },
       ],
     },
@@ -108,7 +120,24 @@ export default function CaseStudy() {
   return (
     <>
       <DarkLandingPage {...landingPageProps} />
+      <Testimonial
+        quote="Draft.dev has been an amazing partner, helping us scale our content program by creating thoughtful and technically-sound developer content and training materials. We’re constantly iterating to build the best educational materials for developer security and Draft.dev has been instrumental in helping us realize these ambitions."
+        name="Randall Degges"
+        role="Head of Developer & Security Relations"
+        company="snyk"
+        imageSrc="/testimonials/randall_degges_snyk_draft_dev.png"
+        imageAlt="Randall Degges"
+      />
       <TestimonialsGroup />
+      <CTA
+        title="Book Discovery Call"
+        description="Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in accusamus quisquam."
+        imageSrc="https://images.unsplash.com/photo-1519338381761-c7523edc1f46?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        imageAlt="Team environment"
+        list={ctaProps}
+        linkHref="#"
+        linkText="See our job postings"
+      />
     </>
   )
 }

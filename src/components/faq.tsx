@@ -52,7 +52,7 @@ export default function FAQ(): JSX.Element {
       <div className="m-auto mx-auto max-w-6xl rounded-xl px-6 lg:px-8">
         <h2 className="header-gradient">Frequently asked questions_</h2>
 
-        <p className="lead-dark mb-16">
+        <p className="lead-dark mb-16 mt-8 font-semibold">
           Have a different question and can’t find the answer you’re looking
           for?
           <br></br>Reach out to our support team by{' '}

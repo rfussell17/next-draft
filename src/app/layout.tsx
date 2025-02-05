@@ -50,6 +50,7 @@ export default function RootLayout({
         <div className="min-h-screen">
           <main>{children}</main>
         </div>
+
         <FAQ />
         <Footer />
       </body>

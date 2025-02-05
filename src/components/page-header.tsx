@@ -27,7 +27,7 @@ const PageHeader: React.FC<PageHeaderProps> = ({ seoTitle, header }) => {
             <h1 className="mb-4 font-code text-base font-medium tracking-wider text-gray-200">
               {seoTitle}
             </h1>
-            <h2 className="font-code text-4xl font-semibold tracking-tight text-white md:text-5xl">
+            <h2 className="font-code text-4xl font-semibold uppercase tracking-tight text-white md:text-5xl">
               {header}_
             </h2>
           </div>
