@@ -76,10 +76,10 @@
   }
 
   .lead-light {
-    @apply pb-8 font-code text-lg text-gray-100;
+    @apply py-5 font-code text-xl text-gray-100;
   }
 
   .lead-dark {
-    @apply font-sans text-lg text-gray-500;
+    @apply font-code text-lg text-gray-600;
   }
 }
