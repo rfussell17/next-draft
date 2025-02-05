@@ -4,7 +4,7 @@ import { Button } from '@/components/button'
 import CaseStudyHome from '@/components/case-study-home'
 import { Container } from '@/components/container'
 import { CTA } from '@/components/cta'
-// import HeroTwo from '@/components/hero-two'
+import HeroTwo from '@/components/hero-two'
 import { LogoCloud } from '@/components/logo-cloud'
 import Testimonial from '@/components/testimonial'
 import Testimonials from '@/components/testimonials-group'
@@ -160,16 +160,16 @@ const Hero: FC<HeroProps> = ({
 export default function Home() {
   return (
     <div className="overflow-hidden">
-      <Hero
+      {/* <Hero
         title="A Content Creation Agency for Technical Writing"
         subtitle="We help Marketers and DevRels attract a technical audience."
         primaryButtonText="See our Content Marketing Services"
         primaryButtonHref="/for-marketers"
         secondaryButtonText="Technical Writing Examples"
         secondaryButtonHref="/for-dev-rels"
-      />
+      /> */}
 
-      {/* <HeroTwo /> */}
+      <HeroTwo />
 
       <main>
         <BodyDetailImage
