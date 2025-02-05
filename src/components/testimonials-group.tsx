@@ -1,10 +1,8 @@
 import Image from 'next/image'
-import headshot1 from '../../public/testimonials/amy-chase.jpg'
-import headshot2 from '../../public/testimonials/conor-neville.jpg'
-import headshot3 from '../../public/testimonials/dillon-lenora.jpg'
-import headshot4 from '../../public/testimonials/harriet-arron.jpg'
-import headshot5 from '../../public/testimonials/tina-yards.jpg'
-import headshot6 from '../../public/testimonials/veronica-winton.jpg'
+
+import randall from '/public/testimonials/randall_degges_snyk_draft_dev.png'
+import rich from '/public/testimonials/rich_loft_labs_draft_dev.png'
+import robert from '/public/testimonials/robert_gibb_fabric_inc_draft_dev.png'
 
 type Testimonial = {
   body: string
@@ -21,7 +19,7 @@ const testimonials: Testimonial[] = [
     author: {
       name: 'Emily Blitstein',
       company: 'SINCH MAILGUN',
-      imageUrl: headshot1.src,
+      imageUrl: rich.src,
     },
   },
   {
@@ -29,7 +27,7 @@ const testimonials: Testimonial[] = [
     author: {
       name: 'Abhishek Iyer',
       company: 'DESCOPE',
-      imageUrl: headshot2.src,
+      imageUrl: robert.src,
     },
   },
   {
@@ -37,7 +35,7 @@ const testimonials: Testimonial[] = [
     author: {
       name: 'Jenny Medeiros',
       company: 'REDPANDA',
-      imageUrl: headshot3.src,
+      imageUrl: randall.src,
     },
   },
   {
@@ -45,7 +43,7 @@ const testimonials: Testimonial[] = [
     author: {
       name: 'Randall Degges',
       company: 'SNYK',
-      imageUrl: headshot4.src,
+      imageUrl: randall.src,
     },
   },
   {
@@ -53,7 +51,7 @@ const testimonials: Testimonial[] = [
     author: {
       name: 'Rich Burroughs',
       company: 'LOFT LABS',
-      imageUrl: headshot5.src,
+      imageUrl: rich.src,
     },
   },
   {
@@ -61,7 +59,7 @@ const testimonials: Testimonial[] = [
     author: {
       name: 'Robert Gibb',
       company: 'FABRIC. INC',
-      imageUrl: headshot6.src,
+      imageUrl: robert.src,
     },
   },
   // Add more testimonials here...
@@ -82,7 +80,7 @@ export default function TestimonialsGroup() {
                 key={testimonial.author.company}
                 className="pt-8 sm:inline-block sm:w-full sm:px-4"
               >
-                <figure className="rounded-2xl bg-gray-50 p-8 text-base">
+                <figure className="rounded-2xl bg-gray-50 p-8 text-base ring-2 ring-gradient-2">
                   <blockquote className="text-gray-900">
                     <p>{`“${testimonial.body}”`}</p>
                   </blockquote>

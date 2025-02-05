@@ -40,7 +40,7 @@ const BodyDetailImage: FC<BodyDetailImageProps> = ({
               <dl className="mt-10 max-w-xl space-y-8 text-base/7 text-gray-600 lg:max-w-none">
                 {features.map((feature) => (
                   <div key={feature.name} className="relative">
-                    <dt className="mr-2 font-bold text-primary">
+                    <dt className="mr-2 font-bold text-secondary">
                       {feature.name}
                     </dt>
                     <dd className="my-1">{feature.description} </dd>
@@ -59,25 +59,38 @@ const BodyDetailImage: FC<BodyDetailImageProps> = ({
               </dl>
             </div>
           </div>
-
-          <div className="sm:px-6 lg:px-0">
-            <div className="relative isolate overflow-hidden bg-primary px-6 pt-8 sm:mx-auto sm:max-w-2xl sm:rounded-3xl sm:pl-16 sm:pr-0 sm:pt-16 lg:mx-0 lg:max-w-none">
+          <div className="m-auto sm:px-6 lg:px-0">
+            {/* For SM and up - with background */}
+            <div className="relative isolate hidden overflow-hidden bg-primary px-6 pt-8 sm:block sm:rounded-3xl sm:pl-16 sm:pr-0">
               <div
                 aria-hidden="true"
                 className="absolute -inset-y-px -left-3 -z-10 w-full origin-bottom-left skew-x-[-30deg] bg-primary opacity-20 ring-1 ring-inset ring-white"
               />
-              <div className="mx-auto max-w-2xl sm:mx-0 sm:max-w-none">
-                <Image
-                  alt={mainImage.alt}
-                  src={mainImage.src}
-                  width={mainImage.width ?? 2432}
-                  height={mainImage.height ?? 1442}
-                  className="-mb-12 w-[57rem] max-w-none rounded-tl-xl bg-gray-800 ring-1 ring-white/10"
-                />
+              <div className="flex min-h-[400px] items-center justify-end">
+                <div className="w-auto">
+                  <Image
+                    alt={mainImage.alt}
+                    src={mainImage.src}
+                    width={500}
+                    height={300}
+                    className="w-[500px] rounded-tl-xl bg-gray-800 ring-1 ring-white/10"
+                  />
+                </div>
               </div>
               <div
                 aria-hidden="true"
                 className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-black/10 sm:rounded-3xl"
+              />
+            </div>
+
+            {/* For mobile - centered, no background */}
+            <div className="flex justify-center px-4 sm:hidden">
+              <Image
+                alt={mainImage.alt}
+                src={mainImage.src}
+                width={500}
+                height={300}
+                className="w-full rounded-xl"
               />
             </div>
           </div>

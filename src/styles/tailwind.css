@@ -44,7 +44,7 @@
   }
 
   .header-gradient {
-    @apply my-4 bg-gradient-text font-code text-5xl font-semibold text-gradient sm:text-6xl sm:tracking-tighter;
+    @apply my-4 bg-gradient-brand font-code text-5xl font-semibold text-gradient sm:text-6xl sm:tracking-tighter;
   }
 
   .header-light {
@@ -56,7 +56,7 @@
   }
 
   .subheader-gradient {
-    @apply my-4 bg-gradient-text font-code text-3xl font-semibold text-gradient sm:text-4xl sm:tracking-tighter;
+    @apply my-4 bg-gradient-brand font-code text-3xl font-semibold text-gradient sm:text-4xl sm:tracking-tighter;
   }
 
   .subheader-light {
@@ -72,7 +72,7 @@
   }
 
   .lead-gradient {
-    @apply my-4 bg-gradient-text font-code text-2xl text-gradient sm:text-3xl sm:tracking-tighter;
+    @apply my-4 bg-gradient-brand font-code text-2xl text-gradient sm:text-3xl sm:tracking-tighter;
   }
 
   .lead-light {

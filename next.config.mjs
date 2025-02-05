@@ -33,6 +33,7 @@ const nextConfig = {
       { hostname: 'img.youtube.com' },
       { hostname: 'lh7-us.googleusercontent.com' },
       { hostname: 'tailwindui.com' },
+      { hostname: 'unsplash.com' },
     ],
   },
 }

@@ -1,6 +1,7 @@
 // DarkLandingPage.tsx
 import Image from 'next/image'
 import React from 'react'
+import { Button } from './button'
 
 // Types for the component props
 interface StatItem {
@@ -57,21 +58,21 @@ export const DarkLandingPage: React.FC<DarkLandingPageProps> = ({
   return (
     <div className={`${className}`}>
       <main className="relative isolate bg-gradient-brand">
-        <div className="px-6 pt-14 lg:px-8">
+        <div className="px-6 lg:px-8">
           <div className="mx-auto max-w-4xl pt-24 text-center sm:pt-40">
             <h1 className="header-light sm:text-7xl">{hero.title}</h1>
-            <p className="lead-light mt-8">{hero.description}</p>
+            <p className="lead-light mt-8">{hero.description} </p>
           </div>
         </div>
 
         {/* Content section */}
         <div className="mx-auto mt-20 max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
-            <dl className="mt-16 grid grid-cols-1 gap-x-8 gap-y-12 sm:mt-20 sm:grid-cols-2 sm:gap-y-16 lg:mt-28 lg:grid-cols-3">
+            <dl className="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:grid-cols-3">
               {content.stats.map((stat, index) => (
                 <div
                   key={index}
-                  className="flex flex-col-reverse gap-y-3 border-l border-white/20 pl-6"
+                  className="mx-auto flex flex-col-reverse gap-y-3"
                 >
                   <dt className="text-lg text-gray-300">{stat.label}</dt>
                   <dd className="text-6xl font-semibold tracking-tight text-white">
@@ -81,6 +82,11 @@ export const DarkLandingPage: React.FC<DarkLandingPageProps> = ({
               ))}
             </dl>
           </div>
+        </div>
+        <div className="m-auto pt-20 text-center">
+          <Button variant="primary" href="" className="font-semibold">
+            See the full case study
+          </Button>
         </div>
 
         {/* Featured image section */}

@@ -21,7 +21,7 @@ const BodyDetail: FC<BodyDetailProps> = ({
   subtitleTop,
   subtitleBottom,
   features,
-  learnMoreText = 'Learn more',
+  learnMoreText = 'Learn more about our',
 }) => {
   return (
     <div className="py-44">
@@ -38,16 +38,16 @@ const BodyDetail: FC<BodyDetailProps> = ({
           <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-12 lg:max-w-none lg:grid-cols-3">
             {features.map((feature) => (
               <div key={feature.name} className="flex flex-col">
-                <dt className="flex items-center gap-x-3 text-lg font-bold text-primary">
+                <dt className="flex items-center gap-x-3 text-lg font-semibold text-secondary">
                   {feature.name}
                 </dt>
-                <dd className="mt-2 flex flex-auto flex-col">
-                  <p className="my-1 flex-auto">{feature.description1}</p>
-                  <p className="my-1 flex-auto">{feature.description2}</p>
-                  <p className="z-50 mt-2">
+                <dd className="mt-2 flex flex-auto flex-col text-base">
+                  <p className="my-2 flex-auto">{feature.description1}</p>
+                  <p className="my-2 flex-auto">{feature.description2}</p>
+                  <p className="z-50 mt-4">
                     <Link
                       href={feature.href}
-                      className="font-semibold text-secondary"
+                      className="font-semibold text-gray-700"
                     >
                       {learnMoreText} {feature.name}
                       <span aria-hidden="true"> →</span>

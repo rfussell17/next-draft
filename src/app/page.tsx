@@ -1,6 +1,7 @@
 import BodyDetail from '@/components/body-detail'
 import BodyDetailImage from '@/components/body-detail-image'
 import { Button } from '@/components/button'
+import CaseStudyHome from '@/components/case-study-home'
 import { Container } from '@/components/container'
 import { CTA } from '@/components/cta'
 import { LogoCloud } from '@/components/logo-cloud'
@@ -47,22 +48,40 @@ const bodyDetailProps = [
 
 const bodyDetailImageProps = [
   {
-    name: 'Schedule A Discovery Call',
+    name: '1. Schedule A Discovery Call',
     description:
       "In this 30-minute introductory call, we'll learn about your company and marketing strategy. If Draft.dev is a good fit for your business, we can start the onboarding process.",
     href: '/learn-more',
   },
   {
-    name: 'Create Your Content Plan',
+    name: '2. Create Your Content Plan',
     description:
       "Based on your budget, goals, and marketing strategy, we'll create your customized content plan. This helps you see exactly what you'll be getting and ensures that we meet your expectations.",
     href: '/content',
   },
   {
-    name: 'Ready-to-publish Technical Content',
+    name: '3. Ready-to-publish Technical Content',
     description:
       "Once your content plan is approved and our team will get started, you'll receive tested and edited content that's ready to publish every 1-2 weeks. If our work ever falls short of your expectations, we'll work with you to revise it.",
     href: '/delivery',
+  },
+]
+
+const bodyDetailImageTwoProps = [
+  {
+    name: 'Drive Technical Authority',
+    description:
+      "We create in-depth technical tutorials, guides, and documentation that showcase your product's capabilities while building credibility with developers.",
+  },
+  {
+    name: 'Scale Your Content Program',
+    description:
+      'Our network of technical experts delivers consistent, high-quality content that frees your team to focus on core business priorities.',
+  },
+  {
+    name: 'Generate Developer Interest',
+    description:
+      'From technical blog posts to product tutorials, we create content that attracts developers and converts them into engaged users.',
   },
 ]
 
@@ -151,31 +170,43 @@ export default function Home() {
 
       <main>
         <BodyDetailImage
-          title="How it works"
-          paragraph=""
-          features={bodyDetailImageProps}
+          title="Technical content that converts"
+          paragraph="Transform your technical marketing with expert-written content that resonates with developers and generates qualified leads."
+          features={bodyDetailImageTwoProps}
           mainImage={{
-            src: 'https://tailwindui.com/plus/img/component-images/project-app-screenshot.png',
+            src: '/site/dev_draft_dev.jpg',
             alt: 'Product screenshot',
           }}
         />
         <LogoCloud />
         <BodyDetail
-          title="Why choose us?"
+          title="Why Draft.dev?"
           subtitleTop="We bring industry experts right to your blog."
           subtitleBottom="Let us handle the complexity of technical content creation."
           features={bodyDetailProps}
-          learnMoreText="Discover our"
+          learnMoreText="Learn more about our"
         />
 
         <Testimonial
-          quote="Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur."
-          name="Tina Yards"
-          role="VP of Sales"
-          company="Protocol"
-          imageSrc="/testimonials/conor-neville.jpg"
-          imageAlt="Tina Yards"
+          quote="Having draft.dev source quality technical content for the Loft Labs blog has been a competitive advantage. It's given us a steadier flow of content, which has helped our brand's visibility, and some of the posts are among the most popular ones we've published."
+          name="Rich Burroughs"
+          role="Developer Advocate"
+          company="Loft Labs"
+          imageSrc="/testimonials/rich_loft_labs_draft_dev.png"
+          imageAlt="Rich Burroughs"
         />
+
+        <BodyDetailImage
+          title="How it works"
+          paragraph=""
+          features={bodyDetailImageProps}
+          mainImage={{
+            src: '/site/team_draft_dev.jpg',
+            alt: 'Product screenshot',
+          }}
+        />
+
+        <CaseStudyHome />
       </main>
       <Testimonials />
 

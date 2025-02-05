@@ -6,7 +6,7 @@ import { Link } from './link'
 const variants = {
   primary: clsx(
     'inline-flex items-center justify-center px-4 py-[calc(theme(spacing.2)-1px)]',
-    'rounded-full border border-transparent bg-gray-100 shadow-md',
+    'rounded-md border border-transparent bg-gray-100 shadow-md',
     'whitespace-nowrap text-base font-medium', // removed direct text color for demonstration
     'data-[disabled]:bg-gray-300 data-[hover]:bg-gray-300 data-[disabled]:opacity-40',
   ),
