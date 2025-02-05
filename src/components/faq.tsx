@@ -50,7 +50,7 @@ export default function FAQ(): JSX.Element {
   return (
     <div className="py-24 sm:py-32">
       <div className="m-auto mx-auto max-w-6xl rounded-xl px-6 lg:px-8">
-        <h2 className="header-gradient">Frequently asked questions</h2>
+        <h2 className="header-gradient">Frequently asked questions_</h2>
 
         <p className="lead-dark mb-16">
           Have a different question and can’t find the answer you’re looking

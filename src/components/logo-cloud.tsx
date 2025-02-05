@@ -13,7 +13,7 @@ export function LogoCloud({
   return (
     <div className="bg-gradient-brand py-24 text-white">
       <div className="mx-auto max-w-2xl lg:text-center">
-        <h2 className="lead-light pb-6 text-center">
+        <h2 className="lead-light mb-10 text-center font-semibold">
           Trusted by 100+ developer tools companies
         </h2>
       </div>
@@ -21,7 +21,7 @@ export function LogoCloud({
       <div
         className={clsx(
           className,
-          'flex justify-between max-sm:mx-auto max-sm:max-w-md max-sm:flex-wrap max-sm:justify-evenly max-sm:gap-x-4 max-sm:gap-y-4',
+          'flex flex-col justify-around max-sm:mx-auto max-sm:max-w-xl max-sm:flex-wrap max-sm:justify-evenly max-sm:gap-x-4 max-sm:gap-y-4 sm:flex-row',
         )}
       >
         <Image

@@ -61,10 +61,10 @@ const CaseStudyHome = () => {
             href="/case-studies"
             className="font-semibold"
           >
-            See the full case study
+            View case studies
           </Button>
           <Button variant="outline" colorMode="light" href="/case-studies">
-            View all case studies
+            See our content marketing services
           </Button>
         </div>
       </main>

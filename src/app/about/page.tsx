@@ -1,5 +1,6 @@
 import { Button } from '@/components/button'
 import { Container } from '@/components/container'
+import PageHeader from '@/components/page-header'
 import type { Metadata } from 'next'
 import Image from 'next/image'
 
@@ -40,118 +41,131 @@ function Person({
 
 function IntroOne() {
   return (
-    <Container className="m-auto my-32 max-w-6xl">
-      <h1 hidden sr-only>
+    <>
+      <PageHeader
+        seoTitle="About Draft.dev"
+        header="We believe great marketing content can also be educational"
+      />
+      <Container className="m-auto my-32 max-w-6xl">
+        {/* <h1 hidden sr-only>
         About Draft.dev
       </h1>
       <h2 className="header-gradient">
         We believe great marketing content can also be educational
-      </h2>
-      <div className="mt-16 grid grid-cols-1 gap-12 lg:grid-cols-2">
-        <div className="m-auto max-w-lg">
-          <p className="text-lg text-gray-600">
-            After spending 8 years as a CTO, building software engineering teams
-            in venture-funded startups, Karl Hughes founded Draft.dev to help
-            companies create authentic technical content that resonates with
-            software developers.
-          </p>
-          <p className="mt-8 text-lg text-gray-600">
-            Since founding the company in 2020, the team has grown to include
-            marketers, editors, engineers, and over 300 engineers who write
-            content for us.
-          </p>
-        </div>
-        <div className="max-lg:order-first max-lg:max-w-lg">
-          <div className="aspect-[3/2] overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10">
-            <Image
-              alt=""
-              src="/company/5.jpg"
-              className="block size-full object-cover"
-              width={200}
-              height={200}
-            />
+      </h2> */}
+
+        <div className="my-24 grid grid-cols-1 gap-12 lg:grid-cols-2">
+          <div className="m-auto max-w-lg">
+            <p className="text-xl text-gray-600">
+              After spending 8 years as a CTO, building software engineering
+              teams in venture-funded startups,{' '}
+              <strong>
+                Karl Hughes founded Draft.dev to help companies create authentic
+                technical content
+              </strong>{' '}
+              that resonates with software developers.
+            </p>
+            <p className="mt-8 text-xl text-gray-600">
+              Since founding the company in 2020, the team has grown to include
+              marketers, editors, engineers, and over 300 engineers who write
+              content for us.
+            </p>
+          </div>
+          <div className="max-lg:order-first max-lg:max-w-lg">
+            <div className="aspect-[3/2] overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10">
+              <Image
+                alt=""
+                src="/company/5.jpg"
+                className="block size-full object-cover"
+                width={200}
+                height={200}
+              />
+            </div>
           </div>
         </div>
-      </div>
-      <h3 className="lead-gradient mt-16">The team</h3>
-      <hr className="mt-6 border-t border-gray-200" />
-      <ul
-        role="list"
-        className="mx-auto mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3"
-      >
-        <Person
-          name="Karl Hughes"
-          description="Founder, CEO"
-          img="/team/michael-foster.jpg"
-        />
-        <Person
-          name="Clayton Kast"
-          description="Account Director"
-          img="/team/dries-vincent.jpg"
-        />
-        <Person
-          name="Annika Puura"
-          description="Operations Manager"
-          img="/team/celeste-vandermark.jpg"
-        />
-        <Person
-          name="Jakkie Koekemoer"
-          description="Engineering Manager"
-          img="/team/courtney-henry.jpg"
-        />
-        <Person
-          name="Aniket Bhattacharyea"
-          description="Developer Advocate"
-          img="/team/marcus-eldridge.jpg"
-        />
-        <Person
-          name="Kumar Harsh"
-          description="Developer Advocate"
-          img="/team/whitney-francis.jpg"
-        />
-        <Person
-          name="Elzet Blaauw"
-          description="Managing Editor"
-          img="/team/leonard-krasner.jpg"
-        />
-        <Person
-          name="Kirstin Spivey"
-          description="Editor"
-          img="/team/nolan-sheffield.jpg"
-        />
-        <Person
-          name="Shane Cullen"
-          description="Editor"
-          img="/team/emily-selman.jpg"
-        />
-        <Person
-          name="Meagan Shelley"
-          description="Marketing"
-          img="/team/leonard-krasner.jpg"
-        />
-        <Person
-          name="Tim Freese"
-          description="Accountant"
-          img="/team/nolan-sheffield.jpg"
-        />
-      </ul>
-    </Container>
+        <h3 className="lead-gradient mt-16 font-semibold">The team_</h3>
+        <hr className="mt-6 border-t border-gray-200" />
+        <ul
+          role="list"
+          className="mx-auto mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3"
+        >
+          <Person
+            name="Karl Hughes"
+            description="Founder, CEO"
+            img="/team/michael-foster.jpg"
+          />
+          <Person
+            name="Clayton Kast"
+            description="Account Director"
+            img="/team/dries-vincent.jpg"
+          />
+          <Person
+            name="Annika Puura"
+            description="Operations Manager"
+            img="/team/celeste-vandermark.jpg"
+          />
+          <Person
+            name="Jakkie Koekemoer"
+            description="Engineering Manager"
+            img="/team/courtney-henry.jpg"
+          />
+          <Person
+            name="Aniket Bhattacharyea"
+            description="Developer Advocate"
+            img="/team/marcus-eldridge.jpg"
+          />
+          <Person
+            name="Kumar Harsh"
+            description="Developer Advocate"
+            img="/team/whitney-francis.jpg"
+          />
+          <Person
+            name="Elzet Blaauw"
+            description="Managing Editor"
+            img="/team/leonard-krasner.jpg"
+          />
+          <Person
+            name="Kirstin Spivey"
+            description="Editor"
+            img="/team/nolan-sheffield.jpg"
+          />
+          <Person
+            name="Shane Cullen"
+            description="Editor"
+            img="/team/emily-selman.jpg"
+          />
+          <Person
+            name="Meagan Shelley"
+            description="Marketing"
+            img="/team/leonard-krasner.jpg"
+          />
+          <Person
+            name="Tim Freese"
+            description="Accountant"
+            img="/team/nolan-sheffield.jpg"
+          />
+        </ul>
+      </Container>
+    </>
   )
 }
 
 function IntroTwo() {
   return (
-    <Container className="my-42 m-auto max-w-6xl rounded-2xl bg-gradient-brand p-16">
+    <Container className="m-auto my-32 max-w-6xl rounded-2xl bg-gradient-brand p-16">
       <h3 className="header-light m-auto max-w-4xl px-8 py-6 ring-2 ring-white">
         What makes Draft.dev different?
       </h3>
       <div className="m-auto mt-16 max-w-4xl">
         <div className="m-auto text-lg text-white">
           <p>
-            We work exclusively with companies that are trying to reach software
-            developers, data engineers, and DevOps practitioners. Typically, our
-            clients are Developer Relations or Developer Marketing teams at
-            companies with 50+ employees or at least Series A funding.
+            We work exclusively with companies that are trying to reach{' '}
+            <strong>
+              software developers, data engineers, and DevOps practitioners
+            </strong>
+            . Typically, our clients are Developer Relations or Developer
+            Marketing teams at companies with 50+ employees or at least Series A
+            funding.
           </p>
           <p className="mt-8">
             We specialize in producing technical content (mostly tutorials and
@@ -160,7 +174,9 @@ function IntroTwo() {
             ebooks.
           </p>
           <p className="mt-8">
-            Our goal is to create high-quality, technically deep content.
+            <strong>
+              Our goal is to create high-quality, technically-deep content.
+            </strong>{' '}
             Subject-matter experts are assigned to each article, so every piece
             is detailed and authoritative. Our core team includes experienced
             engineers and editors who make sure that{' '}
@@ -173,45 +189,11 @@ function IntroTwo() {
   )
 }
 
-function Testimonial() {
-  return (
-    <div className="h-90 relative flex aspect-square w-full flex-col justify-end overflow-hidden rounded-3xl sm:aspect-[5/4] lg:aspect-[3/4]">
-      <Image
-        alt=""
-        src="/testimonials/veronica-winton.jpg"
-        className="absolute inset-0 object-cover"
-        fill
-        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-      />
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 rounded-3xl bg-gradient-to-t from-black from-10% to-75% ring-1 ring-inset ring-gray-950/10 lg:from-25%"
-      />
-      <figure className="relative p-10">
-        <blockquote>
-          <p className="relative text-xl/7 text-white before:absolute before:-translate-x-full before:content-['“'] after:absolute after:content-['”']">
-            We&apos;ve managed to put two of our main competitors out of
-            business in 6 months.
-          </p>
-        </blockquote>
-        <figcaption className="mt-6 border-t border-white/20 pt-6">
-          <p className="text-sm/6 font-medium text-white">Veronica Winton</p>
-          <p className="text-sm/6 font-medium">
-            <span className="bg-gradient-brand bg-clip-text text-transparent">
-              CSO, Planeteria
-            </span>
-          </p>
-        </figcaption>
-      </figure>
-    </div>
-  )
-}
-
 function Jobs() {
   return (
     <Container className="m-auto mt-32 max-w-6xl">
-      <h2 className="header-gradient">Write for Draft.dev</h2>
-      <p className="mt-6 max-w-3xl">
+      <h2 className="header-gradient">Write for Draft.dev_</h2>
+      <p className="mt-6 max-w-4xl text-lg">
         If you're a software developer and you want to build your personal brand
         while getting paid to write about interesting technical topics, you've
         come to the right place. We create content that will be read by a wide
@@ -220,7 +202,7 @@ function Jobs() {
         experience levels to apply.
       </p>
       <div className="mt-16 grid grid-cols-1 gap-16 lg:grid-cols-[1fr_24rem]">
-        <div className="lg:max-w-2xl">
+        <div className="lg:max-w-5xl">
           <div>
             <table className="w-full text-left">
               <colgroup>
@@ -308,7 +290,6 @@ function Jobs() {
             </table>
           </div>
         </div>
-        <Testimonial />
       </div>
     </Container>
   )

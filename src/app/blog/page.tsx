@@ -1,5 +1,5 @@
 import { getWpPosts } from '@/app/lib/wordpress'
-import { Container } from '@/components/container'
+import PageHeader from '@/components/page-header'
 
 import type { Metadata } from 'next'
 import type { StaticImport } from 'next/dist/shared/lib/get-img-props'
@@ -24,12 +24,10 @@ export const metadata: Metadata = {
 
 function Header() {
   return (
-    <Container className="bg-primary py-20">
-      <h1 className="header-light ml-16 sm:text-6xl">Draft.Dev Blog</h1>
-      <h2 className="lead-light ml-16 mt-6">
-        Learn to build a better technical blog.
-      </h2>
-    </Container>
+    <PageHeader
+      seoTitle="Draft.dev blog"
+      header="HIGH QUALITY TECHNICAL CONTENT YOU CAN RELY ON"
+    />
   )
 }
 
