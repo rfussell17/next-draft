@@ -4,6 +4,7 @@ import { Button } from '@/components/button'
 import CaseStudyHome from '@/components/case-study-home'
 import { Container } from '@/components/container'
 import { CTA } from '@/components/cta'
+// import HeroTwo from '@/components/hero-two'
 import { LogoCloud } from '@/components/logo-cloud'
 import Testimonial from '@/components/testimonial'
 import Testimonials from '@/components/testimonials-group'
@@ -167,6 +168,8 @@ export default function Home() {
         secondaryButtonText="Technical Writing Examples"
         secondaryButtonHref="/for-dev-rels"
       />
+
+      {/* <HeroTwo /> */}
 
       <main>
         <BodyDetailImage
