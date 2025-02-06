@@ -3,3 +3,11 @@
 [build]
   command = "npm run build"
   publish = ".next"
+
+{
+  "build": {
+    "env": {
+      "SHARP_IGNORE_GLOBAL_LIBVIPS": "1"
+    }
+  }
+}
