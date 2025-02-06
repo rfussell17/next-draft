@@ -11,6 +11,7 @@ const nextConfig = {
       },
       { hostname: 'optimistic-insurance.localsite.io/blog' },
       { hostname: 'optimistic-insurance.localsite.io/graphql' },
+      { hostname: 'heartfelt-parfait-e90b6d.netlify.app' },
       { hostname: 'draft-test-local.local/graphql' },
       {
         hostname: 'nextdraft.netlify.app',
