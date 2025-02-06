@@ -97,16 +97,20 @@ async function fetchGraphQL(query: string, variables = {}) {
   if (!baseUrl) {
     throw new Error('WORDPRESS_API_URL is not defined')
   }
-  const privacyUrl = baseUrl.includes('?')
-    ? `${baseUrl}&password=${process.env.WORDPRESS_PRIVACY_PASSWORD}`
-    : `${baseUrl}?password=${process.env.WORDPRESS_PRIVACY_PASSWORD}`
 
-  const response = await fetch(privacyUrl, {
+  const headers = new Headers({
+    'Content-Type': 'application/json',
+    Authorization: getAuthHeader(),
+  })
+
+  // Add privacy password to headers if it exists
+  if (process.env.WORDPRESS_PRIVACY_PASSWORD) {
+    headers.append('X-WP-Privacy', process.env.WORDPRESS_PRIVACY_PASSWORD)
+  }
+
+  const response = await fetch(baseUrl, {
     method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      Authorization: getAuthHeader(),
-    },
+    headers,
     body: JSON.stringify({ query, variables }),
     next: { revalidate: 3600 },
   })
