@@ -1,5 +1,3 @@
-// src/app/blog/[slug]/page.tsx
-
 import parse, { type DOMNode } from 'html-react-parser'
 import type { Metadata } from 'next'
 import Image from 'next/image'
@@ -18,12 +16,13 @@ export const metadata: Metadata = {
 }
 
 interface PageProps {
-  params: { slug: string }
+  params: { slug: string } | Promise<{ slug: string }>
   searchParams: { [key: string]: string | string[] | undefined }
 }
 
 export default async function PostPage({ params, searchParams }: PageProps) {
-  const post = await getWpPost(params.slug)
+  const resolvedParams = await Promise.resolve(params)
+  const post = await getWpPost(resolvedParams.slug)
 
   if (!post) {
     notFound()
