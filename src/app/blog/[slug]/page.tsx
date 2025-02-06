@@ -16,12 +16,12 @@ export const metadata: Metadata = {
 }
 
 interface PageProps {
-  params: Promise<{ slug: string }>
+  params: { slug: string } | Promise<{ slug: string }>
   searchParams: { [key: string]: string | string[] | undefined }
 }
 
 export default async function PostPage({ params, searchParams }: PageProps) {
-  const resolvedParams = await params
+  const resolvedParams = await (params as Promise<{ slug: string }>)
   const post = await getWpPost(resolvedParams.slug)
 
   if (!post) {
