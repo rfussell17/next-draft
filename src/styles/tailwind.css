@@ -82,4 +82,8 @@
   .lead-dark {
     @apply font-code text-lg text-gray-600;
   }
+
+  .list-header {
+    @apply bg-gradient-brand font-code text-3xl font-semibold text-gradient sm:tracking-tighter;
+  }
 }
