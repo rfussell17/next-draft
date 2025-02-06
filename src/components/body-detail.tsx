@@ -27,7 +27,7 @@ const BodyDetail: FC<BodyDetailProps> = ({
     <div className="py-44">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="header-gradient">_{title} </h2>
+          <h2 className="header-gradient">{title} </h2>
 
           <h3 className="lead-dark py-5">
             <div className="pb-1">{subtitleTop}</div>

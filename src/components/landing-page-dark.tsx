@@ -98,36 +98,34 @@ export const DarkLandingPage: React.FC<DarkLandingPageProps> = ({
 
         <div className="m-auto py-0 sm:py-20">
           <div className="bg-white py-24">
-            <div className="mx-auto grid max-w-7xl grid-cols-1 gap-20 px-6 lg:px-8 xl:grid-cols-5">
-              <ul
+            <div className="mx-auto flex max-w-7xl gap-20 px-6 lg:px-8">
+              {/* <ul
                 role="list"
                 className="divide-y divide-gray-200 xl:col-span-3"
-              >
-                <li className="flex flex-col gap-10 py-12 first:pt-0 last:pb-0 sm:flex-row">
-                  <Image
-                    alt="Adam Gordon Bell"
-                    width={1000}
-                    height={1000}
-                    src="/testimonials/adam_bell_draft_dev.jpg"
-                    className="aspect-[4/5] w-52 flex-none rounded-2xl object-cover"
-                  />
+              > */}
+              <div className="flex flex-col gap-10 py-12 sm:flex-row">
+                <Image
+                  alt="Adam Gordon Bell"
+                  width={1000}
+                  height={1000}
+                  src="/testimonials/adam_bell_draft_dev.jpg"
+                  className="aspect-[4/5] w-52 flex-none rounded-2xl object-cover"
+                />
 
-                  <div className="max-w-4xl">
-                    <p className="my-8 font-code text-lg font-semibold text-gray-600 sm:text-2xl">
-                      "It's difficult to find an agency with enough high-quality
-                      subject matter expert writers to build up the content
-                      pipeline that Draft.dev gives you. It's a shortcut to
-                      building an in-house writing team."
-                    </p>
-                    <h3 className="subheader-gradient">Adam Gordon Bell,</h3>
-                    <p className="-mt-4 font-semibold text-gray-700">
-                      Director of Developer Relations, Earthly
-                    </p>
-
-                    <ul role="list" className="mt-6 flex gap-x-6"></ul>
-                  </div>
-                </li>
-              </ul>
+                <div className="max-w-xl">
+                  <p className="my-8 font-code text-lg font-semibold text-gray-600 sm:text-2xl">
+                    "It's difficult to find an agency with enough high-quality
+                    subject matter expert writers to build up the content
+                    pipeline that Draft.dev gives you. It's a shortcut to
+                    building an in-house writing team."
+                  </p>
+                  <h3 className="subheader-gradient">Adam Gordon Bell,</h3>
+                  <p className="-mt-4 font-semibold text-gray-700">
+                    Director of Developer Relations, Earthly
+                  </p>
+                </div>
+              </div>
+              {/* </ul> */}
             </div>
           </div>
         </div>
