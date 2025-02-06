@@ -74,12 +74,12 @@ export default function Services() {
       <Header />
 
       <Testimonial
-        quote="Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur."
-        name="Tina Yards"
-        role="VP of Sales"
-        company="Protocol"
-        imageSrc="/testimonials/conor-neville.jpg"
-        imageAlt="Tina Yards"
+        quote="Having draft.dev source quality technical content for the Loft Labs blog has been a competitive advantage. It's given us a steadier flow of content, which has helped our brand's visibility, and some of the posts are among the most popular ones we've published."
+        name="Rich Burroughs"
+        role="Developer Advocate"
+        company="Loft Labs"
+        imageSrc="/testimonials/rich_loft_labs_draft_dev.png"
+        imageAlt="Rich Burroughs"
       />
     </main>
   )

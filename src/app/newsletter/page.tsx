@@ -26,8 +26,8 @@ export default function Newsletter() {
   return (
     <>
       <PageHeader
-        title="Newsletter"
-        description="Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat."
+        seoTitle="About Draft.dev"
+        header="We believe great marketing content can also be educational"
       />
       <LogoCloud />
       <TestimonialsGroup />
