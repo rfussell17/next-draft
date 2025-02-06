@@ -19,7 +19,12 @@ export default async function PostPage({
   params,
   searchParams,
 }: {
-  params: { slug: string }
+  params: { slug: string } & {
+    then?: never
+    catch?: never
+    finally?: never
+    [Symbol.toStringTag]?: never
+  }
   searchParams: { [key: string]: string | string[] | undefined }
 }) {
   const post = await getWpPost(params.slug)
