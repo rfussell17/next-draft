@@ -91,41 +91,53 @@ const getAuthHeader = () => {
   return `Basic ${auth}`
 }
 
-// Fetch from GraphQL API
 async function fetchGraphQL(query: string, variables = {}) {
   const baseUrl = process.env.WORDPRESS_API_URL
   if (!baseUrl) {
     throw new Error('WORDPRESS_API_URL is not defined')
   }
 
-  const headers = new Headers({
-    'Content-Type': 'application/json',
-    Authorization: getAuthHeader(),
-  })
-
-  // Add privacy password to headers if it exists
-  if (process.env.WORDPRESS_PRIVACY_PASSWORD) {
-    headers.append('X-WP-Privacy', process.env.WORDPRESS_PRIVACY_PASSWORD)
-  }
-
-  const response = await fetch(baseUrl, {
-    method: 'POST',
-    headers,
-    body: JSON.stringify({ query, variables }),
-    next: { revalidate: 3600 },
-  })
-
-  const text = await response.text()
-
   try {
-    const json = JSON.parse(text)
-    if (json.errors) {
-      throw new Error(json.errors[0].message)
+    const headers = new Headers({
+      'Content-Type': 'application/json',
+      Authorization: getAuthHeader(),
+    })
+
+    if (process.env.WORDPRESS_PRIVACY_PASSWORD) {
+      headers.append('X-WP-Privacy', process.env.WORDPRESS_PRIVACY_PASSWORD)
     }
-    return json.data
+
+    console.log('Attempting to fetch from:', baseUrl)
+
+    const response = await fetch(baseUrl, {
+      method: 'POST',
+      headers,
+      body: JSON.stringify({ query, variables }),
+      cache: 'no-store',
+      next: { tags: ['posts'] }, // Add this for better cache control
+    })
+
+    if (!response.ok) {
+      console.error('Response not OK:', response.status, response.statusText)
+      throw new Error(`HTTP error! status: ${response.status}`)
+    }
+
+    const text = await response.text()
+
+    try {
+      const json = JSON.parse(text)
+      if (json.errors) {
+        console.error('GraphQL Errors:', json.errors)
+        throw new Error(json.errors[0].message)
+      }
+      return json.data
+    } catch (error) {
+      console.error('Response Parsing Error:', text)
+      throw new Error('Failed to parse WordPress response')
+    }
   } catch (error) {
-    console.error('Response Parsing Error:', text)
-    throw new Error('Failed to parse WordPress response')
+    console.error('Fetch error:', error)
+    throw error
   }
 }
 
