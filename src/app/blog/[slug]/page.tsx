@@ -1,3 +1,5 @@
+// src/app/blog/[slug]/page.tsx
+
 import parse, { type DOMNode } from 'html-react-parser'
 import type { Metadata } from 'next'
 import Image from 'next/image'
@@ -15,16 +17,17 @@ export const metadata: Metadata = {
   },
 }
 
-export default async function PostPage({
-  params,
-  searchParams,
-}: {
+interface PageProps {
   params: { slug: string }
   searchParams: { [key: string]: string | string[] | undefined }
-}) {
+}
+
+export default async function PostPage({ params, searchParams }: PageProps) {
   const post = await getWpPost(params.slug)
 
-  if (!post) notFound()
+  if (!post) {
+    notFound()
+  }
 
   const transform = (domNode: DOMNode) => {
     if (domNode.type === 'tag' && domNode.name === 'img' && domNode.attribs) {
