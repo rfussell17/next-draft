@@ -9,9 +9,13 @@ import type { Metadata } from 'next'
 import { Fira_Code, Fira_Sans } from 'next/font/google'
 
 export const metadata: Metadata = {
-  title: {
-    template: '%s - Radiant',
-    default: 'Draft.dev - A Content Creation Agency for Technical Writing',
+  title: 'Your Site Title',
+  description:
+    'Radiant helps you sell more by revealing sensitive information about your customers.',
+  robots: {
+    index: false,
+    follow: false,
+    noarchive: true,
   },
 }
 
@@ -43,10 +47,10 @@ export default function RootLayout({
           title="The Radiant Blog"
           href="/blog/feed.xml"
         />
-        <meta name="robots" content="noindex, nofollow, noarchive" />
       </head>
       <body className="text-gray-600 antialiased">
         <Navbar />
+
         <div className="min-h-screen">
           <main>{children}</main>
         </div>

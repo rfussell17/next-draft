@@ -1,5 +1,6 @@
 // DarkLandingPage.tsx
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 
 // Types for the component props
@@ -125,7 +126,6 @@ export const DarkLandingPage: React.FC<DarkLandingPageProps> = ({
                   </p>
                 </div>
               </div>
-              {/* </ul> */}
             </div>
           </div>
         </div>
@@ -152,17 +152,29 @@ export const DarkLandingPage: React.FC<DarkLandingPageProps> = ({
               </div>
             ))}
           </dl>
+          <div className="m-auto flex items-center justify-center gap-x-6 sm:my-10">
+            <Link
+              href="#"
+              className="rounded-sm px-3.5 py-2.5 font-code text-base font-semibold text-white shadow-sm ring-2 ring-white hover:bg-gray-100 hover:text-gradient-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+            >
+              Download the full case study
+            </Link>
+            <Link
+              href="#"
+              className="font-code text-base text-white hover:text-gray-300"
+            >
+              Technical writing examples <span aria-hidden="true">→</span>
+            </Link>
+          </div>
         </div>
 
         {/* Case Studies section */}
-        <div className="mx-auto my-32 max-w-7xl px-6 pb-32 sm:mt-40 lg:px-8">
+        <div className="mx-auto my-16 max-w-7xl px-6 py-16 sm:my-24 lg:px-8">
           <div className="mx-auto max-w-2xl lg:mx-0">
-            <h2 className="m:text-5xl text-pretty text-4xl font-semibold tracking-tight text-gray-800">
-              {caseStudy.title} hi
-            </h2>
-            <p className="mt-6 text-lg/8 text-gray-300">
+            <h2 className="header-gradient">{caseStudy.title}_</h2>
+            {/* <p className="mt-6 text-lg/8 text-gray-300">
               {caseStudy.description}
-            </p>
+            </p> */}
           </div>
           <ul
             role="list"
@@ -180,8 +192,6 @@ export const DarkLandingPage: React.FC<DarkLandingPageProps> = ({
                 <h3 className="mt-6 text-lg/8 font-semibold tracking-tight text-secondary">
                   {client.company}
                 </h3>
-                <p className="text-base/7 text-gray-200">{client.name}</p>
-                <p className="text-sm/6 text-gray-300">{client.role}</p>
               </li>
             ))}
           </ul>

@@ -1,7 +1,5 @@
-import { CTA } from '@/components/cta'
+import { CTAFull } from '@/components/cta-full'
 import DarkLandingPage from '@/components/landing-page-dark'
-import Testimonial from '@/components/testimonial'
-import TestimonialsGroup from '@/components/testimonials-group'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -54,19 +52,19 @@ export default function CaseStudy() {
         {
           name: 'Challenges',
           description: [
-            'Creating valuable technical content',
-            'Ramping up content production',
+            'Creating high-quality and valuable technical content',
+            'Ramping up content production for technical blog',
             'Lacking SEO knowledge',
           ],
         },
         {
           name: 'Solution',
           description: [
-            'Consistent content creation process providing excellent results',
+            'Consistent content providing excellent results',
             'SEO and keyword research',
             'Subject matter expert writers',
-            'Professionally edited and ready-to-publish content',
-            'Supportive and helpful customer support team',
+            'Professional and ready-to-publish content',
+            'Supportive and helpful customer support',
           ],
         },
         {
@@ -120,7 +118,7 @@ export default function CaseStudy() {
   return (
     <>
       <DarkLandingPage {...landingPageProps} />
-      <Testimonial
+      {/* <Testimonial
         quote="Draft.dev has been an amazing partner, helping us scale our content program by creating thoughtful and technically-sound developer content and training materials. We’re constantly iterating to build the best educational materials for developer security and Draft.dev has been instrumental in helping us realize these ambitions."
         name="Randall Degges"
         role="Head of Developer & Security Relations"
@@ -128,8 +126,8 @@ export default function CaseStudy() {
         imageSrc="/testimonials/randall_degges_snyk_draft_dev.png"
         imageAlt="Randall Degges"
       />
-      <TestimonialsGroup />
-      <CTA
+      <TestimonialsGroup /> */}
+      <CTAFull
         title="Book Discovery Call"
         description="Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in accusamus quisquam."
         imageSrc="https://images.unsplash.com/photo-1519338381761-c7523edc1f46?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
