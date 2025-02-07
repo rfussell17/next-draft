@@ -1,4 +1,3 @@
-import { Button } from '@/components/button'
 import { Container } from '@/components/container'
 import PageHeader from '@/components/page-header'
 import type { Metadata } from 'next'
@@ -47,13 +46,6 @@ function IntroOne() {
         header="We believe great marketing content can also be educational"
       />
       <Container className="m-auto my-32 max-w-6xl">
-        {/* <h1 hidden sr-only>
-        About Draft.dev
-      </h1>
-      <h2 className="header-gradient">
-        We believe great marketing content can also be educational
-      </h2> */}
-
         <div className="my-24 grid grid-cols-1 gap-12 lg:grid-cols-2">
           <div className="m-auto max-w-lg">
             <p className="text-xl text-gray-600">
@@ -83,7 +75,7 @@ function IntroOne() {
             </div>
           </div>
         </div>
-        <h3 className="lead-gradient mt-16 font-semibold">The team_</h3>
+        <h3 className="lead-gradient mt-16 font-semibold">The team</h3>
         <hr className="mt-6 border-t border-gray-200" />
         <ul
           role="list"
@@ -189,118 +181,11 @@ function IntroTwo() {
   )
 }
 
-function Jobs() {
-  return (
-    <Container className="m-auto mt-32 max-w-6xl">
-      <h2 className="header-gradient">Write for Draft.dev_</h2>
-      <p className="mt-6 max-w-4xl text-lg">
-        If you're a software developer and you want to build your personal brand
-        while getting paid to write about interesting technical topics, you've
-        come to the right place. We create content that will be read by a wide
-        range of readers around the world. As such, we're committed to
-        supporting diversity in our writers and encourage everyone at all
-        experience levels to apply.
-      </p>
-      <div className="mt-16 grid grid-cols-1 gap-16 lg:grid-cols-[1fr_24rem]">
-        <div className="lg:max-w-5xl">
-          <div>
-            <table className="w-full text-left">
-              <colgroup>
-                <col className="w-2/3" />
-                <col className="w-1/3" />
-                <col className="w-0" />
-              </colgroup>
-              <thead className="sr-only">
-                <tr>
-                  <th scope="col">Title</th>
-                  <th scope="col">Location</th>
-                  <th scope="col">Read more</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="colgroup" colSpan={3} className="px-0 pb-0 pt-10">
-                    <div className="-mx-4 rounded-lg bg-gradient-3 px-4 py-3 text-sm/6 font-semibold text-white">
-                      Engineering
-                    </div>
-                  </th>
-                </tr>
-                <tr className="border-b border-dotted border-gray-200 text-sm/6 font-normal">
-                  <td className="px-0 py-4">iOS Developer</td>
-                  <td className="px-0 py-4 text-gray-600">Remote</td>
-                  <td className="px-0 py-4 text-right">
-                    <Button variant="outline" href="#">
-                      View listing
-                    </Button>
-                  </td>
-                </tr>
-                <tr className="border-b border-dotted border-gray-200 text-sm/6 font-normal">
-                  <td className="px-0 py-4">Backend Engineer</td>
-                  <td className="px-0 py-4 text-gray-600">Remote</td>
-                  <td className="px-0 py-4 text-right">
-                    <Button variant="outline" href="#">
-                      View listing
-                    </Button>
-                  </td>
-                </tr>
-                <tr className="text-sm/6 font-normal">
-                  <td className="px-0 py-4">Product Engineer</td>
-                  <td className="px-0 py-4 text-gray-600">Remote</td>
-                  <td className="px-0 py-4 text-right">
-                    <Button variant="outline" href="#">
-                      View listing
-                    </Button>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="colgroup" colSpan={3} className="px-0 pb-0 pt-5">
-                    <div className="-mx-4 rounded-lg bg-gradient-1 px-4 py-3 text-sm/6 font-semibold text-white">
-                      Design
-                    </div>
-                  </th>
-                </tr>
-                <tr className="border-b border-dotted border-gray-200 text-sm/6 font-normal">
-                  <td className="px-0 py-4">Principal Designer</td>
-                  <td className="px-0 py-4 text-gray-600">Remote</td>
-                  <td className="px-0 py-4 text-right">
-                    <Button variant="outline" href="#">
-                      View listing
-                    </Button>
-                  </td>
-                </tr>
-                <tr className="border-b border-dotted border-gray-200 text-sm/6 font-normal">
-                  <td className="px-0 py-4">Designer</td>
-                  <td className="px-0 py-4 text-gray-600">Remote</td>
-                  <td className="px-0 py-4 text-right">
-                    <Button variant="outline" href="#">
-                      View listing
-                    </Button>
-                  </td>
-                </tr>
-                <tr className="text-sm/6 font-normal">
-                  <td className="px-0 py-4">Senior Designer</td>
-                  <td className="px-0 py-4 text-gray-600">Remote</td>
-                  <td className="px-0 py-4 text-right">
-                    <Button variant="outline" href="#">
-                      View listing
-                    </Button>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-    </Container>
-  )
-}
-
 export default function About() {
   return (
     <main className="overflow-hidden">
       <IntroOne />
       <IntroTwo />
-      <Jobs />
     </main>
   )
 }
