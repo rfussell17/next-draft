@@ -69,20 +69,12 @@
 
   /* smaller fonts */
 
-  .lead-gradient {
-    @apply bg-gradient-brand pr-1 font-sans text-lg font-semibold text-gradient sm:text-2xl sm:tracking-tighter;
-  }
-
   .lead-light {
     @apply pr-1 font-sans text-lg font-semibold text-gray-100 sm:text-xl sm:tracking-tighter;
   }
 
   .lead-dark {
     @apply pr-1 font-sans text-lg font-semibold text-gray-600 sm:text-xl sm:tracking-tighter;
-  }
-
-  .p-gradient {
-    @apply my-6 bg-gradient-brand font-sans text-xl text-gradient sm:tracking-tighter;
   }
 
   .p-light {
