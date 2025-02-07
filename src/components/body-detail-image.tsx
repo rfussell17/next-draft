@@ -33,17 +33,15 @@ const BodyDetailImage: FC<BodyDetailImageProps> = ({
       <div className="mx-auto max-w-7xl md:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:grid-cols-2 lg:items-start">
           <div className="px-6 lg:px-0 lg:pr-4 lg:pt-4">
-            <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-lg">
+            <div className="mx-auto max-w-3xl lg:mx-0 lg:max-w-xl">
               <h2 className="header-gradient">{title}</h2>
 
               <h3 className="lead-dark mt-6">{paragraph}</h3>
-              <dl className="mt-10 max-w-xl space-y-8 text-base/7 text-gray-600 lg:max-w-none">
+              <dl className="mt-10 max-w-xl space-y-8 text-lg/7 text-gray-600 lg:max-w-none">
                 {features.map((feature) => (
                   <div key={feature.name} className="relative">
-                    <dt className="mr-2 font-bold text-secondary">
-                      {feature.name}
-                    </dt>
-                    <dd className="my-1">{feature.description} </dd>
+                    <dt className="font-bold text-secondary">{feature.name}</dt>
+                    <dd className="my-2">{feature.description} </dd>
                     <dd>
                       {feature.href && (
                         <Link

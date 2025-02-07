@@ -44,15 +44,15 @@
   }
 
   .header-gradient {
-    @apply my-4 bg-gradient-brand font-code text-5xl font-semibold text-gradient sm:text-6xl sm:tracking-tighter;
+    @apply my-4 bg-gradient-brand py-1 font-code text-5xl font-semibold text-gradient sm:text-6xl sm:tracking-tighter;
   }
 
   .header-light {
-    @apply my-4 font-code text-5xl font-semibold text-white sm:text-6xl sm:tracking-tighter;
+    @apply my-4 py-1 font-code text-5xl font-semibold text-white sm:text-6xl sm:tracking-tighter;
   }
 
   .header-dark {
-    @apply mt-4 font-code font-semibold text-primary;
+    @apply mt-4 py-1 font-code font-semibold text-primary;
   }
 
   .subheader-gradient {
@@ -67,23 +67,36 @@
     @apply mt-4 font-code font-semibold text-primary;
   }
 
-  .testimonial-light {
-    @apply font-code text-2xl font-semibold text-white sm:text-2xl sm:tracking-tighter;
-  }
+  /* smaller fonts */
 
   .lead-gradient {
-    @apply my-4 bg-gradient-brand font-code text-2xl text-gradient sm:text-3xl sm:tracking-tighter;
+    @apply bg-gradient-brand pr-1 font-sans text-lg font-semibold text-gradient sm:text-2xl sm:tracking-tighter;
   }
 
   .lead-light {
-    @apply py-5 font-code text-xl text-gray-100;
+    @apply pr-1 font-sans text-lg font-semibold text-gray-100 sm:text-xl sm:tracking-tighter;
   }
 
   .lead-dark {
-    @apply font-code text-lg text-gray-600;
+    @apply pr-1 font-sans text-lg font-semibold text-gray-600 sm:text-xl sm:tracking-tighter;
+  }
+
+  .p-gradient {
+    @apply my-6 bg-gradient-brand font-sans text-xl text-gradient sm:tracking-tighter;
+  }
+
+  .p-light {
+    @apply my-6 font-sans text-lg text-gray-100 sm:text-xl sm:tracking-tighter;
+  }
+
+  .p-dark {
+    @apply my-6 font-sans text-lg text-gray-500 sm:text-xl sm:tracking-tighter;
   }
 
   .list-header {
-    @apply bg-gradient-brand font-code text-3xl font-semibold text-gradient sm:tracking-tighter;
+    @apply bg-gradient-brand font-code text-3xl font-semibold sm:tracking-tighter;
+  }
+  .testimonial-light {
+    @apply font-code text-2xl font-semibold text-white sm:text-3xl sm:tracking-tighter;
   }
 }

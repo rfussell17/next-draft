@@ -1,15 +1,13 @@
 import BodyDetail from '@/components/body-detail'
-import BodyDetailImage from '@/components/body-detail-image'
-import { Button } from '@/components/button'
 import CaseStudyHome from '@/components/case-study-home'
-import { Container } from '@/components/container'
 import { CTA } from '@/components/cta'
-import HeroTwo from '@/components/hero-two'
+import Hero from '@/components/home/hero'
+import How from '@/components/home/how'
+import What from '@/components/home/what'
 import { LogoCloud } from '@/components/logo-cloud'
 import Testimonial from '@/components/testimonial'
 import Testimonials from '@/components/testimonials-group'
 import type { Metadata } from 'next'
-import type { FC } from 'react'
 
 export const metadata: Metadata = {
   description:
@@ -68,24 +66,6 @@ const bodyDetailImageProps = [
   },
 ]
 
-const bodyDetailImageTwoProps = [
-  {
-    name: 'Drive Technical Authority',
-    description:
-      "We create in-depth technical tutorials, guides, and documentation that showcase your product's capabilities while building credibility with developers.",
-  },
-  {
-    name: 'Scale Your Content Program',
-    description:
-      'Our network of technical experts delivers consistent, high-quality content that frees your team to focus on core business priorities.',
-  },
-  {
-    name: 'Generate Developer Interest',
-    description:
-      'From technical blog posts to product tutorials, we create content that attracts developers and converts them into engaged users.',
-  },
-]
-
 const ctaProps = [
   'Competitive salaries',
   'Flexible work hours',
@@ -104,69 +84,13 @@ interface HeroProps {
   secondaryButtonHref: string
 }
 
-const Hero: FC<HeroProps> = ({
-  title,
-  subtitle,
-  primaryButtonText,
-  primaryButtonHref,
-  secondaryButtonText,
-  secondaryButtonHref,
-}) => {
-  return (
-    <div className="relative">
-      <Container className="relative bg-gradient-brand py-20">
-        <div className="pb-24 pt-16 sm:pb-32 sm:pt-24 md:pb-48 md:pt-32">
-          <h1 className="header-light max-w-5xl leading-10 text-gray-100 md:text-7xl">
-            {title} hi
-          </h1>
-          <h2 className="lead-light my-6">{subtitle}</h2>
-          <div className="mt-12 flex w-full flex-col gap-4 sm:flex-row sm:gap-x-6">
-            <Button
-              variant="primary"
-              href={primaryButtonHref}
-              className="w-full font-semibold sm:w-auto"
-            >
-              {primaryButtonText}
-            </Button>
-            <Button
-              variant="outline"
-              colorMode="light"
-              href={secondaryButtonHref}
-              className="w-full sm:w-auto"
-            >
-              {secondaryButtonText}
-            </Button>
-          </div>
-        </div>
-      </Container>
-    </div>
-  )
-}
-
 export default function Home() {
   return (
     <div className="overflow-hidden">
-      {/* <Hero
-        title="A Content Creation Agency for Technical Writing"
-        subtitle="We help Marketers and DevRels attract a technical audience."
-        primaryButtonText="See our Content Marketing Services"
-        primaryButtonHref="/for-marketers"
-        secondaryButtonText="Technical Writing Examples"
-        secondaryButtonHref="/for-dev-rels"
-      /> */}
-
-      <HeroTwo />
+      <Hero />
 
       <main>
-        <BodyDetailImage
-          title="Technical content that converts"
-          paragraph="Transform your technical marketing with expert-written content that resonates with developers and generates qualified leads."
-          features={bodyDetailImageTwoProps}
-          mainImage={{
-            src: '/site/dev_draft_dev.jpg',
-            alt: 'Product screenshot',
-          }}
-        />
+        <What />
         <LogoCloud />
         <BodyDetail
           title="Why Draft.dev?"
@@ -184,8 +108,8 @@ export default function Home() {
           imageSrc="/testimonials/rich_loft_labs_draft_dev.png"
           imageAlt="Rich Burroughs"
         />
-
-        <BodyDetailImage
+        <How />
+        {/* <BodyDetailImage
           title="How it works"
           paragraph=""
           features={bodyDetailImageProps}
@@ -193,7 +117,7 @@ export default function Home() {
             src: '/site/team_draft_dev.jpg',
             alt: 'Product screenshot',
           }}
-        />
+        /> */}
 
         <CaseStudyHome />
       </main>

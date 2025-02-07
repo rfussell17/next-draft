@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
-const HeroTwo: React.FC = () => {
+const Hero: React.FC = () => {
   return (
     <main className="bg-gradient-brand">
       <div className="relative isolate">
@@ -14,22 +14,24 @@ const HeroTwo: React.FC = () => {
           <div className="mx-auto max-w-7xl px-6 pb-32 pt-36 sm:pt-60 lg:px-8 lg:pt-32">
             <div className="mx-auto max-w-2xl gap-x-12 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
               <div className="relative w-full lg:max-w-2xl lg:shrink-0 xl:max-w-3xl">
-                <h1 className="header-light py-1 sm:text-7xl">
-                  A Content Creation Agency for Technical Writing
+                <h1 className="header-light py-4 sm:text-7xl">
+                  The Leader in Developer Marketing
                 </h1>
-                <p className="lead-light">
-                  We help Marketers and DevRels attract a technical audience.
+                <p className="text-lg text-gray-200 sm:text-2xl">
+                  We are a technical content marketing agency helping Marketing
+                  and Developer Relations teams in Tech Companies drive
+                  awareness, capture leads, and build trust.
                 </p>
-                <div className="mt-16 flex flex-col items-center gap-x-6 sm:flex-row">
+                <div className="mt-6 flex flex-col items-start gap-x-6 sm:mt-16 sm:flex-row sm:items-center">
                   <Link
                     href="#"
-                    className="my-2 rounded-sm px-3.5 py-2.5 text-base font-semibold text-white shadow-sm ring-2 ring-white hover:bg-white hover:text-gray-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary sm:my-0"
+                    className="my-2 rounded-sm px-3.5 py-2.5 text-base font-semibold text-white shadow-sm ring-2 ring-white hover:bg-white hover:text-gray-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary sm:my-0 sm:text-lg"
                   >
                     See our content marketing services
                   </Link>
                   <Link
                     href="#"
-                    className="my-2 font-code text-base text-gray-200 hover:font-semibold hover:text-white sm:my-0"
+                    className="my-2 font-code text-base text-gray-200 hover:font-semibold hover:text-white sm:my-0 sm:text-lg"
                   >
                     Technical writing examples <span aria-hidden="true">→</span>
                   </Link>
@@ -91,4 +93,4 @@ const HeroTwo: React.FC = () => {
   )
 }
 
-export default HeroTwo
+export default Hero
