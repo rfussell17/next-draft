@@ -1,9 +1,9 @@
-import BodyDetail from '@/components/body-detail'
 import CaseStudyHome from '@/components/case-study-home'
 import { CTA } from '@/components/cta'
 import Hero from '@/components/home/hero'
 import How from '@/components/home/how'
 import What from '@/components/home/what'
+import Why from '@/components/home/why'
 import { LogoCloud } from '@/components/logo-cloud'
 import Testimonial from '@/components/testimonial'
 import Testimonials from '@/components/testimonials-group'
@@ -92,13 +92,7 @@ export default function Home() {
       <main>
         <What />
         <LogoCloud />
-        <BodyDetail
-          title="Why Draft.dev?"
-          subtitleTop="We bring industry experts right to your blog."
-          subtitleBottom="Let us handle the complexity of technical content creation."
-          features={bodyDetailProps}
-          learnMoreText="Learn more about our"
-        />
+        <Why />
 
         <Testimonial
           quote="Having draft.dev source quality technical content for the Loft Labs blog has been a competitive advantage. It's given us a steadier flow of content, which has helped our brand's visibility, and some of the posts are among the most popular ones we've published."

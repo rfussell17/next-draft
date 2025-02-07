@@ -14,7 +14,7 @@ const Hero: React.FC = () => {
           <div className="mx-auto max-w-7xl px-6 pb-32 pt-36 sm:pt-60 lg:px-8 lg:pt-32">
             <div className="mx-auto max-w-2xl gap-x-12 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
               <div className="relative w-full lg:max-w-2xl lg:shrink-0 xl:max-w-3xl">
-                <h1 className="header-light py-4 sm:text-7xl">
+                <h1 className="header-light mb-6 py-4 sm:text-7xl">
                   The Leader in Developer Marketing
                 </h1>
                 <p className="text-lg text-gray-200 sm:text-2xl">

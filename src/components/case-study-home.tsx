@@ -1,4 +1,4 @@
-import { Button } from './button'
+import Link from 'next/link'
 
 const CaseStudyHome = () => {
   return (
@@ -23,22 +23,21 @@ const CaseStudyHome = () => {
           </div>
         </div>
 
-        <div className="flex flex-col justify-center gap-x-6 gap-y-4 py-16 sm:flex-row sm:py-14">
-          <Button
-            variant="primary"
-            href="/case-studies"
-            className="text-lg font-semibold"
-          >
-            View case studies
-          </Button>
-          <Button
-            variant="outline"
-            className="text-lg"
-            colorMode="light"
-            href="/case-studies"
-          >
-            See our content marketing services
-          </Button>
+        <div className="">
+          <div className="mt-6 flex flex-col items-center justify-center gap-x-6 sm:mt-16 sm:flex-row sm:items-center">
+            <Link
+              href="#"
+              className="my-2 rounded-sm px-3.5 py-2.5 text-base font-semibold text-white shadow-sm ring-2 ring-white hover:bg-white hover:text-gray-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary sm:my-0 sm:text-lg"
+            >
+              See this case study
+            </Link>
+            <Link
+              href="#"
+              className="my-2 font-code text-base text-gray-200 hover:font-semibold hover:text-white sm:my-0 sm:text-lg"
+            >
+              View all case studies <span aria-hidden="true">→</span>
+            </Link>
+          </div>
         </div>
       </main>
     </div>

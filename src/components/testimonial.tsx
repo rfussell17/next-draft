@@ -40,9 +40,7 @@ function Testimonial({
           <div className="flex max-lg:mt-16 lg:col-span-2 lg:px-16">
             <figure className="mx-auto flex max-w-xl flex-col gap-10 max-lg:text-center">
               <blockquote>
-                <p className="testimonial-light l relative text-left">
-                  {quote}
-                </p>
+                <p className="testimonial-light relative text-left">{quote}</p>
               </blockquote>
               <figcaption className="">
                 <p className="font-medium text-white">{name}</p>
