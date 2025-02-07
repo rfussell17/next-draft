@@ -23,7 +23,7 @@ const Why = () => {
               <dt className="flex items-center gap-x-3 text-lg font-semibold text-secondary">
                 Subject Matter Experts
               </dt>
-              <dd className="mt-2 flex flex-auto flex-col text-base">
+              <dd className="mt-2 flex flex-auto flex-col text-base sm:text-lg">
                 <p className="my-2 flex-auto">
                   We create expert-driven technical content for software
                   professionals. Our global network of developers and subject
@@ -47,7 +47,7 @@ const Why = () => {
               <dt className="flex items-center gap-x-3 text-lg font-semibold text-secondary">
                 Consistent Quality and Style
               </dt>
-              <dd className="mt-2 flex flex-auto flex-col text-base">
+              <dd className="mt-2 flex flex-auto flex-col text-base sm:text-lg">
                 <p className="my-2 flex-auto">
                   If you've worked with freelancers before, you know the quality
                   can vary. Our editors ensure that every piece of content is
@@ -71,7 +71,7 @@ const Why = () => {
               <dt className="flex items-center gap-x-3 text-lg font-semibold text-secondary">
                 Content You Can Count On
               </dt>
-              <dd className="mt-2 flex flex-auto flex-col text-base">
+              <dd className="mt-2 flex flex-auto flex-col text-base sm:text-lg">
                 <p className="my-2 flex-auto">
                   Never worry about whether you'll have a new post ready for
                   your blog again. When you work with Draft.dev, you'll get

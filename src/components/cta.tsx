@@ -27,16 +27,22 @@ export const CTA: FC<CTAProps> = ({
       <div className="relative isolate">
         <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="mx-auto flex max-w-2xl flex-col gap-16 bg-gradient-brand px-6 py-16 ring-1 ring-white/10 sm:rounded-3xl sm:p-8 lg:mx-0 lg:max-w-none lg:flex-row lg:items-center lg:py-20 xl:gap-x-20 xl:px-20">
-            <Image
-              alt={imageAlt}
-              width={500}
-              height={500}
-              src={imageSrc}
-              className="h-96 w-full flex-none rounded-2xl object-cover shadow-xl ring-2 ring-white lg:aspect-square lg:h-auto lg:max-w-sm"
-            />
+            <div className="flex-none rounded-4xl bg-white/15 shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5 lg:max-w-sm">
+              <div className="rounded-4xl p-2 shadow-md shadow-black/5">
+                <div className="overflow-hidden rounded-3xl shadow-2xl outline outline-1 -outline-offset-1 outline-black/10">
+                  <Image
+                    alt={imageAlt}
+                    width={500}
+                    height={500}
+                    src={imageSrc}
+                    className="h-96 w-full rounded-xl object-cover lg:aspect-square lg:h-auto"
+                  />
+                </div>
+              </div>
+            </div>
             <div className="w-full flex-auto">
               <h2 className="header-light">{title}</h2>
-              <h4 className="lead-light">{description}</h4>
+              {/* <h4 className="lead-light">{description}</h4> */}
               <ul
                 role="list"
                 className="grid grid-cols-1 gap-x-8 gap-y-3 text-base/7 text-white sm:grid-cols-2"

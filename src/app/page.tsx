@@ -124,7 +124,7 @@ export default function Home() {
         imageAlt="Team environment"
         list={ctaProps}
         linkHref="#"
-        linkText="See our job postings"
+        linkText="Schedule a discovery call"
       />
     </div>
   )
