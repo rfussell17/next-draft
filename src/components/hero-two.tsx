@@ -23,13 +23,13 @@ const HeroTwo: React.FC = () => {
                 <div className="mt-16 flex items-center gap-x-6">
                   <Link
                     href="#"
-                    className="rounded-sm bg-white px-3.5 py-2.5 text-base font-semibold text-gray-600 shadow-sm hover:text-gradient-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                    className="rounded-sm px-3.5 py-2.5 text-base font-semibold text-white shadow-sm ring-2 ring-white hover:bg-white hover:text-gray-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                   >
                     See our content marketing services
                   </Link>
                   <Link
                     href="#"
-                    className="font-code text-base text-white hover:text-gray-300"
+                    className="font-code text-base text-gray-200 hover:font-semibold hover:text-white"
                   >
                     Technical writing examples <span aria-hidden="true">→</span>
                   </Link>

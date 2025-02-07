@@ -70,7 +70,7 @@ export default function TestimonialsGroup() {
     <div className="bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="header-gradient">Testimonials_</h2>
+          <h2 className="header-gradient">Testimonials</h2>
           <h3 className="lead-dark">What our clients are saying</h3>
         </div>
         <div className="mx-auto mt-16 flow-root max-w-2xl sm:mt-20 lg:mx-0 lg:max-w-none">

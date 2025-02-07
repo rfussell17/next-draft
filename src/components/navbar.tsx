@@ -62,9 +62,9 @@ const recentPosts = [
 
 const links = [
   { href: '/why-us', label: 'Why Us?' },
-  { href: '/services', label: 'Services' },
-  { href: '/company', label: 'Company' },
-  { href: '/blog', label: 'Blog' },
+  { href: '/services', label: 'Placeholder' },
+  { href: '/about', label: 'Company' },
+  // { href: '/blog', label: 'Blog' },
   { href: '/book-discovery-call', label: 'Book Discovery Call' },
 ]
 
