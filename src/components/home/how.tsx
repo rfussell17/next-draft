@@ -71,17 +71,6 @@ const How = () => {
                 />
               </div>
             </div>
-
-            {/* For mobile - centered, no background */}
-            {/* <div className="flex justify-center px-4 sm:hidden">
-              <Image
-                alt="Technical content development"
-                src="/site/dev_draft_dev.jpg"
-                width={500}
-                height={300}
-                className="w-full rounded-xl"
-              />
-            </div> */}
           </div>
         </div>
       </div>
