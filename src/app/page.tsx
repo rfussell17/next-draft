@@ -117,14 +117,14 @@ const Hero: FC<HeroProps> = ({
       <Container className="relative bg-gradient-brand py-20">
         <div className="pb-24 pt-16 sm:pb-32 sm:pt-24 md:pb-48 md:pt-32">
           <h1 className="header-light max-w-5xl leading-10 text-gray-100 md:text-7xl">
-            {title}
+            {title} hi
           </h1>
           <h2 className="lead-light my-6">{subtitle}</h2>
-          <div className="mt-12 flex flex-col gap-x-6 gap-y-4 sm:flex-row">
+          <div className="mt-12 flex w-full flex-col gap-4 sm:flex-row sm:gap-x-6">
             <Button
               variant="primary"
               href={primaryButtonHref}
-              className="font-semibold"
+              className="w-full font-semibold sm:w-auto"
             >
               {primaryButtonText}
             </Button>
@@ -132,6 +132,7 @@ const Hero: FC<HeroProps> = ({
               variant="outline"
               colorMode="light"
               href={secondaryButtonHref}
+              className="w-full sm:w-auto"
             >
               {secondaryButtonText}
             </Button>

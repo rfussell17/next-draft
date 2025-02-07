@@ -8,7 +8,7 @@ const PageHeader: React.FC<PageHeaderProps> = ({ seoTitle, header }) => {
     <header className="relative flex min-h-[400px] overflow-hidden bg-gradient-brand">
       <div className="relative m-auto w-full max-w-7xl px-6">
         <div className="flex min-h-[400px] items-center">
-          <div className="max-w-4xl">
+          <div className="max-w-6xl">
             <h1 className="mb-4 font-code text-base font-medium tracking-wider text-gray-200">
               {seoTitle}
             </h1>

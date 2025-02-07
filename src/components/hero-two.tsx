@@ -20,16 +20,16 @@ const HeroTwo: React.FC = () => {
                 <p className="lead-light">
                   We help Marketers and DevRels attract a technical audience.
                 </p>
-                <div className="mt-16 flex items-center gap-x-6">
+                <div className="mt-16 flex flex-col items-center gap-x-6 sm:flex-row">
                   <Link
                     href="#"
-                    className="rounded-sm px-3.5 py-2.5 text-base font-semibold text-white shadow-sm ring-2 ring-white hover:bg-white hover:text-gray-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                    className="my-2 rounded-sm px-3.5 py-2.5 text-base font-semibold text-white shadow-sm ring-2 ring-white hover:bg-white hover:text-gray-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary sm:my-0"
                   >
                     See our content marketing services
                   </Link>
                   <Link
                     href="#"
-                    className="font-code text-base text-gray-200 hover:font-semibold hover:text-white"
+                    className="my-2 font-code text-base text-gray-200 hover:font-semibold hover:text-white sm:my-0"
                   >
                     Technical writing examples <span aria-hidden="true">→</span>
                   </Link>

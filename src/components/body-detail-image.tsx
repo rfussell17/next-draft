@@ -60,11 +60,10 @@ const BodyDetailImage: FC<BodyDetailImageProps> = ({
             </div>
           </div>
           <div className="m-auto sm:px-6 lg:px-0">
-            {/* For SM and up - with background */}
-            <div className="relative isolate hidden overflow-hidden bg-gradient-brand px-6 pt-8 sm:block sm:rounded-3xl sm:pl-16 sm:pr-0">
+            <div className="relative isolate hidden overflow-hidden bg-gradient-brand px-6 pt-8 sm:block sm:rounded-3xl sm:pl-8 sm:pr-0">
               <div
                 aria-hidden="true"
-                className="absolute -inset-y-px -left-3 -z-10 w-full origin-bottom-left skew-x-[-30deg] bg-primary opacity-20 ring-1 ring-inset ring-white"
+                className="absolute inset-0 -z-10 w-[95%] origin-bottom-left skew-x-[-30deg] bg-primary opacity-20 ring-1 ring-inset ring-white"
               />
               <div className="flex min-h-[400px] items-center justify-end">
                 <div className="w-auto">
