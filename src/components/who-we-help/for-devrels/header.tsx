@@ -12,7 +12,9 @@ export const Header = () => {
               href="/announcements/feature-launch"
               className="inline-flex space-x-6"
             >
-              <span className="hero-eyebrow">For Marketing Teams</span>
+              <span className="hero-eyebrow">
+                For Developer Relations Teams
+              </span>
             </Link>
           </h2>
 
@@ -21,12 +23,12 @@ export const Header = () => {
             Get more done with our intuitive platform designed for modern teams.
           </h3>
 
-          <div className="mt-10 flex items-center gap-x-6 text-lg">
+          <div className="mt-10 flex items-center gap-x-6">
             <Link href="/get-started" className="hero-cta-primary">
-              Get started
+              Book A Discovery Call
             </Link>
             <Link href="/learn-more" className="hero-cta-secondary">
-              Learn more <span aria-hidden="true">→</span>
+              See our Lead Gen Package <span aria-hidden="true">→</span>
             </Link>
           </div>
         </div>

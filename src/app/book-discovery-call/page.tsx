@@ -24,7 +24,7 @@ export default function BookDiscoveryCall() {
     <main className="overflow-hidden">
       <PageHeader
         seoTitle="Schedule A Discovery Call"
-        header="If your SaaS business is ready to invest in technical content, Draft.dev might be a great fit"
+        header="It's time for your SaaS business to invest in technical content"
       />
       <LogoCloud />
       <TestimonialsGroup />

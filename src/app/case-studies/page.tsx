@@ -1,5 +1,6 @@
 import { CTAFull } from '@/components/cta-full'
 import DarkLandingPage from '@/components/landing-page-dark'
+import PageHeader from '@/components/page-header'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -117,6 +118,10 @@ export default function CaseStudy() {
 
   return (
     <>
+      <PageHeader
+        seoTitle="Drive Awareness"
+        header="Custom Content Marketing that Drives Traffic"
+      />
       <DarkLandingPage {...landingPageProps} />
       {/* <Testimonial
         quote="Draft.dev has been an amazing partner, helping us scale our content program by creating thoughtful and technically-sound developer content and training materials. We’re constantly iterating to build the best educational materials for developer security and Draft.dev has been instrumental in helping us realize these ambitions."

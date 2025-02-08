@@ -1,7 +1,10 @@
 import CardList from '@/components/card-list'
-import { CTA } from '@/components/cta'
+import Testimonial from '@/components/testimonial'
 import TestimonialsGroup from '@/components/testimonials-group'
 import { Header } from '@/components/who-we-help/for-devrels/header'
+import How from '@/components/who-we-help/for-devrels/how'
+import What from '@/components/who-we-help/for-devrels/what'
+import Why from '@/components/who-we-help/for-devrels/why'
 import type { Metadata } from 'next'
 import { LogoCloud } from '../../components/logo-cloud'
 
@@ -70,13 +73,18 @@ export default function ForDevRels(): JSX.Element {
     <div>
       <Header />
       <main>
-        {/* <BodyDetail
-          title="Why Choose Us?"
-          subtitleTop="We bring industry experts right to your blog."
-          subtitleBottom="Let us handle the complexity of technical content creation."
-          features={features2}
-          learnMoreText="See how we"
-        /> */}
+        <What />
+        <LogoCloud />
+        <Why />
+        <Testimonial
+          quote="In a matter of weeks, our referral traffic and organic keyword rankings increased by 3x. One post also hit Hacker News which resulted in 5 demo requests in a single day!"
+          name="Robert Gibb"
+          role="Content Marketing Manager"
+          company="Fabric"
+          imageSrc="/testimonials/robert_gibb_fabric_inc_draft_dev.png"
+          imageAlt="Robert Gibb"
+        />
+        <How />
         <CardList
           title="Ongoing technical content"
           subtitle="Build a steady stream of technical content that scales with your business."
@@ -86,9 +94,10 @@ export default function ForDevRels(): JSX.Element {
           requestPricingHref="#"
           requestPricingText="Request pricing"
         />
-        <LogoCloud />
+
         <TestimonialsGroup />
-        <CTA
+
+        {/* <CTA
           title="Book a discovery call"
           description="Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in accusamus quisquam."
           imageSrc="https://images.unsplash.com/photo-1519338381761-c7523edc1f46?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
@@ -96,7 +105,7 @@ export default function ForDevRels(): JSX.Element {
           list={ctaProps}
           linkHref="#"
           linkText="See our job postings"
-        />
+        /> */}
       </main>
     </div>
   )
