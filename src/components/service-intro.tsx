@@ -5,7 +5,6 @@ interface Feature {
   description: string
   href: string
   cta: string
-  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>
 }
 
 interface ServiceIntroProps {
@@ -31,7 +30,7 @@ export function ServiceIntro({
             </h3>
           )}
           <h1 className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl lg:text-balance">
-            {title} - service-intro
+            {title}
           </h1>
           <h2 className="mt-6 text-lg/8 text-gray-600">{subtitle}</h2>
         </div>
@@ -41,10 +40,6 @@ export function ServiceIntro({
             {features.map((feature) => (
               <div key={feature.name} className="flex flex-col">
                 <dt className="flex items-center gap-x-3 text-base/7 font-semibold text-gray-600">
-                  <feature.icon
-                    aria-hidden="true"
-                    className="size-5 flex-none text-primary"
-                  />
                   {feature.name}
                 </dt>
                 <dd className="mt-4 flex flex-auto flex-col text-base/7 text-gray-600">

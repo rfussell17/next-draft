@@ -1,9 +1,7 @@
-import BodyDetail from '../../components/body-detail'
-
 import CardList from '@/components/card-list'
 import { CTA } from '@/components/cta'
-import { HeroSecondary } from '@/components/hero-secondary'
 import TestimonialsGroup from '@/components/testimonials-group'
+import { Header } from '@/components/who-we-help/for-devrels/header'
 import type { Metadata } from 'next'
 import { LogoCloud } from '../../components/logo-cloud'
 
@@ -70,26 +68,15 @@ export default function ForDevRels(): JSX.Element {
 
   return (
     <div>
-      <HeroSecondary
-        title="Developer Marketing that Resonates"
-        description="We support Developer Relations and Developer Advocate Teams by consistently delivering content that technical audiences truly care about and respect."
-        eyebrowLabel="We help DevRels scale their efforts"
-        eyebrowText="See Our Technical Writing Examples "
-        eyebrowHref="#"
-        primaryCtaText="Get started"
-        primaryCtaHref="#"
-        secondaryCtaText="Learn more"
-        secondaryCtaHref="#"
-        imageSrc="https://tailwindui.com/plus/img/component-images/project-app-screenshot.png"
-      />
+      <Header />
       <main>
-        <BodyDetail
+        {/* <BodyDetail
           title="Why Choose Us?"
           subtitleTop="We bring industry experts right to your blog."
           subtitleBottom="Let us handle the complexity of technical content creation."
           features={features2}
           learnMoreText="See how we"
-        />
+        /> */}
         <CardList
           title="Ongoing technical content"
           subtitle="Build a steady stream of technical content that scales with your business."

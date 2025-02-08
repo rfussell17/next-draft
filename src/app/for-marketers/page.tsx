@@ -1,9 +1,9 @@
-import BodyDetail from '@/components/body-detail'
 import CardList from '@/components/card-list'
 import { CTA } from '@/components/cta'
-import { HeroSecondary } from '@/components/hero-secondary'
+import What from '@/components/home/what'
 import { LogoCloud } from '@/components/logo-cloud'
 import TestimonialsGroup from '@/components/testimonials-group'
+import { Header } from '@/components/who-we-help/for-marketers/header'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -84,35 +84,9 @@ export default function ForMarketers(): JSX.Element {
 
   return (
     <div>
-      <HeroSecondary
-        title="Technical Marketing that Converts"
-        description="We specialize in content marketing for tech companies and create lead generation engines based on blog posts, eBooks, and video tutorials for Marketers looking to attract a technical audience."
-        eyebrowLabel="We support Marketing Teams with technical content"
-        eyebrowText="See Our Technical Writing Examples "
-        eyebrowHref="#"
-        primaryCtaText="Get started"
-        primaryCtaHref="#"
-        secondaryCtaText="Technical Writing Examples"
-        secondaryCtaHref="#"
-        imageSrc="https://tailwindui.com/plus/img/component-images/project-app-screenshot.png"
-      />
+      <Header />
       <main>
-        {/* <BodyDetailList
-          title="Ongoing technical content"
-          subtitle="Build a steady stream of technical content that scales with your business."
-          includedFeatures={bodyDetailListPropsOne}
-          addonTitle="Add-on services"
-          addonFeatures={bodyDetailListPropsTwo}
-          requestPricingHref="#"
-          requestPricingText="Request pricing"
-        /> */}
-        <BodyDetail
-          title="Content marketing for tech companies"
-          subtitleTop="We create.... subheading "
-          subtitleBottom=""
-          features={features1}
-          learnMoreText="See how we"
-        />
+        <What />
         <LogoCloud />
         <CardList
           title="Ongoing technical content"

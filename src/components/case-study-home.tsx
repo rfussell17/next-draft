@@ -3,7 +3,7 @@ import Link from 'next/link'
 const CaseStudyHome = () => {
   return (
     <div>
-      <main className="relative isolate bg-gradient-brand py-10">
+      <main className="relative isolate bg-gradient-brand py-16">
         <div className="px-6 lg:px-8">
           <div className="mx-auto max-w-5xl text-center uppercase">
             <h2
@@ -33,7 +33,7 @@ const CaseStudyHome = () => {
             </Link>
             <Link
               href="#"
-              className="my-2 font-code text-base text-gray-200 hover:font-semibold hover:text-white sm:my-0 sm:text-lg"
+              className="my-2 text-base font-semibold text-white hover:text-gray-200 sm:my-0 sm:text-lg"
             >
               View all case studies <span aria-hidden="true">→</span>
             </Link>

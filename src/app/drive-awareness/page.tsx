@@ -1,6 +1,7 @@
 import CardList from '@/components/card-list'
 import { CTA } from '@/components/cta'
 import { LogoCloud } from '@/components/logo-cloud'
+import PageHeader from '@/components/page-header'
 import TestimonialsGroup from '@/components/testimonials-group'
 import {
   ArrowPathIcon,
@@ -70,9 +71,13 @@ const ctaProps = [
   'A great work environment',
 ]
 
-export default function BuildTrust() {
+export default function DriveAwareness() {
   return (
     <>
+      <PageHeader
+        seoTitle="For Marketers"
+        header="Custom Content Marketing that Drives Traffic"
+      />
       <ServiceIntro
         eyebrow="Scale your content efforts"
         title="Custom Content Marketing that Drives Traffic"

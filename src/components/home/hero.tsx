@@ -17,7 +17,7 @@ const Hero: React.FC = () => {
                 <h1 className="header-light mb-6 py-4 sm:text-7xl">
                   The Leader in Developer Marketing
                 </h1>
-                <p className="text-lg text-gray-200 sm:text-2xl">
+                <p className="pt-5 text-lg text-gray-200 sm:text-2xl">
                   We are a technical content marketing agency helping Marketing
                   and Developer Relations teams in Tech Companies drive
                   awareness, capture leads, and build trust.
@@ -31,7 +31,7 @@ const Hero: React.FC = () => {
                   </Link>
                   <Link
                     href="#"
-                    className="my-2 font-code text-base text-gray-200 hover:font-semibold hover:text-white sm:my-0 sm:text-lg"
+                    className="my-2 text-base font-semibold text-white hover:text-gray-200 sm:my-0 sm:text-lg"
                   >
                     Technical writing examples <span aria-hidden="true">→</span>
                   </Link>
