@@ -86,7 +86,7 @@
   }
 
   .list-header {
-    @apply bg-gradient-brand font-code text-3xl font-semibold sm:tracking-tighter;
+    @apply font-code text-3xl font-semibold text-primary sm:tracking-tighter;
   }
   .testimonial-light {
     @apply font-code text-2xl font-semibold text-white sm:text-3xl sm:tracking-tighter;

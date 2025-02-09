@@ -1,6 +1,7 @@
 import { CTAFull } from '@/components/cta-full'
 import DarkLandingPage from '@/components/landing-page-dark'
-import PageHeader from '@/components/page-header'
+import Testimonial from '@/components/testimonial'
+import TestimonialsGroup from '@/components/testimonials-group'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -118,12 +119,12 @@ export default function CaseStudy() {
 
   return (
     <>
-      <PageHeader
+      {/* <PageHeader
         seoTitle="Drive Awareness"
         header="Custom Content Marketing that Drives Traffic"
-      />
+      /> */}
       <DarkLandingPage {...landingPageProps} />
-      {/* <Testimonial
+      <Testimonial
         quote="Draft.dev has been an amazing partner, helping us scale our content program by creating thoughtful and technically-sound developer content and training materials. We’re constantly iterating to build the best educational materials for developer security and Draft.dev has been instrumental in helping us realize these ambitions."
         name="Randall Degges"
         role="Head of Developer & Security Relations"
@@ -131,7 +132,7 @@ export default function CaseStudy() {
         imageSrc="/testimonials/randall_degges_snyk_draft_dev.png"
         imageAlt="Randall Degges"
       />
-      <TestimonialsGroup /> */}
+      <TestimonialsGroup />
       <CTAFull
         title="Book Discovery Call"
         description="Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in accusamus quisquam."

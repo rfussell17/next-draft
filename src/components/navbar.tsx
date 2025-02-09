@@ -64,6 +64,7 @@ const links = [
   { href: '/why-us', label: 'Why Us?' },
   { href: '/services', label: 'Placeholder' },
   { href: '/about', label: 'Company' },
+  { href: '/case-studies', label: 'Case Studies' },
   // { href: '/blog', label: 'Blog' },
   { href: '/book-discovery-call', label: 'Book Discovery Call' },
 ]
