@@ -84,6 +84,26 @@
       @apply subheader-base text-primary;
     }
 
+    .subheader-mobile-base {
+      /* h2 */
+      @apply my-4 font-code font-semibold;
+      font-size: 1.85rem;
+      line-height: 1.1;
+      letter-spacing: -1px;
+    }
+
+    .subheader-mobile-light {
+      @apply subheader-mobile-base text-gray-100;
+    }
+
+    .subheader-mobile-dark {
+      @apply subheader-mobile-base text-gray-600;
+    }
+
+    .subheader-mobile-gradient {
+      @apply subheader-mobile-base bg-gradient-brand text-gradient;
+    }
+
     /* strong paragraph */
     .lead-base {
       @apply pr-1 font-sans font-semibold text-gray-300;
@@ -98,6 +118,10 @@
 
     .lead-dark {
       @apply lead-base text-gray-600;
+    }
+
+    .lead-gradient {
+      @apply lead-base bg-gradient-brand text-gradient;
     }
 
     .paragraph-base {

@@ -2,19 +2,19 @@ import Link from 'next/link'
 
 const Why = () => {
   return (
-    <div className="py-44">
+    <div className="py-16 sm:py-44">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-4xl lg:text-center">
-          <h2 className="header-gradient">The Draft.dev Difference</h2>
+          <h2 className="subheader-gradient">The Draft.dev Difference</h2>
 
-          <h3 className="p-dark">
-            <div className="pb-1">
-              Partner with technical content experts who understand your
-              industry and deliver results.{' '}
-              <span className="my-2 block font-semibold">
-                ‍You'll only pay for content if you're 100% satisfied.
-              </span>
-            </div>
+          <h3 className="paragraph-dark">
+            {' '}
+            Partner with technical content experts who understand your industry
+            and deliver results.{' '}
+          </h3>
+          <h3 className="lead-dark mt-4">
+            {' '}
+            You'll only pay for content if you're 100% satisfied.{' '}
           </h3>
         </div>
         <div className="mx-auto mt-16 max-w-2xl lg:max-w-none">
