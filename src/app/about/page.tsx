@@ -1,5 +1,5 @@
 import { Container } from '@/components/container'
-import PageHeader from '@/components/page-header'
+import PageHeader from '@/components/global/page-header'
 import type { Metadata } from 'next'
 import Image from 'next/image'
 

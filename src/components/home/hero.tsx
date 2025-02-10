@@ -1,11 +1,13 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import { NavbarDark } from '../global/navbar-dark'
 
 const Hero: React.FC = () => {
   return (
-    <main className="bg-gradient-brand">
-      <div className="relative isolate">
+    <div className="bg-gradient-brand">
+      <NavbarDark />
+      <main className="relative isolate">
         <div
           aria-hidden="true"
           className="absolute left-1/2 right-0 top-0 -z-10 -ml-24 transform-gpu overflow-hidden blur-3xl lg:ml-24 xl:ml-48"
@@ -103,8 +105,8 @@ const Hero: React.FC = () => {
             </div>
           </div>
         </div>
-      </div>
-    </main>
+      </main>
+    </div>
   )
 }
 

@@ -71,7 +71,7 @@ const links = [
 
 function DesktopNav() {
   return (
-    <nav className="relative hidden text-gray-700 outline-none lg:flex">
+    <nav className="relative hidden text-white outline-none lg:flex">
       {links.map(({ href, label }) => {
         if (label === 'Why Us?') {
           return (
@@ -183,10 +183,10 @@ function DesktopNav() {
           )
         }
         return (
-          <div key={href} className="relative flex">
+          <div key={href} className="relative flex bg-transparent">
             <Link
               href={href}
-              className="flex items-center px-4 py-3 text-lg font-medium text-gray-700 data-[hover]:bg-black/[2.5%]"
+              className="flex items-center px-4 py-3 text-lg font-medium text-white"
             >
               {label}
             </Link>
@@ -231,7 +231,7 @@ function MobileNav() {
   )
 }
 
-export function Navbar({ banner }: { banner?: React.ReactNode }) {
+export function NavbarLight({ banner }: { banner?: React.ReactNode }) {
   return (
     <Disclosure as="header">
       <div className="relative m-auto flex max-w-7xl justify-around py-3 text-center outline-none">

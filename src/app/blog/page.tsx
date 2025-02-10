@@ -1,5 +1,5 @@
 import { getWpPosts } from '@/app/lib/wordpress'
-import PageHeader from '@/components/page-header'
+import PageHeader from '@/components/global/page-header'
 
 import type { Metadata } from 'next'
 import type { StaticImport } from 'next/dist/shared/lib/get-img-props'

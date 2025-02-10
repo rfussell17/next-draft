@@ -1,7 +1,7 @@
 import CardList from '@/components/card-list'
 import { CTA } from '@/components/cta'
+import PageHeader from '@/components/global/page-header'
 import { LogoCloud } from '@/components/logo-cloud'
-import PageHeader from '@/components/page-header'
 import TestimonialsGroup from '@/components/testimonials-group'
 import {
   ArrowPathIcon,

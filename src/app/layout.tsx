@@ -1,8 +1,7 @@
 // app/layout.tsx
 
-import FAQ from '@/components/faq'
-import { Footer } from '@/components/footer'
-import { Navbar } from '@/components/navbar'
+import FAQ from '@/components/global/faq'
+import { Footer } from '@/components/global/footer'
 
 import '@/styles/tailwind.css'
 import type { Metadata } from 'next'
@@ -49,7 +48,7 @@ export default function RootLayout({
         />
       </head>
       <body className="bg-white text-gray-600 antialiased">
-        <Navbar />
+        {/* <Navbar /> */}
 
         <div className="min-h-screen">
           <main>{children}</main>
