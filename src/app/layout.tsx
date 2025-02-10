@@ -48,7 +48,7 @@ export default function RootLayout({
           href="/blog/feed.xml"
         />
       </head>
-      <body className="text-gray-600 antialiased">
+      <body className="bg-white text-gray-600 antialiased">
         <Navbar />
 
         <div className="min-h-screen">

@@ -14,10 +14,10 @@ const Hero: React.FC = () => {
           <div className="mx-auto max-w-7xl px-6 pb-32 pt-36 sm:pt-60 lg:px-8 lg:pt-32">
             <div className="mx-auto max-w-2xl gap-x-12 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
               <div className="relative w-full lg:max-w-2xl lg:shrink-0 xl:max-w-3xl">
-                <h1 className="header-light mb-6 py-4 sm:text-7xl">
+                <h1 className="header-light mb-6 py-4">
                   The Leader in Developer Marketing
                 </h1>
-                <p className="pt-5 text-lg text-gray-200 sm:text-2xl">
+                <p className="text-lg text-gray-200 sm:text-2xl">
                   We are a technical content marketing agency helping Marketing
                   and Developer Relations teams in Tech Companies drive
                   awareness, capture leads, and build trust.
@@ -39,7 +39,7 @@ const Hero: React.FC = () => {
               </div>
               {/* Image cluster: hidden on screens smaller than sm */}
               <div className="mt-14 hidden justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:flex lg:pl-0">
-                <div className="mr-auto w-44 flex-none space-y-8 sm:mr-0 sm:pt-52 lg:pt-36">
+                <div className="mr-auto w-44 flex-none space-y-8 pt-16 sm:mr-0">
                   <div className="rounded-4xl bg-white/15 shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5">
                     <div className="rounded-4xl p-2 shadow-md shadow-black/5">
                       <div className="overflow-hidden rounded-3xl shadow-2xl outline outline-1 -outline-offset-1 outline-black/10">

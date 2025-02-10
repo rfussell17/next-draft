@@ -48,7 +48,10 @@
   }
 
   .header-light {
-    @apply my-4 py-1 font-code text-5xl font-semibold text-white sm:text-6xl sm:tracking-tighter;
+    @apply my-4 py-1 font-code font-semibold text-white;
+    font-size: 3.275rem;
+    line-height: 1.125;
+    letter-spacing: -2px;
   }
 
   .header-dark {
@@ -70,11 +73,17 @@
   /* smaller fonts */
 
   .lead-light {
-    @apply pr-1 font-sans text-lg font-semibold text-gray-100 sm:text-xl sm:tracking-tighter;
+    @apply pr-1 font-sans font-semibold text-gray-100;
+    font-size: 1.45rem;
+    line-height: 1.35;
+    letter-spacing: -0.5px;
   }
 
   .lead-dark {
-    @apply pr-1 font-sans text-lg font-semibold text-gray-600 sm:text-xl sm:tracking-tighter;
+    @apply pr-1 font-sans font-semibold text-gray-600;
+    font-size: 1.45rem;
+    line-height: 1.35;
+    letter-spacing: -0.5px;
   }
 
   .p-light {
@@ -89,6 +98,8 @@
     @apply font-code text-3xl font-semibold text-primary sm:tracking-tighter;
   }
   .testimonial-light {
-    @apply font-code text-2xl font-semibold text-white sm:text-3xl sm:tracking-tighter;
+    @apply font-code font-semibold text-white;
+    font-size: 2.15rem;
+    line-height: 1.35;
   }
 }
