@@ -11,13 +11,12 @@ export function LogosFlex({
   const image5 = '/logo-cloud/statamic.svg'
 
   return (
-    <div className="pb-16 text-white">
+    <div className="pb-6 text-white sm:pb-16">
       <div className="mb-5">
-        <h2 className="text-left text-sm font-semibold">
-          [Trusted by 100+ developer tools companies]
+        <h2 className="text-sm font-semibold sm:text-left">
+          Trusted by 100+ developer tools companies
         </h2>
       </div>
-
       <div
         className={clsx(
           className,
@@ -27,35 +26,35 @@ export function LogosFlex({
         <Image
           alt="SavvyCal"
           src={image1}
-          className="h-9 sm:h-8 lg:h-12"
+          className="h-20 sm:h-8 lg:h-12"
           width={100}
           height={100}
         />
         <Image
           alt="Laravel"
           src={image2}
-          className="h-9 sm:h-8 lg:h-12"
+          className="h-12 sm:h-8 lg:h-12"
           width={100}
           height={100}
         />
         <Image
           alt="Tuple"
           src={image3}
-          className="h-9 sm:h-8 lg:h-12"
+          className="h-12 sm:h-8 lg:h-12"
           width={100}
           height={100}
         />
         <Image
           alt="Transistor"
           src={image4}
-          className="h-9 sm:h-8 lg:h-12"
+          className="h-12 sm:h-8 lg:h-12"
           width={100}
           height={100}
         />
         <Image
           alt="Statamic"
           src={image5}
-          className="h-9 sm:h-8 lg:h-12"
+          className="h-12 sm:h-8 lg:h-12"
           width={100}
           height={100}
         />

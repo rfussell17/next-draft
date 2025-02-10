@@ -43,55 +43,77 @@
     background-clip: text;
   }
 
-  .header-gradient {
-    @apply my-4 bg-gradient-brand py-1 font-code text-5xl font-semibold text-gradient sm:text-6xl sm:tracking-tighter;
-  }
+  @layer components {
+    /* h1 */
+    .header-base {
+      @apply my-4 py-1 font-code font-semibold;
+      font-size: 3.75rem;
+      line-height: 1.125;
+      letter-spacing: -2px;
+    }
 
-  .header-light {
-    @apply my-4 py-1 font-code font-semibold text-white;
-    font-size: 3.275rem;
-    line-height: 1.125;
-    letter-spacing: -2px;
-  }
+    .header-gradient {
+      @apply header-base bg-gradient-brand text-gradient;
+    }
 
-  .header-dark {
-    @apply mt-4 py-1 font-code font-semibold text-primary;
-  }
+    .header-light {
+      @apply header-base text-white;
+    }
 
-  .subheader-gradient {
-    @apply my-4 bg-gradient-brand font-code text-3xl font-semibold text-gradient sm:text-4xl sm:tracking-tighter;
-  }
+    .header-dark {
+      @apply header-base text-primary;
+    }
 
-  .subheader-light {
-    @apply my-4 font-code text-3xl font-semibold text-white sm:text-4xl sm:tracking-tighter;
-  }
+    .subheader-base {
+      /* h2 */
+      @apply my-4 font-code font-semibold;
+      font-size: 2.85rem;
+      line-height: 1.1;
+      letter-spacing: -1px;
+    }
 
-  .subheader-dark {
-    @apply mt-4 font-code font-semibold text-primary;
-  }
+    .subheader-gradient {
+      @apply subheader-base bg-gradient-brand text-gradient;
+    }
 
-  /* smaller fonts */
+    .subheader-light {
+      @apply subheader-base text-white;
+    }
 
-  .lead-light {
-    @apply font-sans text-gray-300;
-    font-size: 1.45rem;
-    line-height: 1.35;
-    letter-spacing: -0.5px;
-  }
+    .subheader-dark {
+      @apply subheader-base text-primary;
+    }
 
-  .lead-dark {
-    @apply pr-1 font-sans font-semibold text-gray-600;
-    font-size: 1.45rem;
-    line-height: 1.35;
-    letter-spacing: -0.5px;
-  }
+    /* strong paragraph */
+    .lead-base {
+      @apply pr-1 font-sans font-semibold text-gray-300;
+      font-size: 1.45rem;
+      line-height: 1.35;
+      letter-spacing: -0.5px;
+    }
 
-  .p-light {
-    @apply my-6 font-sans text-lg text-gray-100 sm:text-xl sm:tracking-tighter;
-  }
+    .lead-light {
+      @apply lead-base text-gray-300;
+    }
 
-  .p-dark {
-    @apply my-6 font-sans text-lg text-gray-500 sm:text-xl sm:tracking-tighter;
+    .lead-dark {
+      @apply lead-base text-gray-600;
+    }
+
+    .paragraph-base {
+      @apply font-sans;
+      font-size: 1.45rem;
+      line-height: 1.35;
+      letter-spacing: -0.5px;
+    }
+
+    .paragraph-light {
+      @apply paragraph-base text-gray-100;
+    }
+
+    .paragraph-dark {
+      @apply paragraph-base text-gray-500;
+    }
   }
 
   .list-header {

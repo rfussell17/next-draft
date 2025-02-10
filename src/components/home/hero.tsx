@@ -17,24 +17,24 @@ const Hero: React.FC = () => {
           <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
             <div className="mx-auto max-w-2xl gap-x-12 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
               <div className="relative w-full lg:shrink-0 xl:max-w-2xl">
-                <h1 className="sm:header-light mb-6 pb-4 font-code text-4xl font-semibold text-white">
+                <h1 className="sm:header-light mb-6 pb-4 font-code text-3xl font-semibold text-white">
                   The Leader in Developer Marketing
                 </h1>
-                <p className="lead-light">
+                <p className="sm:paragraph-light pb-6 text-base text-gray-100 sm:pb-0">
                   We are a technical content marketing agency helping Marketing
                   and Developer Relations teams in Tech Companies drive
                   awareness, capture leads, and build trust.
                 </p>
-                <div className="my-6 flex flex-col items-start gap-x-6 sm:mt-16 sm:flex-row sm:items-center">
+                <div className="mt-6 flex flex-col items-start gap-x-6 sm:mt-16 sm:flex-row sm:items-center">
                   <Link
                     href="#"
-                    className="my-2 rounded-sm px-3.5 py-2.5 text-base font-semibold text-white shadow-sm ring-2 ring-white hover:bg-white hover:text-gray-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary sm:my-0 sm:text-lg"
+                    className="my-2 rounded-sm px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm ring-2 ring-white hover:bg-white hover:text-gray-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary sm:my-0 sm:text-base"
                   >
                     Book a Discovery Call
                   </Link>
                   <Link
                     href="#"
-                    className="my-2 text-base font-semibold text-white hover:text-gray-200 sm:my-0 sm:text-lg"
+                    className="my-2 text-sm font-semibold text-white hover:text-gray-200 sm:my-0 sm:text-base"
                   >
                     See Our Lead Generation Package{' '}
                     <span aria-hidden="true">→</span>
