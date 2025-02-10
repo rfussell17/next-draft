@@ -73,7 +73,7 @@
   /* smaller fonts */
 
   .lead-light {
-    @apply pr-1 font-sans font-semibold text-gray-100;
+    @apply font-sans text-gray-300;
     font-size: 1.45rem;
     line-height: 1.35;
     letter-spacing: -0.5px;

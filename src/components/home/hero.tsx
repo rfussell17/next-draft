@@ -8,19 +8,19 @@ const Hero: React.FC = () => {
   return (
     <div className="bg-gradient-brand">
       <NavbarDark />
-      <main className="relative isolate">
+      <main className="relative isolate pb-16">
         <div
           aria-hidden="true"
           className="absolute left-1/2 right-0 top-0 -z-10 -ml-24 transform-gpu overflow-hidden blur-3xl lg:ml-24 xl:ml-48"
         ></div>
         <div className="overflow-hidden">
-          <div className="mx-auto max-w-7xl px-6 pb-12 pt-16 sm:pt-32 lg:px-8">
+          <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
             <div className="mx-auto max-w-2xl gap-x-12 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
-              <div className="relative w-full lg:max-w-2xl lg:shrink-0 xl:max-w-3xl">
-                <h1 className="header-light mb-6 py-4">
+              <div className="relative w-full lg:shrink-0 xl:max-w-2xl">
+                <h1 className="sm:header-light mb-6 pb-4 font-code text-4xl font-semibold text-white">
                   The Leader in Developer Marketing
                 </h1>
-                <p className="text-lg text-gray-200 sm:text-2xl">
+                <p className="lead-light">
                   We are a technical content marketing agency helping Marketing
                   and Developer Relations teams in Tech Companies drive
                   awareness, capture leads, and build trust.

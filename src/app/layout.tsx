@@ -1,8 +1,5 @@
-// app/layout.tsx
-
 import FAQ from '@/components/global/faq'
 import { Footer } from '@/components/global/footer'
-
 import '@/styles/tailwind.css'
 import type { Metadata } from 'next'
 import { Fira_Code, Fira_Sans } from 'next/font/google'
@@ -15,6 +12,16 @@ export const metadata: Metadata = {
     index: false,
     follow: false,
     noarchive: true,
+  },
+  alternates: {
+    types: {
+      'application/rss+xml': [
+        {
+          title: 'The Radiant Blog',
+          url: '/blog/feed.xml',
+        },
+      ],
+    },
   },
 }
 
@@ -38,22 +45,17 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${firaSans.variable} ${firaCode.variable}`}>
-      <head>
-        <link
-          rel="alternate"
-          type="application/rss+xml"
-          title="The Radiant Blog"
-          href="/blog/feed.xml"
-        />
-      </head>
+    <html
+      lang="en"
+      data-gramm_editor="false"
+      data-enable-grammarly="false"
+      className={`${firaSans.variable} ${firaCode.variable}`}
+    >
       <body className="bg-white text-gray-600 antialiased">
         {/* <Navbar /> */}
-
         <div className="min-h-screen">
           <main>{children}</main>
         </div>
-
         <FAQ />
         <Footer />
       </body>
