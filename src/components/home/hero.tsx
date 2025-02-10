@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import { NavbarDark } from '../global/navbar-dark'
+import { LogosFlex } from '../logos-flex'
 
 const Hero: React.FC = () => {
   return (
@@ -13,7 +14,7 @@ const Hero: React.FC = () => {
           className="absolute left-1/2 right-0 top-0 -z-10 -ml-24 transform-gpu overflow-hidden blur-3xl lg:ml-24 xl:ml-48"
         ></div>
         <div className="overflow-hidden">
-          <div className="mx-auto max-w-7xl px-6 pb-32 pt-36 sm:pt-60 lg:px-8 lg:pt-32">
+          <div className="mx-auto max-w-7xl px-6 pb-12 pt-16 sm:pt-32 lg:px-8">
             <div className="mx-auto max-w-2xl gap-x-12 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
               <div className="relative w-full lg:max-w-2xl lg:shrink-0 xl:max-w-3xl">
                 <h1 className="header-light mb-6 py-4">
@@ -24,18 +25,19 @@ const Hero: React.FC = () => {
                   and Developer Relations teams in Tech Companies drive
                   awareness, capture leads, and build trust.
                 </p>
-                <div className="mt-6 flex flex-col items-start gap-x-6 sm:mt-16 sm:flex-row sm:items-center">
+                <div className="my-6 flex flex-col items-start gap-x-6 sm:mt-16 sm:flex-row sm:items-center">
                   <Link
                     href="#"
                     className="my-2 rounded-sm px-3.5 py-2.5 text-base font-semibold text-white shadow-sm ring-2 ring-white hover:bg-white hover:text-gray-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary sm:my-0 sm:text-lg"
                   >
-                    See our content marketing services
+                    Book a Discovery Call
                   </Link>
                   <Link
                     href="#"
                     className="my-2 text-base font-semibold text-white hover:text-gray-200 sm:my-0 sm:text-lg"
                   >
-                    Technical writing examples <span aria-hidden="true">→</span>
+                    See Our Lead Generation Package{' '}
+                    <span aria-hidden="true">→</span>
                   </Link>
                 </div>
               </div>
@@ -103,6 +105,9 @@ const Hero: React.FC = () => {
               </div>
               {/* End of image cluster */}
             </div>
+          </div>
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <LogosFlex />
           </div>
         </div>
       </main>
