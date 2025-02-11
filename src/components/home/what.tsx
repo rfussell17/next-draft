@@ -10,7 +10,7 @@ const What = () => {
               <h2 className="sm:subheader-gradient subheader-mobile-gradient">
                 A Content Creation Agency for Technical Writing
               </h2>
-              <h3 className="sm:paragraph-dark pb-4">
+              <h3 className="sm:paragraph-dark py-4">
                 <span className="sm:lead-dark text-base font-semibold">
                   Transform your technical marketing{' '}
                 </span>{' '}

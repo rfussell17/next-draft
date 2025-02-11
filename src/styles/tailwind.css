@@ -14,6 +14,8 @@
   body {
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
+    max-width: 100%;
   }
 }
 
@@ -117,7 +119,7 @@
     }
 
     .lead-dark {
-      @apply lead-base text-gray-600;
+      @apply lead-base text-gray-500;
     }
 
     .lead-gradient {

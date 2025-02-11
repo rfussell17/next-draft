@@ -5,19 +5,21 @@ const Why = () => {
     <div className="py-16 sm:py-44">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-4xl lg:text-center">
-          <h2 className="subheader-gradient">The Draft.dev Difference</h2>
+          <h2 className="subheader-mobile-gradient sm:subheader-gradient">
+            The Draft.dev Difference
+          </h2>
 
-          <h3 className="paragraph-dark">
+          <h3 className="paragraph-dark py-3">
             {' '}
             Partner with technical content experts who understand your industry
             and deliver results.{' '}
           </h3>
-          <h3 className="lead-dark mt-4">
+          <h3 className="lead-dark mt-4 sm:mt-0">
             {' '}
             You'll only pay for content if you're 100% satisfied.{' '}
           </h3>
         </div>
-        <div className="mx-auto mt-16 max-w-2xl lg:max-w-none">
+        <div className="mx-auto mt-10 max-w-2xl sm:mt-16 lg:max-w-none">
           <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-12 lg:max-w-none lg:grid-cols-3">
             <div className="flex flex-col">
               <dt className="flex items-center gap-x-3 text-lg font-semibold text-secondary">
@@ -34,9 +36,9 @@ const Why = () => {
                 <p className="z-50 mt-4">
                   <Link
                     href="/expert-writers"
-                    className="font-semibold text-gray-700"
+                    className="font-semibold text-gradient-3"
                   >
-                    About our Vetted Technical Writers
+                    Our Vetted Technical Writers
                     <span aria-hidden="true"> →</span>
                   </Link>
                 </p>
@@ -58,9 +60,9 @@ const Why = () => {
                 <p className="z-50 mt-4">
                   <Link
                     href="/content-quality"
-                    className="font-semibold text-gray-700"
+                    className="font-semibold text-gradient-3"
                   >
-                    About our Quality-Focused Content
+                    Our Quality-Focused Content
                     <span aria-hidden="true"> →</span>
                   </Link>
                 </p>
@@ -82,9 +84,9 @@ const Why = () => {
                 <p className="z-50 mt-4">
                   <Link
                     href="/delivery-process"
-                    className="font-semibold text-gray-700"
+                    className="font-semibold text-gradient-3"
                   >
-                    About our delivery process
+                    Our delivery process
                     <span aria-hidden="true"> →</span>
                   </Link>
                 </p>
