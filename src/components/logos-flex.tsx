@@ -13,9 +13,9 @@ export function LogosFlex({
   return (
     <div className="pb-6 text-white sm:pb-16">
       <div className="mb-5">
-        <h2 className="subheader-mobile-light pb-3 font-semibold sm:pb-0 sm:text-left sm:text-base">
+        <h3 className="subheader-mobile-light pb-3 font-semibold sm:pb-0 sm:text-left sm:text-base">
           Trusted by 100+ developer tools companies
-        </h2>
+        </h3>
       </div>
       <div
         className={clsx(

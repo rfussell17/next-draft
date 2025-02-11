@@ -5,38 +5,31 @@ const Why = () => {
     <div className="py-44">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-4xl lg:text-center">
-          <h2 className="header-gradient">For Marketers 'Why' section</h2>
-
-          <h3 className="p-dark">
-            <div className="pb-1">
-              Partner with technical content experts who understand your
-              industry and deliver results.{' '}
-              <span className="my-2 block font-semibold">
-                ‍You'll only pay for content if you're 100% satisfied.
-              </span>
-            </div>
-          </h3>
+          <h2 className="header-gradient">
+            We support Marketing Teams with technical content
+          </h2>
         </div>
         <div className="mx-auto mt-16 max-w-2xl lg:max-w-none">
           <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-12 lg:max-w-none lg:grid-cols-3">
             <div className="flex flex-col">
               <dt className="flex items-center gap-x-3 text-lg font-semibold text-secondary">
-                Subject Matter Experts
+                Drive Awareness
               </dt>
               <dd className="mt-2 flex flex-auto flex-col text-base sm:text-lg">
                 <p className="my-2 flex-auto">
-                  We create expert-driven technical content for software
-                  professionals. Our global network of developers and subject
-                  matter experts delivers in-depth coverage across diverse
-                  technologies.
+                  We drive traffic with a consistent cadence of content, freeing
+                  up your marketers and developers to focus on other priorities.
+                  Benefit from a dedicated content strategist who uses proven
+                  frameworks to make sure your content program delivers the
+                  highest ROI for your business.
                 </p>
 
-                <p className="z-50 mt-4">
+                <p className="mt-4">
                   <Link
-                    href="/expert-writers"
+                    href="/drive-awareness"
                     className="font-semibold text-gray-700"
                   >
-                    About our Vetted Technical Writers
+                    See how we drive awareness
                     <span aria-hidden="true"> →</span>
                   </Link>
                 </p>
@@ -45,22 +38,22 @@ const Why = () => {
 
             <div className="flex flex-col">
               <dt className="flex items-center gap-x-3 text-lg font-semibold text-secondary">
-                Consistent Quality and Style
+                Capture Leads
               </dt>
               <dd className="mt-2 flex flex-auto flex-col text-base sm:text-lg">
                 <p className="my-2 flex-auto">
-                  If you've worked with freelancers before, you know the quality
-                  can vary. Our editors ensure that every piece of content is
-                  technically accurate, meets our quality standards, and has a
-                  consistent style.{' '}
+                  Our teams provide you with ebooks, whitepapers, landing page
+                  copywriting, and social media posts, delivering a predictable
+                  lead generation engine that converts organic traffic
+                  automatically into high-quality MQLs and SQLs.
                 </p>
 
-                <p className="z-50 mt-4">
+                <p className="mt-4">
                   <Link
                     href="/content-quality"
                     className="font-semibold text-gray-700"
                   >
-                    About our Quality-Focused Content
+                    See how we capture leads
                     <span aria-hidden="true"> →</span>
                   </Link>
                 </p>
@@ -69,22 +62,23 @@ const Why = () => {
 
             <div className="flex flex-col">
               <dt className="flex items-center gap-x-3 text-lg font-semibold text-secondary">
-                Content You Can Count On
+                Build Trust
               </dt>
               <dd className="mt-2 flex flex-auto flex-col text-base sm:text-lg">
                 <p className="my-2 flex-auto">
-                  Never worry about whether you'll have a new post ready for
-                  your blog again. When you work with Draft.dev, you'll get
-                  ready-to-publish blog posts or videos every 1-2 weeks
-                  depending on your needs.
+                  We deliver high-quality tech content that is written and
+                  reviewed by experienced developers and edited by professional
+                  editors. Build credibility with your technical audiences
+                  through a consistent stream of quality content tailored
+                  specifically to their needs and interests.
                 </p>
 
-                <p className="z-50 mt-4">
+                <p className="mt-4">
                   <Link
                     href="/delivery-process"
                     className="font-semibold text-gray-700"
                   >
-                    About our delivery process
+                    Learn how we build trust
                     <span aria-hidden="true"> →</span>
                   </Link>
                 </p>

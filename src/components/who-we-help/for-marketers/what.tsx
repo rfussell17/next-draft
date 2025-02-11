@@ -7,7 +7,9 @@ const What = () => {
         <div className="grid grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:grid-cols-2 lg:items-center">
           <div className="px-6 lg:px-0 lg:pr-4 lg:pt-4">
             <div className="mx-auto max-w-3xl sm:max-w-4xl lg:mx-0">
-              <h2 className="header-gradient">For Marketers 'What' section</h2>
+              <h2 className="header-gradient">
+                We support Marketing Teams with technical content
+              </h2>
               <h3 className="p-dark pb-4">
                 <span className="lead-dark">Lead Text here </span> Placeholder
                 normal text
@@ -15,35 +17,34 @@ const What = () => {
 
               <dl className="mt-6 max-w-xl space-y-8 text-lg/7 text-gray-600 lg:max-w-none">
                 <div className="relative">
-                  <dt className="font-bold text-secondary">
-                    Drive Technical Authority
-                  </dt>
+                  <dt className="font-bold text-secondary">Drive Awareness</dt>
                   <dd className="my-2">
-                    We create in-depth technical tutorials, guides, and
-                    documentation that showcase your product's capabilities
-                    while building credibility with developers.
+                    We drive traffic with a consistent cadence of content,
+                    freeing up your marketers and developers to focus on other
+                    priorities. Benefit from a dedicated content strategist who
+                    uses proven frameworks to make sure your content program
+                    delivers the highest ROI for your business.
                   </dd>
                 </div>
 
                 <div className="relative">
-                  <dt className="font-bold text-secondary">
-                    Scale Your Content Program
-                  </dt>
+                  <dt className="font-bold text-secondary">Capture Leads</dt>
                   <dd className="my-2">
-                    Our network of technical experts delivers consistent,
-                    high-quality content that frees your team to focus on core
-                    business priorities.
+                    Our teams provide you with ebooks, whitepapers, landing page
+                    copywriting, and social media posts, delivering a
+                    predictable lead generation engine that converts organic
+                    traffic automatically into high-quality MQLs and SQLs.
                   </dd>
                 </div>
 
                 <div className="relative">
-                  <dt className="font-bold text-secondary">
-                    Generate Developer Interest
-                  </dt>
+                  <dt className="font-bold text-secondary">Build Trust</dt>
                   <dd className="my-2">
-                    From technical blog posts to product tutorials, we create
-                    content that attracts developers and converts them into
-                    engaged users.
+                    We deliver high-quality tech content that is written and
+                    reviewed by experienced developers and edited by
+                    professional editors. Build credibility with your technical
+                    audiences through a consistent stream of quality content
+                    tailored specifically to their needs and interests.
                   </dd>
                 </div>
               </dl>

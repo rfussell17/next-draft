@@ -1,6 +1,5 @@
 import CardList from '@/components/card-list'
 import { CTAFull } from '@/components/cta-full'
-import PageHeader from '@/components/global/page-header'
 import { LogoCloud } from '@/components/logo-cloud'
 import TestimonialsGroup from '@/components/testimonials-group'
 import {
@@ -74,10 +73,6 @@ const ctaProps = [
 export default function DriveAwareness() {
   return (
     <>
-      <PageHeader
-        seoTitle="Drive Awareness"
-        header="Custom Content Marketing that Drives Traffic"
-      />
       <ServiceIntro
         eyebrow="Scale your content efforts"
         title="Custom Content Marketing that Drives Traffic"

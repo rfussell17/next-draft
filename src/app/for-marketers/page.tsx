@@ -3,9 +3,8 @@ import { CTAFull } from '@/components/cta-full'
 import { LogoCloud } from '@/components/logo-cloud'
 import Testimonial from '@/components/testimonial'
 import TestimonialsGroup from '@/components/testimonials-group'
-import { Header } from '@/components/who-we-help/for-marketers/header'
+import Header from '@/components/who-we-help/for-marketers/header'
 import How from '@/components/who-we-help/for-marketers/how'
-import What from '@/components/who-we-help/for-marketers/what'
 import Why from '@/components/who-we-help/for-marketers/why'
 import type { Metadata } from 'next'
 
@@ -47,9 +46,9 @@ export default function ForMarketers(): JSX.Element {
     <div>
       <Header />
       <main>
-        <What />
-        <LogoCloud />
         <Why />
+        <LogoCloud />
+
         <CardList
           title="Ongoing technical content"
           subtitle="Build a steady stream of technical content that scales with your business."
