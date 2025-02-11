@@ -48,7 +48,7 @@ const faqs: FAQ[] = [
 
 export default function FAQ(): JSX.Element {
   return (
-    <div className="py-24 sm:py-32">
+    <div data-navbar-color="light" className="py-24 sm:py-32">
       <div className="m-auto mx-auto max-w-6xl rounded-xl px-6 lg:px-8">
         <h2 className="header-gradient">Frequently asked questions</h2>
 

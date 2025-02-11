@@ -23,7 +23,10 @@ export const CTAFull: FC<CTAFullProps> = ({
   linkText,
 }) => {
   return (
-    <div className="relative isolate bg-gradient-brand py-10">
+    <div
+      data-navbar-color="dark"
+      className="relative isolate bg-gradient-brand py-10"
+    >
       <div className="mx-auto max-w-full sm:px-6">
         <div className="mx-auto flex max-w-2xl flex-col gap-16 px-6 py-16 sm:p-8 lg:mx-0 lg:max-w-none lg:flex-row lg:items-center lg:py-20 xl:gap-x-20 xl:px-20">
           <Image

@@ -1,5 +1,6 @@
 import FAQ from '@/components/global/faq'
 import { Footer } from '@/components/global/footer'
+import DynamicNavbar from '@/components/global/navbar-dynamic'
 import '@/styles/tailwind.css'
 import type { Metadata } from 'next'
 import { Fira_Code, Fira_Sans } from 'next/font/google'
@@ -45,19 +46,14 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html
-      lang="en"
-      data-gramm_editor="false"
-      data-enable-grammarly="false"
-      className={`${firaSans.variable} ${firaCode.variable}`}
-    >
-      <body className="bg-white text-gray-600 antialiased">
-        {/* <Navbar /> */}
-        <div className="min-h-screen">
-          <main>{children}</main>
+    <html lang="en" className={`${firaSans.variable} ${firaCode.variable}`}>
+      <body className="bg-white antialiased">
+        <DynamicNavbar />
+        <div className="flex min-h-screen flex-col">
+          <main className="flex-grow">{children}</main>
+          <FAQ />
+          <Footer />
         </div>
-        <FAQ />
-        <Footer />
       </body>
     </html>
   )

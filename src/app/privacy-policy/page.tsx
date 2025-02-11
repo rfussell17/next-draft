@@ -1,4 +1,4 @@
-import { CTA } from '@/components/cta'
+import { CTAFull } from '@/components/cta-full'
 import PageHeader from '@/components/global/page-header'
 import { LogoCloud } from '@/components/logo-cloud'
 import TestimonialsGroup from '@/components/testimonials-group'
@@ -31,7 +31,7 @@ export default function PrivacyPolicy() {
       />
       <LogoCloud />
       <TestimonialsGroup />
-      <CTA
+      <CTAFull
         title="Book a discovery call"
         description="Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in accusamus quisquam."
         imageSrc="https://images.unsplash.com/photo-1519338381761-c7523edc1f46?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"

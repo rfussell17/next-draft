@@ -17,6 +17,7 @@ import {
 } from '@heroicons/react/24/outline'
 import { Bars2Icon, ChevronDownIcon } from '@heroicons/react/24/solid'
 import Image from 'next/image'
+import React, { useEffect, useState } from 'react'
 import { Link } from './link'
 
 const useCases = [
@@ -62,24 +63,63 @@ const recentPosts = [
 
 const links = [
   { href: '/why-us', label: 'Why Us?' },
-  { href: '/services', label: 'Placeholder' },
-  { href: '/about', label: 'Company' },
   { href: '/case-studies', label: 'Case Studies' },
-  // { href: '/blog', label: 'Blog' },
+  { href: '/blog', label: 'Blog' },
+  { href: '/resources', label: 'Free Resources' },
+  { href: '/about', label: 'Company' },
   { href: '/book-discovery-call', label: 'Book Discovery Call' },
 ]
 
-function DesktopNav() {
-  return (
-    <nav className="relative hidden text-gray-800 outline-none lg:flex">
-      {links.map(({ href, label }) => {
-        if (label === 'Why Us?') {
-          return (
-            <div key={label} className="relative flex">
-              <Popover className="relative">
-                <PopoverButton className="flex items-center px-4 py-6 text-lg font-medium data-[hover]:bg-black/[2.5%]">
+interface NavbarProps {
+  banner?: React.ReactNode
+}
+
+export function DynamicNavbar({ banner }: NavbarProps) {
+  const [hasScrolled, setHasScrolled] = useState(false)
+  const navbarHeight = 80
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(min-width: 640px)')
+    let lastKnownScrollY = window.scrollY
+    let ticking = false
+
+    const handleScroll = () => {
+      if (!mediaQuery.matches) return
+      lastKnownScrollY = window.scrollY
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setHasScrolled(lastKnownScrollY > window.innerHeight - navbarHeight)
+          ticking = false
+        })
+        ticking = true
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    handleScroll()
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  const textColor = `text-gray-800 ${hasScrolled ? 'sm:text-gray-800' : 'sm:text-white'}`
+  const navBackground = `bg-white ${hasScrolled ? 'sm:bg-white/95 sm:backdrop-blur-sm sm:shadow-md' : 'sm:bg-transparent'}`
+  const transitionClasses = 'transition-colors duration-300 ease-in-out'
+  const buttonHoverBg = `hover:bg-gray-100/80 ${
+    hasScrolled ? 'sm:hover:bg-gray-100/80' : 'sm:hover:bg-white/10'
+  }`
+
+  function DesktopNav() {
+    return (
+      <nav className={`hidden items-center lg:flex ${textColor}`}>
+        {links.map(({ href, label }) => {
+          if (label === 'Why Us?') {
+            return (
+              <Popover key={label} className="relative">
+                <PopoverButton
+                  className={`flex items-center px-4 py-6 text-lg font-medium ${buttonHoverBg} ${transitionClasses}`}
+                >
                   {label}
-                  <ChevronDownIcon className="ml-2 h-4 w-4 text-gray-800" />
+                  <ChevronDownIcon
+                    className={`ml-2 h-4 w-4 ${textColor} ${transitionClasses}`}
+                  />
                 </PopoverButton>
                 <PopoverPanel className="absolute left-1/2 z-50 mt-2 w-screen max-w-4xl -translate-x-1/2 rounded-xl bg-white shadow-lg ring-1 ring-black/5">
                   <div className="p-6 lg:p-5">
@@ -96,7 +136,7 @@ function DesktopNav() {
                                   as={Link}
                                   key={item.name}
                                   href={item.href}
-                                  className="flex gap-x-4 py-2 text-sm font-semibold text-gray-700"
+                                  className="flex gap-x-4 py-2 text-sm font-semibold text-gray-700 hover:text-gray-900"
                                 >
                                   <item.icon
                                     aria-hidden="true"
@@ -119,7 +159,7 @@ function DesktopNav() {
                                   as={Link}
                                   key={item.name}
                                   href={item.href}
-                                  className="flex gap-x-4 py-2 text-sm font-semibold text-gray-700"
+                                  className="flex gap-x-4 py-2 text-sm font-semibold text-gray-700 hover:text-gray-900"
                                 >
                                   <item.icon
                                     aria-hidden="true"
@@ -179,86 +219,90 @@ function DesktopNav() {
                   </div>
                 </PopoverPanel>
               </Popover>
-            </div>
+            )
+          }
+          return (
+            <Link
+              key={href}
+              href={href}
+              className={`px-4 py-3 text-lg font-medium ${textColor} ${buttonHoverBg} ${transitionClasses}`}
+            >
+              {label}
+            </Link>
           )
-        }
-        return (
-          <div key={href} className="relative flex">
+        })}
+      </nav>
+    )
+  }
+
+  function MobileNav() {
+    return (
+      <DisclosurePanel className="bg-white lg:hidden">
+        <div className="flex flex-col py-2">
+          {links.map(({ href, label }) => (
             <Link
+              key={href}
               href={href}
-              className="flex items-center px-4 py-3 text-lg font-medium text-gray-800"
+              className="px-6 py-2 text-base font-medium text-gray-900 hover:bg-gray-50"
             >
               {label}
             </Link>
-          </div>
-        )
-      })}
-    </nav>
-  )
-}
+          ))}
+        </div>
+      </DisclosurePanel>
+    )
+  }
 
-function MobileNavButton() {
-  return (
-    <DisclosureButton
-      className="flex size-12 items-center justify-center self-center rounded-lg data-[hover]:bg-black/5 lg:hidden"
-      aria-label="Open main menu"
-    >
-      <Bars2Icon className="size-6" />
-    </DisclosureButton>
-  )
-}
-
-function MobileNav() {
-  return (
-    <DisclosurePanel className="lg:hidden">
-      <div className="flex flex-col gap-6 py-4">
-        {links.map(({ href, label }) => (
-          <div key={href} className="transition-opacity duration-200">
-            <Link
-              href={href}
-              className="px-6 text-base font-medium text-gray-950"
-            >
-              {label}
-            </Link>
-          </div>
-        ))}
-      </div>
-      <div className="absolute left-1/2 w-screen -translate-x-1/2">
-        <div className="absolute inset-x-0 top-0 border-t border-black/5" />
-        <div className="absolute inset-x-0 top-2 border-t border-black/5" />
-      </div>
-    </DisclosurePanel>
-  )
-}
-
-export function NavbarLight({ banner }: { banner?: React.ReactNode }) {
   return (
     <Disclosure
-      className="fixed left-0 right-0 top-0 z-50 bg-white"
       as="header"
+      className={`fixed left-0 right-0 top-0 z-50 ${navBackground} ${transitionClasses}`}
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="relative flex items-center justify-between py-3">
-          <div className="relative flex items-center">
-            <Link href="/" title="Home">
+        <div className="flex items-center justify-between py-3">
+          <div className="flex items-center">
+            <Link href="/" title="Home" className="block lg:hidden">
               <Image
                 src="/draft/logos/draftlogo_main_filled.svg"
                 alt="Logo"
                 width={180}
                 height={72}
+                priority
+              />
+            </Link>
+            <Link href="/" title="Home" className="hidden lg:block">
+              <Image
+                src={
+                  hasScrolled
+                    ? '/draft/logos/draftlogo_main_filled.svg'
+                    : '/draft/logos/draftlogo_base_white.svg'
+                }
+                alt="Logo"
+                width={180}
+                height={72}
+                priority
+                className={transitionClasses}
               />
             </Link>
             {banner && (
-              <div className="relative hidden items-center lg:flex">
-                {banner}
-              </div>
+              <div className="hidden items-center lg:flex">{banner}</div>
             )}
           </div>
+
           <DesktopNav />
-          <MobileNavButton />
+
+          <DisclosureButton
+            className={`flex h-12 w-12 items-center justify-center rounded-lg text-gray-800 hover:bg-gray-100/80 lg:hidden`}
+            aria-label="Open main menu"
+          >
+            <Bars2Icon className="h-6 w-6" />
+          </DisclosureButton>
         </div>
+
         <MobileNav />
       </div>
     </Disclosure>
   )
 }
+
+export default DynamicNavbar

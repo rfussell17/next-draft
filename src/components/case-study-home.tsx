@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 const CaseStudyHome = () => {
   return (
-    <div>
+    <div data-navbar-color="dark">
       <main className="relative isolate bg-gradient-brand py-16">
         <div className="px-6 lg:px-8">
           <div className="mx-auto max-w-5xl text-center uppercase">

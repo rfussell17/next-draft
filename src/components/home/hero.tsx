@@ -1,13 +1,11 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-import { NavbarDark } from '../global/navbar-dark'
 import { LogosFlex } from '../logos-flex'
 
 const Hero: React.FC = () => {
   return (
-    <div className="bg-gradient-brand">
-      <NavbarDark />
+    <div className="min-h-screen bg-gradient-brand pt-20">
       <main className="relative isolate pb-16">
         <div
           aria-hidden="true"

@@ -67,7 +67,7 @@ const testimonials: Testimonial[] = [
 
 export default function TestimonialsGroup() {
   return (
-    <div className="bg-white py-24 sm:py-32">
+    <div data-navbar-color="light" className="bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="header-gradient">Testimonials</h2>

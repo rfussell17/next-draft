@@ -1,4 +1,5 @@
 import CardList from '@/components/card-list'
+import { CTAFull } from '@/components/cta-full'
 import Testimonial from '@/components/testimonial'
 import TestimonialsGroup from '@/components/testimonials-group'
 import { Header } from '@/components/who-we-help/for-devrels/header'
@@ -97,7 +98,7 @@ export default function ForDevRels(): JSX.Element {
 
         <TestimonialsGroup />
 
-        {/* <CTA
+        <CTAFull
           title="Book a discovery call"
           description="Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in accusamus quisquam."
           imageSrc="https://images.unsplash.com/photo-1519338381761-c7523edc1f46?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
@@ -105,7 +106,7 @@ export default function ForDevRels(): JSX.Element {
           list={ctaProps}
           linkHref="#"
           linkText="See our job postings"
-        /> */}
+        />
       </main>
     </div>
   )

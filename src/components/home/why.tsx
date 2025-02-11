@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 const Why = () => {
   return (
-    <div className="py-16 sm:py-44">
+    <div data-navbar-color="light" className="py-16 sm:py-44">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-4xl lg:text-center">
           <h2 className="subheader-mobile-gradient sm:subheader-gradient">
@@ -33,7 +33,7 @@ const Why = () => {
                   technologies.
                 </p>
 
-                <p className="z-50 mt-4">
+                <p className="mt-4">
                   <Link
                     href="/expert-writers"
                     className="font-semibold text-gradient-3"
@@ -57,7 +57,7 @@ const Why = () => {
                   consistent style.{' '}
                 </p>
 
-                <p className="z-50 mt-4">
+                <p className="mt-4">
                   <Link
                     href="/content-quality"
                     className="font-semibold text-gradient-3"
@@ -81,7 +81,7 @@ const Why = () => {
                   depending on your needs.
                 </p>
 
-                <p className="z-50 mt-4">
+                <p className="mt-4">
                   <Link
                     href="/delivery-process"
                     className="font-semibold text-gradient-3"

@@ -18,7 +18,10 @@ function Testimonial({
   company,
 }: TestimonialProps) {
   return (
-    <div className="my-24 bg-gradient-brand pb-24 pt-72 lg:pt-36">
+    <div
+      data-navbar-color="dark"
+      className="my-24 bg-gradient-brand pb-24 pt-72 lg:pt-36"
+    >
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-[384px_1fr]">
           <div className="-mt-96 lg:-mt-52">
