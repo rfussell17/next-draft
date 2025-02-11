@@ -43,40 +43,43 @@ const faqs: FAQ[] = [
     answer:
       'We do. The price per article depends on the volume and delivery speed required. Book a call with us to discuss your content needs.',
   },
-  // Add more questions here...
 ]
 
 export default function FAQ(): JSX.Element {
   return (
     <div data-navbar-color="light" className="py-24 sm:py-32">
-      <div className="m-auto mx-auto max-w-6xl rounded-xl px-6 lg:px-8">
-        <h2 className="header-gradient">Frequently asked questions</h2>
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto">
+          <h2 className="header-gradient">Frequently asked questions</h2>
 
-        <p className="p-dark">
-          Have a different question and can’t find the answer you’re looking
-          for?
-        </p>
-        <p className="p-dark">
-          Reach out to our support team by{' '}
-          <Link
-            href="#"
-            className="hover:text-gradient-brand font-semibold text-secondary"
-          >
-            sending us an email
-          </Link>{' '}
-          and we’ll get back to you as soon as we can.
-        </p>
-        <div className="mt-12">
-          <dl className="space-y-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-10 sm:space-y-0 lg:gap-x-10">
-            {faqs.map((faq) => (
-              <div key={faq.id}>
-                <dt className="text-lg font-semibold text-gray-600">
-                  {faq.question}
-                </dt>
-                <dd className="mt-2 text-base/7 text-gray-600">{faq.answer}</dd>
-              </div>
-            ))}
-          </dl>
+          <p className="p-dark">
+            Have a different question and can't find the answer you're looking
+            for?
+          </p>
+          <p className="p-dark">
+            Reach out to our support team by{' '}
+            <Link
+              href="#"
+              className="hover:text-gradient-brand font-semibold text-secondary"
+            >
+              sending us an email
+            </Link>{' '}
+            and we'll get back to you as soon as we can.
+          </p>
+          <div className="mt-12">
+            <dl className="space-y-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-10 sm:space-y-0 lg:gap-x-10">
+              {faqs.map((faq) => (
+                <div key={faq.id}>
+                  <dt className="text-lg font-semibold text-gray-600">
+                    {faq.question}
+                  </dt>
+                  <dd className="mt-2 text-base/7 text-gray-600">
+                    {faq.answer}
+                  </dd>
+                </div>
+              ))}
+            </dl>
+          </div>
         </div>
       </div>
     </div>

@@ -1,4 +1,4 @@
-import SocialProofSmall from '@/components/social-proof-small'
+import { LogosFlex } from '@/components/logos-flex'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
@@ -57,7 +57,8 @@ const Header: React.FC = () => {
             </div>
           </div>
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <SocialProofSmall />
+            {/* <SocialProofSmall /> */}
+            <LogosFlex />
           </div>
         </div>
       </main>
