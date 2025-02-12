@@ -11,7 +11,7 @@ const How = () => {
                 Your Path to Technical Content
               </h2>
               <h3 className="paragraph-dark py-4">
-                <span className="lead-dark">
+                <span className="lead-dark font-semibold">
                   Our streamlined process ensures consistent, high-quality
                   technical content delivered on time.{' '}
                 </span>{' '}

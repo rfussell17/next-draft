@@ -46,6 +46,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${firaSans.variable} ${firaCode.variable}`}>
+      <head>
+        <meta data-grammarly-disable="true" />
+      </head>
       <body className="bg-white antialiased">
         <DynamicNavbar />
         <div className="flex min-h-screen flex-col">
