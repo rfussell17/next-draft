@@ -48,7 +48,7 @@
   @layer components {
     /* h1 */
     .header-base {
-      @apply my-4 py-1 font-code font-semibold;
+      @apply py-1 font-code font-semibold;
       font-size: 3.75rem;
       line-height: 1.125;
       letter-spacing: -2px;
