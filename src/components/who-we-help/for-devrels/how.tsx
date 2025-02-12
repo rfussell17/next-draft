@@ -56,7 +56,7 @@ const How = () => {
               <div className="overflow-hidden rounded-3xl shadow-2xl outline outline-1 -outline-offset-1 outline-black/10">
                 <Image
                   alt="Technical content development"
-                  src="/site/team_draft_dev.jpg"
+                  src="/site/dev_draft_dev.jpg"
                   width={500}
                   height={300}
                   className="w-full rounded-xl"
