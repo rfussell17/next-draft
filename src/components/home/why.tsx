@@ -14,9 +14,9 @@ const Why = () => {
             Partner with technical content experts who understand your industry
             and deliver results.{' '}
           </h3>
-          <h3 className="lead-dark mt-4 sm:mt-0">
+          <h3 className="lead-dark mt-4 rounded-sm py-1 text-center text-gray-700 sm:mt-0 sm:bg-gradient-brand sm:text-white md:mx-auto lg:mx-24">
             {' '}
-            You'll only pay for content if you're 100% satisfied.{' '}
+            You'll only pay for content if you're 100% satisfied.
           </h3>
         </div>
         <div className="mx-auto mt-10 max-w-2xl sm:mt-16 lg:max-w-none">
@@ -36,7 +36,7 @@ const Why = () => {
                 <p className="mt-4">
                   <Link
                     href="/expert-writers"
-                    className="text-base font-semibold text-gradient-3"
+                    className="text-base font-semibold text-gradient-3 hover:text-gray-700"
                   >
                     Our Vetted Technical Writers
                     <span aria-hidden="true"> →</span>
@@ -60,7 +60,7 @@ const Why = () => {
                 <p className="mt-4">
                   <Link
                     href="/content-quality"
-                    className="text-base font-semibold text-gradient-3"
+                    className="text-base font-semibold text-gradient-3 hover:text-gray-700"
                   >
                     Our Quality-Focused Content
                     <span aria-hidden="true"> →</span>
@@ -84,7 +84,7 @@ const Why = () => {
                 <p className="mt-4">
                   <Link
                     href="/delivery-process"
-                    className="text-base font-semibold text-gradient-3"
+                    className="text-base font-semibold text-gradient-3 hover:text-gray-700"
                   >
                     Our delivery process
                     <span aria-hidden="true"> →</span>

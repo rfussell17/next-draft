@@ -61,7 +61,7 @@ export const CTAFull: FC<CTAFullProps> = ({
             <div className="mt-10 flex">
               <Link
                 href={linkHref}
-                className="text-md px-10 py-2 font-semibold text-white ring-2 ring-white hover:bg-white hover:text-gradient-3"
+                className="text-md rounded-sm px-4 py-2 font-semibold text-white ring-2 ring-white hover:bg-white hover:text-gray-600"
               >
                 {linkText} <span aria-hidden="true">&rarr;</span>
               </Link>

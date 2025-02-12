@@ -17,7 +17,10 @@ function CallToAction() {
               </hgroup>
 
               <div className="mt-12 text-center">
-                <Button className="w-full sm:w-auto" href="#">
+                <Button
+                  className="w-full bg-transparent text-white ring-2 ring-white hover:bg-white hover:text-gray-600 sm:w-auto"
+                  href="#"
+                >
                   Book a Discovery Call
                 </Button>
               </div>
