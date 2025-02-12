@@ -89,7 +89,7 @@
     .subheader-mobile-base {
       /* h2 */
       @apply my-4 font-code font-semibold;
-      font-size: 1.85rem;
+      font-size: 1.45rem;
       line-height: 1.1;
       letter-spacing: -1px;
     }
