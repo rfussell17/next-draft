@@ -8,14 +8,6 @@ const How = () => {
           <div className="px-6 lg:px-0 lg:pr-4 lg:pt-4">
             <div className="mx-auto max-w-3xl sm:max-w-4xl lg:mx-0">
               <h2 className="header-gradient">DevRel "how" Section</h2>
-              <h3 className="p-dark pb-4">
-                <span className="lead-dark">
-                  Our streamlined process ensures consistent, high-quality
-                  technical content delivered on time.{' '}
-                </span>{' '}
-                Here's how we help you create content that resonates with
-                developers.
-              </h3>
 
               <dl className="mt-6 max-w-xl space-y-8 text-lg/7 text-gray-600 lg:max-w-none">
                 <div className="relative">

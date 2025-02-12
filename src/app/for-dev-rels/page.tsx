@@ -1,13 +1,13 @@
 import CardList from '@/components/card-list'
 import { CTAFull } from '@/components/cta-full'
+import SocialProof from '@/components/social-proof'
 import Testimonial from '@/components/testimonial'
 import TestimonialsGroup from '@/components/testimonials-group'
-import { Header } from '@/components/who-we-help/for-devrels/header'
+import Header from '@/components/who-we-help/for-devrels/header'
 import How from '@/components/who-we-help/for-devrels/how'
-import What from '@/components/who-we-help/for-devrels/what'
 import Why from '@/components/who-we-help/for-devrels/why'
+
 import type { Metadata } from 'next'
-import { LogoCloud } from '../../components/logo-cloud'
 
 export const metadata: Metadata = {
   description:
@@ -18,41 +18,14 @@ export const metadata: Metadata = {
   },
 }
 
-export default function ForDevRels(): JSX.Element {
+export default function ForMarketers(): JSX.Element {
   const ctaProps = [
-    'DevRel Specific content in here',
+    'marketing-specific content in here',
     'Flexible work hours',
     '30 days of paid vacation',
     'Annual team retreats',
     'Benefits for you and your family',
     'A great work environment',
-  ]
-
-  const features2 = [
-    {
-      name: 'Drive Awareness',
-      description1:
-        'With a track record of predictably creating demand, our content strategists help implement proven frameworks that drive traffic and inbound leads.',
-      description2:
-        'We ensure our blog posts, eBooks and video tutorials are accurate, engaging, and resonate with your technical audience.',
-      href: '/drive-awareness',
-    },
-    {
-      name: 'Capture Leads',
-      description1:
-        'Our subject matter experts evaluate your product and help build out your content roadmap, turning readers into leads, and leads into new customers.',
-      description2:
-        'Recurring check-ins ensure we adapt our content production plan according to the latest learnings.',
-      href: '/capture-leads',
-    },
-    {
-      name: 'Build Trust',
-      description1:
-        'Everything we deliver to you is written and reviewed by practicing technical professionals and edited by professional editors.',
-      description2:
-        'Outsource the creation of technical content to us and build respect and engagement with software developers, DevOps, data engineers, and more.',
-      href: '/build-trust',
-    },
   ]
 
   const cardListPropsOne = [
@@ -74,9 +47,13 @@ export default function ForDevRels(): JSX.Element {
     <div>
       <Header />
       <main>
-        <What />
-        <LogoCloud />
         <Why />
+
+        <div className="bg-gradient-brand">
+          <SocialProof />
+        </div>
+        <How />
+
         <Testimonial
           quote="In a matter of weeks, our referral traffic and organic keyword rankings increased by 3x. One post also hit Hacker News which resulted in 5 demo requests in a single day!"
           name="Robert Gibb"
@@ -85,7 +62,7 @@ export default function ForDevRels(): JSX.Element {
           imageSrc="/testimonials/robert_gibb_fabric_inc_draft_dev.png"
           imageAlt="Robert Gibb"
         />
-        <How />
+
         <CardList
           title="Ongoing technical content"
           subtitle="Build a steady stream of technical content that scales with your business."
@@ -96,16 +73,17 @@ export default function ForDevRels(): JSX.Element {
           requestPricingText="Request pricing"
         />
 
-        <TestimonialsGroup />
+        {/* <LogoCloud /> */}
 
+        <TestimonialsGroup />
         <CTAFull
           title="Book a discovery call"
           description="Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in accusamus quisquam."
-          imageSrc="https://images.unsplash.com/photo-1519338381761-c7523edc1f46?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          imageSrc="/site/cta.jpg"
           imageAlt="Team environment"
           list={ctaProps}
-          linkHref="#"
-          linkText="See our job postings"
+          linkHref="/discovery-call"
+          linkText="Book a Discovery Call"
         />
       </main>
     </div>

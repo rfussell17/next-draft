@@ -4,7 +4,9 @@ import SocialProof from '@/components/social-proof'
 import Testimonial from '@/components/testimonial'
 import TestimonialsGroup from '@/components/testimonials-group'
 import Header from '@/components/who-we-help/for-marketers/header'
+import How from '@/components/who-we-help/for-marketers/how'
 import Why from '@/components/who-we-help/for-marketers/why'
+
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -50,6 +52,17 @@ export default function ForMarketers(): JSX.Element {
         <div className="bg-gradient-brand">
           <SocialProof />
         </div>
+        <How />
+
+        <Testimonial
+          quote="Draft.dev has been an amazing partner, helping us scale our content program by creating thoughtful and technically-sound developer content and training materials. We’re constantly iterating to build the best educational materials for developer security and Draft.dev has been instrumental in helping us realize these ambitions."
+          name="Randall Degges"
+          role="Head of Developer & Security Relations"
+          company="snyk"
+          imageSrc="/testimonials/randall_degges_snyk_draft_dev.png"
+          imageAlt="Randall Degges"
+        />
+
         <CardList
           title="Ongoing technical content"
           subtitle="Build a steady stream of technical content that scales with your business."
@@ -58,14 +71,6 @@ export default function ForMarketers(): JSX.Element {
           addonFeatures={cardListPropsTwo}
           requestPricingHref="#"
           requestPricingText="Request pricing"
-        />
-        <Testimonial
-          quote="In a matter of weeks, our referral traffic and organic keyword rankings increased by 3x. One post also hit Hacker News which resulted in 5 demo requests in a single day!"
-          name="Robert Gibb"
-          role="Content Marketing Manager"
-          company="Fabric"
-          imageSrc="/testimonials/robert_gibb_fabric_inc_draft_dev.png"
-          imageAlt="Robert Gibb"
         />
 
         {/* <LogoCloud /> */}
