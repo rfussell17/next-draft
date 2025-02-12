@@ -12,11 +12,11 @@ const Why = () => {
           <h3 className="paragraph-dark py-3">
             {' '}
             Partner with technical content experts who understand your industry
-            and deliver results.{' '}
-          </h3>
-          <h3 className="lead-dark mt-4 font-semibold sm:mt-0">
-            {' '}
-            You'll only pay for content if you're 100% satisfied.{' '}
+            and deliver results.
+            <span className="lead-dark font-semibold">
+              <br></br>
+              You'll only pay for content if you're 100% satisfied.{' '}
+            </span>
           </h3>
         </div>
         <div className="mx-auto mt-10 max-w-2xl sm:mt-16 lg:max-w-none">
