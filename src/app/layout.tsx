@@ -12,7 +12,6 @@ export const metadata: Metadata = {
   robots: {
     index: false,
     follow: false,
-    noarchive: true,
   },
   alternates: {
     types: {

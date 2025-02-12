@@ -1,4 +1,5 @@
 import { Container } from '@/components/container'
+import { CTAFull } from '@/components/cta-full'
 import Testimonial from '@/components/testimonial'
 import type { Metadata } from 'next'
 
@@ -24,49 +25,14 @@ function Header() {
   )
 }
 
-function FeatureItem({
-  description,
-  disabled = false,
-}: {
-  description: string
-  disabled?: boolean
-}) {
-  return (
-    <li
-      data-disabled={disabled ? true : undefined}
-      className="flex items-start gap-4 text-sm/6 text-gray-950/75 data-[disabled]:text-gray-950/25"
-    >
-      <span className="inline-flex h-6 items-center">
-        <PlusIcon className="size-[0.9375rem] shrink-0 fill-gray-950/25" />
-      </span>
-      {disabled && <span className="sr-only">Not included:</span>}
-      {description}
-    </li>
-  )
-}
-
-function PlusIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
-  return (
-    <svg viewBox="0 0 15 15" aria-hidden="true" {...props}>
-      <path clipRule="evenodd" d="M8 0H7v7H0v1h7v7h1V8h7V7H8V0z" />
-    </svg>
-  )
-}
-
 export default function Services() {
-  const cardListPropsOne = [
-    'Private forum access',
-    'SEO Keyword and topic ideation',
-    'Diagrams, and code samples',
-    'Technical reviews',
-    'Professional editing',
-    'Social media collateral',
-  ]
-
-  const cardListPropsTwo = [
-    'Technical ebooks',
-    'Executive ghostwriting',
-    'Video tutorials',
+  const ctaProps = [
+    'Competitive salaries',
+    'Flexible work hours',
+    '30 days of paid vacation',
+    'Annual team retreats',
+    'Benefits for you and your family',
+    'A great work environment',
   ]
 
   return (
@@ -80,6 +46,15 @@ export default function Services() {
         company="Loft Labs"
         imageSrc="/testimonials/rich_loft_labs_draft_dev.png"
         imageAlt="Rich Burroughs"
+      />
+      <CTAFull
+        title="Book a discovery call"
+        description="Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in accusamus quisquam."
+        imageSrc="/site/cta.jpg"
+        imageAlt="Team environment"
+        list={ctaProps}
+        linkHref="/discovery-call"
+        linkText="Book a Discovery Call"
       />
     </main>
   )

@@ -18,54 +18,6 @@ export const metadata: Metadata = {
   },
 }
 
-const bodyDetailProps = [
-  {
-    name: 'Expert Writers',
-    description1:
-      'We have a global network of expert writers. Every piece undergoes thorough editorial review.',
-    description2:
-      'We have a global network of expert writers. Every piece undergoes thorough editorial review.',
-    href: '/learn-more',
-  },
-  {
-    name: 'Consistent Content',
-    description1:
-      'We have a global network of expert writers. Every piece undergoes thorough editorial review.',
-    description2:
-      'We have a global network of expert writers. Every piece undergoes thorough editorial review.',
-    href: '/content',
-  },
-  {
-    name: 'Reliable Delivery',
-    description1:
-      'We have a global network of expert writers. Every piece undergoes thorough editorial review.',
-    description2:
-      'We have a global network of expert writers. Every piece undergoes thorough editorial review.',
-    href: '/delivery',
-  },
-]
-
-const bodyDetailImageProps = [
-  {
-    name: '1. Schedule A Discovery Call',
-    description:
-      "In this 30-minute introductory call, we'll learn about your company and marketing strategy. If Draft.dev is a good fit for your business, we can start the onboarding process.",
-    href: '/learn-more',
-  },
-  {
-    name: '2. Create Your Content Plan',
-    description:
-      "Based on your budget, goals, and marketing strategy, we'll create your customized content plan. This helps you see exactly what you'll be getting and ensures that we meet your expectations.",
-    href: '/content',
-  },
-  {
-    name: '3. Ready-to-publish Technical Content',
-    description:
-      "Once your content plan is approved and our team will get started, you'll receive tested and edited content that's ready to publish every 1-2 weeks. If our work ever falls short of your expectations, we'll work with you to revise it.",
-    href: '/delivery',
-  },
-]
-
 const ctaProps = [
   'Competitive salaries',
   'Flexible work hours',
@@ -103,28 +55,19 @@ export default function Home() {
           imageAlt="Rich Burroughs"
         />
         <How />
-        {/* <BodyDetailImage
-          title="How it works"
-          paragraph=""
-          features={bodyDetailImageProps}
-          mainImage={{
-            src: '/site/team_draft_dev.jpg',
-            alt: 'Product screenshot',
-          }}
-        /> */}
 
         <CaseStudyHome />
       </main>
       <Testimonials />
 
       <CTAFull
-        title="Book Discovery Call"
+        title="Book a discovery call"
         description="Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in accusamus quisquam."
-        imageSrc="https://images.unsplash.com/photo-1519338381761-c7523edc1f46?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        imageSrc="/site/cta.jpg"
         imageAlt="Team environment"
         list={ctaProps}
-        linkHref="#"
-        linkText="Schedule a discovery call"
+        linkHref="/discovery-call"
+        linkText="Book a Discovery Call"
       />
     </div>
   )

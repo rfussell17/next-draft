@@ -93,11 +93,11 @@ export default function BuildTrust() {
       <CTAFull
         title="Book a discovery call"
         description="Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in accusamus quisquam."
-        imageSrc="https://images.unsplash.com/photo-1519338381761-c7523edc1f46?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        imageSrc="/site/cta.jpg"
         imageAlt="Team environment"
         list={ctaProps}
-        linkHref="#"
-        linkText="See our job postings"
+        linkHref="/discovery-call"
+        linkText="Book a Discovery Call"
       />
     </>
   )

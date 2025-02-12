@@ -43,7 +43,7 @@ export const CTAFull: FC<CTAFullProps> = ({
             </div>
           </div>
           <div className="w-full flex-auto">
-            <h2 className="header-light">{title}</h2>
+            <h2 className="subheader-light">{title}</h2>
             <ul
               role="list"
               className="grid grid-cols-1 gap-x-8 gap-y-3 py-4 text-base/7 text-white sm:grid-cols-2"
