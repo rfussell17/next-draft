@@ -4,7 +4,7 @@ import Hero from '@/components/home/hero'
 import How from '@/components/home/how'
 import What from '@/components/home/what'
 import Why from '@/components/home/why'
-import { LogoCloud } from '@/components/logo-cloud'
+import SocialProof from '@/components/social-proof'
 import Testimonial from '@/components/testimonial'
 import Testimonials from '@/components/testimonials-group'
 import type { Metadata } from 'next'
@@ -91,7 +91,7 @@ export default function Home() {
 
       <main>
         <What />
-        <LogoCloud />
+        <SocialProof />
         <Why />
 
         <Testimonial

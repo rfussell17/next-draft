@@ -94,6 +94,10 @@
       letter-spacing: -1px;
     }
 
+    .sitemap-heading {
+      @apply font-code text-lg font-semibold;
+    }
+
     .subheader-mobile-light {
       @apply subheader-mobile-base text-gray-100;
     }

@@ -36,7 +36,7 @@ const Why = () => {
                 <p className="mt-4">
                   <Link
                     href="/expert-writers"
-                    className="font-semibold text-gradient-3"
+                    className="text-base font-semibold text-gradient-3"
                   >
                     Our Vetted Technical Writers
                     <span aria-hidden="true"> →</span>
@@ -60,7 +60,7 @@ const Why = () => {
                 <p className="mt-4">
                   <Link
                     href="/content-quality"
-                    className="font-semibold text-gradient-3"
+                    className="text-base font-semibold text-gradient-3"
                   >
                     Our Quality-Focused Content
                     <span aria-hidden="true"> →</span>
@@ -84,7 +84,7 @@ const Why = () => {
                 <p className="mt-4">
                   <Link
                     href="/delivery-process"
-                    className="font-semibold text-gradient-3"
+                    className="text-base font-semibold text-gradient-3"
                   >
                     Our delivery process
                     <span aria-hidden="true"> →</span>

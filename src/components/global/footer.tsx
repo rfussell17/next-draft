@@ -5,22 +5,29 @@ import { Button } from './button'
 
 function CallToAction() {
   return (
-    <div className="relative py-24 text-center">
-      <hgroup>
-        <h2 className="header-light my-6 text-3xl tracking-tight sm:text-5xl">
-          Want to learn more about how we work?
-        </h2>
-      </hgroup>
+    <div className="-mt-34 md:pb-22 -mx-4 pb-20 lg:-mx-8">
+      <div className="mx-auto max-w-7xl">
+        <div className="-m-2 rounded-4xl bg-white/15 shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5">
+          <div className="rounded-4xl p-2 shadow-md shadow-black/5">
+            <div className="overflow-hidden rounded-3xl bg-gradient-brand p-12 shadow-2xl outline outline-1 -outline-offset-1 outline-black/10">
+              <hgroup>
+                <h2 className="header-light my-6 text-center text-3xl tracking-tight sm:text-5xl">
+                  Want to learn more about how we work?
+                </h2>
+              </hgroup>
 
-      <div className="mt-12">
-        <Button className="w-full sm:w-auto" href="#">
-          Book a Discovery Call
-        </Button>
+              <div className="mt-12 text-center">
+                <Button className="w-full sm:w-auto" href="#">
+                  Book a Discovery Call
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   )
 }
-
 function SitemapHeading({ children }: { children: React.ReactNode }) {
   return <h3 className="text-sm/6 font-bold text-white">{children}</h3>
 }
@@ -44,22 +51,28 @@ function Sitemap() {
   return (
     <>
       <div>
-        <SitemapHeading>Product</SitemapHeading>
+        <SitemapHeading>
+          <span className="sitemap-heading">Product</span>
+        </SitemapHeading>
         <SitemapLinks>
-          <SitemapLink href="/pricing">Pricing</SitemapLink>
+          <SitemapLink href="/pricing">Pricing </SitemapLink>
           <SitemapLink href="/terms-of-service">Terms of service</SitemapLink>
           <SitemapLink href="/privacy-policy">Privacy policy</SitemapLink>
         </SitemapLinks>
       </div>
       <div>
-        <SitemapHeading>Company</SitemapHeading>
+        <SitemapHeading>
+          <span className="sitemap-heading">Company</span>
+        </SitemapHeading>
         <SitemapLinks>
           <SitemapLink href="/about">Our Team</SitemapLink>
           <SitemapLink href="/about">Write for Draft</SitemapLink>
         </SitemapLinks>
       </div>
       <div>
-        <SitemapHeading>Learn</SitemapHeading>
+        <SitemapHeading>
+          <span className="sitemap-heading">Learn</span>
+        </SitemapHeading>
         <SitemapLinks>
           <SitemapLink href="/blog">Blog</SitemapLink>
           <SitemapLink href="/newsletter">Newsletter</SitemapLink>
@@ -68,7 +81,9 @@ function Sitemap() {
         </SitemapLinks>
       </div>
       <div>
-        <SitemapHeading>Questions</SitemapHeading>
+        <SitemapHeading>
+          <span className="sitemap-heading">Questions</span>
+        </SitemapHeading>
         <SitemapLinks>
           <SitemapLink href="/case-studies">Case Studies</SitemapLink>
           <SitemapLink href="/book-discovery-call">Book a Call</SitemapLink>
@@ -139,42 +154,54 @@ function SocialLinks() {
 
 function Copyright() {
   return (
-    <div className="text-center text-sm/6 text-white">
-      &copy; {new Date().getFullYear()} Draft.Dev
+    <div className="bg-white/15 py-1 shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5">
+      <div className="shadow-md shadow-black/5">
+        <div className="text-center text-sm/6 text-white">
+          &copy; {new Date().getFullYear()} Draft.Dev
+        </div>
+      </div>
     </div>
   )
 }
 
 export function Footer() {
   return (
-    <footer>
-      <Container className="relative bg-gradient-brand text-white">
+    <>
+      {/* CTA positioned outside the footer */}
+      <div className="relative z-10">
         <CallToAction />
-        <div className="pb-16">
-          <div className="grid grid-cols-2 gap-y-10 pb-6 lg:grid-cols-6 lg:gap-8">
-            <div className="col-span-2">
-              <div className="pt-10">
-                <Link href="/" title="Home">
-                  <Image
-                    src="draft/logos/draftlogo_clean_white.svg"
-                    alt="Logo"
-                    width={180}
-                    height={72}
-                  />
-                </Link>
-                <div className="mt-6 flex justify-start gap-6">
-                  <SocialLinks />
+      </div>
+
+      {/* Actual footer content */}
+      <footer className="relative -mt-64 bg-gradient-brand pt-36">
+        <Container className="relative text-white">
+          <div className="pb-16 pt-24">
+            <div className="grid grid-cols-2 gap-y-10 pb-6 lg:grid-cols-6 lg:gap-8">
+              <div className="col-span-2">
+                <div className="pt-10">
+                  <Link href="/" title="Home">
+                    <Image
+                      src="draft/logos/draftlogo_clean_white.svg"
+                      alt="Logo"
+                      width={180}
+                      height={72}
+                    />
+                  </Link>
+                  <div className="mt-6 flex justify-start gap-6">
+                    <SocialLinks />
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="col-span-2 grid grid-cols-2 gap-x-8 gap-y-12 lg:col-span-4 lg:grid-cols-subgrid lg:pt-6">
-              <Sitemap />
+              <div className="col-span-2 grid grid-cols-2 gap-x-8 gap-y-12 lg:col-span-4 lg:grid-cols-subgrid lg:pt-6">
+                <Sitemap />
+              </div>
             </div>
           </div>
-
+        </Container>
+        <div className="bg-gradient-brand">
           <Copyright />
         </div>
-      </Container>
-    </footer>
+      </footer>
+    </>
   )
 }

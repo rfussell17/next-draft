@@ -19,7 +19,7 @@ function Testimonial({
 }: TestimonialProps) {
   return (
     <div
-      data-navbar-color="dark"
+      data-navbar-color="light"
       className="my-24 bg-gradient-brand pb-24 pt-72 lg:pt-36"
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -39,8 +39,8 @@ function Testimonial({
               </div>
             </div>
           </div>
-          <div className="flex max-lg:mt-16 lg:col-span-1 lg:pl-20 lg:pr-8">
-            <figure className="mx-auto flex max-w-full flex-col gap-10 max-lg:text-center">
+          <div className="flex max-lg:mt-16 lg:col-span-1 lg:pl-20">
+            <figure className="mx-auto flex max-w-full flex-col gap-4 max-lg:text-center">
               <blockquote>
                 <p className="sm:testimonial-light subheader-mobile-light relative text-left">
                   "{quote}"
