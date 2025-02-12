@@ -1,14 +1,15 @@
 import CardList from '@/components/card-list'
 import { CTAFull } from '@/components/cta-full'
-import { LogoCloud } from '@/components/logo-cloud'
+import SocialProof from '@/components/social-proof'
 import TestimonialsGroup from '@/components/testimonials-group'
+import Header from '@/components/use-cases/drive-awareness/header'
+import Why from '@/components/use-cases/drive-awareness/why'
 import {
   ArrowPathIcon,
   CloudArrowUpIcon,
   LockClosedIcon,
 } from '@heroicons/react/20/solid'
 import type { Metadata } from 'next'
-import { ServiceIntro } from '../../components/service-intro'
 
 export const metadata: Metadata = {
   description:
@@ -73,14 +74,16 @@ const ctaProps = [
 export default function DriveAwareness() {
   return (
     <>
-      <ServiceIntro
+      {/* <ServiceIntro
         eyebrow="Scale your content efforts"
         title="Custom Content Marketing that Drives Traffic"
         subtitle="We specialize in creating technical content that gets reach and drives business."
         features={features}
-      />
-
-      <LogoCloud />
+      /> */}
+      <Header />
+      <Why />
+      {/* <How /> */}
+      <SocialProof />
       <CardList
         title="Ongoing technical content"
         subtitle="Build a steady stream of technical content that scales with your business."

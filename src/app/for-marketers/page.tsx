@@ -55,7 +55,7 @@ export default function ForMarketers(): JSX.Element {
         <How />
 
         <Testimonial
-          quote="Draft.dev has been an amazing partner, helping us scale our content program by creating thoughtful and technically-sound developer content and training materials. We’re constantly iterating to build the best educational materials for developer security and Draft.dev has been instrumental in helping us realize these ambitions."
+          quote="Draft.dev has been an amazing partner, helping us scale our content program by creating thoughtful and technically-sound developer content and training materials. We’re constantly iterating to build the best educational materials for developer security and Draft.dev has been instrumental in helping us."
           name="Randall Degges"
           role="Head of Developer & Security Relations"
           company="snyk"

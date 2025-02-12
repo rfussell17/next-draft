@@ -19,7 +19,7 @@ export default function SocialProof() {
               including some of the most well-known in the tech industry.
             </p>
           </div>
-          <dl className="mt-16 grid grid-cols-1 gap-0.5 overflow-hidden rounded-2xl text-center sm:grid-cols-2 lg:grid-cols-4">
+          <dl className="my-16 grid grid-cols-1 gap-0.5 overflow-hidden rounded-2xl text-center sm:grid-cols-2 lg:grid-cols-4">
             {stats.map((stat) => (
               <div key={stat.id} className="flex flex-col bg-white/5 p-8">
                 <dt className="text-sm font-semibold leading-6 text-gray-300">

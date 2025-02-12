@@ -20,7 +20,7 @@ function Testimonial({
   return (
     <div
       data-navbar-color="light"
-      className="my-24 bg-gradient-brand pb-24 pt-72 lg:pt-36"
+      className="my-24 bg-gradient-brand pb-24 pt-72 lg:pt-24"
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-[384px_1fr]">
@@ -39,7 +39,7 @@ function Testimonial({
               </div>
             </div>
           </div>
-          <div className="flex max-lg:mt-16 lg:col-span-1 lg:pl-20">
+          <div className="max-lg:mt-26 flex lg:col-span-1 lg:pl-20">
             <figure className="mx-auto flex max-w-full flex-col gap-4 max-lg:text-center">
               <blockquote>
                 <p className="sm:testimonial-light subheader-mobile-light relative text-left">
