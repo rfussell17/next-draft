@@ -112,7 +112,7 @@
 
     /* strong paragraph */
     .lead-base {
-      @apply pr-1 font-sans font-semibold text-gray-300;
+      @apply pr-1 font-sans text-gray-300;
       font-size: 1.45rem;
       line-height: 1.35;
       letter-spacing: -0.5px;

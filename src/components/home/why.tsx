@@ -14,9 +14,9 @@ const Why = () => {
             Partner with technical content experts who understand your industry
             and deliver results.{' '}
           </h3>
-          <h3 className="lead-dark mt-4 rounded-sm py-1 text-center text-gray-700 sm:mt-0 sm:bg-gradient-brand sm:text-white md:mx-auto lg:mx-24">
+          <h3 className="lead-dark mt-4 font-semibold sm:mt-0">
             {' '}
-            You'll only pay for content if you're 100% satisfied.
+            You'll only pay for content if you're 100% satisfied.{' '}
           </h3>
         </div>
         <div className="mx-auto mt-10 max-w-2xl sm:mt-16 lg:max-w-none">
