@@ -2,14 +2,20 @@ import Link from 'next/link'
 
 const Why = () => {
   return (
-    <div className="py-44">
+    <div data-navbar-color="light" className="py-16 sm:py-44">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-4xl lg:text-center">
-          <h2 className="header-gradient">
-            We help DevRels scale their efforts
+          <h2 className="subheader-mobile-gradient sm:subheader-gradient">
+            Developer Marketing that Resonates
           </h2>
+
+          <h3 className="paragraph-dark py-3">
+            We support Developer Relations and Developer Advocate Teams by
+            consistently delivering content that technical audiences truly care
+            about and respect.
+          </h3>
         </div>
-        <div className="mx-auto mt-16 max-w-2xl lg:max-w-none">
+        <div className="mx-auto mt-10 max-w-2xl sm:mt-16 lg:max-w-none">
           <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-12 lg:max-w-none lg:grid-cols-3">
             <div className="flex flex-col">
               <dt className="flex items-center gap-x-3 text-lg font-semibold text-secondary">
@@ -24,12 +30,12 @@ const Why = () => {
                   resonate with your technical audience.
                 </p>
 
-                <p className="z-50 mt-4">
+                <p className="mt-4">
                   <Link
                     href="/expert-writers"
-                    className="font-semibold text-gray-700"
+                    className="text-base font-semibold text-gradient-3 hover:text-gray-700"
                   >
-                    See how we drive awareness
+                    How we drive awareness
                     <span aria-hidden="true"> →</span>
                   </Link>
                 </p>
@@ -49,12 +55,12 @@ const Why = () => {
                   learnings.
                 </p>
 
-                <p className="z-50 mt-4">
+                <p className="mt-4">
                   <Link
                     href="/content-quality"
-                    className="font-semibold text-gray-700"
+                    className="text-base font-semibold text-gradient-3 hover:text-gray-700"
                   >
-                    See how we capture leads
+                    How we capture leads
                     <span aria-hidden="true"> →</span>
                   </Link>
                 </p>
@@ -74,12 +80,12 @@ const Why = () => {
                   data engineers, and more.
                 </p>
 
-                <p className="z-50 mt-4">
+                <p className="mt-4">
                   <Link
                     href="/delivery-process"
-                    className="font-semibold text-gray-700"
+                    className="text-base font-semibold text-gradient-3 hover:text-gray-700"
                   >
-                    Learn how we build trust
+                    How we build trust
                     <span aria-hidden="true"> →</span>
                   </Link>
                 </p>

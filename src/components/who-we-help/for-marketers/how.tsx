@@ -10,7 +10,7 @@ const How = () => {
         <div className="grid grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:grid-cols-2 lg:items-center">
           <div className="px-6 lg:px-0 lg:pr-4 lg:pt-4">
             <div className="mx-auto max-w-3xl sm:max-w-4xl lg:mx-0">
-              <h2 className="subheader-mobile-gradient sm:header-gradient">
+              <h2 className="subheader-mobile-gradient sm:subheader-gradient">
                 Your Path to Technical Content
               </h2>
               <h3 className="paragraph-dark py-4">
