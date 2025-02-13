@@ -4,11 +4,14 @@ import Image from 'next/image'
 export function LogoCloud({
   className,
 }: React.ComponentPropsWithoutRef<'div'>) {
-  const image1 = '/logo-cloud/savvycal.svg'
-  const image2 = '/logo-cloud/laravel.svg'
-  const image3 = '/logo-cloud/tuple.svg'
-  const image4 = '/logo-cloud/transistor.svg'
-  const image5 = '/logo-cloud/statamic.svg'
+  const redpanda = '/logos/redpanda_logo_draft_dev.svg'
+  const rewind = '/logos/rewind_logo_draft_dev.svg'
+  const snyk = '/logos/snyk_logo_draft_dev.svg'
+  const earthly = '/logos/earthly_logo_draft_dev.svg'
+  const tailscale = '/logos/tailscale_logo_draft_dev.svg'
+  const saucelabs = '/logos/saucelabs_logo_draft_dev.svg'
+  const foxit = '/logos/foxit_logo_draft_dev.svg'
+  const containiq = '/logos/containiq_logo_draft_dev.svg'
 
   return (
     <div
@@ -28,39 +31,40 @@ export function LogoCloud({
         )}
       >
         <Image
-          alt="SavvyCal"
-          src={image1}
-          className="h-9 max-sm:mx-auto sm:h-8 lg:h-12"
-          width={200}
-          height={200}
+          alt="Red Panda logo"
+          src={redpanda}
+          className="h-12"
+          width={192}
+          height={48}
+          priority
         />
         <Image
-          alt="Laravel"
-          src={image2}
-          className="h-9 max-sm:mx-auto sm:h-8 lg:h-12"
-          width={200}
-          height={200}
+          alt="Earthly logo"
+          src={earthly}
+          className="h-12"
+          width={192}
+          height={48}
         />
         <Image
-          alt="Tuple"
-          src={image3}
-          className="h-9 max-sm:mx-auto sm:h-8 lg:h-12"
-          width={200}
-          height={200}
+          alt="Foxit logo"
+          src={foxit}
+          className="h-12"
+          width={192}
+          height={48}
         />
         <Image
-          alt="Transistor"
-          src={image4}
-          className="h-9 max-sm:mx-auto sm:h-8 lg:h-12"
-          width={200}
-          height={200}
+          alt="Rewind logo"
+          src={rewind}
+          className="h-12"
+          width={192}
+          height={48}
         />
         <Image
-          alt="Statamic"
-          src={image5}
-          className="h-9 max-sm:mx-auto sm:h-8 lg:h-12"
-          width={200}
-          height={200}
+          alt="Snyk logo"
+          src={snyk}
+          className="h-12"
+          width={192}
+          height={48}
         />
       </div>
     </div>
