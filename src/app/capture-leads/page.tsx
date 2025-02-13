@@ -1,14 +1,15 @@
 import CardList from '@/components/card-list'
 import { CTAFull } from '@/components/cta-full'
-import { LogoCloud } from '@/components/logo-cloud'
+import SocialProof from '@/components/social-proof'
 import TestimonialsGroup from '@/components/testimonials-group'
+import Header from '@/components/use-cases/capture-leads/header'
+import Why from '@/components/use-cases/capture-leads/why'
 import {
   ArrowPathIcon,
   CloudArrowUpIcon,
   LockClosedIcon,
 } from '@heroicons/react/20/solid'
 import type { Metadata } from 'next'
-import { ServiceIntro } from '../../components/service-intro'
 
 export const metadata: Metadata = {
   description:
@@ -73,13 +74,15 @@ const cardListPropsTwo = [
 export default function BuildTrust() {
   return (
     <>
-      <ServiceIntro
+      {/* <ServiceIntro
         eyebrow="Consistently turn organic traffic into MQLs and SQLs"
         title="Inbound Lead Generation and Technical Copy Writing"
         subtitle="We have implemented our lead generation engines at tech companies driving 100s of millions in recurring revenue, predictably driving traffic and leads."
         features={features}
-      />
-      <LogoCloud />
+      /> */}
+      <Header />
+      <Why />
+      <SocialProof />
       <TestimonialsGroup />
       <CardList
         title="Ongoing technical content"

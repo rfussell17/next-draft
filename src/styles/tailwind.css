@@ -78,12 +78,17 @@
       @apply subheader-base bg-gradient-brand text-gradient;
     }
 
+    .subheader-case-study {
+      @apply subheader-base;
+      line-height: 1.188;
+    }
+
     .subheader-light {
       @apply subheader-base text-white;
     }
 
     .subheader-dark {
-      @apply subheader-base text-primary;
+      @apply subheader-base text-gray-600;
     }
 
     .subheader-mobile-base {

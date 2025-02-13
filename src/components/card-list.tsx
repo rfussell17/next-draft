@@ -22,13 +22,10 @@ const CardList: FC<CardListProps> = ({
   requestPricingText,
 }) => {
   return (
-    <div className="py-10 sm:py-20">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        {/* <div className="mx-auto max-w-4xl sm:text-center">
-          <h2 className="header-gradient py-1">{title}</h2>
-        </div> */}
-        <div className="rounded-xl bg-gradient-brand">
-          <div className="mx-auto mt-16 max-w-2xl text-white ring-gray-200 sm:mt-20 sm:p-6 lg:mx-0 lg:flex lg:max-w-none">
+    <div className="bg-gradient-brand py-10 sm:py-16">
+      <div className="mx-auto max-w-full">
+        <div className="">
+          <div className="mx-auto max-w-2xl text-white ring-gray-200 sm:p-6 lg:mx-0 lg:flex lg:max-w-none">
             <div className="p-8 sm:p-10 lg:flex-auto">
               <h3 className="subheader-light">{subtitle}</h3>
               <div className="my-10 flex items-center gap-x-4">

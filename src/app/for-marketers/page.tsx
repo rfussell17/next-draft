@@ -1,4 +1,5 @@
 import CardList from '@/components/card-list'
+import CaseStudyLight from '@/components/case-study-light'
 import { CTAFull } from '@/components/cta-full'
 import SocialProof from '@/components/social-proof'
 import Testimonial from '@/components/testimonial'
@@ -62,6 +63,8 @@ export default function ForMarketers(): JSX.Element {
           imageSrc="/testimonials/randall_degges_snyk_draft_dev.png"
           imageAlt="Randall Degges"
         />
+
+        <CaseStudyLight />
 
         <CardList
           title="Ongoing technical content"
