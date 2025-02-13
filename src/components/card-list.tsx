@@ -22,8 +22,8 @@ const CardList: FC<CardListProps> = ({
   requestPricingText,
 }) => {
   return (
-    <div className="bg-gradient-brand py-10 sm:py-16">
-      <div className="mx-auto max-w-full">
+    <div className="max-w-full bg-gradient-brand py-10 sm:py-16">
+      <div className="mx-auto max-w-7xl">
         <div className="">
           <div className="mx-auto max-w-2xl text-white ring-gray-200 sm:p-6 lg:mx-0 lg:flex lg:max-w-none">
             <div className="p-8 sm:p-10 lg:flex-auto">

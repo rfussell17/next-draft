@@ -1,4 +1,5 @@
 import CardList from '@/components/card-list'
+import CaseStudyLight from '@/components/case-study-light'
 import { CTAFull } from '@/components/cta-full'
 import SocialProof from '@/components/social-proof'
 import TestimonialsGroup from '@/components/testimonials-group'
@@ -82,8 +83,8 @@ export default function DriveAwareness() {
       /> */}
       <Header />
       <Why />
-      {/* <How /> */}
       <SocialProof />
+      <CaseStudyLight />
       <CardList
         title="Ongoing technical content"
         subtitle="Build a steady stream of technical content that scales with your business."

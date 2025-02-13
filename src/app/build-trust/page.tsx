@@ -1,14 +1,16 @@
 import CardList from '@/components/card-list'
+import CaseStudyLight from '@/components/case-study-light'
 import { CTAFull } from '@/components/cta-full'
-import { LogoCloud } from '@/components/logo-cloud'
+import SocialProof from '@/components/social-proof'
 import TestimonialsGroup from '@/components/testimonials-group'
+import Header from '@/components/use-cases/build-trust/header'
+import Why from '@/components/use-cases/build-trust/why'
 import {
   ArrowPathIcon,
   CloudArrowUpIcon,
   LockClosedIcon,
 } from '@heroicons/react/20/solid'
 import type { Metadata } from 'next'
-import { ServiceIntro } from '../../components/service-intro'
 
 export const metadata: Metadata = {
   description:
@@ -73,14 +75,10 @@ const cardListPropsTwo = [
 export default function BuildTrust() {
   return (
     <>
-      <ServiceIntro
-        eyebrow="Written by Developers, for Developers"
-        title="Our Technical Content Writers are Practicing Professionals"
-        subtitle="From articles about your industry, to product tutorials, to B2B Thought Leadership pieces - our writing and editing teams of professional developers have you covered."
-        features={features}
-      />
-
-      <LogoCloud />
+      <Header />
+      <Why />
+      <SocialProof />
+      <CaseStudyLight />
       <CardList
         title="Ongoing technical content"
         subtitle="Build a steady stream of technical content that scales with your business."

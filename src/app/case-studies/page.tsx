@@ -134,13 +134,13 @@ export default function CaseStudy() {
       />
       <TestimonialsGroup />
       <CTAFull
-        title="Book a discovery call"
+        title="Book Discovery Call"
         description="Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in accusamus quisquam."
-        imageSrc="/site/cta.jpg"
+        imageSrc="https://images.unsplash.com/photo-1519338381761-c7523edc1f46?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
         imageAlt="Team environment"
         list={ctaProps}
-        linkHref="/discovery-call"
-        linkText="Book a Discovery Call"
+        linkHref="#"
+        linkText="See our job postings"
       />
     </>
   )

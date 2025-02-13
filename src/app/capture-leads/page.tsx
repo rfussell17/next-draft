@@ -1,4 +1,5 @@
 import CardList from '@/components/card-list'
+import CaseStudyLight from '@/components/case-study-light'
 import { CTAFull } from '@/components/cta-full'
 import SocialProof from '@/components/social-proof'
 import TestimonialsGroup from '@/components/testimonials-group'
@@ -74,16 +75,10 @@ const cardListPropsTwo = [
 export default function BuildTrust() {
   return (
     <>
-      {/* <ServiceIntro
-        eyebrow="Consistently turn organic traffic into MQLs and SQLs"
-        title="Inbound Lead Generation and Technical Copy Writing"
-        subtitle="We have implemented our lead generation engines at tech companies driving 100s of millions in recurring revenue, predictably driving traffic and leads."
-        features={features}
-      /> */}
       <Header />
       <Why />
       <SocialProof />
-      <TestimonialsGroup />
+      <CaseStudyLight />
       <CardList
         title="Ongoing technical content"
         subtitle="Build a steady stream of technical content that scales with your business."
@@ -93,6 +88,7 @@ export default function BuildTrust() {
         requestPricingHref="#"
         requestPricingText="Request pricing"
       />
+      <TestimonialsGroup />
       <CTAFull
         title="Book a discovery call"
         description="Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in accusamus quisquam."

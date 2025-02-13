@@ -4,33 +4,44 @@ import Link from 'next/link'
 const CaseStudyLight = () => {
   return (
     <div>
-      <main className="relative isolate pb-16">
-        <div className="mx-auto max-w-7xl px-6 py-6 sm:py-16 lg:px-8">
+      <main className="relative isolate my-32">
+        <div className="mx-auto max-w-7xl px-6 py-6 lg:px-8">
           <div className="mx-auto max-w-2xl gap-x-12 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
             <div className="relative w-full lg:shrink-0 xl:max-w-2xl">
               <h1 className="subheader-case-study mb-6 pb-4 font-semibold text-gradient-3">
-                See how{' '}
+                How{' '}
                 <span className="bg-gradient-brand px-2 text-white">
                   Earthly
                 </span>{' '}
                 increased its monthly blog visitors by{' '}
                 <span className="bg-gradient-brand px-2 text-white">346%</span>{' '}
-                and ramped up its content production with Draft.dev
+                with Draft.dev
               </h1>
-              <p className="sm:lead-dark pb-6 text-xl sm:pb-0">
-                <em>
+              <div className="rounded-xl bg-gradient-brand px-10 py-16">
+                {' '}
+                <p className="font-code text-2xl font-semibold text-white">
                   “It’s difficult to find an agency with enough high-quality
                   subject matter expert writers to build up the content pipeline
                   that Draft.dev gives you. It’s a shortcut to building an
                   in-house writing team.”
-                </em>
-              </p>
-              <div className="mt-6 flex flex-col items-start gap-x-6 sm:mt-16 sm:flex-row sm:items-center">
+                </p>
+                <div className="pt-8 text-white">
+                  {' '}
+                  <p className="case-study-small font-semibold">
+                    Adam Gordon Bell
+                  </p>
+                  <p className="case-study-small">
+                    Director of Developer Relations, Earthly
+                  </p>
+                </div>
+              </div>
+
+              <div className="mt-6 flex flex-col items-center gap-x-6 sm:mt-16 sm:flex-row">
                 <Link
                   href="#"
                   className="my-2 rounded-sm bg-gradient-brand px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm ring-2 ring-white hover:bg-white hover:text-gray-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary sm:my-0 sm:text-base"
                 >
-                  Read this case study
+                  Read the full case study
                 </Link>
                 <Link
                   href="#"
@@ -41,7 +52,7 @@ const CaseStudyLight = () => {
               </div>
             </div>
 
-            <div className="mt-14 hidden lg:block">
+            <div className="hidden lg:block">
               <div className="rounded-4xl bg-white/15 p-2 shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5">
                 <div className="overflow-hidden rounded-3xl shadow-2xl outline outline-1 -outline-offset-1 outline-black/10">
                   <Image
