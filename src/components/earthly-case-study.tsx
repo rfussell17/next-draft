@@ -2,6 +2,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import CaseStudyLight from './case-study-light'
 
 // Types for the component props
 interface StatItem {
@@ -21,7 +22,7 @@ interface CaseStudies {
   role: string
 }
 
-interface DarkLandingPageProps {
+interface EarthlyCaseStudyProps {
   hero: {
     title: string
     description: string
@@ -47,7 +48,7 @@ interface DarkLandingPageProps {
   className?: string
 }
 
-export const DarkLandingPage: React.FC<DarkLandingPageProps> = ({
+export const EarthlyCaseStudy: React.FC<EarthlyCaseStudyProps> = ({
   content,
   highlights,
   caseStudy,
@@ -97,34 +98,7 @@ export const DarkLandingPage: React.FC<DarkLandingPageProps> = ({
 
         {/* Content section */}
 
-        <div className="m-auto py-0 sm:py-20">
-          <div className="bg-white py-24">
-            <div className="m-auto flex max-w-7xl gap-20">
-              <div className="flex flex-col gap-10 sm:flex-row">
-                <Image
-                  alt="Adam Gordon Bell"
-                  width={1000}
-                  height={1000}
-                  src="/testimonials/adam_bell_draft_dev.jpg"
-                  className="aspect-[4/5] w-52 flex-none rounded-2xl object-cover"
-                />
-
-                <div className="max-w-3xl">
-                  <p className="my-8 font-code text-lg font-semibold text-gray-600 sm:text-2xl">
-                    "It's difficult to find an agency with enough high-quality
-                    subject matter expert writers to build up the content
-                    pipeline that Draft.dev gives you. It's a shortcut to
-                    building an in-house writing team."
-                  </p>
-                  <h3 className="subheader-gradient">Adam Gordon Bell,</h3>
-                  <p className="-mt-4 font-semibold text-gray-700">
-                    Director of Developer Relations, Earthly
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <CaseStudyLight />
 
         {/* Highlights section */}
         <div className="sm:py-22 mx-auto bg-gradient-brand px-6 py-12 lg:px-8">
@@ -197,4 +171,4 @@ export const DarkLandingPage: React.FC<DarkLandingPageProps> = ({
   )
 }
 
-export default DarkLandingPage
+export default EarthlyCaseStudy
