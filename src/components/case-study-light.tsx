@@ -17,16 +17,19 @@ const CaseStudyLight = () => {
                 <span className="bg-gradient-brand px-2 text-white">346%</span>{' '}
                 with Draft.dev
               </h1>
-              <div className="rounded-xl bg-gradient-brand px-10 py-16">
+
+              <div className="relative max-w-xl py-8 pl-8">
                 {' '}
-                <p className="font-code text-2xl font-semibold text-white">
-                  “It’s difficult to find an agency with enough high-quality
+                {/* Removed py-8 to let content determine spacing */}
+                <div className="absolute left-0 top-0 h-full w-1 bg-gray-300" />{' '}
+                {/* Gradient bar that matches content height */}
+                <p className="font-code text-2xl font-semibold text-gray-600">
+                  "It's difficult to find an agency with enough high-quality
                   subject matter expert writers to build up the content pipeline
-                  that Draft.dev gives you. It’s a shortcut to building an
-                  in-house writing team.”
+                  that Draft.dev gives you. It's a shortcut to building an
+                  in-house writing team."
                 </p>
-                <div className="pt-8 text-white">
-                  {' '}
+                <div className="pt-8 text-gray-600">
                   <p className="case-study-small font-semibold">
                     Adam Gordon Bell
                   </p>
