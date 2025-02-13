@@ -99,12 +99,8 @@ export const DarkLandingPage: React.FC<DarkLandingPageProps> = ({
 
         <div className="m-auto py-0 sm:py-20">
           <div className="bg-white py-24">
-            <div className="mx-auto flex max-w-7xl gap-20 px-6 lg:px-8">
-              {/* <ul
-                role="list"
-                className="divide-y divide-gray-200 xl:col-span-3"
-              > */}
-              <div className="flex flex-col gap-10 py-12 sm:flex-row">
+            <div className="m-auto flex max-w-7xl gap-20">
+              <div className="flex flex-col gap-10 sm:flex-row">
                 <Image
                   alt="Adam Gordon Bell"
                   width={1000}
@@ -113,7 +109,7 @@ export const DarkLandingPage: React.FC<DarkLandingPageProps> = ({
                   className="aspect-[4/5] w-52 flex-none rounded-2xl object-cover"
                 />
 
-                <div className="max-w-xl">
+                <div className="max-w-3xl">
                   <p className="my-8 font-code text-lg font-semibold text-gray-600 sm:text-2xl">
                     "It's difficult to find an agency with enough high-quality
                     subject matter expert writers to build up the content
