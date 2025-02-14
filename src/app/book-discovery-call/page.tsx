@@ -1,6 +1,6 @@
-import { CTAFull } from '@/components/cta-full'
+import { CTAFull } from '@/components/global/cta-full'
 import PageHeader from '@/components/global/page-header'
-import TestimonialsGroup from '@/components/testimonials-group'
+import TestimonialsGroup from '@/components/media/testimonials/testimonials-group'
 
 import type { Metadata } from 'next'
 

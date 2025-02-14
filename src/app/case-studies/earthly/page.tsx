@@ -22,11 +22,11 @@ const ctaProps = [
   'A great work environment',
 ]
 
-export default function CaseStudy() {
+export default function Earthly() {
   const landingPageProps = {
     hero: {
       title:
-        'How Earthly Increased Its Monthly Blog Visitors by 346% and Ramped Up Its Content Production with Draft.dev',
+        'How (earhtly) Earthly Increased Its Monthly Blog Visitors by 346% and Ramped Up Its Content Production with Draft.dev',
       description: 'and Ramped Up Its Content Production with Draft.dev',
     },
     content: {

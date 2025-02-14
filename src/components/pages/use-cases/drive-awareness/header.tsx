@@ -1,4 +1,4 @@
-import { LogosFlex } from '@/components/logos-flex'
+import { LogosFlex } from '@/components/media/logos-flex'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
@@ -16,13 +16,12 @@ const Header: React.FC = () => {
             <div className="mx-auto max-w-2xl gap-x-12 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
               <div className="relative w-full lg:shrink-0 xl:max-w-2xl">
                 <h1 className="sm:header-light mb-6 pb-4 font-code text-3xl font-semibold text-white">
-                  Inbound Lead Generation and Technical Copy Writing
+                  Custom Content Marketing that Drives Traffic
                 </h1>
-                <h2 className="sm:paragraph-light pb-6 text-base text-gray-100 sm:pb-0">
-                  We have implemented our lead generation engines at tech
-                  companies driving 100s of millions in recurring revenue,
-                  predictably driving traffic and leads.
-                </h2>
+                <p className="sm:paragraph-light pb-6 text-base text-gray-100 sm:pb-0">
+                  We specialize in creating technical content that gets reach
+                  and drives business.
+                </p>
                 <div className="mt-6 flex flex-col items-start gap-x-6 sm:mt-16 sm:flex-row sm:items-center">
                   <Link
                     href="#"
@@ -47,7 +46,7 @@ const Header: React.FC = () => {
                       alt=""
                       height={1000}
                       width={1000}
-                      src="/site/content_draft_dev.jpg"
+                      src="/site/meeting_draft_dev.jpg"
                       className="aspect-[2/3] w-full object-cover"
                     />
                   </div>

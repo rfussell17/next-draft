@@ -1,4 +1,4 @@
-import { LogosFlex } from '@/components/logos-flex'
+import { LogosFlex } from '@/components/media/logos-flex'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'

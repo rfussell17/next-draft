@@ -1,4 +1,4 @@
-import { Container } from '@/components/container'
+import { Container } from '@/components/global/container'
 import { Link } from '@/components/global/link'
 import Image from 'next/image'
 import { Button } from './button'

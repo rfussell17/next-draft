@@ -62,18 +62,18 @@ export const EarthlyCaseStudy: React.FC<EarthlyCaseStudyProps> = ({
             <div className="px-6 lg:px-8">
               <div className="mx-auto max-w-5xl text-center uppercase">
                 <h2
-                  className="header-light py-16 sm:text-6xl"
+                  className="subheader-light py-16"
                   style={{ lineHeight: '1.3' }} // Adjust the value as needed
                 >
                   How{' '}
-                  <span className="bg-white">
-                    <span className="header-gradient px-3 py-0">Earthly</span>
+                  <span className="bg-white pt-3">
+                    <span className="header-gradient px-3">Earthly</span>
                   </span>{' '}
                   Increased Its Monthly Blog Visitors by{' '}
-                  <span className="bg-white">
-                    <span className="header-gradient px-3 py-0">346%</span>
+                  <span className="bg-white pt-3">
+                    <span className="header-gradient px-3">346%</span>
                   </span>{' '}
-                  and ramped up its content production with Draft.dev_
+                  and ramped up its content production with Draft.dev
                 </h2>
               </div>
             </div>

@@ -1,6 +1,6 @@
-import { Container } from '@/components/container'
-import { CTAFull } from '@/components/cta-full'
-import Testimonial from '@/components/testimonial'
+import { Container } from '@/components/global/container'
+import { CTAFull } from '@/components/global/cta-full'
+import Testimonial from '@/components/media/testimonials/testimonial'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {

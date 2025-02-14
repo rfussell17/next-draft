@@ -1,4 +1,4 @@
-import { LogosFlex } from '@/components/logos-flex'
+import { LogosFlex } from '@/components/media/logos-flex'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
@@ -16,13 +16,13 @@ const Header: React.FC = () => {
             <div className="mx-auto max-w-2xl gap-x-12 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
               <div className="relative w-full lg:shrink-0 xl:max-w-2xl">
                 <h1 className="sm:header-light mb-6 pb-4 font-code text-3xl font-semibold text-white">
-                  Our Technical Content Writers are Practicing Professionals
+                  Developer Marketing that Resonates
                 </h1>
-                <h2 className="sm:paragraph-light pb-6 text-base text-gray-100 sm:pb-0">
-                  From articles about your industry, to product tutorials, to
-                  B2B Thought Leadership pieces - our writing and editing teams
-                  of professional developers have you covered.
-                </h2>
+                <p className="sm:paragraph-light pb-6 text-base text-gray-100 sm:pb-0">
+                  We support Developer Relations and Developer Advocate Teams by
+                  consistently delivering content that technical audiences truly
+                  care about and respect.
+                </p>
                 <div className="mt-6 flex flex-col items-start gap-x-6 sm:mt-16 sm:flex-row sm:items-center">
                   <Link
                     href="#"
@@ -47,7 +47,7 @@ const Header: React.FC = () => {
                       alt=""
                       height={1000}
                       width={1000}
-                      src="/site/trust_draft_dev.jpg"
+                      src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-x=.4&w=396&h=528&q=80"
                       className="aspect-[2/3] w-full object-cover"
                     />
                   </div>

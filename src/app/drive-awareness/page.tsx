@@ -1,10 +1,10 @@
-import CardList from '@/components/card-list'
-import { CTAFull } from '@/components/cta-full'
-import MiniCaseLoft from '@/components/mini-case-loft'
-import SocialProof from '@/components/social-proof'
-import TestimonialsGroup from '@/components/testimonials-group'
-import Header from '@/components/use-cases/drive-awareness/header'
-import Why from '@/components/use-cases/drive-awareness/why'
+import CardList from '@/components/global/card-list'
+import { CTAFull } from '@/components/global/cta-full'
+import MiniCaseLoft from '@/components/media/case-studies/mini-case-loft'
+import SocialProof from '@/components/media/social-proof'
+import TestimonialsGroup from '@/components/media/testimonials/testimonials-group'
+import Header from '@/components/pages/use-cases/drive-awareness/header'
+import Why from '@/components/pages/use-cases/drive-awareness/why'
 import {
   ArrowPathIcon,
   CloudArrowUpIcon,

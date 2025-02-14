@@ -58,7 +58,7 @@ export default function Example() {
       <div className="bg-white py-5">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <PopoverButton className="inline-flex items-center gap-x-1 text-sm/6 font-semibold text-gray-900">
-            Solutions
+            Solutions-example
             <ChevronDownIcon aria-hidden="true" className="size-5" />
           </PopoverButton>
         </div>
