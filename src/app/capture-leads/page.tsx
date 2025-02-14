@@ -1,6 +1,6 @@
 import CardList from '@/components/card-list'
 import { CTAFull } from '@/components/cta-full'
-import CaseStudyLight from '@/components/mini-case-earthly'
+import MiniCaseStatusHero from '@/components/mini-case-status-hero'
 import SocialProof from '@/components/social-proof'
 import TestimonialsGroup from '@/components/testimonials-group'
 import Header from '@/components/use-cases/capture-leads/header'
@@ -78,7 +78,7 @@ export default function BuildTrust() {
       <Header />
       <Why />
       <SocialProof />
-      <CaseStudyLight />
+      <MiniCaseStatusHero />
       <CardList
         title="Ongoing technical content"
         subtitle="Build a steady stream of technical content that scales with your business."
