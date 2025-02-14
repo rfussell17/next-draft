@@ -1,16 +1,29 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-const MiniCaseLoft = () => {
+const MedCaseLoft = () => {
   return (
     <div>
-      <main className="relative isolate my-24">
+      <main className="relative isolate my-32">
         <div className="mx-auto max-w-7xl px-6 py-6 lg:px-8">
           <div className="mx-auto max-w-2xl gap-x-12 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
             <div className="relative w-full lg:shrink-0 xl:max-w-2xl">
+              <h1 className="subheader-case-study mb-6 pb-4 font-semibold text-gradient-3">
+                How{' '}
+                <span className="bg-gradient-brand px-2 text-white">
+                  Loft Labs
+                </span>{' '}
+                scaled its kubernetes blog by{' '}
+                <span className="bg-gradient-brand px-2 text-white">4x</span>{' '}
+                with Draft.dev
+              </h1>
+
               <div className="relative max-w-xl py-8 pl-8">
-                <div className="absolute left-0 top-0 h-full w-1 bg-gray-300" />
-                <p className="bg-gradient-brand font-code text-3xl font-semibold text-gradient">
+                {' '}
+                {/* Removed py-8 to let content determine spacing */}
+                <div className="absolute left-0 top-0 h-full w-1 bg-gray-300" />{' '}
+                {/* Gradient bar that matches content height */}
+                <p className="font-code text-2xl font-semibold text-gray-600">
                   "Content is one of the biggest and best channels you can
                   invest in. And if you want to quickly scale without
                   compromising the quality and expertise, Draft.dev is the way
@@ -46,7 +59,7 @@ const MiniCaseLoft = () => {
               <div className="rounded-4xl bg-white/15 p-2 shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5">
                 <div className="overflow-hidden rounded-3xl shadow-2xl outline outline-1 -outline-offset-1 outline-black/10">
                   <Image
-                    alt="Rahul Patwardhan"
+                    alt="Marketing success visualization"
                     height={1000}
                     width={1000}
                     priority
@@ -63,4 +76,4 @@ const MiniCaseLoft = () => {
   )
 }
 
-export default MiniCaseLoft
+export default MedCaseLoft

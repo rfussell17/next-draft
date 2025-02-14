@@ -4,26 +4,13 @@ import Link from 'next/link'
 const MiniCaseStatusHero = () => {
   return (
     <div>
-      <main className="relative isolate my-32">
+      <main className="relative isolate my-24">
         <div className="mx-auto max-w-7xl px-6 py-6 lg:px-8">
           <div className="mx-auto max-w-2xl gap-x-12 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
             <div className="relative w-full lg:shrink-0 xl:max-w-2xl">
-              <h1 className="subheader-case-study mb-6 pb-4 font-semibold text-gradient-3">
-                How{' '}
-                <span className="bg-gradient-brand px-2 text-white">
-                  Status Hero
-                </span>{' '}
-                grew blog traffic by{' '}
-                <span className="bg-gradient-brand px-2 text-white">211%</span>{' '}
-                with Draft.dev
-              </h1>
-
               <div className="relative max-w-xl py-8 pl-8">
-                {' '}
-                {/* Removed py-8 to let content determine spacing */}
-                <div className="absolute left-0 top-0 h-full w-1 bg-gray-300" />{' '}
-                {/* Gradient bar that matches content height */}
-                <p className="font-code text-2xl font-semibold text-gray-600">
+                <div className="absolute left-0 top-0 h-full w-1 bg-gray-300" />
+                <p className="bg-gradient-brand font-code text-3xl font-semibold text-gradient">
                   "Draft.dev has helped us create high-quality content that
                   resonates with our audience on a regular basis. They have
                   helped us double our audience, attract more trial users, and
@@ -55,7 +42,7 @@ const MiniCaseStatusHero = () => {
               <div className="rounded-4xl bg-white/15 p-2 shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5">
                 <div className="overflow-hidden rounded-3xl shadow-2xl outline outline-1 -outline-offset-1 outline-black/10">
                   <Image
-                    alt="Marketing success visualization"
+                    alt="Henry Poydar"
                     height={1000}
                     width={1000}
                     priority

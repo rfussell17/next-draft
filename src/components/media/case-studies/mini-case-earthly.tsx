@@ -9,10 +9,7 @@ const MiniCaseEarthly = () => {
           <div className="mx-auto max-w-2xl gap-x-12 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
             <div className="relative w-full lg:shrink-0 xl:max-w-2xl">
               <div className="relative max-w-xl py-8 pl-8">
-                {' '}
-                {/* Removed py-8 to let content determine spacing */}
-                <div className="absolute left-0 top-0 h-full w-1 bg-gray-300" />{' '}
-                {/* Gradient bar that matches content height */}
+                <div className="absolute left-0 top-0 h-full w-1 bg-gray-300" />
                 <p className="bg-gradient-brand font-code text-3xl font-semibold text-gradient">
                   "It's difficult to find an agency with enough high-quality
                   subject matter expert writers to build up the content pipeline
@@ -49,7 +46,7 @@ const MiniCaseEarthly = () => {
               <div className="rounded-4xl bg-white/15 p-2 shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5">
                 <div className="overflow-hidden rounded-3xl shadow-2xl outline outline-1 -outline-offset-1 outline-black/10">
                   <Image
-                    alt="Marketing success visualization"
+                    alt="Adam Gordon Bell"
                     height={1000}
                     width={1000}
                     priority

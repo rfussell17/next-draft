@@ -1,6 +1,6 @@
 import CardList from '@/components/global/card-list'
 import { CTAFull } from '@/components/global/cta-full'
-import MiniCaseStatusHero from '@/components/media/case-studies/mini-case-status-hero'
+import MedCaseStatusHero from '@/components/media/case-studies/med-case-status-hero'
 import SocialProof from '@/components/media/social-proof'
 import Testimonial from '@/components/media/testimonials/testimonial'
 import TestimonialsGroup from '@/components/media/testimonials/testimonials-group'
@@ -63,7 +63,7 @@ export default function ForMarketers(): JSX.Element {
           imageSrc="/media/testimonials-lg/robert_gibb_fabric_draft_dev.jpg"
           imageAlt="Robert Gibb"
         />
-        <MiniCaseStatusHero />
+        <MedCaseStatusHero />
         <CardList
           title="Ongoing technical content"
           subtitle="Build a steady stream of technical content that scales with your business."

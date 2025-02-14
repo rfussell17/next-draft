@@ -1,6 +1,6 @@
 import CardList from '@/components/global/card-list'
 import { CTAFull } from '@/components/global/cta-full'
-import MiniCaseStatusHero from '@/components/media/case-studies/mini-case-status-hero'
+import MedCaseLoft from '@/components/media/case-studies/med-case-loft'
 import SocialProof from '@/components/media/social-proof'
 import TestimonialsGroup from '@/components/media/testimonials/testimonials-group'
 import Header from '@/components/page-components/use-cases/capture-leads/header'
@@ -78,7 +78,7 @@ export default function BuildTrust() {
       <Header />
       <Why />
       <SocialProof />
-      <MiniCaseStatusHero />
+      <MedCaseLoft />
       <CardList
         title="Ongoing technical content"
         subtitle="Build a steady stream of technical content that scales with your business."
