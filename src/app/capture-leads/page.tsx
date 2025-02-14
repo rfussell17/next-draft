@@ -5,11 +5,6 @@ import SocialProof from '@/components/media/social-proof'
 import TestimonialsGroup from '@/components/media/testimonials/testimonials-group'
 import Header from '@/components/page-components/use-cases/capture-leads/header'
 import Why from '@/components/page-components/use-cases/capture-leads/why'
-import {
-  ArrowPathIcon,
-  CloudArrowUpIcon,
-  LockClosedIcon,
-} from '@heroicons/react/20/solid'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -20,33 +15,6 @@ export const metadata: Metadata = {
     follow: false,
   },
 }
-
-const features = [
-  {
-    name: 'Predictable Leads',
-    description:
-      'We help you establish and maintain a predictable lead generation engine based on ebooks, whitepapers, landing page copywriting and social media posts, that automatically works for you in the background.',
-    href: '#',
-    cta: 'B2B Tech Marketing',
-    icon: CloudArrowUpIcon,
-  },
-  {
-    name: 'Lead Qualification',
-    description:
-      'With our proven lead qualification system and our expert guidance you will consistently convert organic traffic into high-quality Marketing Qualified Leads and Sales Qualified Leads your Sales organization can close.',
-    href: '#',
-    cta: 'lead generation for saas companies LP',
-    icon: LockClosedIcon,
-  },
-  {
-    name: 'Recurring check-ins',
-    description:
-      'Maximize your lead generation ROI with our analytical data-driven approach. Recurring check-ins ensure we adapt our content production plan according to the latest learnings.',
-    href: '#',
-    cta: 'See our Content Strategy Services',
-    icon: ArrowPathIcon,
-  },
-]
 
 const ctaProps = [
   'marketing-specific content in here',

@@ -49,12 +49,10 @@ export default function ForMarketers(): JSX.Element {
       <Header />
       <main>
         <Why />
-
         <div className="bg-gradient-brand">
           <SocialProof />
         </div>
         <How />
-
         <Testimonial
           quote="Draft.dev has been an amazing partner, helping us scale our content program by creating thoughtful and technically-sound developer content and training materials. We’re constantly iterating to build the best educational materials for developer security and Draft.dev has been instrumental in helping us."
           name="Randall Degges"
@@ -63,9 +61,7 @@ export default function ForMarketers(): JSX.Element {
           imageSrc="/media/testimonials-lg/randall_degges_snyk_draft_dev.jpg"
           imageAlt="Randall Degges"
         />
-
         <MedCaseEarthly />
-
         <CardList
           title="Ongoing technical content"
           subtitle="Build a steady stream of technical content that scales with your business."
@@ -75,7 +71,6 @@ export default function ForMarketers(): JSX.Element {
           requestPricingHref="#"
           requestPricingText="Request pricing"
         />
-
         <TestimonialsGroup />
         <CTAFull
           title="Book a discovery call"

@@ -5,11 +5,6 @@ import SocialProof from '@/components/media/social-proof'
 import TestimonialsGroup from '@/components/media/testimonials/testimonials-group'
 import Header from '@/components/page-components/use-cases/drive-awareness/header'
 import Why from '@/components/page-components/use-cases/drive-awareness/why'
-import {
-  ArrowPathIcon,
-  CloudArrowUpIcon,
-  LockClosedIcon,
-} from '@heroicons/react/20/solid'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -20,33 +15,6 @@ export const metadata: Metadata = {
     follow: false,
   },
 }
-
-const features = [
-  {
-    name: 'Strategic Content in Every Format',
-    description:
-      'We drive awareness by providing blog posts, eBooks and video tutorials at a consistent cadence, freeing up your marketers and developers to focus on other priorities. We also suggest promotional strategies that place the content in front of your target audience.',
-    href: '#',
-    cta: 'Learn more about our Business to Business Marketing Agency',
-    icon: CloudArrowUpIcon,
-  },
-  {
-    name: 'For Marketers and DevRels',
-    description:
-      'Whether you are a Marketer that needs help with technical content or a DevRel that needs support on the strategic side, we create content that puts your product in a good light, helping drive developer engagement with your business and product.',
-    href: '#',
-    cta: 'Learn more about our B2B Tech Marketing',
-    icon: LockClosedIcon,
-  },
-  {
-    name: 'Enterprise Content Marketing',
-    description:
-      'We help enterprises create successful content programs that drive awareness and leads. Our seasoned team of content strategists use proven frameworks to make sure your content delivers the highest ROI for your business.',
-    href: '#',
-    cta: 'Learn more about our Enterprise Content Marketing ',
-    icon: ArrowPathIcon,
-  },
-]
 
 const cardListPropsOne = [
   'Private forum access',

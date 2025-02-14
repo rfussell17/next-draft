@@ -5,11 +5,6 @@ import SocialProof from '@/components/media/social-proof'
 import TestimonialsGroup from '@/components/media/testimonials/testimonials-group'
 import Header from '@/components/page-components/use-cases/build-trust/header'
 import Why from '@/components/page-components/use-cases/build-trust/why'
-import {
-  ArrowPathIcon,
-  CloudArrowUpIcon,
-  LockClosedIcon,
-} from '@heroicons/react/20/solid'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -20,33 +15,6 @@ export const metadata: Metadata = {
     follow: false,
   },
 }
-
-const features = [
-  {
-    name: 'Technical Writing that Convinces',
-    description:
-      'Everything we produce is written by subject matter experts, technically reviewed and professionally edited by our in-house team, delivered to you in a ready-to-publish format along with social posts and SEO meta descriptions.',
-    href: '#',
-    cta: 'See Technical Writing Examples',
-    icon: CloudArrowUpIcon,
-  },
-  {
-    name: 'Thought Leadership Content',
-    description:
-      'We provide you with written and video material that allows for a consistent output of high-quality content. The topics we work on are defined by experienced developers and are guaranteed to resonate with your readers.',
-    href: '#',
-    cta: 'About Our Thought Leadership Content Marketing',
-    icon: LockClosedIcon,
-  },
-  {
-    name: 'Build Respect with Your Technical Audience',
-    description:
-      'Our internal subject matter experts evaluate your product and will take care of writing, reviewing, and editing content pieces, be it blog posts, ebooks, or white papers about your industry or your product specifically.',
-    href: '#',
-    cta: 'Outsource Your Technical Writing',
-    icon: ArrowPathIcon,
-  },
-]
 
 const ctaProps = [
   'marketing-specific content in here',

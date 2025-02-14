@@ -43,8 +43,8 @@ const MiniCaseStatusHero = () => {
                 <div className="overflow-hidden rounded-3xl shadow-2xl outline outline-1 -outline-offset-1 outline-black/10">
                   <Image
                     alt="Henry Poydar"
-                    height={1000}
-                    width={1000}
+                    height={500}
+                    width={500}
                     priority
                     src="/media/testimonials-lg/henry_poydar_steady_draft_dev.jpg"
                     className="aspect-[2/3] w-full object-cover"
