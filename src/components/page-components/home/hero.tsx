@@ -1,7 +1,7 @@
+import { LogosFlex } from '@/components/media/logos-flex'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-import { LogosFlex } from '../../media/logos-flex'
 
 const Hero: React.FC = () => {
   return (

@@ -1,7 +1,7 @@
 import { CTAFull } from '@/components/global/cta-full'
-import EarthlyCaseStudy from '@/components/media/case-studies/earthly-case-study'
 import Testimonial from '@/components/media/testimonials/testimonial'
 import TestimonialsGroup from '@/components/media/testimonials/testimonials-group'
+import EarthlyCaseStudy from '@/components/page-components/case-studies/earthly-case-study'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {

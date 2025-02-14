@@ -4,9 +4,9 @@ import MiniCaseEarthly from '@/components/media/case-studies/mini-case-earthly'
 import SocialProof from '@/components/media/social-proof'
 import Testimonial from '@/components/media/testimonials/testimonial'
 import TestimonialsGroup from '@/components/media/testimonials/testimonials-group'
-import Header from '@/components/pages/who-we-help/for-marketers/header'
-import How from '@/components/pages/who-we-help/for-marketers/how'
-import Why from '@/components/pages/who-we-help/for-marketers/why'
+import Header from '@/components/page-components/who-we-help/for-marketers/header'
+import How from '@/components/page-components/who-we-help/for-marketers/how'
+import Why from '@/components/page-components/who-we-help/for-marketers/why'
 
 import type { Metadata } from 'next'
 

@@ -3,8 +3,8 @@ import { CTAFull } from '@/components/global/cta-full'
 import MiniCaseLoft from '@/components/media/case-studies/mini-case-loft'
 import SocialProof from '@/components/media/social-proof'
 import TestimonialsGroup from '@/components/media/testimonials/testimonials-group'
-import Header from '@/components/pages/use-cases/build-trust/header'
-import Why from '@/components/pages/use-cases/build-trust/why'
+import Header from '@/components/page-components/use-cases/build-trust/header'
+import Why from '@/components/page-components/use-cases/build-trust/why'
 import {
   ArrowPathIcon,
   CloudArrowUpIcon,

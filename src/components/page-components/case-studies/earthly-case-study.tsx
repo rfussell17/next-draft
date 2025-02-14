@@ -2,7 +2,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-import CaseStudyLight from './mini-case-earthly'
+import CaseStudyLight from '../../media/case-studies/mini-case-earthly'
 
 // Types for the component props
 interface StatItem {
@@ -62,7 +62,7 @@ export const EarthlyCaseStudy: React.FC<EarthlyCaseStudyProps> = ({
             <div className="px-6 lg:px-8">
               <div className="mx-auto max-w-5xl text-center uppercase">
                 <h2
-                  className="subheader-light py-16"
+                  className="subheader-light pt-16"
                   style={{ lineHeight: '1.3' }} // Adjust the value as needed
                 >
                   How{' '}
@@ -78,17 +78,32 @@ export const EarthlyCaseStudy: React.FC<EarthlyCaseStudyProps> = ({
               </div>
             </div>
 
+            <div className="mb-12 flex flex-col items-center justify-center gap-x-6 sm:mb-24 sm:mt-12 sm:flex-row">
+              <Link
+                href="#"
+                className="my-2 rounded-sm px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm ring-2 ring-white hover:bg-white hover:text-gray-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary sm:my-0 sm:text-base"
+              >
+                Download the full case study
+              </Link>
+              <Link
+                href="#"
+                className="my-2 text-sm font-semibold text-white hover:text-gray-200 sm:my-0 sm:text-base"
+              >
+                Just give me the hard facts <span aria-hidden="true">→</span>
+              </Link>
+            </div>
+
             <div className="mx-auto max-w-2xl lg:max-w-5xl">
               <dl className="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:grid-cols-3">
                 {content.stats.map((stat, index) => (
                   <div
                     key={index}
-                    className="mx-auto flex flex-col-reverse gap-y-3"
+                    className="mx-auto flex max-w-lg flex-col-reverse gap-y-3 rounded-xl bg-white/5 px-3 py-4"
                   >
-                    <dt className="font-code text-lg font-semibold text-gray-300">
+                    <dt className="font-code text-lg font-bold text-gray-300">
                       {stat.label}
                     </dt>
-                    <dd className="header-light">{stat.value}</dd>
+                    <dd className="header-light text-center">{stat.value}</dd>
                   </div>
                 ))}
               </dl>
@@ -141,7 +156,7 @@ export const EarthlyCaseStudy: React.FC<EarthlyCaseStudyProps> = ({
         {/* Case Studies section */}
         <div className="mx-auto my-16 max-w-7xl px-6 py-16 sm:my-24 lg:px-8">
           <div className="mx-auto max-w-2xl lg:mx-0">
-            <h2 className="header-gradient">{caseStudy.title}_</h2>
+            <h2 className="header-gradient">{caseStudy.title}</h2>
             {/* <p className="mt-6 text-lg/8 text-gray-300">
               {caseStudy.description}
             </p> */}
