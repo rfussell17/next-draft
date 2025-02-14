@@ -1,10 +1,8 @@
-// DarkLandingPage.tsx
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import CaseStudyLight from '../../media/case-studies/mini-case-earthly'
 
-// Types for the component props
 interface StatItem {
   label: string
   value: string
@@ -12,7 +10,7 @@ interface StatItem {
 
 interface HighLightItem {
   name: string
-  description: string[] // Changed to string array
+  description: string[]
 }
 
 interface CaseStudies {
@@ -63,7 +61,7 @@ export const EarthlyCaseStudy: React.FC<EarthlyCaseStudyProps> = ({
               <div className="mx-auto max-w-4xl text-center uppercase">
                 <h2
                   className="subheader-light pt-16"
-                  style={{ lineHeight: '1.3' }} // Adjust the value as needed
+                  style={{ lineHeight: '1.3' }}
                 >
                   How{' '}
                   <span className="bg-white pt-3">
@@ -98,7 +96,7 @@ export const EarthlyCaseStudy: React.FC<EarthlyCaseStudyProps> = ({
                 {content.stats.map((stat, index) => (
                   <div
                     key={index}
-                    className="mx-auto flex max-w-lg flex-col-reverse gap-y-3 rounded-xl bg-white/5 px-3 py-4"
+                    className="mx-auto flex max-w-lg flex-col-reverse gap-y-3 rounded-xl bg-white/5 px-16 py-4 text-center"
                   >
                     <dt className="font-code text-lg font-bold text-gray-300">
                       {stat.label}
@@ -111,22 +109,22 @@ export const EarthlyCaseStudy: React.FC<EarthlyCaseStudyProps> = ({
           </div>
         </div>
 
-        {/* Content section */}
-
         <CaseStudyLight />
 
-        {/* Highlights section */}
         <div className="sm:py-22 mx-auto bg-gradient-brand px-6 py-12 lg:px-8">
           <dl className="mx-auto grid max-w-2xl justify-center justify-items-start gap-8 py-16 text-base/7 text-white sm:grid-cols-2 sm:justify-items-center lg:max-w-7xl lg:grid-cols-3 lg:gap-x-16">
             {highlights.items.map((highlight) => (
-              <div key={highlight.name} className="relative">
+              <div
+                key={highlight.name}
+                className="relative rounded-xl bg-white/5 p-10"
+              >
                 <dt>
-                  <span className="mb-5 inline-block bg-white px-6">
-                    <span className="list-header">{highlight.name}</span>
+                  <span className="font-code text-xl font-semibold sm:text-3xl">
+                    {highlight.name}
                   </span>
                 </dt>
                 <dd>
-                  <ul className="list-disc space-y-2 pl-4">
+                  <ul className="list-disc space-y-2 pl-4 pt-8">
                     {highlight.description.map((item, index) => (
                       <li key={index} className="text-lg text-white">
                         {item}

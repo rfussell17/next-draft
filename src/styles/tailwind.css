@@ -152,7 +152,7 @@
   }
 
   .list-header {
-    @apply font-code text-3xl font-semibold text-primary sm:tracking-tighter;
+    @apply font-code text-3xl font-semibold text-white sm:tracking-tighter;
   }
   .testimonial-light {
     @apply font-code font-semibold text-white;
