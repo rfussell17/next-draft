@@ -74,8 +74,6 @@ export default function ForMarketers(): JSX.Element {
           requestPricingText="Request pricing"
         />
 
-        {/* <LogoCloud /> */}
-
         <TestimonialsGroup />
         <CTAFull
           title="Book a discovery call"

@@ -1,6 +1,5 @@
 import { CTAFull } from '@/components/cta-full'
 import PageHeader from '@/components/global/page-header'
-import { LogoCloud } from '@/components/logo-cloud'
 import TestimonialsGroup from '@/components/testimonials-group'
 import type { Metadata } from 'next'
 
@@ -29,7 +28,6 @@ export default function Newsletter() {
         seoTitle="About Draft.dev"
         header="We believe great marketing content can also be educational"
       />
-      <LogoCloud />
       <TestimonialsGroup />
       <CTAFull
         title="Book a discovery call"
