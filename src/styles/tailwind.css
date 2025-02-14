@@ -80,7 +80,7 @@
 
     .subheader-case-study {
       @apply subheader-base;
-      line-height: 1.188;
+      line-height: 1.25;
     }
 
     .subheader-light {

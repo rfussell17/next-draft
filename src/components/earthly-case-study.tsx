@@ -2,7 +2,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-import CaseStudyLight from './case-study-light'
+import CaseStudyLight from './mini-case-earthly'
 
 // Types for the component props
 interface StatItem {

@@ -44,7 +44,7 @@ export default function Services() {
         name="Rich Burroughs"
         role="Developer Advocate"
         company="Loft Labs"
-        imageSrc="/testimonials/rich_loft_labs_draft_dev.png"
+        imageSrc="/media/testimonials-lg/rich_burroughs_loft_labs_draft_dev.jpg"
         imageAlt="Rich Burroughs"
       />
       <CTAFull

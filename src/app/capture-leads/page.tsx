@@ -1,6 +1,6 @@
 import CardList from '@/components/card-list'
-import CaseStudyLight from '@/components/case-study-light'
 import { CTAFull } from '@/components/cta-full'
+import CaseStudyLight from '@/components/mini-case-earthly'
 import SocialProof from '@/components/social-proof'
 import TestimonialsGroup from '@/components/testimonials-group'
 import Header from '@/components/use-cases/capture-leads/header'

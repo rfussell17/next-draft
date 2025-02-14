@@ -1,6 +1,6 @@
 import CardList from '@/components/card-list'
-import CaseStudyLight from '@/components/case-study-light'
 import { CTAFull } from '@/components/cta-full'
+import MiniCaseStatusHero from '@/components/mini-case-status-hero'
 import SocialProof from '@/components/social-proof'
 import Testimonial from '@/components/testimonial'
 import TestimonialsGroup from '@/components/testimonials-group'
@@ -60,10 +60,10 @@ export default function ForMarketers(): JSX.Element {
           name="Robert Gibb"
           role="Content Marketing Manager"
           company="Fabric"
-          imageSrc="/testimonials/robert_gibb_fabric_inc_draft_dev.png"
+          imageSrc="/media/testimonials-lg/robert_gibb_fabric_draft_dev.jpg"
           imageAlt="Robert Gibb"
         />
-        <CaseStudyLight />
+        <MiniCaseStatusHero />
         <CardList
           title="Ongoing technical content"
           subtitle="Build a steady stream of technical content that scales with your business."

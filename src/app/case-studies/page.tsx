@@ -125,7 +125,7 @@ export default function CaseStudy() {
         name="Randall Degges"
         role="Head of Developer & Security Relations"
         company="snyk"
-        imageSrc="/testimonials/randall_degges_snyk_draft_dev.png"
+        imageSrc="/media/testimonials-lg/randall_degges_snyk_draft_dev.jpg"
         imageAlt="Randall Degges"
       />
       <TestimonialsGroup />

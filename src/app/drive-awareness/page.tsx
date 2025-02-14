@@ -1,6 +1,6 @@
 import CardList from '@/components/card-list'
-import CaseStudyLight from '@/components/case-study-light'
 import { CTAFull } from '@/components/cta-full'
+import CaseStudyLight from '@/components/mini-case-earthly'
 import SocialProof from '@/components/social-proof'
 import TestimonialsGroup from '@/components/testimonials-group'
 import Header from '@/components/use-cases/drive-awareness/header'
@@ -75,12 +75,6 @@ const ctaProps = [
 export default function DriveAwareness() {
   return (
     <>
-      {/* <ServiceIntro
-        eyebrow="Scale your content efforts"
-        title="Custom Content Marketing that Drives Traffic"
-        subtitle="We specialize in creating technical content that gets reach and drives business."
-        features={features}
-      /> */}
       <Header />
       <Why />
       <SocialProof />

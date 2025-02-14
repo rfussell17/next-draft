@@ -4,13 +4,13 @@ import Image from 'next/image'
 export function LogosFlex({
   className,
 }: React.ComponentPropsWithoutRef<'div'>) {
-  const redpanda = '/logos/redpanda_logo_draft_dev.svg'
-  const rewind = '/logos/rewind_logo_draft_dev.svg'
-  const earthly = '/logos/earthly_logo_draft_dev.svg'
-  const tailscale = '/logos/tailscale_logo_draft_dev.svg'
-  const saucelabs = '/logos/saucelabs_logo_draft_dev.svg'
-  const foxit = '/logos/foxit_logo_draft_dev.svg'
-  const containiq = '/logos/containiq_logo_draft_dev.svg'
+  const redpanda = '/media/logos/redpanda_logo_draft_dev.svg'
+  const rewind = '/media/logos/rewind_logo_draft_dev.svg'
+  const earthly = '/media/logos/earthly_logo_draft_dev.svg'
+  const tailscale = '/media/logos/tailscale_logo_draft_dev.svg'
+  const saucelabs = '/media/logos/saucelabs_logo_draft_dev.svg'
+  const foxit = '/media/logos/foxit_logo_draft_dev.svg'
+  const containiq = '/media/logos/containiq_logo_draft_dev.svg'
 
   return (
     <div className="text-white">

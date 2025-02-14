@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-const CaseStudyLight = () => {
+const MiniCaseStatusHero = () => {
   return (
     <div>
       <main className="relative isolate my-32">
@@ -11,10 +11,10 @@ const CaseStudyLight = () => {
               <h1 className="subheader-case-study mb-6 pb-4 font-semibold text-gradient-3">
                 How{' '}
                 <span className="bg-gradient-brand px-2 text-white">
-                  Earthly
+                  Status Hero
                 </span>{' '}
-                increased its monthly blog visitors by{' '}
-                <span className="bg-gradient-brand px-2 text-white">346%</span>{' '}
+                grew blog traffic by{' '}
+                <span className="bg-gradient-brand px-2 text-white">211%</span>{' '}
                 with Draft.dev
               </h1>
 
@@ -24,18 +24,14 @@ const CaseStudyLight = () => {
                 <div className="absolute left-0 top-0 h-full w-1 bg-gray-300" />{' '}
                 {/* Gradient bar that matches content height */}
                 <p className="font-code text-2xl font-semibold text-gray-600">
-                  "It's difficult to find an agency with enough high-quality
-                  subject matter expert writers to build up the content pipeline
-                  that Draft.dev gives you. It's a shortcut to building an
-                  in-house writing team."
+                  "Draft.dev has helped us create high-quality content that
+                  resonates with our audience on a regular basis. They have
+                  helped us double our audience, attract more trial users, and
+                  increase our trial conversion rate."
                 </p>
                 <div className="pt-8 text-gray-600">
-                  <p className="case-study-small font-semibold">
-                    Adam Gordon Bell
-                  </p>
-                  <p className="case-study-small">
-                    Director of Developer Relations, Earthly
-                  </p>
+                  <p className="case-study-small font-semibold">Henry Poydar</p>
+                  <p className="case-study-small">Founder & CEO, Status Hero</p>
                 </div>
               </div>
 
@@ -55,7 +51,7 @@ const CaseStudyLight = () => {
               </div>
             </div>
 
-            <div className="hidden lg:block">
+            <div className="hidden lg:block lg:w-[400px]">
               <div className="rounded-4xl bg-white/15 p-2 shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5">
                 <div className="overflow-hidden rounded-3xl shadow-2xl outline outline-1 -outline-offset-1 outline-black/10">
                   <Image
@@ -63,7 +59,7 @@ const CaseStudyLight = () => {
                     height={1000}
                     width={1000}
                     priority
-                    src="/testimonials/adam_bell_draft_dev.jpg"
+                    src="/media/testimonials-lg/henry_poydar_steady_draft_dev.jpg"
                     className="aspect-[2/3] w-full object-cover"
                   />
                 </div>
@@ -76,4 +72,4 @@ const CaseStudyLight = () => {
   )
 }
 
-export default CaseStudyLight
+export default MiniCaseStatusHero

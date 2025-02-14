@@ -1,8 +1,8 @@
 import Image from 'next/image'
 
-import randall from '/public/testimonials/randall_degges_snyk_draft_dev.png'
-import rich from '/public/testimonials/rich_loft_labs_draft_dev.png'
-import robert from '/public/testimonials/robert_gibb_fabric_inc_draft_dev.png'
+import randall from '/public/media/testimonials-sm/randall_degges_snyk_draft_dev.jpg'
+import rich from '/public/media/testimonials-sm/rich_burroughs_loft_labs_draft_dev.jpg'
+import robert from '/public/media/testimonials-sm/robert_gibb_fabric_draft_dev.jpg'
 
 type Testimonial = {
   body: string

@@ -1,6 +1,6 @@
 import CardList from '@/components/card-list'
-import CaseStudyLight from '@/components/case-study-light'
 import { CTAFull } from '@/components/cta-full'
+import CaseStudyLight from '@/components/mini-case-earthly'
 import SocialProof from '@/components/social-proof'
 import Testimonial from '@/components/testimonial'
 import TestimonialsGroup from '@/components/testimonials-group'
@@ -60,7 +60,7 @@ export default function ForMarketers(): JSX.Element {
           name="Randall Degges"
           role="Head of Developer & Security Relations"
           company="snyk"
-          imageSrc="/testimonials/randall_degges_snyk_draft_dev.png"
+          imageSrc="/media/testimonials-lg/randall_degges_snyk_draft_dev.jpg"
           imageAlt="Randall Degges"
         />
 
