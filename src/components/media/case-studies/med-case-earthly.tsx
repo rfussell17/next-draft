@@ -1,19 +1,29 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-const MiniCaseEarthly = () => {
+const MedCaseEarthly = () => {
   return (
     <div>
-      <main className="relative isolate my-24">
+      <main className="relative isolate my-32">
         <div className="mx-auto max-w-7xl px-6 py-6 lg:px-8">
           <div className="mx-auto max-w-2xl gap-x-12 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
             <div className="relative w-full lg:shrink-0 xl:max-w-2xl">
+              <h1 className="subheader-case-study mb-6 pb-4 font-semibold text-gradient-3">
+                How{' '}
+                <span className="bg-gradient-brand px-2 text-white">
+                  Earthly
+                </span>{' '}
+                increased its monthly blog visitors by{' '}
+                <span className="bg-gradient-brand px-2 text-white">346%</span>{' '}
+                with Draft.dev
+              </h1>
+
               <div className="relative max-w-xl py-8 pl-8">
                 {' '}
                 {/* Removed py-8 to let content determine spacing */}
                 <div className="absolute left-0 top-0 h-full w-1 bg-gray-300" />{' '}
                 {/* Gradient bar that matches content height */}
-                <p className="bg-gradient-brand font-code text-3xl font-semibold text-gradient">
+                <p className="font-code text-2xl font-semibold text-gray-600">
                   "It's difficult to find an agency with enough high-quality
                   subject matter expert writers to build up the content pipeline
                   that Draft.dev gives you. It's a shortcut to building an
@@ -66,4 +76,4 @@ const MiniCaseEarthly = () => {
   )
 }
 
-export default MiniCaseEarthly
+export default MedCaseEarthly
