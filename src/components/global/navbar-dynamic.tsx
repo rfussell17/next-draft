@@ -76,26 +76,14 @@ interface NavbarProps {
 
 export function DynamicNavbar({ banner }: NavbarProps) {
   const [hasScrolled, setHasScrolled] = useState(false)
-  const navbarHeight = 80
-  useEffect(() => {
-    const mediaQuery = window.matchMedia('(min-width: 640px)')
-    let lastKnownScrollY = window.scrollY
-    let ticking = false
 
+  useEffect(() => {
     const handleScroll = () => {
-      if (!mediaQuery.matches) return
-      lastKnownScrollY = window.scrollY
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          setHasScrolled(lastKnownScrollY > window.innerHeight - navbarHeight)
-          ticking = false
-        })
-        ticking = true
-      }
+      setHasScrolled(window.scrollY > 0)
     }
 
     window.addEventListener('scroll', handleScroll, { passive: true })
-    handleScroll()
+    handleScroll() // Initial check
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
@@ -292,7 +280,7 @@ export function DynamicNavbar({ banner }: NavbarProps) {
           <DesktopNav />
 
           <DisclosureButton
-            className={`flex h-12 w-12 items-center justify-center rounded-lg text-gray-800 hover:bg-gray-100/80 lg:hidden`}
+            className="flex h-12 w-12 items-center justify-center rounded-lg text-gray-800 hover:bg-gray-100/80 lg:hidden"
             aria-label="Open main menu"
           >
             <Bars2Icon className="h-6 w-6" />

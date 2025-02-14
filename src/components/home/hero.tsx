@@ -5,7 +5,7 @@ import { LogosFlex } from '../logos-flex'
 
 const Hero: React.FC = () => {
   return (
-    <div className="-mb-20 min-h-screen bg-gradient-brand pt-20 sm:mb-0">
+    <div className="min-h-screen bg-gradient-brand pt-20 sm:mb-0">
       <main className="relative isolate">
         <div
           aria-hidden="true"
