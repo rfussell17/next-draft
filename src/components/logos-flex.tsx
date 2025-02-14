@@ -6,7 +6,6 @@ export function LogosFlex({
 }: React.ComponentPropsWithoutRef<'div'>) {
   const redpanda = '/logos/redpanda_logo_draft_dev.svg'
   const rewind = '/logos/rewind_logo_draft_dev.svg'
-  // const snyk = '/logos/snyk_logo_draft_dev2.svg'
   const earthly = '/logos/earthly_logo_draft_dev.svg'
   const tailscale = '/logos/tailscale_logo_draft_dev.svg'
   const saucelabs = '/logos/saucelabs_logo_draft_dev.svg'
@@ -20,48 +19,63 @@ export function LogosFlex({
           Trusted by 100+ developer tools companies
         </h3>
       </div>
-      <div className="rounded-lg bg-white/5 px-4 py-8">
+      <div className="rounded-lg px-4 py-8 sm:bg-white/5">
         <div
           className={clsx(
             className,
-            'flex flex-col items-center gap-4 sm:flex-row sm:items-center sm:justify-around sm:gap-4',
+            'grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7',
+            'items-center justify-items-center',
           )}
         >
           <Image
             alt="Red Panda logo"
             src={redpanda}
-            className="h-20"
+            className="h-16"
             width={192}
             height={48}
             priority
+          />
+          <Image
+            alt="Tailscale logo"
+            src={tailscale}
+            width={192}
+            height={48}
+            className="h-16"
           />
           <Image
             alt="Earthly logo"
             src={earthly}
             width={192}
             height={48}
-            className="h-20"
+            className="h-16"
           />
           <Image
             alt="Foxit logo"
             src={foxit}
             width={192}
             height={48}
-            className="h-20"
+            className="h-16"
           />
           <Image
             alt="Rewind logo"
             src={rewind}
             width={192}
             height={48}
-            className="h-20"
+            className="h-16"
+          />
+          <Image
+            alt="Saucelabs logo"
+            src={saucelabs}
+            width={192}
+            height={48}
+            className="h-16"
           />
           <Image
             alt="ContainIQ logo"
             src={containiq}
             width={192}
             height={48}
-            className="h-20"
+            className="h-16"
           />
         </div>
       </div>
