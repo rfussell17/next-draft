@@ -154,10 +154,10 @@ export const EarthlyCaseStudy: React.FC<EarthlyCaseStudyProps> = ({
         {/* Case Studies section */}
         <div className="mx-auto my-16 max-w-7xl px-6 py-16 sm:my-24 lg:px-8">
           <div className="mx-auto max-w-2xl lg:mx-0">
-            <h2 className="header-gradient">{caseStudy.title}</h2>
-            {/* <p className="mt-6 text-lg/8 text-gray-300">
+            <h2 className="subheader-gradient">{caseStudy.title}</h2>
+            <p className="mt-6 text-lg/8 text-gray-300">
               {caseStudy.description}
-            </p> */}
+            </p>
           </div>
           <ul
             role="list"

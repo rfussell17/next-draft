@@ -1,10 +1,9 @@
 import Image from 'next/image'
-import Link from 'next/link'
 
 const MiniCaseLoft = () => {
   return (
     <div>
-      <main className="relative isolate my-24">
+      <main className="relative isolate my-16">
         <div className="mx-auto max-w-7xl px-6 py-6 lg:px-8">
           <div className="mx-auto max-w-2xl gap-x-12 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
             <div className="relative w-full lg:shrink-0 xl:max-w-2xl">
@@ -25,23 +24,7 @@ const MiniCaseLoft = () => {
                   </p>
                 </div>
               </div>
-
-              <div className="mt-6 flex flex-col items-center gap-x-6 sm:mt-16 sm:flex-row">
-                <Link
-                  href="#"
-                  className="my-2 rounded-sm bg-gradient-brand px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm ring-2 ring-white hover:bg-white hover:text-gray-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary sm:my-0 sm:text-base"
-                >
-                  Read the full case study
-                </Link>
-                <Link
-                  href="#"
-                  className="my-2 text-sm font-semibold text-gray-600 hover:text-gray-800 sm:my-0 sm:text-base"
-                >
-                  See all case studies <span aria-hidden="true">→</span>
-                </Link>
-              </div>
             </div>
-
             <div className="hidden lg:block lg:w-[400px]">
               <div className="rounded-4xl bg-white/15 p-2 shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5">
                 <div className="overflow-hidden rounded-3xl shadow-2xl outline outline-1 -outline-offset-1 outline-black/10">
