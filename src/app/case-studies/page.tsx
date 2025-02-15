@@ -23,78 +23,10 @@ const ctaProps = [
 ]
 
 export default function CaseStudy() {
-  const landingPageProps = {
-    content: {
-      stats: [
-        { label: 'Blog visitors per workday', value: '1,500' },
-        { label: 'Increase in monthly readers', value: '346%' },
-        { label: 'Blog conversion rate', value: '6%' },
-      ],
-    },
-    featuredImage: {
-      src: 'https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5',
-      alt: 'Team collaboration',
-    },
-    highlights: {
-      title: 'Highlights',
-      description:
-        'The principles that guide everything we do and every decision we make.',
-      items: [
-        {
-          name: 'Challenges',
-          description: [
-            'Creating high-quality and valuable technical content',
-            'Ramping up content production for technical blog',
-            'Lacking SEO knowledge',
-          ],
-        },
-        {
-          name: 'Solution',
-          description: [
-            'Consistent content providing excellent results',
-            'SEO and keyword research',
-            'Subject matter expert writers',
-            'Professional and ready-to-publish content',
-            'Supportive and helpful customer support',
-          ],
-        },
-        {
-          name: 'Results',
-          description: [
-            '346% increase in monthly blog visitors',
-            '1500 visitors per workday',
-            '6% conversion rate on blog content',
-            'Ranking in the top 3 for some keywords',
-          ],
-        },
-      ],
-    },
-    caseStudy: {
-      title: 'More Case Studies',
-      description: 'lorem ipsom',
-      clients: [
-        {
-          name: 'Henry Poydar',
-          role: 'Founder & CEO',
-          imageUrl: '/media/testimonials-sm/henry_poydar_steady_draft_dev.jpg',
-          company: 'Status Hero',
-        },
-        {
-          name: 'Rahul Patwardhan',
-          role: 'Senior Director, Demand Generation',
-          imageUrl:
-            '/media/testimonials-sm/rahul_patwardhan_loft_labs_draft_dev.jpg',
-          company: 'Loft Labs',
-        },
-      ],
-    },
-  }
-
   return (
     <>
       <CaseStudyMain />
       <LogosDark />
-
       <TestimonialsGroup />
       <CTAFull
         title="Book Discovery Call"

@@ -29,7 +29,9 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "src/app/drive-awareness"
+    "src/app/drive-awareness",
+    "src/app/case-studies/loft-labs",
+    "src/app/case-studies/earthly"
   ],
   "exclude": ["node_modules"]
 }
