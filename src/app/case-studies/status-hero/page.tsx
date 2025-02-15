@@ -1,5 +1,5 @@
 import { CTAFull } from '@/components/global/cta-full'
-import CaseStudyMain from '@/components/media/case-studies/case-study-main'
+import CaseStudyStatusHero from '@/components/media/case-studies/case-study-status-hero'
 import { LogosDark } from '@/components/media/logos-dark'
 import TestimonialsGroup from '@/components/media/testimonials/testimonials-group'
 import type { Metadata } from 'next'
@@ -25,7 +25,7 @@ const ctaProps = [
 export default function StatusHeroCaseStudy() {
   return (
     <>
-      <CaseStudyMain />
+      <CaseStudyStatusHero />
       <LogosDark />
       <TestimonialsGroup />
       <CTAFull
