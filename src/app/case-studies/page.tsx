@@ -1,7 +1,7 @@
 import { CTAFull } from '@/components/global/cta-full'
-import Testimonial from '@/components/media/testimonials/testimonial'
+import CaseStudyMain from '@/components/media/case-studies/case-study-main'
+import { LogosDark } from '@/components/media/logos-dark'
 import TestimonialsGroup from '@/components/media/testimonials/testimonials-group'
-import EarthlyCaseStudy from '@/components/page-components/case-studies/earthly-case-study'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -24,18 +24,7 @@ const ctaProps = [
 
 export default function CaseStudy() {
   const landingPageProps = {
-    hero: {
-      title:
-        'How Earthly Increased Its Monthly Blog Visitors by 346% and Ramped Up Its Content Production with Draft.dev',
-      description: 'and Ramped Up Its Content Production with Draft.dev',
-    },
     content: {
-      paragraphs: [
-        'Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae sed turpis id. Id dolor praesent donec est. Odio penatibus risus viverra tellus varius sit neque erat velit.',
-        'Et vitae blandit facilisi magna lacus commodo. Vitae sapien duis odio id et. Id blandit molestie auctor fermentum dignissim. Lacus diam tincidunt ac cursus in vel.',
-        'Erat pellentesque dictumst ligula porttitor risus eget et eget. Ultricies tellus felis id dignissim eget. Est augue maecenas risus nulla ultrices congue nunc tortor.',
-        'Et vitae blandit facilisi magna lacus commodo. Vitae sapien duis odio id et. Id blandit molestie auctor fermentum dignissim. Lacus diam tincidunt ac cursus in vel. Mauris varius vulputate et ultrices hac adipiscing egestas.',
-      ],
       stats: [
         { label: 'Blog visitors per workday', value: '1,500' },
         { label: 'Increase in monthly readers', value: '346%' },
@@ -82,22 +71,20 @@ export default function CaseStudy() {
     },
     caseStudy: {
       title: 'More Case Studies',
-      description:
-        "We're a dynamic group of individuals who are passionate about what we do and dedicated to delivering the best results for our clients.",
+      description: 'lorem ipsom',
       clients: [
         {
-          name: 'Leslie Alexander',
-          role: 'Co-Founder / CEO',
-          imageUrl:
-            'https://images.unsplash.com/photo-1494790108377-be9c29b29330',
-          company: 'Big Company',
+          name: 'Henry Poydar',
+          role: 'Founder & CEO',
+          imageUrl: '/media/testimonials-sm/henry_poydar_steady_draft_dev.jpg',
+          company: 'Status Hero',
         },
         {
-          name: 'Michael Foster',
-          role: 'Co-Founder / CTO',
+          name: 'Rahul Patwardhan',
+          role: 'Senior Director, Demand Generation',
           imageUrl:
-            'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5',
-          company: 'Blog Company',
+            '/media/testimonials-sm/rahul_patwardhan_loft_labs_draft_dev.jpg',
+          company: 'Loft Labs',
         },
       ],
     },
@@ -105,15 +92,9 @@ export default function CaseStudy() {
 
   return (
     <>
-      <EarthlyCaseStudy {...landingPageProps} />
-      <Testimonial
-        quote="Draft.dev has been an amazing partner, helping us scale our content program by creating thoughtful and technically-sound developer content and training materials. We’re constantly iterating to build the best educational materials for developer security and Draft.dev has been instrumental in helping us realize these ambitions."
-        name="Randall Degges"
-        role="Head of Developer & Security Relations"
-        company="snyk"
-        imageSrc="/media/testimonials-lg/randall_degges_snyk_draft_dev.jpg"
-        imageAlt="Randall Degges"
-      />
+      <CaseStudyMain />
+      <LogosDark />
+
       <TestimonialsGroup />
       <CTAFull
         title="Book Discovery Call"
