@@ -24,10 +24,7 @@ const ctaProps = [
 export default function Newsletter() {
   return (
     <>
-      <PageHeader
-        seoTitle="About Draft.dev"
-        header="We believe great marketing content can also be educational"
-      />
+      <PageHeader header="Draft.dev Privacy Policy" />
       <TestimonialsGroup />
       <CTAFull
         title="Book a discovery call"

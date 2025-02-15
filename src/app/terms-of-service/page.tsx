@@ -24,10 +24,7 @@ const ctaProps = [
 export default function TermsOfService() {
   return (
     <>
-      <PageHeader
-        seoTitle="About Draft.dev"
-        header="We believe great marketing content can also be educational"
-      />
+      <PageHeader header="Draft.dev Terms of Service" />
       <TestimonialsGroup />
       <CTAFull
         title="Book a discovery call"

@@ -23,12 +23,7 @@ export const metadata: Metadata = {
 }
 
 function Header() {
-  return (
-    <PageHeader
-      seoTitle="Draft.dev blog"
-      header="HIGH QUALITY TECHNICAL CONTENT YOU CAN RELY ON"
-    />
-  )
+  return <PageHeader header="Draft.dev blog" />
 }
 
 export const dynamic = 'force-dynamic'

@@ -24,10 +24,7 @@ const ctaProps = [
 export default function PrivacyPolicy() {
   return (
     <>
-      <PageHeader
-        seoTitle="About Draft.dev"
-        header="We believe great marketing content can also be educational"
-      />
+      <PageHeader header="Privacy Policy" />
 
       <TestimonialsGroup />
       <CTAFull

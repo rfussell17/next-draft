@@ -21,10 +21,7 @@ export const metadata: Metadata = {
 export default function BookDiscoveryCall() {
   return (
     <main className="overflow-hidden">
-      <PageHeader
-        seoTitle="Schedule A Discovery Call"
-        header="It's time for your SaaS business to invest in technical content"
-      />
+      <PageHeader header="Schedule A Discovery Call" />
       <TestimonialsGroup />
       <CTAFull
         title="Book a discovery call"
