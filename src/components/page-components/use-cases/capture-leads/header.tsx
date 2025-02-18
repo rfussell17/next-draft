@@ -5,7 +5,7 @@ import React from 'react'
 
 const Header: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-brand pt-20">
+    <div className="bg-gradient-brand pt-20">
       <main className="relative isolate pb-16">
         <div
           aria-hidden="true"
