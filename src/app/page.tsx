@@ -47,6 +47,7 @@ export default function Home() {
         <CaseStudyHome />
       </main>
       <Testimonials />
+
       <CTAFull
         title="Book a discovery call"
         description="Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in accusamus quisquam."
