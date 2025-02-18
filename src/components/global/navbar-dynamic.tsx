@@ -80,9 +80,9 @@ const STYLES = {
 }
 
 const getNavStyles = (hasScrolled: boolean) => ({
-  text: `text-gray-800 ${hasScrolled ? 'sm:text-gray-800' : 'sm:text-white'}`,
-  background: `bg-white ${hasScrolled ? 'sm:bg-white/95 sm:backdrop-blur-sm sm:shadow-md' : 'sm:bg-transparent'}`,
-  hoverBg: `hover:bg-gray-100/80 ${hasScrolled ? 'sm:hover:bg-gray-100/80' : 'sm:hover:bg-white/10'}`,
+  text: `text-gray-800 ${hasScrolled ? 'tablet:text-gray-800' : 'tablet:text-white'}`,
+  background: `bg-white ${hasScrolled ? 'tablet:bg-white/95 tablet:backdrop-blur-sm tablet:shadow-md' : 'tablet:bg-transparent'}`,
+  hoverBg: `hover:bg-gray-100/80 ${hasScrolled ? 'tablet:hover:bg-gray-100/80' : 'tablet:hover:bg-white/10'}`,
   logo: hasScrolled
     ? '/draft/logos/draftlogo_main_filled.svg'
     : '/draft/logos/draftlogo_base_white.svg',
@@ -201,7 +201,7 @@ export function DynamicNavbar({ banner }: NavbarProps) {
   )
 
   const DesktopNav = () => (
-    <nav className={`hidden items-center lg:flex ${styles.text}`}>
+    <nav className={`tablet:flex hidden items-center ${styles.text}`}>
       {NAVIGATION_CONFIG.links.map(({ href, label }) =>
         label === 'Why Us?' ? (
           <WhyUsPopover key={label} />
@@ -219,7 +219,7 @@ export function DynamicNavbar({ banner }: NavbarProps) {
   )
 
   const MobileNav = () => (
-    <DisclosurePanel className="bg-white lg:hidden">
+    <DisclosurePanel className="tablet:hidden bg-white">
       <div className="flex flex-col py-2">
         {NAVIGATION_CONFIG.links.map(({ href, label }) => (
           <Link key={href} href={href} className={STYLES.mobileLink}>
@@ -238,7 +238,7 @@ export function DynamicNavbar({ banner }: NavbarProps) {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between py-3">
           <div className="flex items-center">
-            <Link href="/" title="Home" className="block lg:hidden">
+            <Link href="/" title="Home" className="tablet:hidden block">
               <Image
                 src="/draft/logos/draftlogo_main_filled.svg"
                 alt="Logo"
@@ -247,7 +247,7 @@ export function DynamicNavbar({ banner }: NavbarProps) {
                 priority
               />
             </Link>
-            <Link href="/" title="Home" className="hidden lg:block">
+            <Link href="/" title="Home" className="tablet:block hidden">
               <Image
                 src={styles.logo}
                 alt="Logo"
@@ -258,7 +258,7 @@ export function DynamicNavbar({ banner }: NavbarProps) {
               />
             </Link>
             {banner && (
-              <div className="hidden items-center lg:flex">{banner}</div>
+              <div className="tablet:flex hidden items-center">{banner}</div>
             )}
           </div>
 

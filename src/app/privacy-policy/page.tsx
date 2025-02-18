@@ -14,7 +14,6 @@ export default function PrivacyPolicy() {
     <>
       <PageHeader header="Privacy Policy" />
       <div className="mx-auto mt-16 max-w-7xl px-6 sm:mt-24 lg:px-8">
-        <h2 className="subheader-dark">Privacy Policy</h2>
         <p className="lead-dark">Updated 12/22/20</p>
         <p className="paragraph-dark my-5 max-w-5xl">
           We want to protect your privacy. In order to operate, our web sites

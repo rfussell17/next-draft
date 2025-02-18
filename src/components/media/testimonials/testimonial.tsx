@@ -20,7 +20,7 @@ function Testimonial({
   return (
     <div
       data-navbar-color="light"
-      className="my-24 bg-gradient-brand pb-24 pt-72 lg:pt-24"
+      className="my-24 bg-gradient-brand pb-24 pt-72 md:pt-24"
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-[384px_1fr]">
