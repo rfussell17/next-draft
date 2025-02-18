@@ -11,6 +11,9 @@ const Why = () => {
           <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-12 lg:max-w-none lg:grid-cols-3">
             <div className="flex flex-col">
               <dd className="mt-2 flex flex-auto flex-col text-base sm:text-lg">
+                <dt className="flex items-center gap-x-3 text-lg font-semibold text-secondary">
+                  Built for Developer-Focused Companies
+                </dt>
                 <p className="my-2 flex-auto">
                   We work exclusively with companies that are trying to reach
                   software developers, data engineers, and DevOps practitioners.
@@ -23,6 +26,9 @@ const Why = () => {
 
             <div className="flex flex-col">
               <dd className="mt-2 flex flex-auto flex-col text-base sm:text-lg">
+                <dt className="flex items-center gap-x-3 text-lg font-semibold text-secondary">
+                  Technical Content at Scale
+                </dt>
                 <p className="my-2 flex-auto">
                   We specialize in producing technical content (mostly tutorials
                   and blog posts), but we can also help you create a content
@@ -34,6 +40,9 @@ const Why = () => {
 
             <div className="flex flex-col">
               <dd className="mt-2 flex flex-auto flex-col text-base sm:text-lg">
+                <dt className="flex items-center gap-x-3 text-lg font-semibold text-secondary">
+                  Expert-Crafted, Publication-Ready Content
+                </dt>
                 <p className="my-2 flex-auto">
                   Our goal is to create high-quality, technically-deep content.
                   Subject-matter experts are assigned to each article, so every

@@ -9,7 +9,7 @@ type PersonProps = {
 const Person = ({ name, description, img }: PersonProps) => {
   return (
     <li>
-      <div className="w-48 rounded-3xl bg-white/15 p-1 shadow ring-1 ring-black/5">
+      <div className="w-48 rounded-4xl bg-white/15 p-1 shadow ring-1 ring-black/5">
         <div className="rounded-3xl p-1 shadow-md shadow-black/5">
           <div className="overflow-hidden rounded-3xl shadow-2xl outline outline-1 -outline-offset-1 outline-black/10">
             <Image
@@ -74,6 +74,17 @@ const Team = () => {
     <div className="bg-gradient-brand py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <h2 className="subheader-light">The team</h2>
+        <p className="paragraph-light my-5 max-w-5xl">
+          Draft.dev is a <strong>content marketing agency</strong> focused on
+          creating in-depth, technical content for companies in tech. We work
+          with subject matter experts from around the world to create{' '}
+          <strong>tutorials</strong>, <strong>blog posts</strong>, and{' '}
+          <strong>e-books</strong> for our clients. We're a small but quickly
+          growing team of technologists, writers, marketers, and editors.
+        </p>
+        <p className="paragraph-light my-5">
+          Want to join us? Learn more about our open roles here.
+        </p>
         <hr className="mt-6 border-t border-gray-200/20" />
         <ul className="mx-auto mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {teamMembers.map((member) => (
