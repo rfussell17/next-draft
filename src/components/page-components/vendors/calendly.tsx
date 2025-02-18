@@ -25,7 +25,7 @@ const CalendlyWidget = ({ url, minWidth = 320 }: CalendlyWidgetProps) => {
         style={{
           minWidth: `${minWidth}px`,
           width: '100%',
-          height: '1400px',
+          height: '1600px',
           overflow: 'hidden',
           border: 'none',
         }}

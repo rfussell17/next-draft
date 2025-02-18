@@ -66,7 +66,7 @@ const NAVIGATION_CONFIG = {
     { href: '/blog', label: 'Blog' },
     { href: '/resources', label: 'Free Resources' },
     { href: '/about', label: 'Company' },
-    { href: '/book-discovery-call', label: 'Book Discovery Call' },
+    { href: '/call', label: 'Book Discovery Call' },
   ],
 }
 

@@ -11,7 +11,6 @@ module.exports = {
         md: '788',
         lg: '1090px', // Default is 1024px
         xl: '1280px', // Default is 1280px
-        '2xl': '1536px', // Default is 1536px
 
         tablet: '1090px',
         laptop: '1024px',

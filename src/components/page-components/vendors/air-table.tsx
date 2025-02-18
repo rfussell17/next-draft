@@ -16,13 +16,14 @@ const AirtableEmbed: FC<AirtableEmbedProps> = ({
   const embedUrl = `https://airtable.com/embed/${baseId}/${tableId}`
 
   return (
-    <div className="h-screen w-full">
+    <div className="w-full">
       <iframe
         className={`airtable-embed h-full w-full ${className}`}
         src={embedUrl}
         style={{
           background: 'transparent',
           border: '1px solid #ccc',
+          height: '3200px',
         }}
         onWheel={(e) => {
           e.stopPropagation()

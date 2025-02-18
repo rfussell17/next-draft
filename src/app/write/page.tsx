@@ -1,6 +1,4 @@
-import { CTAFull } from '@/components/global/cta-full'
 import PageHeader from '@/components/global/page-header'
-import TestimonialsGroup from '@/components/media/testimonials/testimonials-group'
 import AirtableEmbed from '@/components/page-components/vendors/air-table'
 
 import type { Metadata } from 'next'
@@ -21,21 +19,11 @@ export const metadata: Metadata = {
 }
 export default function Write() {
   return (
-    <main className="overflow-hidden">
+    <div>
       <PageHeader header="Write for Draft.dev" />
-
-      <AirtableEmbed />
-
-      <TestimonialsGroup />
-      <CTAFull
-        title="Book a discovery call"
-        description="Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in accusamus quisquam."
-        imageSrc="/site/cta_draft_dev.jpg"
-        imageAlt="Team environment"
-        list={ctaProps}
-        linkHref="/call"
-        linkText="Book a Discovery Call"
-      />
-    </main>
+      <main className="block">
+        <AirtableEmbed />
+      </main>
+    </div>
   )
 }
