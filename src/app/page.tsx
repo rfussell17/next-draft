@@ -27,25 +27,14 @@ const ctaProps = [
   'A great work environment',
 ]
 
-interface HeroProps {
-  title: string
-  subtitle: string
-  primaryButtonText: string
-  primaryButtonHref: string
-  secondaryButtonText: string
-  secondaryButtonHref: string
-}
-
 export default function Home() {
   return (
     <div className="overflow-hidden">
       <Hero />
-
       <main>
         <What />
         <SocialProof />
         <Why />
-
         <Testimonial
           quote="Having draft.dev source quality technical content for the Loft Labs blog has been a competitive advantage. It's given us a steadier flow of content, which has helped our brand's visibility, and some of the posts are among the most popular ones we've published."
           name="Rich Burroughs"
@@ -55,11 +44,9 @@ export default function Home() {
           imageAlt="Rich Burroughs"
         />
         <How />
-
         <CaseStudyHome />
       </main>
       <Testimonials />
-
       <CTAFull
         title="Book a discovery call"
         description="Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in accusamus quisquam."
