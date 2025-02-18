@@ -179,6 +179,7 @@ export function Footer() {
       <footer className="relative -mt-64 bg-gradient-brand pt-36">
         <Container className="relative text-white">
           <div className="pb-16 pt-24">
+            <hr className="mt-16 border-t border-gray-200/20" />
             <div className="grid grid-cols-2 gap-y-10 pb-6 lg:grid-cols-6 lg:gap-8">
               <div className="col-span-2">
                 <div className="pt-10">

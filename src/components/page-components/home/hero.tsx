@@ -36,7 +36,7 @@ const Hero: React.FC = () => {
                 </div>
               </div>
               <div className="mt-14 hidden justify-end gap-8 sm:-mt-44 sm:pl-20 lg:mt-0 lg:flex lg:pl-0">
-                <div className="mr-auto w-44 flex-none space-y-8 pt-16 sm:mr-0">
+                <div className="mr-auto w-44 flex-none space-y-6 pt-16 sm:mr-0">
                   <div className="rounded-4xl bg-white/15 shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5">
                     <div className="rounded-4xl p-2 shadow-md shadow-black/5">
                       <div className="overflow-hidden rounded-3xl shadow-2xl outline outline-1 -outline-offset-1 outline-black/10">
@@ -66,7 +66,7 @@ const Hero: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="w-44 flex-none space-y-8 pt-32 sm:pt-0">
+                <div className="w-44 flex-none space-y-6 pt-32 sm:pt-0">
                   <div className="rounded-4xl bg-white/15 shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5">
                     <div className="rounded-4xl p-2 shadow-md shadow-black/5">
                       <div className="overflow-hidden rounded-3xl shadow-2xl outline outline-1 -outline-offset-1 outline-black/10">
