@@ -56,7 +56,7 @@ const UpcomingWebinars = () => {
                   Register Now
                 </Link>
                 <Link
-                  href="#"
+                  href="#past-webinars"
                   className="my-2 text-sm font-semibold text-gray-600 hover:text-gray-700 sm:my-0 sm:text-base"
                 >
                   Watch past webinars <span aria-hidden="true">→</span>
