@@ -1,10 +1,10 @@
 import { MedHeader } from '@/components/global/headers/med-header'
 import { LogosDark } from '@/components/media/logos-dark'
 import SocialProof from '@/components/media/social-proof'
-import How from '@/components/page-components/company/how'
 import Team from '@/components/page-components/company/team'
 import What from '@/components/page-components/company/what'
-import Why from '@/components/page-components/company/why'
+import How from '@/components/page-components/how'
+import Why from '@/components/page-components/why'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -36,9 +36,62 @@ export default function About() {
       <main className="overflow-hidden">
         <What />
         <Team />
-        <Why />
+        <Why
+          title="What makes Draft.dev different?"
+          subtitle=""
+          subtitleBold=""
+          features={[
+            {
+              title: 'title',
+              description:
+                'We work exclusively with companies that are trying to reach software developers, data engineers, and DevOps practitioners. Typically, our clients are Developer Relations or Developer Marketing teams at companies with 50+ employees or at least Series A funding.',
+              linkText: 'Our Vetted Technical Writers',
+              linkHref: '/expert-writers',
+            },
+            {
+              title: 'title',
+              description:
+                'We specialize in producing technical content (mostly tutorials and blog posts), but we can also help you create a content plan, come up with suitable topics, or execute on one-time content projects like ebooks.',
+              linkText: 'Our Quality-Focused Content',
+              linkHref: '/content-quality',
+            },
+            {
+              title: 'Content You Can Count On',
+              description:
+                'Our goal is to create high-quality, technically-deep content. Subject-matter experts are assigned to each article, so every piece is detailed and authoritative. Our core team includes experienced engineers and editors who make sure that every piece of content comes to you ready to publish.',
+              linkText: 'Our delivery process',
+              linkHref: '/delivery-process',
+            },
+          ]}
+        />
         <SocialProof />
-        <How />
+        <How
+          title="How Draft.dev works with clients"
+          subtitleBold=""
+          subtitleRegular=""
+          steps={[
+            {
+              number: '1',
+              title: 'Discovery Call',
+              description:
+                'Before we begin working with a new client, we want to make sure we’re a good fit for you. In our 30-minute discovery session, we’ll ask you where your business is at, what your content goals are, and the type of content you’re looking to produce.',
+            },
+            {
+              number: '2',
+              title: 'Statement of Work and Timeline',
+              description:
+                ' We almost always have a backlog of new clients waiting to start, so once you’re ready to reserve a spot in our production calendar, we’ll send over an estimated timeline and statement of work. This allows us to ensure we have enough writers and editors ready to help maintain our rigorous quality standards, and that both parties are on the same page as far as the scope of work is concerned.',
+            },
+            {
+              number: '3',
+              title: 'Topic Strategy and Intake',
+              description:
+                'During the topic strategy phase, we’ll define your content goals, requirements, and the preferences of all stakeholders on your team. Your team will be able to provide examples of articles you like and any desired topic ideas you have in mind. All relevant information about your brand and content strategy is helpful to our Technical Content Specialists and can be incorporated into your content plan.',
+            },
+          ]}
+          imageSrc="/site/dev_draft_dev.jpg"
+          imageAlt="Technical content development"
+        />
         <LogosDark />
       </main>
     </>
