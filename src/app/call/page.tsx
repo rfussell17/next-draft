@@ -1,5 +1,5 @@
 import { CTAFull } from '@/components/global/cta-full'
-import PageHeader from '@/components/global/page-header'
+import { MedHeader } from '@/components/global/med-header'
 import TestimonialsGroup from '@/components/media/testimonials/testimonials-group'
 import CalendlyWidget from '@/components/page-components/vendors/calendly'
 
@@ -21,21 +21,29 @@ export const metadata: Metadata = {
 }
 export default function Call() {
   return (
-    <main className="overflow-hidden">
-      <PageHeader header="Schedule A Discovery Call" />
-
-      <CalendlyWidget url="https://calendly.com/d/2by-kmh-7q6" />
-
-      <TestimonialsGroup />
-      <CTAFull
-        title="Book a discovery call"
-        description="Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in accusamus quisquam."
-        imageSrc="/site/cta_draft_dev.jpg"
-        imageAlt="Team environment"
-        list={ctaProps}
-        linkHref="/call"
-        linkText="Book a Discovery Call"
+    <>
+      <MedHeader
+        title="Book a Discovery Call"
+        descriptionOne="We write technical marketing content designed to reach software developers, DevOps practitioners, data engineers, and engineering managers. If your SaaS business is ready to invest in technical content this year, Draft.dev might be a great fit."
+        descriptionTwo="Use the form below to schedule a discovery call or reach out to sales@draft.dev."
+        image={{
+          src: '/site/headers/terms_draft_dev.jpg',
+          alt: 'Draft.dev Newsletter',
+        }}
       />
-    </main>
+      <main className="overflow-hidden">
+        <CalendlyWidget url="https://calendly.com/d/2by-kmh-7q6" />
+        <TestimonialsGroup />
+        <CTAFull
+          title="Book a discovery call"
+          description="Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in accusamus quisquam."
+          imageSrc="/site/cta_draft_dev.jpg"
+          imageAlt="Team environment"
+          list={ctaProps}
+          linkHref="/call"
+          linkText="Book a Discovery Call"
+        />
+      </main>
+    </>
   )
 }

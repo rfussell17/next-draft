@@ -1,4 +1,4 @@
-import PageHeader from '@/components/global/page-header'
+import { MedHeader } from '@/components/global/med-header'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -12,16 +12,16 @@ export const metadata: Metadata = {
 export default function PrivacyPolicy() {
   return (
     <>
-      <PageHeader header="Privacy Policy" />
+      <MedHeader
+        title="Draft.Dev Privacy Policy"
+        descriptionOne="Updated 12/22/20"
+        descriptionTwo="We want to protect your privacy. In order to operate, our web sites and business operations may gather information about you with your consent. These terms explain how this may happen, what we do with any potentially personal information, and how you can get in contact should you have any concerns."
+        image={{
+          src: '/site/headers/newsletter_draft_dev.jpg',
+          alt: 'Draft.dev Newsletter',
+        }}
+      />
       <div className="mx-auto mt-16 max-w-7xl px-6 sm:mt-24 lg:px-8">
-        <p className="lead-dark">Updated 12/22/20</p>
-        <p className="paragraph-dark my-5 max-w-5xl">
-          We want to protect your privacy. In order to operate, our web sites
-          and business operations may gather information about you with your
-          consent. These terms explain how this may happen, what we do with any
-          potentially personal information, and how you can get in contact
-          should you have any concerns.
-        </p>
         <h2 className="subheader-dark mt-16">Information Collected</h2>
         <p className="paragraph-dark my-5 max-w-5xl">
           Portable CTO, LLC - which owns and operates this site - collects your

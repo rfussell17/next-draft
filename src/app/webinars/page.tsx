@@ -1,6 +1,8 @@
 import { CTAFull } from '@/components/global/cta-full'
-import PageHeader from '@/components/global/page-header'
+import { MedHeader } from '@/components/global/med-header'
 import TestimonialsGroup from '@/components/media/testimonials/testimonials-group'
+import PastWebinars from '@/components/page-components/webinars/past'
+import UpcomingWebinars from '@/components/page-components/webinars/upcoming'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -24,8 +26,17 @@ const ctaProps = [
 export default function Webinars() {
   return (
     <>
-      <PageHeader header="Draft.dev Webinars" />
-
+      <MedHeader
+        title="Draft.Dev Webinars"
+        descriptionOne="Elevate your developer marketing expertise with our monthly webinar series."
+        descriptionTwo=""
+        image={{
+          src: '/site/headers/webinars_draft_dev.jpg',
+          alt: 'Draft.dev Webinars',
+        }}
+      />
+      <UpcomingWebinars />
+      <PastWebinars />
       <TestimonialsGroup />
       <CTAFull
         title="Book a discovery call"

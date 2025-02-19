@@ -1,5 +1,5 @@
 import { CTAFull } from '@/components/global/cta-full'
-import PageHeader from '@/components/global/page-header'
+import { MedHeader } from '@/components/global/med-header'
 import TestimonialsGroup from '@/components/media/testimonials/testimonials-group'
 import type { Metadata } from 'next'
 
@@ -24,7 +24,15 @@ const ctaProps = [
 export default function TermsOfService() {
   return (
     <>
-      <PageHeader header="Draft.dev Terms of Service" />
+      <MedHeader
+        title="Draft.Dev Terms of Service"
+        descriptionOne="..."
+        descriptionTwo="..."
+        image={{
+          src: '/site/headers/terms_draft_dev.jpg',
+          alt: 'Draft.dev Newsletter',
+        }}
+      />
       <TestimonialsGroup />
       <CTAFull
         title="Book a discovery call"
