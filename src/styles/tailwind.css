@@ -173,4 +173,12 @@
   .logo-flex-mobile {
     @apply bg-transparent;
   }
+
+  #mc_embed_signup {
+    @apply bg-transparent font-code font-semibold text-white;
+  }
+
+  #mc-embedded-subscribe-form {
+    @apply bg-transparent font-code font-semibold text-white;
+  }
 }
