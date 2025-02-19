@@ -3,15 +3,15 @@ import React from 'react'
 
 interface Feature {
   title: string
-  description: string
+  description?: string
   linkText: string
   linkHref: string
 }
 
 interface WhyProps {
   title: string
-  subtitle: string
-  subtitleBold: string
+  subtitle?: string
+  subtitleBold?: string
   features: Feature[]
   className?: string
 }
@@ -31,13 +31,17 @@ const Why: React.FC<WhyProps> = ({
             {title}
           </h2>
 
-          <h3 className="paragraph-dark py-3">
-            {subtitle}
-            <span className="lead-dark font-semibold">
-              <br />
-              {subtitleBold}
-            </span>
-          </h3>
+          {(subtitle || subtitleBold) && (
+            <h3 className="paragraph-dark py-3">
+              {subtitle}
+              {subtitleBold && (
+                <span className="lead-dark font-semibold">
+                  {subtitle && <br />}
+                  {subtitleBold}
+                </span>
+              )}
+            </h3>
+          )}
         </div>
         <div className="mx-auto mt-10 max-w-2xl sm:mt-16 lg:max-w-none">
           <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-12 lg:max-w-none lg:grid-cols-3">
@@ -47,9 +51,10 @@ const Why: React.FC<WhyProps> = ({
                   {feature.title}
                 </dt>
                 <dd className="mt-2 flex flex-auto flex-col text-base sm:text-lg">
-                  <p className="my-2 flex-auto">{feature.description}</p>
-
-                  <p className="mt-4">
+                  {feature.description && (
+                    <p className="my-2 flex-auto">{feature.description}</p>
+                  )}
+                  <p className={feature.description ? 'mt-4' : 'mt-2'}>
                     <Link
                       href={feature.linkHref}
                       className="text-base font-semibold text-gradient-3 hover:text-gray-700"

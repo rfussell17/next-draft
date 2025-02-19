@@ -4,13 +4,13 @@ import React from 'react'
 interface Step {
   number: string
   title: string
-  description: string
+  description?: string
 }
 
 interface HowProps {
   title: string
-  subtitleBold: string
-  subtitleRegular: string
+  subtitleBold?: string
+  subtitleRegular?: string
   steps: Step[]
   imageSrc: string
   imageAlt: string
@@ -35,10 +35,18 @@ const How: React.FC<HowProps> = ({
               <h2 className="subheader-mobile-gradient sm:subheader-gradient">
                 {title}
               </h2>
-              <h3 className="paragraph-dark py-4">
-                <span className="lead-dark font-semibold">{subtitleBold} </span>{' '}
-                {subtitleRegular}
-              </h3>
+
+              {(subtitleBold || subtitleRegular) && (
+                <h3 className="paragraph-dark py-4">
+                  {subtitleBold && (
+                    <span className="lead-dark font-semibold">
+                      {subtitleBold}
+                      {subtitleRegular && ' '}
+                    </span>
+                  )}
+                  {subtitleRegular}
+                </h3>
+              )}
 
               <dl className="mt-6 max-w-xl space-y-8 text-lg/7 text-gray-600 lg:max-w-none">
                 {steps.map((step, index) => (
@@ -46,7 +54,9 @@ const How: React.FC<HowProps> = ({
                     <dt className="font-bold text-secondary">
                       {step.number}. {step.title}
                     </dt>
-                    <dd className="my-2">{step.description}</dd>
+                    {step.description && (
+                      <dd className="my-2">{step.description}</dd>
+                    )}
                   </div>
                 ))}
               </dl>

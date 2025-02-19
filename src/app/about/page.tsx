@@ -38,8 +38,6 @@ export default function About() {
         <Team />
         <Why
           title="What makes Draft.dev different?"
-          subtitle=""
-          subtitleBold=""
           features={[
             {
               title: 'title',
