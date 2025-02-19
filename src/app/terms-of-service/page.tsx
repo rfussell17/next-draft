@@ -1,5 +1,5 @@
 import { CTAFull } from '@/components/global/cta-full'
-import { MedHeader } from '@/components/global/med-header'
+import { MedHeader } from '@/components/global/headers/med-header'
 import TestimonialsGroup from '@/components/media/testimonials/testimonials-group'
 import type { Metadata } from 'next'
 

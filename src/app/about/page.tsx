@@ -1,4 +1,4 @@
-import { MedHeader } from '@/components/global/med-header'
+import { MedHeader } from '@/components/global/headers/med-header'
 import { LogosDark } from '@/components/media/logos-dark'
 import SocialProof from '@/components/media/social-proof'
 import How from '@/components/page-components/company/how'

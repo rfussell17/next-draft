@@ -1,5 +1,6 @@
 import { CTAFull } from '@/components/global/cta-full'
-import { MedHeader } from '@/components/global/med-header'
+import { MedHeader } from '@/components/global/headers/med-header'
+import SocialProof from '@/components/media/social-proof'
 import TestimonialsGroup from '@/components/media/testimonials/testimonials-group'
 import CalendlyWidget from '@/components/page-components/vendors/calendly'
 
@@ -33,6 +34,7 @@ export default function Call() {
       />
       <main className="overflow-hidden">
         <CalendlyWidget url="https://calendly.com/d/2by-kmh-7q6" />
+        <SocialProof />
         <TestimonialsGroup />
         <CTAFull
           title="Book a discovery call"

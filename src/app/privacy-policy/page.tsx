@@ -1,4 +1,4 @@
-import { MedHeader } from '@/components/global/med-header'
+import { MedHeader } from '@/components/global/headers/med-header'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {

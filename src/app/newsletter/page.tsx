@@ -1,5 +1,5 @@
 import { CTAFull } from '@/components/global/cta-full'
-import { FormHeader } from '@/components/global/form-header'
+import { FormHeader } from '@/components/global/headers/form-header'
 import TestimonialsGroup from '@/components/media/testimonials/testimonials-group'
 import type { Metadata } from 'next'
 

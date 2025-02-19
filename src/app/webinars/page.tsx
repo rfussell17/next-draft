@@ -1,5 +1,5 @@
 import { CTAFull } from '@/components/global/cta-full'
-import { MedHeader } from '@/components/global/med-header'
+import { MedHeader } from '@/components/global/headers/med-header'
 import TestimonialsGroup from '@/components/media/testimonials/testimonials-group'
 import PastWebinars from '@/components/page-components/webinars/past'
 import UpcomingWebinars from '@/components/page-components/webinars/upcoming'
@@ -26,7 +26,7 @@ const ctaProps = [
 export default function Webinars() {
   return (
     <>
-      <MedHeader
+      {/* <EventHeader
         title="Draft.Dev Webinars"
         descriptionOne="Elevate your developer marketing expertise with our monthly webinar series."
         descriptionTwo=""
@@ -34,6 +34,11 @@ export default function Webinars() {
           src: '/site/headers/webinars_draft_dev.jpg',
           alt: 'Draft.dev Webinars',
         }}
+      /> */}
+      <MedHeader
+        title="Draft.Dev Webinars"
+        descriptionOne="Elevate your developer marketing expertise with our monthly webinar series."
+        descriptionTwo=""
       />
       <UpcomingWebinars />
       <PastWebinars />

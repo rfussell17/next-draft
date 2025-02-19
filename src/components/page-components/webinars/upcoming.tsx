@@ -1,12 +1,10 @@
 import { CalendarIcon, ClockIcon } from '@heroicons/react/24/outline'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const UpcomingWebinars = () => {
   return (
-    <div
-      data-navbar-color="light"
-      className="overflow-hidden bg-white py-14 sm:py-32"
-    >
+    <div className="overflow-hidden bg-white py-14 sm:py-32">
       <div className="mx-auto max-w-7xl md:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:grid-cols-2 lg:items-center">
           <div className="lg:px-0 lg:pr-4 lg:pt-4">
@@ -50,6 +48,20 @@ const UpcomingWebinars = () => {
                   </dd>
                 </div>
               </dl>
+              <div className="mt-6 flex flex-col items-start gap-x-6 sm:mt-16 sm:flex-row sm:items-center">
+                <Link
+                  href="#"
+                  className="my-2 rounded-sm px-3.5 py-2.5 text-sm font-semibold text-gray-600 shadow-sm ring-2 ring-gray-500 hover:bg-gradient-brand hover:text-white hover:ring-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 sm:my-0 sm:text-base"
+                >
+                  Register Now
+                </Link>
+                <Link
+                  href="#"
+                  className="my-2 text-sm font-semibold text-gray-600 hover:text-gray-700 sm:my-0 sm:text-base"
+                >
+                  Watch past webinars <span aria-hidden="true">→</span>
+                </Link>
+              </div>
             </div>
           </div>
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import MailchimpSubscribeForm from '../page-components/vendors/mailchimp'
+import MailchimpSubscribeForm from '../../page-components/vendors/mailchimp'
 
 interface FormHeaderProps {
   title: string
