@@ -54,7 +54,7 @@ export default function Home() {
                 'From technical blog posts to product tutorials, we create content that attracts developers and converts them into engaged users.',
             },
           ]}
-          imageSrc="/site/team_draft_dev.jpg"
+          imageSrc="/site/med-portrait/pair_programming.jpg"
           imageAlt="Technical content development"
         />
         <SocialProof />
@@ -121,7 +121,7 @@ export default function Home() {
                 "Once your content plan is approved and our team will get started, you'll receive tested and edited content that's ready to publish every 1-2 weeks. If our work ever falls short of your expectations, we'll work with you to revise it.",
             },
           ]}
-          imageSrc="/site/hero/commit_draft_dev.jpg"
+          imageSrc="/site/med-portrait/commit_draft_dev.jpg"
           imageAlt="Technical content development"
         />
         <CaseStudyHome />

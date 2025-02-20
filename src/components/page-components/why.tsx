@@ -24,9 +24,9 @@ const Why: React.FC<WhyProps> = ({
   className = '',
 }) => {
   return (
-    <div data-navbar-color="light" className={`py-16 sm:py-44 ${className}`}>
+    <div className="overflow-hidden bg-white py-14 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-4xl lg:text-center">
+        <div className="mx-auto max-w-4xl lg:max-w-4xl lg:text-center">
           <h2 className="subheader-mobile-gradient sm:subheader-gradient">
             {title}
           </h2>
@@ -43,7 +43,7 @@ const Why: React.FC<WhyProps> = ({
             </h3>
           )}
         </div>
-        <div className="mx-auto mt-10 max-w-2xl sm:mt-16 lg:max-w-none">
+        <div className="mx-auto mt-10 max-w-4xl sm:mt-16 lg:max-w-none">
           <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-12 lg:max-w-none lg:grid-cols-3">
             {features.map((feature, index) => (
               <div key={index} className="flex flex-col">
