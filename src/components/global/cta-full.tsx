@@ -8,7 +8,7 @@ interface CTAFullProps {
   description: string
   imageSrc: string
   imageAlt?: string
-  list: string[]
+  list?: string[]
   linkHref: string
   linkText: string
 }
@@ -18,10 +18,12 @@ export const CTAFull: FC<CTAFullProps> = ({
   description,
   imageSrc,
   imageAlt = 'CTA Image',
-  list,
+  list = [],
   linkHref,
   linkText,
 }) => {
+  const hasList = list && list.length > 0
+
   return (
     <div
       data-navbar-color="dark"
@@ -44,21 +46,26 @@ export const CTAFull: FC<CTAFullProps> = ({
           </div>
           <div className="w-full flex-auto">
             <h2 className="subheader-light">{title}</h2>
-            <ul
-              role="list"
-              className="grid grid-cols-1 gap-x-8 gap-y-3 py-4 text-base/7 text-white sm:grid-cols-2"
-            >
-              {list.map((ctaList) => (
-                <li key={ctaList} className="flex gap-x-3">
-                  <CheckCircleIcon
-                    aria-hidden="true"
-                    className="h-7 w-5 flex-none"
-                  />
-                  {ctaList}
-                </li>
-              ))}
-            </ul>
-            <div className="mt-10 flex">
+            <p className="mt-4 text-lg text-white">{description}</p>
+
+            {hasList && (
+              <ul
+                role="list"
+                className="grid grid-cols-1 gap-x-8 gap-y-3 py-4 text-base/7 text-white sm:grid-cols-2"
+              >
+                {list.map((ctaList) => (
+                  <li key={ctaList} className="flex gap-x-3">
+                    <CheckCircleIcon
+                      aria-hidden="true"
+                      className="h-7 w-5 flex-none"
+                    />
+                    {ctaList}
+                  </li>
+                ))}
+              </ul>
+            )}
+
+            <div className={`flex ${hasList ? 'mt-10' : 'mt-6'}`}>
               <Link
                 href={linkHref}
                 className="text-md rounded-sm px-4 py-2 font-semibold text-white ring-2 ring-white hover:bg-white hover:text-gray-600"

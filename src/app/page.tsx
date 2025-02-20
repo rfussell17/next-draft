@@ -4,9 +4,9 @@ import Testimonial from '@/components/media/testimonials/testimonial'
 import Testimonials from '@/components/media/testimonials/testimonials-group'
 import CaseStudyHome from '@/components/page-components/home/case-study-home'
 import Hero from '@/components/page-components/home/hero'
-import What from '@/components/page-components/home/what'
 
 import How from '@/components/page-components/how'
+import What from '@/components/page-components/what'
 import Why from '@/components/page-components/why'
 import type { Metadata } from 'next'
 
@@ -33,7 +33,30 @@ export default function Home() {
     <div className="overflow-hidden">
       <Hero />
       <main>
-        <What />
+        <What
+          title="A Content Creation Agency for Technical Writing"
+          subtitleBold="Transform your technical marketing"
+          subtitleRegular="with expert-written content that resonates with developers and generates qualified leads."
+          features={[
+            {
+              title: 'Drive Technical Authority',
+              description:
+                "We create in-depth technical tutorials, guides, and documentation that showcase your product's capabilities while building credibility with developers.",
+            },
+            {
+              title: 'Scale Your Content Program',
+              description:
+                'Our network of technical experts delivers consistent, high-quality content that frees your team to focus on core business priorities.',
+            },
+            {
+              title: 'Generate Developer Interest',
+              description:
+                'From technical blog posts to product tutorials, we create content that attracts developers and converts them into engaged users.',
+            },
+          ]}
+          imageSrc="/site/team_draft_dev.jpg"
+          imageAlt="Technical content development"
+        />
         <SocialProof />
         <Why
           title="The Draft.dev Difference"

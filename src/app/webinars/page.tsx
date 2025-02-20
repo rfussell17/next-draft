@@ -26,15 +26,6 @@ const ctaProps = [
 export default function Webinars() {
   return (
     <>
-      {/* <EventHeader
-        title="Draft.Dev Webinars"
-        descriptionOne="Elevate your developer marketing expertise with our monthly webinar series."
-        descriptionTwo=""
-        image={{
-          src: '/site/headers/webinars_draft_dev.jpg',
-          alt: 'Draft.dev Webinars',
-        }}
-      /> */}
       <MedHeader
         title="Draft.Dev Webinars"
         descriptionOne="Elevate your developer marketing expertise with our monthly webinar series."

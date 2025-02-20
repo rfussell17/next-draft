@@ -29,7 +29,7 @@ const UpcomingWebinars = () => {
                 </div>
               </div>
 
-              <dl className="mt-6 max-w-xl space-y-8 text-gray-700 lg:max-w-none">
+              <dl className="mt-6 max-w-xl space-y-8 text-lg text-gray-700 lg:max-w-none">
                 <div className="relative">
                   <dd className="my-4">
                     Technical professionals come in many roles—developers,
@@ -57,7 +57,7 @@ const UpcomingWebinars = () => {
                 </Link>
                 <Link
                   href="#past-webinars"
-                  className="my-2 text-sm font-semibold text-gray-600 hover:text-gray-700 sm:my-0 sm:text-base"
+                  className="my-2 text-base font-semibold text-gray-600 hover:text-gray-700 sm:my-0 sm:text-base"
                 >
                   Watch past webinars <span aria-hidden="true">→</span>
                 </Link>
