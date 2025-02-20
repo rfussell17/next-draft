@@ -44,7 +44,7 @@ const Hero: React.FC = () => {
                           alt=""
                           height={1000}
                           width={1000}
-                          src="/site/team_draft_dev.jpg"
+                          src="/site/small-portrait/coding_draft_dev.jpg"
                           className="aspect-[2/3] w-full rounded-xl object-cover"
                         />
                       </div>
@@ -58,7 +58,7 @@ const Hero: React.FC = () => {
                           alt=""
                           height={1000}
                           width={1000}
-                          src="/site/content_draft_dev.jpg"
+                          src="/site/small-portrait/sales_draft_dev.jpg"
                           className="aspect-[2/3] w-full rounded-xl object-cover"
                         />
                       </div>
@@ -74,7 +74,7 @@ const Hero: React.FC = () => {
                           alt=""
                           height={1000}
                           width={1000}
-                          src="/site/trust_draft_dev.jpg"
+                          src="/site/small-portrait/laptop_draft_dev.jpg"
                           className="aspect-[2/3] w-full rounded-xl object-cover"
                         />
                       </div>
@@ -88,7 +88,7 @@ const Hero: React.FC = () => {
                           alt=""
                           height={1000}
                           width={1000}
-                          src="/site/marketing_draft_dev.jpg"
+                          src="/site/small-portrait/commit_draft_dev.jpg"
                           className="aspect-[2/3] w-full rounded-xl object-cover"
                         />
                       </div>

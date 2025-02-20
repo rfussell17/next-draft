@@ -121,7 +121,7 @@ export default function Home() {
                 "Once your content plan is approved and our team will get started, you'll receive tested and edited content that's ready to publish every 1-2 weeks. If our work ever falls short of your expectations, we'll work with you to revise it.",
             },
           ]}
-          imageSrc="/site/dev_draft_dev.jpg"
+          imageSrc="/site/hero/commit_draft_dev.jpg"
           imageAlt="Technical content development"
         />
         <CaseStudyHome />
