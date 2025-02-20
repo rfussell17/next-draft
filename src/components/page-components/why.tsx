@@ -32,10 +32,10 @@ const Why: React.FC<WhyProps> = ({
           </h2>
 
           {(subtitle || subtitleBold) && (
-            <h3 className="paragraph-dark py-3">
+            <h3 className="sm:paragraph-dark py-3 text-lg text-gray-600">
               {subtitle}
               {subtitleBold && (
-                <span className="lead-dark font-semibold">
+                <span className="sm:lead-dark font-semibold">
                   {subtitle && <br />}
                   {subtitleBold}
                 </span>
@@ -52,7 +52,9 @@ const Why: React.FC<WhyProps> = ({
                 </dt>
                 <dd className="mt-2 flex flex-auto flex-col text-base sm:text-lg">
                   {feature.description && (
-                    <p className="my-2 flex-auto">{feature.description}</p>
+                    <p className="my-0 flex-auto sm:my-2">
+                      {feature.description}
+                    </p>
                   )}
                   <p className={feature.description ? 'mt-4' : 'mt-2'}>
                     <Link

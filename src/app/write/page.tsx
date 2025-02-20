@@ -3,15 +3,6 @@ import AirtableEmbed from '@/components/page-components/vendors/air-table'
 
 import type { Metadata } from 'next'
 
-const ctaProps = [
-  'marketing-specific content in here',
-  'Flexible work hours',
-  '30 days of paid vacation',
-  'Annual team retreats',
-  'Benefits for you and your family',
-  'A great work environment',
-]
-
 export const metadata: Metadata = {
   title: 'Write for Draft.dev',
   description:

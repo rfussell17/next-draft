@@ -1,5 +1,5 @@
 import { getWpPosts } from '@/app/lib/wordpress'
-import PageHeader from '@/components/global/page-header'
+import { MedHeader } from '@/components/global/headers/med-header'
 
 import type { Metadata } from 'next'
 import type { StaticImport } from 'next/dist/shared/lib/get-img-props'
@@ -23,7 +23,9 @@ export const metadata: Metadata = {
 }
 
 function Header() {
-  return <PageHeader header="Draft.dev blog" />
+  return (
+    <MedHeader title="Draft.dev blog" descriptionOne="" descriptionTwo={''} />
+  )
 }
 
 export const dynamic = 'force-dynamic'

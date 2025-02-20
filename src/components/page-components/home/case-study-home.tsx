@@ -5,14 +5,21 @@ const CaseStudyHome = () => {
     <main className="relative isolate bg-gradient-brand py-16">
       <div className="px-6 lg:px-8">
         <div className="mx-auto max-w-5xl text-center uppercase">
-          <h2 className="subheader-light" style={{ lineHeight: '1.5' }}>
+          <h2
+            className="subheader-mobile-light sm:subheader-light"
+            style={{ lineHeight: '1.5' }}
+          >
             How{' '}
             <span className="inline-flex items-center bg-white px-4">
-              <span className="subheader-gradient">Earthly</span>
+              <span className="sm:subheader-gradient text-xl text-gradient-1">
+                Earthly
+              </span>
             </span>{' '}
             Increased Its Monthly Blog Visitors by{' '}
             <span className="inline-flex items-center bg-white px-4">
-              <span className="subheader-gradient">346%</span>
+              <span className="sm:subheader-gradient text-xl text-gradient-1">
+                346%
+              </span>
             </span>{' '}
             and ramped up its content production with Draft.dev
           </h2>

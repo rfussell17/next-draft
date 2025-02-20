@@ -1,19 +1,9 @@
-import { CTAFull } from '@/components/global/cta-full'
 import { MedHeader } from '@/components/global/headers/med-header'
 import SocialProof from '@/components/media/social-proof'
 import TestimonialsGroup from '@/components/media/testimonials/testimonials-group'
 import CalendlyWidget from '@/components/page-components/vendors/calendly'
 
 import type { Metadata } from 'next'
-
-const ctaProps = [
-  'marketing-specific content in here',
-  'Flexible work hours',
-  '30 days of paid vacation',
-  'Annual team retreats',
-  'Benefits for you and your family',
-  'A great work environment',
-]
 
 export const metadata: Metadata = {
   title: 'Call Us',
@@ -36,15 +26,6 @@ export default function Call() {
         <CalendlyWidget url="https://calendly.com/d/2by-kmh-7q6" />
         <SocialProof />
         <TestimonialsGroup />
-        <CTAFull
-          title="Book a discovery call"
-          description="Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in accusamus quisquam."
-          imageSrc="/site/cta_draft_dev.jpg"
-          imageAlt="Team environment"
-          list={ctaProps}
-          linkHref="/call"
-          linkText="Book a Discovery Call"
-        />
       </main>
     </>
   )

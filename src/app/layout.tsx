@@ -1,3 +1,4 @@
+import { BookDiscoveryCall } from '@/components/global/cta/book-discovery-call'
 import FAQ from '@/components/global/faq'
 import { Footer } from '@/components/global/footer'
 import DynamicNavbar from '@/components/global/navbar-dynamic'
@@ -53,6 +54,7 @@ export default function RootLayout({
         <DynamicNavbar />
         <div className="flex min-h-screen flex-col">
           <main className="flex-grow">{children}</main>
+          <BookDiscoveryCall />
           <FAQ />
           <Footer />
         </div>

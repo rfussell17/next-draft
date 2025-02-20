@@ -1,4 +1,3 @@
-import { CTAFull } from '@/components/global/cta-full'
 import SocialProof from '@/components/media/social-proof'
 import Testimonial from '@/components/media/testimonials/testimonial'
 import Testimonials from '@/components/media/testimonials/testimonials-group'
@@ -19,20 +18,11 @@ export const metadata: Metadata = {
   },
 }
 
-const ctaProps = [
-  'Competitive salaries',
-  'Flexible work hours',
-  '30 days of paid vacation',
-  'Annual team retreats',
-  'Benefits for you and your family',
-  'A great work environment',
-]
-
 export default function Home() {
   return (
     <div className="overflow-hidden">
-      <Hero />
       <main>
+        <Hero />
         <What
           title="A Content Creation Agency for Technical Writing"
           subtitleBold="Transform your technical marketing"
@@ -125,18 +115,8 @@ export default function Home() {
           imageAlt="Technical content development"
         />
         <CaseStudyHome />
+        <Testimonials />
       </main>
-      <Testimonials />
-
-      <CTAFull
-        title="Book a discovery call"
-        description="Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in accusamus quisquam."
-        imageSrc="/site/cta_draft_dev.jpg"
-        imageAlt="Team environment"
-        list={ctaProps}
-        linkHref="/discovery-call"
-        linkText="Book a Discovery Call"
-      />
     </div>
   )
 }

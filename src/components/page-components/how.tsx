@@ -37,9 +37,9 @@ const How: React.FC<HowProps> = ({
               </h2>
 
               {(subtitleBold || subtitleRegular) && (
-                <h3 className="paragraph-dark py-4">
+                <h3 className="sm:paragraph-dark py-4 text-lg text-gray-600">
                   {subtitleBold && (
-                    <span className="lead-dark font-semibold">
+                    <span className="sm:lead-dark text-lg font-semibold text-gray-600">
                       {subtitleBold}
                       {subtitleRegular && ' '}
                     </span>

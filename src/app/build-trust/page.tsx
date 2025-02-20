@@ -1,5 +1,4 @@
 import CardList from '@/components/global/card-list'
-import { CTAFull } from '@/components/global/cta-full'
 import ServiceHeader from '@/components/global/headers/service-header'
 import MedCaseStatusHero from '@/components/media/case-studies/med-case-status-hero'
 import SocialProof from '@/components/media/social-proof'
@@ -15,15 +14,6 @@ export const metadata: Metadata = {
     follow: false,
   },
 }
-
-const ctaProps = [
-  'marketing-specific content in here',
-  'Flexible work hours',
-  '30 days of paid vacation',
-  'Annual team retreats',
-  'Benefits for you and your family',
-  'A great work environment',
-]
 
 const cardListPropsOne = [
   'Private forum access',
@@ -99,15 +89,6 @@ export default function BuildTrust() {
         requestPricingText="Request pricing"
       />
       <TestimonialsGroup />
-      <CTAFull
-        title="Book a discovery call"
-        description="Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in accusamus quisquam."
-        imageSrc="/site/cta_draft_dev.jpg"
-        imageAlt="Team environment"
-        list={ctaProps}
-        linkHref="/discovery-call"
-        linkText="Book a Discovery Call"
-      />
     </>
   )
 }

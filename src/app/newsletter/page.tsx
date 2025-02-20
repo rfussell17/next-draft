@@ -1,4 +1,3 @@
-import { CTAFull } from '@/components/global/cta-full'
 import { FormHeader } from '@/components/global/headers/form-header'
 import TestimonialsGroup from '@/components/media/testimonials/testimonials-group'
 import type { Metadata } from 'next'
@@ -12,15 +11,6 @@ export const metadata: Metadata = {
   },
 }
 
-const ctaProps = [
-  'marketing-specific content in here',
-  'Flexible work hours',
-  '30 days of paid vacation',
-  'Annual team retreats',
-  'Benefits for you and your family',
-  'A great work environment',
-]
-
 export default function Newsletter() {
   return (
     <>
@@ -33,15 +23,6 @@ export default function Newsletter() {
       </div>
 
       <TestimonialsGroup />
-      <CTAFull
-        title="Book a discovery call"
-        description="Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in accusamus quisquam."
-        imageSrc="/site/cta_draft_dev.jpg"
-        imageAlt="Team environment"
-        list={ctaProps}
-        linkHref="/discovery-call"
-        linkText="Book a Discovery Call"
-      />
     </>
   )
 }

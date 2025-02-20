@@ -1,5 +1,4 @@
 import CardList from '@/components/global/card-list'
-import { CTAFull } from '@/components/global/cta-full'
 import ServiceHeader from '@/components/global/headers/service-header'
 import MedCaseEarthly from '@/components/media/case-studies/med-case-earthly'
 import SocialProof from '@/components/media/social-proof'
@@ -20,15 +19,6 @@ export const metadata: Metadata = {
 }
 
 export default function ForMarketers(): JSX.Element {
-  const ctaProps = [
-    'marketing-specific content in here',
-    'Flexible work hours',
-    '30 days of paid vacation',
-    'Annual team retreats',
-    'Benefits for you and your family',
-    'A great work environment',
-  ]
-
   const cardListPropsOne = [
     'Private forum access',
     'SEO Keyword and topic ideation',
@@ -60,7 +50,7 @@ export default function ForMarketers(): JSX.Element {
           text: 'See Our Lead Generation Package',
           href: '/lead-generation',
         }}
-        imageSrc="/site/marketing_draft_dev.jpg"
+        imageSrc="/site/med-portrait/developers_draft_dev.jpg"
         imageAlt="Developer Marketing"
         showLogos={true}
       />
@@ -120,7 +110,7 @@ export default function ForMarketers(): JSX.Element {
                 "Once your content plan is approved and our team will get started, you'll receive tested and edited content that's ready to publish every 1-2 weeks. If our work ever falls short of your expectations, we'll work with you to revise it.",
             },
           ]}
-          imageSrc="/site/dev_draft_dev.jpg"
+          imageSrc="/site/med-portrait/sales_draft_dev.jpg"
           imageAlt="Technical content development"
         />
         <Testimonial
@@ -142,15 +132,6 @@ export default function ForMarketers(): JSX.Element {
           requestPricingText="Request pricing"
         />
         <TestimonialsGroup />
-        <CTAFull
-          title="Book a discovery call"
-          description="Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in accusamus quisquam."
-          imageSrc="/site/cta_draft_dev.jpg"
-          imageAlt="Team environment"
-          list={ctaProps}
-          linkHref="/discovery-call"
-          linkText="Book a Discovery Call"
-        />
       </main>
     </div>
   )
