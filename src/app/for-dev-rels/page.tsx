@@ -110,7 +110,7 @@ export default function ForDevRels(): JSX.Element {
                 "After finalizing your strategy, our expert team begins creating high-quality technical content delivered every 1-2 weeks. Each piece undergoes thorough testing and editing, and we'll refine any content until it meets your standards.",
             },
           ]}
-          imageSrc="/site/team_draft_dev.jpg"
+          imageSrc="/site/med-portrait/code_session_draft_dev.jpg"
           imageAlt="Technical content development"
         />
 

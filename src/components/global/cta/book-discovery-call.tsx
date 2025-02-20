@@ -1,4 +1,3 @@
-import { CheckCircleIcon } from '@heroicons/react/20/solid'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -32,46 +31,18 @@ export const BookDiscoveryCall = () => {
               content this year, Draft.dev might be a great fit.
             </p>
 
-            <ul
-              role="list"
-              className="grid grid-cols-1 gap-x-8 gap-y-3 py-4 text-base/7 text-white sm:grid-cols-2"
-            >
-              <li className="flex gap-x-3">
-                <CheckCircleIcon
-                  aria-hidden="true"
-                  className="h-7 w-5 flex-none"
-                />
-                Unlimited projects
-              </li>
-              <li className="flex gap-x-3">
-                <CheckCircleIcon
-                  aria-hidden="true"
-                  className="h-7 w-5 flex-none"
-                />
-                24/7 priority support
-              </li>
-              <li className="flex gap-x-3">
-                <CheckCircleIcon
-                  aria-hidden="true"
-                  className="h-7 w-5 flex-none"
-                />
-                Advanced analytics
-              </li>
-              <li className="flex gap-x-3">
-                <CheckCircleIcon
-                  aria-hidden="true"
-                  className="h-7 w-5 flex-none"
-                />
-                Custom integrations
-              </li>
-            </ul>
-
-            <div className="mt-10">
+            <div className="mt-6 flex flex-col items-start gap-x-6 sm:mt-16 sm:flex-row sm:items-center">
               <Link
-                href="/pricing/premium"
-                className="text-md rounded-sm px-4 py-2 font-semibold text-white ring-2 ring-white hover:bg-white hover:text-gray-600"
+                href="#"
+                className="my-2 rounded-sm px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm ring-2 ring-white hover:bg-white hover:text-gray-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary sm:my-0 sm:text-base"
               >
-                Upgrade now <span aria-hidden="true">&rarr;</span>
+                Schedule a Discovery Call
+              </Link>
+              <Link
+                href="#"
+                className="my-2 text-sm font-semibold text-white hover:text-gray-200 sm:my-0 sm:text-base"
+              >
+                Email sales@draft.dev <span aria-hidden="true">→</span>
               </Link>
             </div>
           </div>

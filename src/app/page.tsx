@@ -44,7 +44,7 @@ export default function Home() {
                 'From technical blog posts to product tutorials, we create content that attracts developers and converts them into engaged users.',
             },
           ]}
-          imageSrc="/site/med-portrait/pair_programming.jpg"
+          imageSrc="/site/med-portrait/pair_programming_draft_dev.jpg"
           imageAlt="Technical content development"
         />
         <SocialProof />
