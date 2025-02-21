@@ -1,5 +1,4 @@
 import { MedHeader } from '@/components/global/headers/med-header'
-import { LogosDark } from '@/components/media/logos-dark'
 import SocialProof from '@/components/media/social-proof'
 import Team from '@/components/page-components/company/team'
 import What from '@/components/page-components/company/what'
@@ -90,7 +89,6 @@ export default function About() {
           imageSrc="/site/med-portrait/developers_draft_dev.jpg"
           imageAlt="Technical content development"
         />
-        <LogosDark />
       </main>
     </>
   )

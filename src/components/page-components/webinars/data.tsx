@@ -1,6 +1,6 @@
-import type { Webinar } from '@/components/global/types'
+import type { Data } from '@/components/global/types'
 
-export const pastWebinars: Webinar[] = [
+export const pastWebinars: Data[] = [
   {
     id: '1',
     title: 'Strategies for Enterprise Growth through Developer Ecosystems',

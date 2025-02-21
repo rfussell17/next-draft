@@ -1,5 +1,5 @@
-import type { Webinar } from '@/components/global/types'
-import { WebinarCard } from './card'
+import type { Data } from '@/components/global/types'
+import { ResourceCard } from '../resources/resource-card'
 import { pastWebinars } from './data'
 
 const PastWebinars = () => {
@@ -12,8 +12,8 @@ const PastWebinars = () => {
           </h2>
 
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {pastWebinars.map((webinar: Webinar) => (
-              <WebinarCard key={webinar.id} webinar={webinar} />
+            {pastWebinars.map((webinar: Data) => (
+              <ResourceCard key={webinar.id} resource={webinar} />
             ))}
           </div>
         </div>

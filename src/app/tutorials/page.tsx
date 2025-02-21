@@ -1,6 +1,6 @@
 import ServiceHeader from '@/components/global/headers/service-header'
-import SocialProof from '@/components/media/social-proof'
 import TestimonialsGroup from '@/components/media/testimonials/testimonials-group'
+import Examples from '@/components/page-components/resources/tutorials/examples'
 import ServiceInfo from '@/components/page-components/resources/tutorials/service-info'
 
 import type { Metadata } from 'next'
@@ -22,8 +22,8 @@ export default function Tutorials() {
         description="We can help you create in-depth tutorials designed to reach software developers."
       />
       <ServiceInfo />
+      <Examples />
       <TestimonialsGroup />
-      <SocialProof />
     </>
   )
 }

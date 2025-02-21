@@ -1,6 +1,6 @@
 import { MedHeader } from '@/components/global/headers/med-header'
 import TestimonialsGroup from '@/components/media/testimonials/testimonials-group'
-import PastWebinars from '@/components/page-components/webinars/past'
+import PastWebinars from '@/components/page-components/webinars/past-webinars'
 import UpcomingWebinars from '@/components/page-components/webinars/upcoming'
 import type { Metadata } from 'next'
 

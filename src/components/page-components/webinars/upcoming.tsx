@@ -65,16 +65,18 @@ const UpcomingWebinars = () => {
             </div>
           </div>
 
-          <div className="rounded-4xl bg-white/15 shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5 max-lg:mx-auto max-lg:max-w-xs">
-            <div className="rounded-4xl p-2 shadow-md shadow-black/5">
-              <div className="overflow-hidden rounded-3xl shadow-2xl outline outline-1 -outline-offset-1 outline-black/10">
-                <Image
-                  alt="Technical content development"
-                  src="/site/team_draft_dev.jpg"
-                  width={500}
-                  height={300}
-                  className="w-full rounded-xl"
-                />
+          <div className="hidden lg:ml-auto lg:block">
+            <div className="rounded-4xl bg-white/15 shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5">
+              <div className="rounded-4xl p-2 shadow-md shadow-black/5">
+                <div className="overflow-hidden rounded-3xl shadow-2xl outline outline-1 -outline-offset-1 outline-black/10">
+                  <Image
+                    alt="webinars"
+                    src="/site/med-portrait/webinar_draft_dev.jpg"
+                    width={400}
+                    height={600}
+                    className="rounded-xl"
+                  />
+                </div>
               </div>
             </div>
           </div>
