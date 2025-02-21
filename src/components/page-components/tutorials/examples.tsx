@@ -1,11 +1,11 @@
 import type { Data } from '@/components/global/types'
 
-import { ResourceCard } from '../resource-card'
+import { ResourceCard } from '../resources/resource-card'
 import { tutorials } from './data'
 
 const Examples = () => {
   return (
-    <div className="overflow-hidden bg-gradient-brand py-24" id="past-webinars">
+    <div className="overflow-hidden bg-gradient-brand py-24" id="examples">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="">
           <h2 className="sm:subheader-light subheader-mobile-light">
