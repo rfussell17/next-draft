@@ -14,20 +14,20 @@ export const metadata: Metadata = {
   },
 }
 
-export default function Tutorials() {
+export default function VideoTutorials() {
   return (
     <>
       <ServiceHeader
-        title="Developer Tutorials by Draft.dev"
+        title="Video Tutorials by Draft.dev"
         primaryCTA={{
           text: 'Book a Discovery Call',
           href: '/call',
         }}
         secondaryCTA={{
-          text: 'Tutorial Examples',
+          text: 'Video Tutorial Examples',
           href: '#examples',
         }}
-        description="We can help you create in-depth tutorials designed to reach software developers."
+        description="We create high-quality video tutorials for a technical audience."
       />
       <ServiceInfo />
       <Examples />

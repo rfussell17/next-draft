@@ -36,7 +36,7 @@ function SitemapHeading({ children }: { children: React.ReactNode }) {
 }
 
 function SitemapLinks({ children }: { children: React.ReactNode }) {
-  return <ul className="mt-6 space-y-4 text-sm/6">{children}</ul>
+  return <ul className="mt-6 space-y-2 text-sm/6">{children}</ul>
 }
 
 function SitemapLink(props: React.ComponentPropsWithoutRef<typeof Link>) {
@@ -58,9 +58,10 @@ function Sitemap() {
           <span className="sitemap-heading">Product</span>
         </SitemapHeading>
         <SitemapLinks>
-          <SitemapLink href="/pricing">Pricing </SitemapLink>
-          <SitemapLink href="/terms-of-service">Terms of service</SitemapLink>
-          <SitemapLink href="/privacy-policy">Privacy policy</SitemapLink>
+          <SitemapLink href="/lead-generation">Lead Generation</SitemapLink>
+          <SitemapLink href="/tutorials">Tutorials</SitemapLink>
+          <SitemapLink href="/video-tutorials">Video Tutorials</SitemapLink>
+          <SitemapLink href="/e-books">E-Books</SitemapLink>
         </SitemapLinks>
       </div>
       <div>
@@ -70,6 +71,10 @@ function Sitemap() {
         <SitemapLinks>
           <SitemapLink href="/about">Our Team</SitemapLink>
           <SitemapLink href="/write">Write for Draft</SitemapLink>
+          <SitemapLink href="/terms-of-service">
+            Terms of Service [NEED]
+          </SitemapLink>
+          <SitemapLink href="/privacy-policy">Privacy Policy</SitemapLink>
         </SitemapLinks>
       </div>
       <div>
@@ -78,9 +83,9 @@ function Sitemap() {
         </SitemapHeading>
         <SitemapLinks>
           <SitemapLink href="/blog">Blog</SitemapLink>
+          <SitemapLink href="/resources">Resources</SitemapLink>
           <SitemapLink href="/newsletter">Newsletter</SitemapLink>
           <SitemapLink href="/webinars">Webinars</SitemapLink>
-          <SitemapLink href="/video-tutorials">Video Tutorials</SitemapLink>
         </SitemapLinks>
       </div>
       <div>
@@ -89,7 +94,9 @@ function Sitemap() {
         </SitemapHeading>
         <SitemapLinks>
           <SitemapLink href="/case-studies">Case Studies</SitemapLink>
-          <SitemapLink href="/call">Book a Call</SitemapLink>
+          <SitemapLink href="/testimonials">Testimonials</SitemapLink>
+          <SitemapLink href="/faq">Frequently Asked Questions</SitemapLink>
+          <SitemapLink href="/call">Book a Discovery Call</SitemapLink>
         </SitemapLinks>
       </div>
     </>

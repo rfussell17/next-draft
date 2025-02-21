@@ -1,4 +1,3 @@
-import { LogosFlex } from '@/components/media/logos-flex'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
@@ -27,20 +26,15 @@ const ServiceHeader: React.FC<ServiceHeaderProps> = ({
   secondaryCTA,
   imageSrc,
   imageAlt = '',
-  showLogos = true,
   className = '',
 }) => {
   return (
     <div className={`bg-gradient-brand pt-20 ${className}`}>
       <main className="relative isolate pb-16">
-        <div
-          aria-hidden="true"
-          className="absolute left-1/2 right-0 top-0 -z-10 -ml-24 transform-gpu overflow-hidden blur-3xl lg:ml-24 xl:ml-48"
-        />
         <div className="overflow-hidden">
           <div className="mx-auto max-w-7xl px-6 py-6 sm:py-16 lg:px-8">
-            <div className="mx-auto max-w-2xl gap-x-12 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
-              <div className="relative w-full lg:shrink-0 xl:max-w-2xl">
+            <div className="mx-auto max-w-5xl gap-x-12 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
+              <div className="relative w-full lg:shrink-0 xl:max-w-5xl">
                 <h1 className="sm:header-light mb-6 pb-4 font-code text-3xl font-semibold text-white">
                   {title}
                 </h1>
@@ -84,11 +78,6 @@ const ServiceHeader: React.FC<ServiceHeaderProps> = ({
               )}
             </div>
           </div>
-          {showLogos && (
-            <div className="mx-auto max-w-7xl px-6 lg:px-8">
-              <LogosFlex />
-            </div>
-          )}
         </div>
       </main>
     </div>
