@@ -17,10 +17,6 @@ export default function Call() {
         title="Book a Discovery Call"
         descriptionOne="We write technical marketing content designed to reach software developers, DevOps practitioners, data engineers, and engineering managers. If your SaaS business is ready to invest in technical content this year, Draft.dev might be a great fit."
         descriptionTwo="Use the form below to schedule a discovery call or reach out to sales@draft.dev."
-        image={{
-          src: '/site/headers/terms_draft_dev.jpg',
-          alt: 'Draft.dev Newsletter',
-        }}
       />
       <main className="overflow-hidden">
         <CalendlyWidget url="https://calendly.com/d/2by-kmh-7q6" />

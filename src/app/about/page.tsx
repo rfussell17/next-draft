@@ -26,10 +26,6 @@ export default function About() {
           tutorials, blog posts, and e-books for our clients. We're a small but quickly
           growing team of technologists, writers, marketers, and editors."
         descriptionTwo="Want to join us? Learn more about our open roles here."
-        image={{
-          src: '/site/headers/newsletter_draft_dev.jpg',
-          alt: 'Draft.dev Newsletter',
-        }}
       />
 
       <main className="overflow-hidden">

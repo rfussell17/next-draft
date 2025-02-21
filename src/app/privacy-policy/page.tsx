@@ -16,12 +16,8 @@ export default function PrivacyPolicy() {
         title="Draft.Dev Privacy Policy"
         descriptionOne="Updated 12/22/20"
         descriptionTwo="We want to protect your privacy. In order to operate, our web sites and business operations may gather information about you with your consent. These terms explain how this may happen, what we do with any potentially personal information, and how you can get in contact should you have any concerns."
-        image={{
-          src: '/site/headers/newsletter_draft_dev.jpg',
-          alt: 'Draft.dev Newsletter',
-        }}
       />
-      <div className="mx-auto mt-16 max-w-7xl px-6 sm:mt-24 lg:px-8">
+      <div className="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8">
         <h2 className="subheader-dark mt-16">Information Collected</h2>
         <p className="paragraph-dark my-5 max-w-5xl">
           Portable CTO, LLC - which owns and operates this site - collects your

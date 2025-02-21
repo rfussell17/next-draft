@@ -1,6 +1,6 @@
-import CardList from '@/components/global/card-list'
 import ServiceHeader from '@/components/global/headers/service-header'
 import MedCaseLoft from '@/components/media/case-studies/med-case-loft'
+import { LogosDark } from '@/components/media/logos-dark'
 import SocialProof from '@/components/media/social-proof'
 import TestimonialsGroup from '@/components/media/testimonials/testimonials-group'
 import Why from '@/components/page-components/why'
@@ -14,21 +14,6 @@ export const metadata: Metadata = {
     follow: false,
   },
 }
-
-const cardListPropsOne = [
-  'Private forum access',
-  'SEO Keyword and topic ideation',
-  'Diagrams, and code samples',
-  'Technical reviews',
-  'Professional editing',
-  'Social media collateral',
-]
-
-const cardListPropsTwo = [
-  'Technical ebooks',
-  'Executive ghostwriting',
-  'Video tutorials',
-]
 
 export default function BuildTrust() {
   return (
@@ -44,9 +29,6 @@ export default function BuildTrust() {
           text: 'See Our Lead Generation Package',
           href: '/lead-generation',
         }}
-        imageSrc="/site/med-portrait/workflow_draft_dev.jpg"
-        imageAlt="Developer Marketing"
-        showLogos={true}
       />
       <Why
         title="Consistently turn organic traffic into MQLs and SQLs"
@@ -79,15 +61,7 @@ export default function BuildTrust() {
       />
       <SocialProof />
       <MedCaseLoft />
-      <CardList
-        title="Ongoing technical content"
-        subtitle="Build a steady stream of technical content that scales with your business."
-        includedFeatures={cardListPropsOne}
-        addonTitle="Add-on services"
-        addonFeatures={cardListPropsTwo}
-        requestPricingHref="#"
-        requestPricingText="Request pricing"
-      />
+      <LogosDark />
       <TestimonialsGroup />
     </>
   )

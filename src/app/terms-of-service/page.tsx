@@ -18,10 +18,6 @@ export default function TermsOfService() {
         title="Draft.Dev Terms of Service"
         descriptionOne="..."
         descriptionTwo="..."
-        image={{
-          src: '/site/headers/terms_draft_dev.jpg',
-          alt: 'Draft.dev Newsletter',
-        }}
       />
       <TestimonialsGroup />
     </>

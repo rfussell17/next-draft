@@ -21,6 +21,7 @@ export default function Webinars() {
         descriptionOne="Elevate your developer marketing expertise with our monthly webinar series."
         descriptionTwo=""
       />
+
       <UpcomingWebinars />
       <PastWebinars />
       <TestimonialsGroup />

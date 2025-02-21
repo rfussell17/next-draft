@@ -16,10 +16,6 @@ export default function Write() {
         title="Write for Draft.dev"
         descriptionOne="If you're a software developer and you want to build your personal brand while getting paid to write about interesting technical topics, you've come to the right place. "
         descriptionTwo="We create content that will be read by a wide range of readers around the world. As such, we're committed to supporting diversity in our writers and encourage everyone at all experience levels to apply."
-        image={{
-          src: '/site/headers/write_draft_dev.jpg',
-          alt: 'Trust Draft Dev',
-        }}
       />
       <main className="block">
         <AirtableEmbed />

@@ -1,6 +1,6 @@
-import CardList from '@/components/global/card-list'
 import ServiceHeader from '@/components/global/headers/service-header'
 import MedCaseStatusHero from '@/components/media/case-studies/med-case-status-hero'
+import { LogosDark } from '@/components/media/logos-dark'
 import SocialProof from '@/components/media/social-proof'
 import Testimonial from '@/components/media/testimonials/testimonial'
 import TestimonialsGroup from '@/components/media/testimonials/testimonials-group'
@@ -19,21 +19,6 @@ export const metadata: Metadata = {
 }
 
 export default function ForDevRels(): JSX.Element {
-  const cardListPropsOne = [
-    'Private forum access',
-    'SEO Keyword and topic ideation',
-    'Diagrams, and code samples',
-    'Technical reviews',
-    'Professional editing',
-    'Social media collateral',
-  ]
-
-  const cardListPropsTwo = [
-    'Technical ebooks',
-    'Executive ghostwriting',
-    'Video tutorials',
-  ]
-
   return (
     <div>
       <ServiceHeader
@@ -47,9 +32,6 @@ export default function ForDevRels(): JSX.Element {
           text: 'See Our Lead Generation Package',
           href: '/lead-generation',
         }}
-        imageSrc="/site/marketing_draft_dev.jpg"
-        imageAlt="Developer Marketing"
-        showLogos={true}
       />
       <main>
         <Why
@@ -123,15 +105,7 @@ export default function ForDevRels(): JSX.Element {
           imageAlt="Robert Gibb"
         />
         <MedCaseStatusHero />
-        <CardList
-          title="Ongoing technical content"
-          subtitle="Build a steady stream of technical content that scales with your business."
-          includedFeatures={cardListPropsOne}
-          addonTitle="Add-on services"
-          addonFeatures={cardListPropsTwo}
-          requestPricingHref="#"
-          requestPricingText="Request pricing"
-        />
+        <LogosDark />
 
         <TestimonialsGroup />
       </main>
