@@ -4,22 +4,15 @@ interface MedHeaderProps {
   title: string
   descriptionOne: string
   descriptionTwo: string
-  image?: {
-    src: string
-    alt: string
-  }
-  className?: string
 }
 
 export const MedHeader: React.FC<MedHeaderProps> = ({
   title,
   descriptionOne,
   descriptionTwo,
-  image,
-  className = '',
 }) => {
   return (
-    <div className={`bg-gradient-brand pt-36 ${className}`}>
+    <div className="bg-gradient-brand pt-32">
       <main className="relative isolate pb-12">
         <div
           aria-hidden="true"

@@ -5,17 +5,15 @@ interface FormHeaderProps {
   title: string
   descriptionOne?: string
   descriptionTwo?: string
-  className?: string
 }
 
 export const FormHeader: React.FC<FormHeaderProps> = ({
   title,
   descriptionOne,
   descriptionTwo,
-  className = '',
 }) => {
   return (
-    <div className={`bg-gradient-brand pt-36 ${className}`}>
+    <div className="bg-gradient-brand pt-32">
       <main className="relative isolate py-16">
         <div
           aria-hidden="true"

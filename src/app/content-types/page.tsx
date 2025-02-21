@@ -1,7 +1,7 @@
 import ServiceHeader from '@/components/global/headers/service-header'
 import TestimonialsGroup from '@/components/media/testimonials/testimonials-group'
 import Examples from '@/components/page-components/content-types/examples'
-import ServiceInfo from '@/components/page-components/tutorials/service-info'
+import ServiceInfo from '@/components/page-components/content-types/service-info'
 
 import type { Metadata } from 'next'
 

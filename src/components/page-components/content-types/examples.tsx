@@ -36,31 +36,31 @@ const ContentSection = ({ title, description, items }: ContentSectionProps) => (
 const Examples = () => {
   const sections = [
     {
-      title: 'Tutorials',
+      title: '1. Tutorials',
       description:
         'Tutorials provide a step-by-step explanation for why and how to accomplish a specific engineering task. These posts usually include code samples and screenshots.',
       items: tutorials,
     },
     {
-      title: 'Roundups',
+      title: '2. Roundups',
       description:
         'Roundups (or "listicles") offer a collection of comparable products or tools in list form. Good roundups are well-researched and often widely shared.',
       items: roundups,
     },
     {
-      title: 'Comparisons',
+      title: '3. Comparisons',
       description:
         'Similar to roundups, comparisons typically focus on just two or three options and include even more depth to the concepts discussed.',
       items: comparisons,
     },
     {
-      title: 'Technical Guides',
+      title: '4. Technical Guides',
       description:
         'A guide is a high-level overview of a technology or group of technologies. The best guides require technical knowledge and personal experience.',
       items: guides,
     },
     {
-      title: 'Persuasive Writing',
+      title: '5. Persuasive Writing',
       description:
         'Persuasive writing is about making your case to technical decision-makers. It usually requires a mix of engineering experience and domain expertise.',
       items: writing,
@@ -72,9 +72,9 @@ const Examples = () => {
       className="overflow-hidden bg-gradient-brand py-16 sm:py-20"
       id="examples"
     >
-      <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
+      <div className="mx-auto max-w-7xl px-6 py-10 lg:px-8">
         <div className="mx-auto">
-          <div className="space-y-16">
+          <div className="space-y-12">
             {sections.map((section, index) => (
               <ContentSection
                 key={index}

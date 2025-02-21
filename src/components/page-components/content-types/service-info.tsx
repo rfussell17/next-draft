@@ -30,6 +30,12 @@ const ServiceInfo = () => {
                   journey.
                 </p>
               </div>
+
+              <p className="lead-dark py-6 text-xl">
+                <strong>Check out the examples below</strong> to see how
+                different content types work together to create a comprehensive
+                developer marketing strategy.
+              </p>
             </div>
           </div>
 
@@ -38,8 +44,8 @@ const ServiceInfo = () => {
               <div className="rounded-4xl p-2 shadow-md shadow-black/5">
                 <div className="overflow-hidden rounded-3xl shadow-2xl outline outline-1 -outline-offset-1 outline-black/10">
                   <Image
-                    alt="webinars"
-                    src="/site/med-portrait/tutorials_draft_dev.jpg"
+                    alt="coding"
+                    src="/site/med-portrait/coding_draft_dev.jpg"
                     width={400}
                     height={600}
                     className="rounded-xl"

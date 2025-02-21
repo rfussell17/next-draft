@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
@@ -13,10 +12,6 @@ interface ServiceHeaderProps {
     text: string
     href: string
   }
-  imageSrc?: string
-  imageAlt?: string
-  showLogos?: boolean
-  className?: string
 }
 
 const ServiceHeader: React.FC<ServiceHeaderProps> = ({
@@ -24,12 +19,9 @@ const ServiceHeader: React.FC<ServiceHeaderProps> = ({
   description,
   primaryCTA,
   secondaryCTA,
-  imageSrc,
-  imageAlt = '',
-  className = '',
 }) => {
   return (
-    <div className={`bg-gradient-brand pt-20 ${className}`}>
+    <div className="bg-gradient-brand pt-32">
       <main className="relative isolate pb-16">
         <div className="overflow-hidden">
           <div className="mx-auto max-w-7xl px-6 py-6 sm:py-16 lg:px-8">
@@ -60,22 +52,6 @@ const ServiceHeader: React.FC<ServiceHeaderProps> = ({
                   )}
                 </div>
               </div>
-
-              {imageSrc && (
-                <div className="mt-14 hidden w-96 lg:block">
-                  <div className="rounded-4xl bg-white/15 p-2 shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5">
-                    <div className="overflow-hidden rounded-3xl shadow-2xl outline outline-1 -outline-offset-1 outline-black/10">
-                      <Image
-                        alt={imageAlt}
-                        height={1000}
-                        width={1000}
-                        src={imageSrc}
-                        className="aspect-[2/3] w-full object-cover"
-                      />
-                    </div>
-                  </div>
-                </div>
-              )}
             </div>
           </div>
         </div>
