@@ -87,7 +87,7 @@ export default function About() {
                 'During the topic strategy phase, we’ll define your content goals, requirements, and the preferences of all stakeholders on your team. Your team will be able to provide examples of articles you like and any desired topic ideas you have in mind. All relevant information about your brand and content strategy is helpful to our Technical Content Specialists and can be incorporated into your content plan.',
             },
           ]}
-          imageSrc="/site/dev_draft_dev.jpg"
+          imageSrc="/site/med-portrait/developers_draft_dev.jpg"
           imageAlt="Technical content development"
         />
         <LogosDark />

@@ -44,7 +44,7 @@ export default function DriveAwareness() {
           text: 'See Our Lead Generation Package',
           href: '/lead-generation',
         }}
-        imageSrc="/site/marketing_draft_dev.jpg"
+        imageSrc="/site/med-portrait/review_draft_dev.jpg"
         imageAlt="Developer Marketing"
         showLogos={true}
       />
