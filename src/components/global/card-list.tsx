@@ -1,36 +1,42 @@
+'use client'
+
 import { CheckIcon } from '@heroicons/react/20/solid'
 import Link from 'next/link'
 import type { FC, ReactNode } from 'react'
+import { useEffect, useState } from 'react'
 
 interface CardListProps {
   title: ReactNode
-  subtitle: ReactNode
   includedFeatures: string[]
-  addonTitle: ReactNode
-  addonFeatures: string[]
+  youtubeVideoId: string
   requestPricingHref: string
   requestPricingText: string
 }
 
 const CardList: FC<CardListProps> = ({
   title,
-  subtitle,
   includedFeatures,
-  addonTitle,
-  addonFeatures,
+  youtubeVideoId,
   requestPricingHref,
   requestPricingText,
 }) => {
+  const [videoLoaded, setVideoLoaded] = useState(false)
+
+  useEffect(() => {
+    setVideoLoaded(true)
+  }, [])
+
   return (
     <div className="max-w-full bg-gradient-brand py-10 sm:py-16">
       <div className="mx-auto max-w-7xl">
         <div className="">
-          <div className="mx-auto max-w-2xl text-white ring-gray-200 sm:p-6 lg:mx-0 lg:flex lg:max-w-none">
+          <div className="mx-auto max-w-3xl text-white ring-gray-200 sm:py-6 lg:mx-0 lg:flex lg:max-w-none">
             <div className="p-8 sm:p-10 lg:flex-auto">
-              <h3 className="subheader-light">{subtitle}</h3>
+              <h3 className="subheader-light">{title}</h3>
               <div className="my-10 flex items-center gap-x-4">
                 <h4 className="flex-none px-6 py-1 text-lg font-semibold ring-2 ring-white">
-                  What’s included
+                  Check out a sample video & explore everything that is
+                  included:
                 </h4>
                 <div className="h-px flex-auto bg-gray-100" />
               </div>
@@ -49,33 +55,26 @@ const CardList: FC<CardListProps> = ({
                 ))}
               </ul>
             </div>
-            <div className="-mt-2 p-2 lg:mt-0 lg:flex lg:w-full lg:max-w-md lg:shrink-0 lg:flex-col">
-              <div className="h-full rounded-2xl bg-gray-50 py-10 text-center ring-1 ring-inset ring-gray-900/5 lg:flex lg:flex-col lg:justify-between lg:py-16">
-                <div className="mx-auto flex h-full max-w-xs flex-col px-8">
-                  <div className="flex-1">
-                    <p className="text-base font-semibold text-gray-600">
-                      {addonTitle}
-                    </p>
-                    <span className="mt-6 flex items-baseline justify-center gap-x-2">
-                      <ul
-                        role="list"
-                        className="mt-2 grid grid-cols-1 gap-4 text-base text-gray-600 sm:gap-6"
-                      >
-                        {addonFeatures.map((feature) => (
-                          <li key={feature} className="flex gap-x-3">
-                            <CheckIcon
-                              aria-hidden="true"
-                              className="h-6 w-5 flex-none text-primary"
-                            />
-                            {feature}
-                          </li>
-                        ))}
-                      </ul>
-                    </span>
-                  </div>
+
+            <div className="-mt-2 p-2 lg:mt-0 lg:flex lg:w-full lg:max-w-md lg:shrink-0 lg:flex-col lg:justify-center">
+              <div className="flex flex-col items-center justify-center rounded-2xl bg-white/10 shadow-lg ring-1 ring-inset ring-white/20">
+                <div className="w-full overflow-hidden rounded-t-xl">
+                  {videoLoaded && (
+                    <iframe
+                      width="100%"
+                      height="250"
+                      src={`https://www.youtube.com/embed/${youtubeVideoId}?autoplay=0&rel=0&vq=hd1080&audio=1`}
+                      title="YouTube video player"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    ></iframe>
+                  )}
+                </div>
+
+                <div className="w-full">
                   <Link
                     href={requestPricingHref}
-                    className="mt-10 block w-full rounded-md bg-gradient-brand px-3 py-2 text-center text-base font-semibold text-white shadow-sm hover:bg-secondary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                    className="block w-full rounded-b-md bg-white px-3 py-2 text-center text-base font-semibold text-gray-800 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
                   >
                     {requestPricingText}
                   </Link>
