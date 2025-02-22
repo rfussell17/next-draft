@@ -1,8 +1,8 @@
-import CardList from '@/components/global/card-list'
 import ServiceHeader from '@/components/global/headers/service-header'
 import TestimonialsGroup from '@/components/media/testimonials/testimonials-group'
 import What from '@/components/page-components/what'
 
+import VideoCard from '@/components/page-components/video-tutorials/video-card'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -54,7 +54,7 @@ export default function VideoTutorials() {
         imageSrc="/site/med-portrait/video_tutorials_draft_dev.jpg"
         imageAlt="Technical content development"
       />
-      <CardList
+      <VideoCard
         title="Technical Videos Done Right"
         includedFeatures={[
           'Engaging video walkthroughs for practical guidance',

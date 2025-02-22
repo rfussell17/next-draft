@@ -5,7 +5,7 @@ import Link from 'next/link'
 import type { FC, ReactNode } from 'react'
 import { useEffect, useState } from 'react'
 
-interface CardListProps {
+interface VideoCardProps {
   title: ReactNode
   includedFeatures: string[]
   youtubeVideoId: string
@@ -13,7 +13,7 @@ interface CardListProps {
   requestPricingText: string
 }
 
-const CardList: FC<CardListProps> = ({
+const VideoCard: FC<VideoCardProps> = ({
   title,
   includedFeatures,
   youtubeVideoId,
@@ -30,10 +30,10 @@ const CardList: FC<CardListProps> = ({
     <div className="max-w-full bg-gradient-brand py-10 sm:py-16">
       <div className="mx-auto max-w-7xl">
         <div className="">
-          <div className="mx-auto max-w-3xl text-white ring-gray-200 sm:py-6 lg:mx-0 lg:flex lg:max-w-none">
+          <div className="mx-auto text-white ring-gray-200 sm:py-6 lg:mx-0 lg:flex">
             <div className="p-8 sm:p-10 lg:flex-auto">
               <h3 className="subheader-light">{title}</h3>
-              <div className="my-10 flex items-center gap-x-4">
+              <div className="my-10 flex items-center gap-x-8">
                 <h4 className="flex-none px-6 py-1 text-lg font-semibold ring-2 ring-white">
                   Check out a sample video & explore everything that is
                   included:
@@ -88,4 +88,4 @@ const CardList: FC<CardListProps> = ({
   )
 }
 
-export default CardList
+export default VideoCard

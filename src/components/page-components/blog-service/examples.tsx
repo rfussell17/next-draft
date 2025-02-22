@@ -1,7 +1,7 @@
 import type { Data } from '@/components/global/types'
 
 import { ResourceBlock } from '../resources/resource-block'
-import { tutorials } from './data'
+import { posts } from './data'
 
 const Examples = () => {
   return (
@@ -9,16 +9,15 @@ const Examples = () => {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="">
           <h2 className="sm:subheader-light subheader-mobile-light">
-            Developer Tutorials
+            Blog Posts by Draft.dev
           </h2>
           <p className="paragraph-light">
-            Learn more about how to write your own technical tutorials here, or
-            check out some of our samples below:
+            Check out some of our technical blog content samples below:
           </p>
 
           <div className="mt-8 grid grid-cols-1 py-6">
-            {tutorials.map((tutorial: Data) => (
-              <ResourceBlock key={tutorial.id} resource={tutorial} />
+            {posts.map((post: Data) => (
+              <ResourceBlock key={post.id} resource={post} />
             ))}
           </div>
         </div>

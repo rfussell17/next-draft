@@ -25,8 +25,8 @@ const ServiceHeader: React.FC<ServiceHeaderProps> = ({
       <main className="relative isolate pb-16">
         <div className="overflow-hidden">
           <div className="mx-auto max-w-7xl px-6 py-6 sm:py-16 lg:px-8">
-            <div className="mx-auto max-w-5xl gap-x-12 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
-              <div className="relative w-full lg:shrink-0 xl:max-w-5xl">
+            <div className="mx-auto max-w-4xl gap-x-12 lg:mx-0 lg:flex lg:items-center">
+              <div className="relative w-full lg:shrink-0 xl:max-w-3xl">
                 <h1 className="sm:header-light mb-6 pb-4 font-code text-3xl font-semibold text-white">
                   {title}
                 </h1>
