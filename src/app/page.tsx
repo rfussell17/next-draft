@@ -4,7 +4,7 @@ import CaseStudyHome from '@/components/page-components/home/case-study-home'
 import Hero from '@/components/page-components/home/hero'
 
 import How from '@/components/page-components/how'
-import ServiceCard from '@/components/page-components/resources/service-card'
+import LeadGenCard from '@/components/page-components/resources/lead-gen-card'
 import What from '@/components/page-components/what'
 import Why from '@/components/page-components/why'
 import type { Metadata } from 'next'
@@ -115,7 +115,8 @@ export default function Home() {
           imageSrc="/site/med-portrait/commit_draft_dev.jpg"
           imageAlt="Technical content development"
         />
-        <ServiceCard
+
+        <LeadGenCard
           title="Lead Generation Package"
           subtitle="$10,000/mo retainer with Draft.dev includes:"
           includedFeatures={[

@@ -62,6 +62,7 @@ const NAVIGATION_CONFIG = {
   ],
   links: [
     { href: '/why-us', label: 'Why Us?' },
+    { href: '#lead-gen', label: 'Lead Generation' },
     { href: '/case-studies', label: 'Case Studies' },
     { href: '/blog', label: 'Blog' },
     { href: '/resources', label: 'Free Resources' },
@@ -201,7 +202,7 @@ export function DynamicNavbar({ banner }: NavbarProps) {
   )
 
   const DesktopNav = () => (
-    <nav className={`tablet:flex hidden items-center ${styles.text}`}>
+    <nav className={`hidden items-center tablet:flex ${styles.text}`}>
       {NAVIGATION_CONFIG.links.map(({ href, label }) =>
         label === 'Why Us?' ? (
           <WhyUsPopover key={label} />
@@ -219,7 +220,7 @@ export function DynamicNavbar({ banner }: NavbarProps) {
   )
 
   const MobileNav = () => (
-    <DisclosurePanel className="tablet:hidden bg-white">
+    <DisclosurePanel className="bg-white tablet:hidden">
       <div className="flex flex-col py-2">
         {NAVIGATION_CONFIG.links.map(({ href, label }) => (
           <Link key={href} href={href} className={STYLES.mobileLink}>
@@ -238,7 +239,7 @@ export function DynamicNavbar({ banner }: NavbarProps) {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between py-3">
           <div className="flex items-center">
-            <Link href="/" title="Home" className="tablet:hidden block">
+            <Link href="/" title="Home" className="block tablet:hidden">
               <Image
                 src="/draft/logos/draftlogo_main_filled.svg"
                 alt="Logo"
@@ -247,7 +248,7 @@ export function DynamicNavbar({ banner }: NavbarProps) {
                 priority
               />
             </Link>
-            <Link href="/" title="Home" className="tablet:block hidden">
+            <Link href="/" title="Home" className="hidden tablet:block">
               <Image
                 src={styles.logo}
                 alt="Logo"
@@ -258,7 +259,7 @@ export function DynamicNavbar({ banner }: NavbarProps) {
               />
             </Link>
             {banner && (
-              <div className="tablet:flex hidden items-center">{banner}</div>
+              <div className="hidden items-center tablet:flex">{banner}</div>
             )}
           </div>
 
