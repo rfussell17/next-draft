@@ -1,10 +1,10 @@
 import SocialProof from '@/components/media/social-proof'
-import Testimonial from '@/components/media/testimonials/testimonial'
 import Testimonials from '@/components/media/testimonials/testimonials-group'
 import CaseStudyHome from '@/components/page-components/home/case-study-home'
 import Hero from '@/components/page-components/home/hero'
 
 import How from '@/components/page-components/how'
+import ServiceCard from '@/components/page-components/resources/service-card'
 import What from '@/components/page-components/what'
 import Why from '@/components/page-components/why'
 import type { Metadata } from 'next'
@@ -76,14 +76,15 @@ export default function Home() {
             },
           ]}
         />
-        <Testimonial
+        <CaseStudyHome />
+        {/* <Testimonial
           quote="Having draft.dev source quality technical content for the Loft Labs blog has been a competitive advantage. It's given us a steadier flow of content, which has helped our brand's visibility, and some of the posts are among the most popular ones we've published."
           name="Rich Burroughs"
           role="Developer Advocate"
           company="Loft Labs"
           imageSrc="/media/testimonials-lg/rich_burroughs_loft_labs_draft_dev.jpg"
           imageAlt="Rich Burroughs"
-        />
+        /> */}
 
         <How
           title="Your Path to Technical Content"
@@ -114,7 +115,23 @@ export default function Home() {
           imageSrc="/site/med-portrait/commit_draft_dev.jpg"
           imageAlt="Technical content development"
         />
-        <CaseStudyHome />
+        <ServiceCard
+          title="Lead Generation Package"
+          subtitle="$10,000/mo retainer with Draft.dev includes:"
+          includedFeatures={[
+            'Content Strategy & Program Development',
+            'Promotion Strategy',
+            'Copy for Landing Page',
+
+            'Monthly Analytics Reviews',
+
+            '4 Blog Posts per month including: Demo Apps, Code Samples, Diagrams, Social Collateral',
+            'Downloadable Lead Magnet',
+          ]}
+          imageURL="/site/med-landscape/terms_draft_dev.jpg"
+          imageAlt="Draft.dev Lead Generation Package"
+        />
+
         <Testimonials />
       </main>
     </div>

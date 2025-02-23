@@ -58,7 +58,7 @@ function Sitemap() {
           <span className="sitemap-heading">Product</span>
         </SitemapHeading>
         <SitemapLinks>
-          <SitemapLink href="/lead-generation">Lead Generation</SitemapLink>
+          <SitemapLink href="/blog-posts">Blog Content</SitemapLink>
           <SitemapLink href="/tutorials">Tutorials</SitemapLink>
           <SitemapLink href="/video-tutorials">Video Tutorials</SitemapLink>
           <SitemapLink href="/e-books">E-Books</SitemapLink>
@@ -70,7 +70,7 @@ function Sitemap() {
         </SitemapHeading>
         <SitemapLinks>
           <SitemapLink href="/about">Our Team</SitemapLink>
-          <SitemapLink href="/write">Write for Draft</SitemapLink>
+          <SitemapLink href="/write">Write for Draft.dev</SitemapLink>
           <SitemapLink href="/terms-of-service">
             Terms of Service [NEED]
           </SitemapLink>
@@ -82,7 +82,7 @@ function Sitemap() {
           <span className="sitemap-heading">Learn</span>
         </SitemapHeading>
         <SitemapLinks>
-          <SitemapLink href="/blog">Blog</SitemapLink>
+          <SitemapLink href="/blog">Draft.dev Blog</SitemapLink>
           <SitemapLink href="/resources">Resources</SitemapLink>
           <SitemapLink href="/newsletter">Newsletter</SitemapLink>
           <SitemapLink href="/webinars">Webinars</SitemapLink>
