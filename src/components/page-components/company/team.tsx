@@ -44,7 +44,7 @@ const teamMembers: TeamMember[] = [
   },
   {
     name: 'Manuel Weiss',
-    description: 'Co-owner, title',
+    description: 'Co-owner',
     img: '/draft/team/manuel_weiss_draft_dev.jpg',
   },
   {
@@ -71,6 +71,26 @@ const teamMembers: TeamMember[] = [
     name: 'Sarah Cottone',
     description: 'Content Strategist',
     img: '/draft/team/sarah_cottone_draft_dev.jpg',
+  },
+  {
+    name: 'Aniket Bhattacharyea',
+    description: 'Developer Advocate',
+    img: '/draft/team/aniket_bhattacharyea_draft_dev.jpg',
+  },
+  {
+    name: 'Kumar Harsh',
+    description: 'Developer Advocate',
+    img: '/draft/team/kumar_harsh_draft_dev.jpg',
+  },
+  {
+    name: 'Kirstin Spivey',
+    description: 'Developmental Editor',
+    img: '/draft/team/kirstin_spivey_draft_dev.jpg',
+  },
+  {
+    name: 'Shane Cullen',
+    description: 'Developmental Editor',
+    img: '/draft/team/shane_cullen_draft_dev.jpg',
   },
 ]
 
