@@ -4,7 +4,7 @@ import CaseStudyHome from '@/components/page-components/home/case-study-home'
 import Hero from '@/components/page-components/home/hero'
 
 import How from '@/components/page-components/how'
-import LeadGenCard from '@/components/page-components/resources/lead-gen-card'
+import SinglePricing from '@/components/page-components/resources/single-pricing'
 import What from '@/components/page-components/what'
 import Why from '@/components/page-components/why'
 import type { Metadata } from 'next'
@@ -76,7 +76,36 @@ export default function Home() {
             },
           ]}
         />
-        <CaseStudyHome />
+        <SinglePricing
+          title="Lead Generation Package"
+          description="Our Lead Generation service is a comprehensive 3-step process designed to drive awareness, uncover existing demand, and deliver clear ROI through strategic technical content."
+          callToActionURL="/book-discovery-call"
+          priceText="Generate qualified leads"
+          price="$10,000"
+          currency="/Month"
+          includedFeatures={[
+            {
+              leadText: 'Strategic Content Creation:',
+              text: 'Full-funnel technical content with demo apps, code samples, and social collateral.',
+            },
+            {
+              leadText: 'Comprehensive Campaign Strategy:',
+              text: 'Analysis of existing content, competitor research, and measurable goals.',
+            },
+            {
+              leadText: 'Lead Collection System:',
+              text: 'Downloadable assets with landing page copy optimized for MQL/SQL conversion.',
+            },
+            {
+              leadText: 'Performance Optimization:',
+              text: 'Monthly analytics reviews tracking cost per lead and content effectiveness.',
+            },
+          ]}
+          disclaimerOne="Six Month Minimum"
+          disclaimerTwo="Delivery starts after initial planning period"
+          disclaimerThree="Draft.dev recommends supporting the content with promotional campaign to drive traffic"
+        />
+
         {/* <Testimonial
           quote="Having draft.dev source quality technical content for the Loft Labs blog has been a competitive advantage. It's given us a steadier flow of content, which has helped our brand's visibility, and some of the posts are among the most popular ones we've published."
           name="Rich Burroughs"
@@ -116,22 +145,7 @@ export default function Home() {
           imageAlt="Technical content development"
         />
 
-        <LeadGenCard
-          title="Lead Generation Package"
-          subtitle="$10,000/mo retainer with Draft.dev includes:"
-          includedFeatures={[
-            'Content Strategy & Program Development',
-            'Promotion Strategy',
-            'Copy for Landing Page',
-
-            'Monthly Analytics Reviews',
-
-            '4 Blog Posts per month including: Demo Apps, Code Samples, Diagrams, Social Collateral',
-            'Downloadable Lead Magnet',
-          ]}
-          imageURL="/site/med-landscape/terms_draft_dev.jpg"
-          imageAlt="Draft.dev Lead Generation Package"
-        />
+        <CaseStudyHome />
 
         <Testimonials />
       </main>
