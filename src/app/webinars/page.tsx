@@ -1,45 +1,30 @@
-import { CTA } from '@/components/cta'
-import { LogoCloud } from '@/components/logo-cloud'
-import PageHeader from '@/components/page-header'
-import TestimonialsGroup from '@/components/testimonials-group'
+import { MedHeader } from '@/components/global/headers/med-header'
+import TestimonialsGroup from '@/components/media/testimonials/testimonials-group'
+import PastWebinars from '@/components/page-components/webinars/past-webinars'
+import UpcomingWebinars from '@/components/page-components/webinars/upcoming'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   description:
-    'Radiant helps you sell more by revealing sensitive information about your customers.',
+    'At Draft.dev, we consistently host webinars with industry peers. Watch our previous sessions here and sign up for our upcoming webinars.',
   robots: {
     index: false,
     follow: false,
   },
 }
 
-const ctaProps = [
-  'marketing-specific content in here',
-  'Flexible work hours',
-  '30 days of paid vacation',
-  'Annual team retreats',
-  'Benefits for you and your family',
-  'A great work environment',
-]
-
 export default function Webinars() {
   return (
     <>
-      <PageHeader
-        title="Webinars"
-        description="Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat."
+      <MedHeader
+        title="Draft.Dev Webinars"
+        descriptionOne="Elevate your developer marketing expertise with our monthly webinar series."
+        descriptionTwo=""
       />
-      <LogoCloud />
+
+      <UpcomingWebinars />
+      <PastWebinars />
       <TestimonialsGroup />
-      <CTA
-        title="Book a discovery call"
-        description="Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in accusamus quisquam."
-        imageSrc="https://images.unsplash.com/photo-1519338381761-c7523edc1f46?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-        imageAlt="Team environment"
-        list={ctaProps}
-        linkHref="#"
-        linkText="See our job postings"
-      />
     </>
   )
 }

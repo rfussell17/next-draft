@@ -8,21 +8,30 @@ import { getWpPost } from '../../lib/wordpress'
 
 export const metadata: Metadata = {
   description:
-    'Radiant helps you sell more by revealing sensitive information about your customers.',
+    'Blog post details',
   robots: {
     index: false,
     follow: false,
   },
 }
 
-export default async function PostPage({
-  params,
-}: {
-  params: { slug: string }
-}) {
-  const post = await getWpPost(params.slug)
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
 
-  if (!post) notFound()
+interface PageProps {
+  params: Promise<{ slug: string }>
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>
+}
+
+export default async function PostPage({ params, searchParams }: PageProps) {
+  const resolvedParams = await params
+  const resolvedSearchParams = await searchParams
+
+  const post = await getWpPost(resolvedParams.slug)
+
+  if (!post) {
+    notFound()
+  }
 
   const transform = (domNode: DOMNode) => {
     if (domNode.type === 'tag' && domNode.name === 'img' && domNode.attribs) {

@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build --no-lint",
     "start": "next start",
     "lint": "next lint"
   },
@@ -16,12 +16,11 @@
     "dayjs": "^1.11.12",
     "feed": "^4.2.2",
     "html-react-parser": "^5.1.19",
-    "next": "14.2.11",
+    "next": "^15.2.0-canary.49",
     "react": "^18",
     "react-dom": "^18",
     "react-use-measure": "^2.1.1",
-    "sanitize-html": "^2.13.1",
-    "sharp": "^0.33.5"
+    "sanitize-html": "^2.13.1"
   },
   "devDependencies": {
     "@types/node": "^20",

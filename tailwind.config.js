@@ -7,6 +7,15 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        md: '788',
+        lg: '1090px', // Default is 1024px
+        xl: '1280px', // Default is 1280px
+
+        tablet: '1090px',
+        laptop: '1024px',
+        desktop: '1280px',
+      },
       fontFamily: {
         sans: ['var(--font-fira-sans)', 'system-ui', 'sans-serif'],
         code: ['var(--font-fira-code)', 'monospace'],

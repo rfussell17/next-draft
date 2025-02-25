@@ -1,5 +1,5 @@
 import { getWpPosts } from '@/app/lib/wordpress'
-import { Container } from '@/components/container'
+import { MedHeader } from '@/components/global/headers/med-header'
 
 import type { Metadata } from 'next'
 import type { StaticImport } from 'next/dist/shared/lib/get-img-props'
@@ -15,7 +15,7 @@ import type {
 
 export const metadata: Metadata = {
   description:
-    'Radiant helps you sell more by revealing sensitive information about your customers.',
+    'The Draft.dev Blog publishes information around Content Marketing Best Practices, Software Development topics, and more.',
   robots: {
     index: false,
     follow: false,
@@ -24,14 +24,12 @@ export const metadata: Metadata = {
 
 function Header() {
   return (
-    <Container className="bg-primary py-20">
-      <h1 className="header-light ml-16 sm:text-6xl">Draft.Dev Blog</h1>
-      <h2 className="lead-light ml-16 mt-6">
-        Learn to build a better technical blog.
-      </h2>
-    </Container>
+    <MedHeader title="Draft.dev blog" descriptionOne="" descriptionTwo={''} />
   )
 }
+
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
 
 export default async function BlogPage() {
   const posts = await getWpPosts()

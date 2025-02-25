@@ -1,7 +1,10 @@
-import { Button } from '@/components/button'
-import { Container } from '@/components/container'
+import { MedHeader } from '@/components/global/headers/med-header'
+import SocialProof from '@/components/media/social-proof'
+import Team from '@/components/page-components/company/team'
+import What from '@/components/page-components/company/what'
+import How from '@/components/page-components/how'
+import Why from '@/components/page-components/why'
 import type { Metadata } from 'next'
-import Image from 'next/image'
 
 export const metadata: Metadata = {
   description:
@@ -12,314 +15,77 @@ export const metadata: Metadata = {
   },
 }
 
-function Person({
-  name,
-  description,
-  img,
-}: {
-  name: string
-  description: string
-  img: string
-}) {
-  return (
-    <li className="flex items-center gap-4">
-      <Image
-        alt=""
-        src={img}
-        className="size-12 rounded-full"
-        width={200}
-        height={200}
-      />
-      <div className="text-sm/6">
-        <h3 className="font-medium">{name}</h3>
-        <p className="text-gray-00">{description}</p>
-      </div>
-    </li>
-  )
-}
-
-function IntroOne() {
-  return (
-    <Container className="m-auto my-32 max-w-6xl">
-      <h1 hidden sr-only>
-        About Draft.dev
-      </h1>
-      <h2 className="header-gradient">
-        We believe great marketing content can also be educational
-      </h2>
-      <div className="mt-16 grid grid-cols-1 gap-12 lg:grid-cols-2">
-        <div className="m-auto max-w-lg">
-          <p className="text-lg text-gray-600">
-            After spending 8 years as a CTO, building software engineering teams
-            in venture-funded startups, Karl Hughes founded Draft.dev to help
-            companies create authentic technical content that resonates with
-            software developers.
-          </p>
-          <p className="mt-8 text-lg text-gray-600">
-            Since founding the company in 2020, the team has grown to include
-            marketers, editors, engineers, and over 300 engineers who write
-            content for us.
-          </p>
-        </div>
-        <div className="max-lg:order-first max-lg:max-w-lg">
-          <div className="aspect-[3/2] overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10">
-            <Image
-              alt=""
-              src="/company/5.jpg"
-              className="block size-full object-cover"
-              width={200}
-              height={200}
-            />
-          </div>
-        </div>
-      </div>
-      <h3 className="lead-gradient mt-16">The team</h3>
-      <hr className="mt-6 border-t border-gray-200" />
-      <ul
-        role="list"
-        className="mx-auto mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3"
-      >
-        <Person
-          name="Karl Hughes"
-          description="Founder, CEO"
-          img="/team/michael-foster.jpg"
-        />
-        <Person
-          name="Clayton Kast"
-          description="Account Director"
-          img="/team/dries-vincent.jpg"
-        />
-        <Person
-          name="Annika Puura"
-          description="Operations Manager"
-          img="/team/celeste-vandermark.jpg"
-        />
-        <Person
-          name="Jakkie Koekemoer"
-          description="Engineering Manager"
-          img="/team/courtney-henry.jpg"
-        />
-        <Person
-          name="Aniket Bhattacharyea"
-          description="Developer Advocate"
-          img="/team/marcus-eldridge.jpg"
-        />
-        <Person
-          name="Kumar Harsh"
-          description="Developer Advocate"
-          img="/team/whitney-francis.jpg"
-        />
-        <Person
-          name="Elzet Blaauw"
-          description="Managing Editor"
-          img="/team/leonard-krasner.jpg"
-        />
-        <Person
-          name="Kirstin Spivey"
-          description="Editor"
-          img="/team/nolan-sheffield.jpg"
-        />
-        <Person
-          name="Shane Cullen"
-          description="Editor"
-          img="/team/emily-selman.jpg"
-        />
-        <Person
-          name="Meagan Shelley"
-          description="Marketing"
-          img="/team/leonard-krasner.jpg"
-        />
-        <Person
-          name="Tim Freese"
-          description="Accountant"
-          img="/team/nolan-sheffield.jpg"
-        />
-      </ul>
-    </Container>
-  )
-}
-
-function IntroTwo() {
-  return (
-    <Container className="my-42 m-auto max-w-6xl rounded-2xl bg-gradient-brand p-16">
-      <h3 className="header-light m-auto max-w-4xl px-8 py-6 ring-2 ring-white">
-        What makes Draft.dev different?
-      </h3>
-      <div className="m-auto mt-16 max-w-4xl">
-        <div className="m-auto text-lg text-white">
-          <p>
-            We work exclusively with companies that are trying to reach software
-            developers, data engineers, and DevOps practitioners. Typically, our
-            clients are Developer Relations or Developer Marketing teams at
-            companies with 50+ employees or at least Series A funding.
-          </p>
-          <p className="mt-8">
-            We specialize in producing technical content (mostly tutorials and
-            blog posts), but we can also help you create a content plan, come up
-            with suitable topics, or execute on one-time content projects like
-            ebooks.
-          </p>
-          <p className="mt-8">
-            Our goal is to create high-quality, technically deep content.
-            Subject-matter experts are assigned to each article, so every piece
-            is detailed and authoritative. Our core team includes experienced
-            engineers and editors who make sure that{' '}
-            <strong>every piece of content </strong>
-            comes to you ready to publish.
-          </p>
-        </div>
-      </div>
-    </Container>
-  )
-}
-
-function Testimonial() {
-  return (
-    <div className="h-90 relative flex aspect-square w-full flex-col justify-end overflow-hidden rounded-3xl sm:aspect-[5/4] lg:aspect-[3/4]">
-      <Image
-        alt=""
-        src="/testimonials/veronica-winton.jpg"
-        className="absolute inset-0 object-cover"
-        fill
-        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-      />
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 rounded-3xl bg-gradient-to-t from-black from-10% to-75% ring-1 ring-inset ring-gray-950/10 lg:from-25%"
-      />
-      <figure className="relative p-10">
-        <blockquote>
-          <p className="relative text-xl/7 text-white before:absolute before:-translate-x-full before:content-['“'] after:absolute after:content-['”']">
-            We&apos;ve managed to put two of our main competitors out of
-            business in 6 months.
-          </p>
-        </blockquote>
-        <figcaption className="mt-6 border-t border-white/20 pt-6">
-          <p className="text-sm/6 font-medium text-white">Veronica Winton</p>
-          <p className="text-sm/6 font-medium">
-            <span className="bg-gradient-brand bg-clip-text text-transparent">
-              CSO, Planeteria
-            </span>
-          </p>
-        </figcaption>
-      </figure>
-    </div>
-  )
-}
-
-function Jobs() {
-  return (
-    <Container className="m-auto mt-32 max-w-6xl">
-      <h2 className="header-gradient">Write for Draft.dev</h2>
-      <p className="mt-6 max-w-3xl">
-        If you're a software developer and you want to build your personal brand
-        while getting paid to write about interesting technical topics, you've
-        come to the right place. We create content that will be read by a wide
-        range of readers around the world. As such, we're committed to
-        supporting diversity in our writers and encourage everyone at all
-        experience levels to apply.
-      </p>
-      <div className="mt-16 grid grid-cols-1 gap-16 lg:grid-cols-[1fr_24rem]">
-        <div className="lg:max-w-2xl">
-          <div>
-            <table className="w-full text-left">
-              <colgroup>
-                <col className="w-2/3" />
-                <col className="w-1/3" />
-                <col className="w-0" />
-              </colgroup>
-              <thead className="sr-only">
-                <tr>
-                  <th scope="col">Title</th>
-                  <th scope="col">Location</th>
-                  <th scope="col">Read more</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="colgroup" colSpan={3} className="px-0 pb-0 pt-10">
-                    <div className="-mx-4 rounded-lg bg-gradient-3 px-4 py-3 text-sm/6 font-semibold text-white">
-                      Engineering
-                    </div>
-                  </th>
-                </tr>
-                <tr className="border-b border-dotted border-gray-200 text-sm/6 font-normal">
-                  <td className="px-0 py-4">iOS Developer</td>
-                  <td className="px-0 py-4 text-gray-600">Remote</td>
-                  <td className="px-0 py-4 text-right">
-                    <Button variant="outline" href="#">
-                      View listing
-                    </Button>
-                  </td>
-                </tr>
-                <tr className="border-b border-dotted border-gray-200 text-sm/6 font-normal">
-                  <td className="px-0 py-4">Backend Engineer</td>
-                  <td className="px-0 py-4 text-gray-600">Remote</td>
-                  <td className="px-0 py-4 text-right">
-                    <Button variant="outline" href="#">
-                      View listing
-                    </Button>
-                  </td>
-                </tr>
-                <tr className="text-sm/6 font-normal">
-                  <td className="px-0 py-4">Product Engineer</td>
-                  <td className="px-0 py-4 text-gray-600">Remote</td>
-                  <td className="px-0 py-4 text-right">
-                    <Button variant="outline" href="#">
-                      View listing
-                    </Button>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="colgroup" colSpan={3} className="px-0 pb-0 pt-5">
-                    <div className="-mx-4 rounded-lg bg-gradient-1 px-4 py-3 text-sm/6 font-semibold text-white">
-                      Design
-                    </div>
-                  </th>
-                </tr>
-                <tr className="border-b border-dotted border-gray-200 text-sm/6 font-normal">
-                  <td className="px-0 py-4">Principal Designer</td>
-                  <td className="px-0 py-4 text-gray-600">Remote</td>
-                  <td className="px-0 py-4 text-right">
-                    <Button variant="outline" href="#">
-                      View listing
-                    </Button>
-                  </td>
-                </tr>
-                <tr className="border-b border-dotted border-gray-200 text-sm/6 font-normal">
-                  <td className="px-0 py-4">Designer</td>
-                  <td className="px-0 py-4 text-gray-600">Remote</td>
-                  <td className="px-0 py-4 text-right">
-                    <Button variant="outline" href="#">
-                      View listing
-                    </Button>
-                  </td>
-                </tr>
-                <tr className="text-sm/6 font-normal">
-                  <td className="px-0 py-4">Senior Designer</td>
-                  <td className="px-0 py-4 text-gray-600">Remote</td>
-                  <td className="px-0 py-4 text-right">
-                    <Button variant="outline" href="#">
-                      View listing
-                    </Button>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        <Testimonial />
-      </div>
-    </Container>
-  )
-}
-
 export default function About() {
   return (
-    <main className="overflow-hidden">
-      <IntroOne />
-      <IntroTwo />
-      <Jobs />
-    </main>
+    <>
+      <MedHeader
+        title="About Draft.Dev"
+        descriptionOne="Draft.dev is a content marketing agency focused on
+          creating in-depth, technical content for companies in tech. We work
+          with subject matter experts from around the world to create
+          tutorials, blog posts, and e-books for our clients. We're a small but quickly
+          growing team of technologists, writers, marketers, and editors."
+        descriptionTwo="Want to join us? Learn more about our open roles here."
+      />
+
+      <main className="overflow-hidden">
+        <What />
+        <Team />
+        <Why
+          title="What makes Draft.dev different?"
+          features={[
+            {
+              title: 'title',
+              description:
+                'We work exclusively with companies that are trying to reach software developers, data engineers, and DevOps practitioners. Typically, our clients are Developer Relations or Developer Marketing teams at companies with 50+ employees or at least Series A funding.',
+              linkText: 'Our Vetted Technical Writers',
+              linkHref: '/expert-writers',
+            },
+            {
+              title: 'title',
+              description:
+                'We specialize in producing technical content (mostly tutorials and blog posts), but we can also help you create a content plan, come up with suitable topics, or execute on one-time content projects like ebooks.',
+              linkText: 'Our Quality-Focused Content',
+              linkHref: '/content-quality',
+            },
+            {
+              title: 'Content You Can Count On',
+              description:
+                'Our goal is to create high-quality, technically-deep content. Subject-matter experts are assigned to each article, so every piece is detailed and authoritative. Our core team includes experienced engineers and editors who make sure that every piece of content comes to you ready to publish.',
+              linkText: 'Our delivery process',
+              linkHref: '/delivery-process',
+            },
+          ]}
+        />
+        <SocialProof />
+        <How
+          title="How Draft.dev works with clients"
+          subtitleBold=""
+          subtitleRegular=""
+          steps={[
+            {
+              number: '1',
+              title: 'Discovery Call',
+              description:
+                'Before we begin working with a new client, we want to make sure we’re a good fit for you. In our 30-minute discovery session, we’ll ask you where your business is at, what your content goals are, and the type of content you’re looking to produce.',
+            },
+            {
+              number: '2',
+              title: 'Statement of Work and Timeline',
+              description:
+                ' We almost always have a backlog of new clients waiting to start, so once you’re ready to reserve a spot in our production calendar, we’ll send over an estimated timeline and statement of work. This allows us to ensure we have enough writers and editors ready to help maintain our rigorous quality standards, and that both parties are on the same page as far as the scope of work is concerned.',
+            },
+            {
+              number: '3',
+              title: 'Topic Strategy and Intake',
+              description:
+                'During the topic strategy phase, we’ll define your content goals, requirements, and the preferences of all stakeholders on your team. Your team will be able to provide examples of articles you like and any desired topic ideas you have in mind. All relevant information about your brand and content strategy is helpful to our Technical Content Specialists and can be incorporated into your content plan.',
+            },
+          ]}
+          imageSrc="/site/med-portrait/developers_draft_dev.jpg"
+          imageAlt="Technical content development"
+        />
+      </main>
+    </>
   )
 }

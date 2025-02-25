@@ -14,6 +14,8 @@
   body {
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
+    max-width: 100%;
   }
 }
 
@@ -24,11 +26,11 @@
   }
 
   .hero-cta-primary {
-    @apply rounded-md bg-secondary px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-secondary-80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary-60;
+    @apply rounded-sm px-3.5 py-2.5 text-base font-semibold text-white shadow-sm ring-2 ring-white hover:bg-white hover:text-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary-60 sm:text-lg;
   }
 
   .hero-cta-secondary {
-    @apply text-sm font-semibold text-gray-100 hover:text-secondary-20;
+    @apply text-base font-semibold text-gray-100 hover:text-secondary-20 sm:text-lg;
   }
 
   .hero-image-container {
@@ -43,43 +45,140 @@
     background-clip: text;
   }
 
-  .header-gradient {
-    @apply my-4 bg-gradient-brand font-code text-5xl font-semibold text-gradient sm:text-6xl sm:tracking-tighter;
+  @layer components {
+    /* h1 */
+    .header-base {
+      @apply py-1 font-code font-semibold;
+      font-size: 3.75rem;
+      line-height: 1.125;
+      letter-spacing: -2px;
+    }
+
+    .header-gradient {
+      @apply header-base bg-gradient-brand text-gradient;
+    }
+
+    .header-light {
+      @apply header-base text-white;
+    }
+
+    .header-dark {
+      @apply header-base text-primary;
+    }
+
+    .subheader-base {
+      /* h2 */
+      @apply my-4 font-code font-semibold;
+      font-size: 2.85rem;
+      line-height: 1.1;
+      letter-spacing: -1px;
+    }
+
+    .subheader-gradient {
+      @apply subheader-base bg-gradient-brand text-gradient;
+    }
+
+    .subheader-case-study {
+      @apply subheader-base;
+      line-height: 1.25;
+    }
+
+    .subheader-light {
+      @apply subheader-base text-white;
+    }
+
+    .subheader-dark {
+      @apply subheader-base text-gray-600;
+    }
+
+    .subheader-mobile-base {
+      /* h2 */
+      @apply my-4 font-code font-semibold;
+      font-size: 1.45rem;
+      line-height: 1.1;
+      letter-spacing: -1px;
+    }
+
+    .sitemap-heading {
+      @apply font-code text-lg font-semibold;
+    }
+
+    .subheader-mobile-light {
+      @apply subheader-mobile-base text-gray-100;
+    }
+
+    .subheader-mobile-dark {
+      @apply subheader-mobile-base text-gray-600;
+    }
+
+    .subheader-mobile-gradient {
+      @apply subheader-mobile-base bg-gradient-brand text-gradient;
+    }
+
+    /* strong paragraph */
+    .lead-base {
+      @apply pr-1 font-sans text-gray-300;
+      font-size: 1.45rem;
+      line-height: 1.35;
+      letter-spacing: -0.5px;
+    }
+
+    .lead-light {
+      @apply lead-base text-gray-300;
+    }
+
+    .lead-dark {
+      @apply lead-base text-gray-500;
+    }
+
+    .lead-gradient {
+      @apply lead-base bg-gradient-brand text-gradient;
+    }
+
+    .paragraph-base {
+      @apply font-sans;
+      font-size: 1.45rem;
+      line-height: 1.35;
+      letter-spacing: -0.5px;
+    }
+
+    .paragraph-light {
+      @apply paragraph-base text-gray-100;
+    }
+
+    .paragraph-dark {
+      @apply paragraph-base text-gray-500;
+    }
   }
 
-  .header-light {
-    @apply my-4 font-code text-5xl font-semibold text-white sm:text-6xl sm:tracking-tighter;
+  .list-header {
+    @apply font-code text-3xl font-semibold text-white sm:tracking-tighter;
   }
-
-  .header-dark {
-    @apply mt-4 font-code font-semibold text-primary;
-  }
-
-  .subheader-gradient {
-    @apply my-4 bg-gradient-brand font-code text-3xl font-semibold text-gradient sm:text-4xl sm:tracking-tighter;
-  }
-
-  .subheader-light {
-    @apply my-4 font-code text-3xl font-semibold text-white sm:text-4xl sm:tracking-tighter;
-  }
-
-  .subheader-dark {
-    @apply mt-4 font-code font-semibold text-primary;
-  }
-
   .testimonial-light {
-    @apply font-code text-2xl font-semibold text-white sm:text-2xl sm:tracking-tighter;
+    @apply font-code font-semibold text-white;
+    font-size: 2.15rem;
+    line-height: 1.35;
   }
 
-  .lead-gradient {
-    @apply my-4 bg-gradient-brand font-code text-2xl text-gradient sm:text-3xl sm:tracking-tighter;
+  .case-study-small {
+    @apply font-sans;
+    font-size: 1rem;
+    letter-spacing: 0.1px;
   }
 
-  .lead-light {
-    @apply pb-8 font-code text-lg text-gray-100;
+  .logo-flex {
+    background-color: rgba(255, 255, 255, 0.08);
   }
 
-  .lead-dark {
-    @apply font-sans text-lg text-gray-500;
+  .logo-flex-mobile {
+    @apply bg-transparent;
+  }
+
+  #mc_embed_signup {
+    @apply bg-transparent font-code font-semibold text-white;
+  }
+
+  #mc-embedded-subscribe-form {
+    @apply bg-transparent font-code font-semibold text-white;
   }
 }

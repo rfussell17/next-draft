@@ -3,3 +3,12 @@
 [build]
   command = "npm run build"
   publish = ".next"
+
+[build.environment]
+  SHARP_IGNORE_GLOBAL_LIBVIPS = "1"
+
+  [[redirects]]
+  from = "http://localhost:3000/case-studies/earthly"
+  to = "http://localhost:3000/case-studies"
+  status = 301
+  force = true

@@ -1,17 +1,28 @@
-// app/layout.tsx
-
-import FAQ from '@/components/faq'
-import { Footer } from '@/components/footer'
-import { Navbar } from '@/components/navbar'
-
+import { BookDiscoveryCall } from '@/components/global/cta/book-discovery-call'
+import FAQ from '@/components/global/faq'
+import { Footer } from '@/components/global/footer'
+import DynamicNavbar from '@/components/global/navbar-dynamic'
 import '@/styles/tailwind.css'
 import type { Metadata } from 'next'
 import { Fira_Code, Fira_Sans } from 'next/font/google'
 
 export const metadata: Metadata = {
-  title: {
-    template: '%s - Radiant',
-    default: 'Draft.dev - A Content Creation Agency for Technical Writing',
+  title: 'Content Creation Agency for Technical Audiences - Draft.dev',
+  description:
+    'We are a technical content marketing agency helping Marketing and Developer Relations teams in Tech Companies drive awareness, capture leads, and build trust.',
+  robots: {
+    index: false,
+    follow: false,
+  },
+  alternates: {
+    types: {
+      'application/rss+xml': [
+        {
+          title: 'The Radiant Blog',
+          url: '/blog/feed.xml',
+        },
+      ],
+    },
   },
 }
 
@@ -35,23 +46,18 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${firaSans.variable} ${firaCode.variable}`}>
+    <html lang="en" className={`${firaSans.variable} ${firaCode.variable} !scroll-smooth`}>
       <head>
-        <link
-          rel="alternate"
-          type="application/rss+xml"
-          title="The Radiant Blog"
-          href="/blog/feed.xml"
-        />
-        <meta name="robots" content="noindex, nofollow, noarchive" />
+        <meta data-grammarly-disable="true" />
       </head>
-      <body className="text-gray-600 antialiased">
-        <Navbar />
-        <div className="min-h-screen">
-          <main>{children}</main>
+      <body className="bg-white antialiased">
+        <DynamicNavbar />
+        <div className="flex min-h-screen flex-col">
+          <main className="flex-grow">{children}</main>
+          <BookDiscoveryCall />
+          <FAQ />
+          <Footer />
         </div>
-        <FAQ />
-        <Footer />
       </body>
     </html>
   )

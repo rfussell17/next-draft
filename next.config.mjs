@@ -3,37 +3,60 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
+        protocol: 'https',
         hostname: 'draft-test-local.local',
+        pathname: '/**',
       },
-
       {
+        protocol: 'https',
         hostname: 'optimistic-insurance.localsite.io',
+        pathname: '/**',
       },
-      { hostname: 'optimistic-insurance.localsite.io/blog' },
-      { hostname: 'optimistic-insurance.localsite.io/graphql' },
-      { hostname: 'draft-test-local.local/graphql' },
       {
+        protocol: 'https',
+        hostname: 'heartfelt-parfait-e90b6d.netlify.app',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
         hostname: 'nextdraft.netlify.app',
+        pathname: '/**',
       },
       {
+        protocol: 'https',
         hostname: 'images.unsplash.com',
+        pathname: '/**',
       },
       {
+        protocol: 'https',
         hostname: 'app.netlify.com',
+        pathname: '/**',
       },
-      { hostname: '0.gravatar.com' },
-      { hostname: '1.gravatar.com' },
-      { hostname: '2.gravatar.com' },
-      { hostname: 'secure.gravatar.com' },
-      { hostname: 'nextjs-wordpress.local' },
-      { hostname: 'images.unsplash.com' },
-      { hostname: 'plus.unsplash.com' },
-      { hostname: 'amazing-breakfast.flywheelsites.com' },
-      { hostname: 'res.cloudinary.com' },
-      { hostname: 'img.youtube.com' },
-      { hostname: 'lh7-us.googleusercontent.com' },
-      { hostname: 'tailwindui.com' },
-      { hostname: 'unsplash.com' },
+      {
+        protocol: 'https',
+        hostname: '*.gravatar.com',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'res.cloudinary.com',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'img.youtube.com',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'lh7-us.googleusercontent.com',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'tailwindui.com',
+        pathname: '/**',
+      },
     ],
   },
 }
