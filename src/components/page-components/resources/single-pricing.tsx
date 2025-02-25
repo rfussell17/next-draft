@@ -46,7 +46,7 @@ const SinglePricing: React.FC<SinglePricingProps> = ({
         <div className=" ">
           <div className="rounded-3xl shadow-[inset_0_0_2px_1px_#ffffff4d]">
             <div className="p-2">
-              <div className="overflow-hidden rounded-[20px] bg-white/15 shadow-2xl">
+              <div className="overflow-hidden rounded-[20px] bg-white/5 shadow-2xl">
                 <div className="flex flex-col lg:flex-row">
                   <div className="w-full bg-white p-8 sm:p-10 lg:w-[calc(100%-384px)]">
                     <h3 className="subheader-gradient">{title}</h3>
@@ -86,15 +86,15 @@ const SinglePricing: React.FC<SinglePricingProps> = ({
                       </p>
                       <Link
                         href={callToActionURL}
-                        className="text-gray-00 rounded-md bg-white px-6 py-4 text-center text-lg font-semibold shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                        className="rounded-md bg-white px-6 py-4 text-center text-lg font-semibold text-gray-700 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
                       >
                         Book a Discovery Call
                       </Link>
                     </div>
 
                     {(disclaimerOne || disclaimerTwo || disclaimerThree) && (
-                      <div className="bg-black/20 px-8 py-6">
-                        <ul className="space-y-2 text-xs text-white/80">
+                      <div className="bg-black/15 px-8 py-6">
+                        <ul className="space-y-2 text-xs font-semibold text-white/90">
                           {disclaimerOne && (
                             <li className="flex items-center gap-x-2">
                               <span className="inline-block text-white/60">
