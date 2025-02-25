@@ -21,14 +21,14 @@ const Hero: React.FC = () => {
                 </p>
                 <div className="mt-6 flex flex-col items-start gap-x-6 sm:mt-16 sm:flex-row sm:items-center">
                   <Link
-                    href="#"
+                    href="/call"
                     className="my-2 rounded-sm px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm ring-2 ring-white hover:bg-white hover:text-gray-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary sm:my-0 sm:text-base"
                   >
                     Book a Discovery Call
                   </Link>
                   <Link
-                    href="#"
-                    className="my-2 text-sm font-semibold text-white hover:text-gray-200 sm:my-0 sm:text-base"
+                    href="#lead-generation-package"
+                    className="my-2 text-sm font-semibold text-white hover:text-gray-200 sm:my-0 sm:text-base !scroll-smooth"
                   >
                     See Our Lead Generation Package{' '}
                     <span aria-hidden="true">→</span>

@@ -8,7 +8,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Call Us',
   description:
-    'Companies all over the world have closed millions of deals with Radiant. Sign up today and start selling smarter.',
+    'Book a Discovery Call with us to learn more about our Lead Generation Package and other custom services.',
 }
 export default function Call() {
   return (

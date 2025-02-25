@@ -5,7 +5,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Services',
   description:
-    'Companies all over the world have closed millions of deals with Radiant. Sign up today and start selling smarter.',
+    'Learn more about the Content Marketing Services we offer at Draft.dev',
   robots: {
     index: false,
     follow: false,

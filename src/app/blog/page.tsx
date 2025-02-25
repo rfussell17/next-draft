@@ -15,7 +15,7 @@ import type {
 
 export const metadata: Metadata = {
   description:
-    'Radiant helps you sell more by revealing sensitive information about your customers.',
+    'The Draft.dev Blog publishes information around Content Marketing Best Practices, Software Development topics, and more.',
   robots: {
     index: false,
     follow: false,

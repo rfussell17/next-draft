@@ -8,7 +8,7 @@ import { getWpPost } from '../../lib/wordpress'
 
 export const metadata: Metadata = {
   description:
-    'Radiant helps you sell more by revealing sensitive information about your customers.',
+    'Blog post details',
   robots: {
     index: false,
     follow: false,

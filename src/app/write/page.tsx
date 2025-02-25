@@ -6,7 +6,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Write for Draft.dev',
   description:
-    'Companies all over the world have closed millions of deals with Radiant. Sign up today and start selling smarter.',
+    'If you are a software developer and you want to build your personal brand while getting paid to write about interesting technical topics give us your details and we will get in touch.',
 }
 
 export default function Write() {

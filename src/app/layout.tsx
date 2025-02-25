@@ -7,9 +7,9 @@ import type { Metadata } from 'next'
 import { Fira_Code, Fira_Sans } from 'next/font/google'
 
 export const metadata: Metadata = {
-  title: 'Your Site Title',
+  title: 'Content Creation Agency for Technical Audiences - Draft.dev',
   description:
-    'Radiant helps you sell more by revealing sensitive information about your customers.',
+    'We are a technical content marketing agency helping Marketing and Developer Relations teams in Tech Companies drive awareness, capture leads, and build trust.',
   robots: {
     index: false,
     follow: false,
@@ -46,7 +46,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${firaSans.variable} ${firaCode.variable}`}>
+    <html lang="en" className={`${firaSans.variable} ${firaCode.variable} !scroll-smooth`}>
       <head>
         <meta data-grammarly-disable="true" />
       </head>

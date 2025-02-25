@@ -11,7 +11,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   description:
-    'Radiant helps you sell more by revealing sensitive information about your customers.',
+    'We are a technical content marketing agency helping Marketing and Developer Relations teams in Tech Companies drive awareness, capture leads, and build trust.',
   robots: {
     index: false,
     follow: false,
@@ -78,8 +78,8 @@ export default function Home() {
         />
         <SinglePricing
           title="Lead Generation Package"
-          description="Our Lead Generation service is a comprehensive 3-step process designed to drive awareness, uncover existing demand, and deliver clear ROI through strategic technical content."
-          callToActionURL="/book-discovery-call"
+          description="Our Lead Generation service is a comprehensive 3-step framework designed to drive awareness, uncover existing demand, and deliver clear ROI through strategic technical content."
+          callToActionURL="/call"
           priceText="Generate qualified leads"
           price="$10,000"
           currency="/Month"

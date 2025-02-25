@@ -62,7 +62,7 @@ const NAVIGATION_CONFIG = {
   ],
   links: [
     { href: '/why-us', label: 'Why Us?' },
-    { href: '#lead-gen', label: 'Lead Generation' },
+    { href: './#lead-generation-package', label: 'Lead Generation' },
     { href: '/case-studies', label: 'Case Studies' },
     { href: '/blog', label: 'Blog' },
     { href: '/resources', label: 'Free Resources' },

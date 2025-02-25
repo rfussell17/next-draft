@@ -5,7 +5,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   description:
-    'Radiant helps you sell more by revealing sensitive information about your customers.',
+    'Learn how Loft Labs scaled its Kubernetes blog by 4x and achieved top SEO rankings with Draft.dev',
   robots: {
     index: false,
     follow: false,
