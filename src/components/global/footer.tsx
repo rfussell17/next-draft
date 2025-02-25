@@ -71,9 +71,6 @@ function Sitemap() {
         <SitemapLinks>
           <SitemapLink href="/about">Our Team</SitemapLink>
           <SitemapLink href="/write">Write for Draft.dev</SitemapLink>
-          <SitemapLink href="/terms-of-service">
-            Terms of Service [NEED]
-          </SitemapLink>
           <SitemapLink href="/privacy-policy">Privacy Policy</SitemapLink>
         </SitemapLinks>
       </div>
@@ -83,7 +80,6 @@ function Sitemap() {
         </SitemapHeading>
         <SitemapLinks>
           <SitemapLink href="/blog">Draft.dev Blog</SitemapLink>
-          <SitemapLink href="/resources">Resources</SitemapLink>
           <SitemapLink href="/newsletter">Newsletter</SitemapLink>
           <SitemapLink href="/webinars">Webinars</SitemapLink>
         </SitemapLinks>

@@ -65,7 +65,7 @@ const NAVIGATION_CONFIG = {
     { href: './#lead-generation-package', label: 'Lead Generation' },
     { href: '/case-studies', label: 'Case Studies' },
     { href: '/blog', label: 'Blog' },
-    { href: '/resources', label: 'Free Resources' },
+    { href: '/playbook', label: 'Playbook' },
     { href: '/about', label: 'Company' },
     { href: '/call', label: 'Book Discovery Call' },
   ],
@@ -169,7 +169,7 @@ export function DynamicNavbar({ banner }: NavbarProps) {
         <article key={post.id} className="relative flex flex-col gap-y-6">
           <div className="relative flex-none">
             <Image
-              alt=""
+              alt="image post"
               src={post.imageUrl}
               className="aspect-[2/1] w-full rounded-lg bg-gray-100 object-cover"
               height={200}
