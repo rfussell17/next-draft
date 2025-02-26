@@ -58,10 +58,10 @@ function Sitemap() {
           <span className="sitemap-heading">Tech Content</span>
         </SitemapHeading>
         <SitemapLinks>
+          <SitemapLink href="/content-types">Content Types</SitemapLink>
           <SitemapLink href="/blog-posts">Blog Content</SitemapLink>
           <SitemapLink href="/tutorials">Tutorials</SitemapLink>
           <SitemapLink href="/video-tutorials">Video Tutorials</SitemapLink>
-          <SitemapLink href="/e-books">E-Books</SitemapLink>
         </SitemapLinks>
       </div>
       <div>
