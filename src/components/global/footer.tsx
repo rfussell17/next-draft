@@ -80,7 +80,7 @@ function Sitemap() {
           <span className="sitemap-heading">Resources</span>
         </SitemapHeading>
         <SitemapLinks>
-          <SitemapLink href="/blog">Draft.dev Blog</SitemapLink>
+          <SitemapLink href="/learn">Draft.dev Blog</SitemapLink>
           <SitemapLink href="/newsletter">Newsletter</SitemapLink>
           <SitemapLink href="/webinars">Webinars</SitemapLink>
           <SitemapLink href="/playbook">Tech Content Playbook</SitemapLink>
