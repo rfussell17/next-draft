@@ -12,8 +12,7 @@ const Examples = () => {
             Developer Tutorials
           </h2>
           <p className="paragraph-light">
-            Learn more about how to write your own technical tutorials here, or
-            check out some of our samples below:
+            See some of the Tech Tutorial Content work we have created for our clients below:
           </p>
 
           <div className="mt-8 grid grid-cols-1 py-6">

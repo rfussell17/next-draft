@@ -71,27 +71,28 @@ function Sitemap() {
         <SitemapLinks>
           <SitemapLink href="/about">Our Team</SitemapLink>
           <SitemapLink href="/write">Write for Draft.dev</SitemapLink>
+          <SitemapLink href="./#faq">Frequently Asked Questions</SitemapLink>
           <SitemapLink href="/privacy-policy">Privacy Policy</SitemapLink>
         </SitemapLinks>
       </div>
       <div>
         <SitemapHeading>
-          <span className="sitemap-heading">Learn</span>
+          <span className="sitemap-heading">Resources</span>
         </SitemapHeading>
         <SitemapLinks>
           <SitemapLink href="/blog">Draft.dev Blog</SitemapLink>
           <SitemapLink href="/newsletter">Newsletter</SitemapLink>
           <SitemapLink href="/webinars">Webinars</SitemapLink>
+          <SitemapLink href="/playbook">Tech Content Playbook</SitemapLink>
         </SitemapLinks>
       </div>
       <div>
         <SitemapHeading>
-          <span className="sitemap-heading">Questions</span>
+          <span className="sitemap-heading">Learn more</span>
         </SitemapHeading>
         <SitemapLinks>
           <SitemapLink href="/case-studies">Case Studies</SitemapLink>
-          <SitemapLink href="/testimonials">Testimonials</SitemapLink>
-          <SitemapLink href="./#faq">Frequently Asked Questions</SitemapLink>
+          <SitemapLink href="./#testimonials">Testimonials</SitemapLink>
           <SitemapLink href="/call">Book a Discovery Call</SitemapLink>
         </SitemapLinks>
       </div>
