@@ -18,16 +18,16 @@ export default function ContentTypes() {
   return (
     <>
       <ServiceHeader
-        title="Content Types by Draft.dev"
+        title="We Are Able to Create Many Types of Content"
         primaryCTA={{
           text: 'Book a Discovery Call',
           href: '/call',
         }}
         secondaryCTA={{
-          text: 'Tutorial Examples',
-          href: '#examples',
+          text: 'See Our Lead Generation Package',
+          href: './#lead-generation-package',
         }}
-        description="Explore different content types we create for technical audiences."
+        description="Explore the different content types we create for technical audiences."
       />
       <ServiceInfo />
       <Examples />

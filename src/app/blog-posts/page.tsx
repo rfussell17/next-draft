@@ -24,8 +24,8 @@ export default function BlogPosts() {
           href: '/call',
         }}
         secondaryCTA={{
-          text: 'Tutorial Examples',
-          href: '#examples',
+          text: 'See which content types we support',
+          href: '/content-types',
         }}
         description="We help developer marketing teams create blog posts that software engineers actually want to read."
       />

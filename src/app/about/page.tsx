@@ -22,10 +22,8 @@ export default function About() {
         title="About Draft.Dev"
         descriptionOne="Draft.dev is a content marketing agency focused on
           creating in-depth, technical content for companies in tech. We work
-          with subject matter experts from around the world to create
-          tutorials, blog posts, and e-books for our clients. We're a small but quickly
-          growing team of technologists, writers, marketers, and editors."
-        /* descriptionTwo="Want to join us? Learn more about our open roles here." */
+          with subject matter experts from around the world."
+        descriptionTwo="Let us create technical tutorials, video tutorials, blog posts, and e-books for you."
       />
 
       <main className="overflow-hidden">

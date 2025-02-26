@@ -18,7 +18,9 @@ const Examples = () => {
 
           <div className="mt-8 grid grid-cols-1 py-6">
             {tutorials.map((tutorial: Data) => (
-              <ResourceBlock key={tutorial.id} resource={tutorial} />
+              <div key={tutorial.id} className="mb-8">
+                <ResourceBlock resource={tutorial} />
+              </div>
             ))}
           </div>
         </div>

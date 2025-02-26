@@ -24,8 +24,8 @@ export default function Tutorials() {
           href: '/call',
         }}
         secondaryCTA={{
-          text: 'Tutorial Examples',
-          href: '#examples',
+          text: 'See which content types we support',
+          href: '/content-types',
         }}
         description="We can help you create in-depth tutorials designed to reach software developers."
       />

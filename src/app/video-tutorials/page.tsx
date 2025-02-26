@@ -24,8 +24,8 @@ export default function VideoTutorials() {
           href: '/call',
         }}
         secondaryCTA={{
-          text: 'Video Tutorial Examples',
-          href: '#examples',
+          text: 'See which content types we support',
+          href: '/content-types',
         }}
         description="We create high-quality video tutorials for a technical audience."
       />
