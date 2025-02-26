@@ -32,8 +32,7 @@ export default function DriveAwareness() {
       />
       <Why
         title="Turn Technical Content into Growth"
-        subtitle="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque
-            nostrum voluptatem ducimus id explicabo, quo, voluptates, numqua."
+        subtitle="With a track record of predictably creating demand, our content strategists help implement proven frameworks that drive traffic and inbound leads from technical audiences."
         subtitleBold=""
         features={[
           {

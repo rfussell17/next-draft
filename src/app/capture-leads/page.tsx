@@ -32,8 +32,7 @@ export default function BuildTrust() {
       />
       <Why
         title="Consistently turn organic traffic into MQLs and SQLs"
-        subtitle="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque
-            nostrum voluptatem ducimus id explicabo, quo, voluptates, numqua."
+        subtitle="Maximize your lead generation ROI with the help of a dedicated content strategist and our analytical data-driven approach."
         subtitleBold=""
         features={[
           {
@@ -53,7 +52,7 @@ export default function BuildTrust() {
           {
             title: 'Recurring check-ins',
             description:
-              'Maximize your lead generation ROI with our analytical data-driven approach. Recurring check-ins ensure we adapt our content production plan according to the latest learnings..',
+              'Maximize your lead generation ROI with our analytical data-driven approach. Recurring check-ins ensure we adapt our content production plan according to the latest learnings.',
             linkText: 'Our Content Strategy Services',
             linkHref: '/delivery-process',
           },

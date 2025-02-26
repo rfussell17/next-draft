@@ -32,8 +32,7 @@ export default function BuildTrust() {
       />
       <Why
         title="Written by Developers, for Developers"
-        subtitle="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque
-            nostrum voluptatem ducimus id explicabo, quo, voluptates, numqua."
+        subtitle="Build credibility and trust with your technical audiences through a consistent stream of high-quality content, tailored specifically to their needs and interests."
         subtitleBold=""
         features={[
           {
