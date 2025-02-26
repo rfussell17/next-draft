@@ -27,7 +27,7 @@ export default function DriveAwareness() {
         }}
         secondaryCTA={{
           text: 'See Our Lead Generation Package',
-          href: '/lead-generation',
+          href: './#lead-generation-package',
         }}
       />
       <Why
@@ -39,22 +39,22 @@ export default function DriveAwareness() {
             title: 'Strategic Content in Every Format',
             description:
               'We drive awareness by providing blog posts, eBooks and video tutorials at a consistent cadence, freeing up your marketers and developers to focus on other priorities. We also suggest promotional strategies that place the content in front of your target audience.',
-            linkText: 'Our Business to Business Marketing Agency',
-            linkHref: '/expert-writers',
+            linkText: 'See what content types we create for you',
+            linkHref: '/content-types',
           },
           {
             title: 'For Marketers and DevRels',
             description:
               'Whether you are a Marketer that needs help with technical content or a DevRel that needs support on the strategic side, we create content that puts your product in a good light, helping drive developer engagement with your business and product.',
-            linkText: 'Our B2B Tech Marketing',
-            linkHref: '/content-quality',
+            linkText: 'How we build trust with technical audiences',
+            linkHref: '/build-trust',
           },
           {
-            title: 'Enterprise Content Marketing',
+            title: 'Technical Content Marketing',
             description:
-              'We help enterprises create successful content programs that drive awareness and leads. Our seasoned team of content strategists use proven frameworks to make sure your content delivers the highest ROI for your business.',
-            linkText: 'Our Enterprise Content Marketing',
-            linkHref: '/delivery-process',
+              'We help tech companies create successful content programs that drive awareness and leads. Our seasoned team of content strategists use proven frameworks to make sure your content delivers the highest ROI for your business.',
+            linkText: 'How we predictably generate demand',
+            linkHref: '/capture-leads',
           },
         ]}
       />

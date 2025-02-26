@@ -27,7 +27,7 @@ export default function BuildTrust() {
         }}
         secondaryCTA={{
           text: 'See Our Lead Generation Package',
-          href: '/lead-generation',
+          href: './#lead-generation-package',
         }}
       />
       <Why
@@ -39,22 +39,22 @@ export default function BuildTrust() {
             title: 'Technical Writing that Convinces',
             description:
               'Everything we produce is written by subject matter experts, technically reviewed and professionally edited by our in-house team, delivered to you in a ready-to-publish format along with social posts and SEO meta descriptions.',
-            linkText: 'See Technical Writing Examples',
-            linkHref: '/expert-writers',
+            linkText: 'See how we help Marketing Teams',
+            linkHref: '/for-marketers',
           },
           {
             title: 'Thought Leadership Content',
             description:
               'We provide you with written and video material that allows for a consistent output of high-quality content. The topics we work on are defined by experienced developers and are guaranteed to resonate with your readers',
-            linkText: 'About Our Thought Leadership Content Marketing',
-            linkHref: '/content-quality',
+            linkText: 'See how we help Developer Relations Teams',
+            linkHref: '/for-dev-rels',
           },
           {
             title: 'Build Respect with Your Technical Audience',
             description:
               'Our internal subject matter experts evaluate your product and will take care of writing, reviewing, and editing content pieces, be it blog posts, ebooks, or white papers about your industry or your product specifically.',
-            linkText: 'Outsource Your Technical Writing',
-            linkHref: '/delivery-process',
+            linkText: 'Learn more about our team and writers',
+            linkHref: '/about',
           },
         ]}
       />

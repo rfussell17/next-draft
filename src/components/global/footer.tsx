@@ -55,7 +55,7 @@ function Sitemap() {
     <>
       <div>
         <SitemapHeading>
-          <span className="sitemap-heading">Product</span>
+          <span className="sitemap-heading">Tech Content</span>
         </SitemapHeading>
         <SitemapLinks>
           <SitemapLink href="/blog-posts">Blog Content</SitemapLink>

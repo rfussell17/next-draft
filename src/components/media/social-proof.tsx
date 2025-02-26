@@ -1,8 +1,9 @@
 const stats = [
-  { id: 1, name: 'Dev Writers & Reviewers ', value: '300+' },
-  { id: 2, name: 'Technical Audience', value: '100%' },
-  { id: 3, name: 'Clients', value: '100+' },
-  { id: 4, name: 'Content Pieces Published', value: '3000+' },
+  { id: 1, name: 'Subject Matter Experts & Reviewers ', value: '300+' },
+  { id: 2, name: 'Clients', value: '100+' },
+  { id: 3, name: 'Content Pieces Published', value: '3000+' },
+  { id: 4, name: 'Technical Audience', value: '100%' },
+
 ]
 
 export default function SocialProof() {
