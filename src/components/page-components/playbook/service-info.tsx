@@ -11,16 +11,17 @@ const ServiceInfo = () => {
               <h2 className="sm:subheader-gradient subheader-mobile-gradient">
                 Produce high-quality technical marketing content
               </h2>
+              {/* FORM EMBED HERE */}
 
-              <div className="">
+              {/* <div className="">
                 <h3 className="sm:paragraph-dark py-4">
                   Do you struggle to find writers to cover technical topics? Do
                   you wish you were more consistently writing technical blog
                   posts? Is editing becoming a huge time sink?
                 </h3>
-              </div>
+              </div> */}
 
-              <dl className="max-w-xl space-y-8 text-lg text-gray-700 lg:max-w-none">
+              {/* <dl className="max-w-xl space-y-8 text-lg text-gray-700 lg:max-w-none">
                 <div className="relative">
                   <dd className="lead-dark my-2 text-lg">
                     <strong className="text-gray-500">
@@ -43,10 +44,10 @@ const ServiceInfo = () => {
                 </li>
                 <li className="py-2">Multi-author publishing calendar</li>
                 <li className="py-2">Technical blogging style guide</li>
-              </ul>
+              </ul> */}
               <div className="mt-6 flex flex-col items-start gap-x-6 sm:mt-16 sm:flex-row sm:items-center">
                 <Link
-                  href="https://us02web.zoom.us/webinar/register/WN_mB3ViyRAS2a0Ejl3UBdBKQ#/registration"
+                  href="/call"
                   className="my-2 rounded-sm px-3.5 py-2.5 text-sm font-semibold text-gray-600 shadow-sm ring-2 ring-gray-500 hover:bg-gradient-brand hover:text-white hover:ring-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 sm:my-0 sm:text-base"
                 >
                   Book a Discovery Call

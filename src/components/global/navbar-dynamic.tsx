@@ -65,7 +65,7 @@ const NAVIGATION_CONFIG = {
     { href: './#lead-generation-package', label: 'Lead Generation' },
     { href: '/case-studies', label: 'Case Studies' },
     { href: '/blog', label: 'Blog' },
-    { href: '/playbook', label: 'Playbook' },
+    { href: '/playbook', label: 'Content Playbook' },
     { href: '/about', label: 'Company' },
     { href: '/call', label: 'Book Discovery Call' },
   ],
