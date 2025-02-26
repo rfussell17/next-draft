@@ -91,7 +91,7 @@ function Sitemap() {
         <SitemapLinks>
           <SitemapLink href="/case-studies">Case Studies</SitemapLink>
           <SitemapLink href="/testimonials">Testimonials</SitemapLink>
-          <SitemapLink href="/faq">Frequently Asked Questions</SitemapLink>
+          <SitemapLink href="./#faq">Frequently Asked Questions</SitemapLink>
           <SitemapLink href="/call">Book a Discovery Call</SitemapLink>
         </SitemapLinks>
       </div>
