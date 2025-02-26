@@ -5,6 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 export const metadata = {
+  title:'Technical Content Marketing Case Studies - Draft.dev',
   description:
     'See how Earthly increased their monthly blog visitors by 346% with Draft.dev technical content.',
   robots: {

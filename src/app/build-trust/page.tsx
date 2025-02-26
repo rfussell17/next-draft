@@ -7,6 +7,7 @@ import Why from '@/components/page-components/why'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
+  title: 'Build Trust and Thought Leadreship with Technical Content - Draft.dev',
   description:
     'We deliver high-quality tech content that is written and reviewed by experienced developers, and edited by professional editors.',
   robots: {

@@ -6,6 +6,7 @@ import ServiceInfo from '@/components/page-components/tutorials/service-info'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
+  title:'Developer Tutorials - Draft.dev',
   description:
     'Learn more about how we can help you create in-depth tutorials designed to reach software developers, and see some examples.',
   robots: {

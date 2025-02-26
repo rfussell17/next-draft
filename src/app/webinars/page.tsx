@@ -5,6 +5,7 @@ import UpcomingWebinars from '@/components/page-components/webinars/upcoming'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
+  title:'Technical Content Webinars - Draft.dev',
   description:
     'At Draft.dev, we consistently host webinars with industry peers. Watch our previous sessions here and sign up for our upcoming webinars.',
   robots: {

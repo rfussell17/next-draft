@@ -4,6 +4,7 @@ import TestimonialsGroup from '@/components/media/testimonials/testimonials-grou
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
+  title: 'Case Studies - Draft.dev',
   description:
     'Learn why clients like SupaBase, Earthly, Loft Labs, RedPanda, and others choose us.',
   robots: {

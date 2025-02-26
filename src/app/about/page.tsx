@@ -7,8 +7,9 @@ import Why from '@/components/page-components/why'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
+  title: 'About us - Draft.dev',
   description:
-    'Radiant helps you sell more by revealing sensitive information about your customers.',
+    'Draft.dev is a technical content marketing agency focused run by subject matter experts. Learn more about us here.',
   robots: {
     index: false,
     follow: false,

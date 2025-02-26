@@ -4,6 +4,7 @@ import TestimonialsGroup from '@/components/media/testimonials/testimonials-grou
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
+  title: 'Status Hero Case Study - Draft.dev',
   description:
     'Learn how Status Hero grew blog traffic by 211% and increased its trial conversion rate with Draft.dev',
   robots: {

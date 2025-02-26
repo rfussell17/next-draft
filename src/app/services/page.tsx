@@ -3,7 +3,7 @@ import Testimonial from '@/components/media/testimonials/testimonial'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Services',
+  title: 'Content Marketing Services - Draft.dev',
   description:
     'Learn more about the Content Marketing Services we offer at Draft.dev',
   robots: {

@@ -4,6 +4,7 @@ import TestimonialsGroup from '@/components/media/testimonials/testimonials-grou
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
+  title: 'Loft Labs Case Study - Draft.dev',
   description:
     'Learn how Loft Labs scaled its Kubernetes blog by 4x and achieved top SEO rankings with Draft.dev',
   robots: {

@@ -6,6 +6,7 @@ import ServiceInfo from '@/components/page-components/playbook/service-info'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
+  title:'Technical Content Marketing Playbook - Draft.dev',
   description:
     'Download our Technical Marketing Playbook: Learn everything you need to produce high-quality technical marketing content.',
   robots: {

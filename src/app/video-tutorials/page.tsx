@@ -6,6 +6,7 @@ import VideoCard from '@/components/page-components/video-tutorials/video-card'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
+  title:'Technical Video Tutorials - Draft.dev',
   description:
     'Learn more about how we can help you create tech-video-tutorials designed to reach software developers, and see some examples.',
   robots: {
@@ -18,7 +19,7 @@ export default function VideoTutorials() {
   return (
     <>
       <ServiceHeader
-        title="Video Tutorials by Draft.dev"
+        title="Technical Video Tutorials by Draft.dev"
         primaryCTA={{
           text: 'Book a Discovery Call',
           href: '/call',

@@ -2,7 +2,8 @@ import { MedHeader } from '@/components/global/headers/med-header'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  description: 'Draft.dev - Privacy Policy',
+  title:'Privacy Policy - Draft.dev',
+  description: 'We want to protect your privacy. These terms explain how we gather information and how you can get in contact should you have any concerns.',
   robots: {
     index: false,
     follow: false,

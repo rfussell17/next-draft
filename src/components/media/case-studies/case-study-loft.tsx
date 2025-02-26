@@ -5,6 +5,7 @@ import Link from 'next/link'
 import MiniCaseLoft from './mini-case-loft'
 
 export const metadata = {
+  title:'Loft Labs Case Study - Draft.dev',
   description:
     'How Loft Scaled Its Kubernetes Blog and Achieved Top SEO Rankings with Draft.dev',
   robots: {

@@ -6,8 +6,9 @@ import ServiceInfo from '@/components/page-components/blog-service/service-info'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
+  title: 'Technical Blog Content - Draft.dev',
   description:
-    'Radiant helps you sell more by revealing sensitive information about your customers.',
+    'Learn how Draft.dev helps hundreds of clients by creating blog posts that resonate with a technical audience and captures leads.',
   robots: {
     index: false,
     follow: false,
@@ -18,7 +19,7 @@ export default function BlogPosts() {
   return (
     <>
       <ServiceHeader
-        title="Content for Your Developer Blog"
+        title="Technical Blog Content"
         primaryCTA={{
           text: 'Book a Discovery Call',
           href: '/call',

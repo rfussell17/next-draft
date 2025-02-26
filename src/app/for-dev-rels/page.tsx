@@ -10,6 +10,7 @@ import Why from '@/components/page-components/why'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
+  title: 'Developer Marketing that Resonates - Draft.dev',
   description:
     'We support Developer Relations and Developer Advocate Teams by consistently delivering content that technical audiences truly care about and respect.',
   robots: {

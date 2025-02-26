@@ -6,6 +6,7 @@ import ServiceInfo from '@/components/page-components/content-types/service-info
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
+  title: 'Technical Content Types we Create for Our Clients - Draft.dev',
   description:
     'Learn how we help clients by providing tutorials, round-up articles, video tutorials, comparison content, technical guides, and persuasive writing.',
   robots: {

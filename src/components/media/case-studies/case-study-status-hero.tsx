@@ -5,6 +5,7 @@ import Link from 'next/link'
 import MiniCaseStatusHero from './mini-case-status-hero'
 
 export const metadata = {
+  title:'Status Hero Case Study - Draft.dev',
   description:
     'How Status Hero Grew Blog Traffic By 211% and Increased its Trial Conversion Rate With Draft.dev',
   robots: {

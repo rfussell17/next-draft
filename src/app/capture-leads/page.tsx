@@ -7,6 +7,7 @@ import Why from '@/components/page-components/why'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
+  title: 'Inbound Lead Generation and Technical Copy Writing - Draft.dev',
   description:
     'Consistently convert organic traffic into high-quality MQLs and SQLs with our proven lead qualification system and our expert guidance.',
   robots: {

@@ -3,6 +3,7 @@ import TestimonialsGroup from '@/components/media/testimonials/testimonials-grou
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
+  title: 'Subscribe to the Draft.dev Newsletter',
   description:
     'Sign up to our Draft.dev Newsletter - we publish software development news and occasionally share news about webinars and other free resources.',
   robots: {

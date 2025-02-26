@@ -6,7 +6,7 @@ import CalendlyWidget from '@/components/page-components/vendors/calendly'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Call Us',
+  title: 'Book a Discovery Call - Draft.dev',
   description:
     'Book a Discovery Call with us to learn more about our Lead Generation Package and other custom services.',
 }
