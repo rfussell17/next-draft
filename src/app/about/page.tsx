@@ -25,7 +25,7 @@ export default function About() {
           with subject matter experts from around the world to create
           tutorials, blog posts, and e-books for our clients. We're a small but quickly
           growing team of technologists, writers, marketers, and editors."
-        descriptionTwo="Want to join us? Learn more about our open roles here."
+        /* descriptionTwo="Want to join us? Learn more about our open roles here." */
       />
 
       <main className="overflow-hidden">
@@ -35,25 +35,25 @@ export default function About() {
           title="What makes Draft.dev different?"
           features={[
             {
-              title: 'title',
+              title: 'A sole focus on technical audiences',
               description:
                 'We work exclusively with companies that are trying to reach software developers, data engineers, and DevOps practitioners. Typically, our clients are Developer Relations or Developer Marketing teams at companies with 50+ employees or at least Series A funding.',
-              linkText: 'Our Vetted Technical Writers',
-              linkHref: '/expert-writers',
+              linkText: 'How we build trust with technical audiences',
+              linkHref: '/build-trust',
             },
             {
-              title: 'title',
+              title: 'Technical expertise and Marketing excellence',
               description:
                 'We specialize in producing technical content (mostly tutorials and blog posts), but we can also help you create a content plan, come up with suitable topics, or execute on one-time content projects like ebooks.',
-              linkText: 'Our Quality-Focused Content',
-              linkHref: '/content-quality',
+              linkText: 'How we predictably generate demand',
+              linkHref: '/drive-awareness',
             },
             {
               title: 'Content You Can Count On',
               description:
-                'Our goal is to create high-quality, technically-deep content. Subject-matter experts are assigned to each article, so every piece is detailed and authoritative. Our core team includes experienced engineers and editors who make sure that every piece of content comes to you ready to publish.',
-              linkText: 'Our delivery process',
-              linkHref: '/delivery-process',
+                'We create high-quality, technically-deep content. Subject-matter experts are assigned to each article, so every piece is detailed and authoritative. Our core team includes experienced engineers and editors who make sure that every piece of content comes to you ready to publish.',
+              linkText: 'What our clients say about our work',
+              linkHref: '/case-studies',
             },
           ]}
         />
