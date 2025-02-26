@@ -90,7 +90,7 @@ export default function CaseStudyLoftLabs() {
               </div>
             </div>
 
-            <div className="mb-12 flex flex-col items-center justify-center gap-x-6 sm:mb-24 sm:mt-12 sm:flex-row">
+            {/* <div className="mb-12 flex flex-col items-center justify-center gap-x-6 sm:mb-24 sm:mt-12 sm:flex-row">
               <Link
                 href="#"
                 className="my-2 rounded-sm px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm ring-2 ring-white hover:bg-white hover:text-gray-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary sm:my-0 sm:text-base"
@@ -103,7 +103,7 @@ export default function CaseStudyLoftLabs() {
               >
                 Just give me the hard facts <span aria-hidden="true">→</span>
               </Link>
-            </div>
+            </div> */}
 
             {/* Stats Grid */}
             <div className="mx-auto max-w-2xl lg:max-w-5xl">
@@ -149,7 +149,7 @@ export default function CaseStudyLoftLabs() {
                 </div>
               ))}
             </dl>
-            <div className="flex items-center justify-center gap-x-6 sm:my-10">
+            {/* <div className="flex items-center justify-center gap-x-6 sm:my-10">
               <Link
                 href="#"
                 className="rounded-sm px-3.5 py-2.5 font-code text-base font-semibold text-white shadow-sm ring-2 ring-white hover:bg-gray-100 hover:text-gradient-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
@@ -162,16 +162,16 @@ export default function CaseStudyLoftLabs() {
               >
                 Technical writing examples <span aria-hidden="true">→</span>
               </Link>
-            </div>
+            </div> */}
           </div>
         </div>
 
-        <div className="mx-auto my-24 max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto my-24 max-w-7xl px-6 lg:px-8 scroll-mt-32" id="more-case-studies">
           <div className="mx-auto">
             <h2 className="subheader-gradient">More Case Studies</h2>
             <p className="lead-dark">
               Hear from real clients to learn how they have succeeded with
-              Draft.dev
+              Draft.dev.
             </p>
           </div>
           <ul

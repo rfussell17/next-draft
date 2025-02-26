@@ -17,7 +17,7 @@ export function LogosDark({
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:max-w-none">
           <h3 className="subheader-mobile-light pb-3 font-semibold sm:pb-0 sm:text-left sm:text-base">
-            Trusted by 100+ developer tools companies
+            Trusted by 100+ tech companies
           </h3>
         </div>
         <div className="rounded-lg px-4 py-8 sm:bg-white/5">

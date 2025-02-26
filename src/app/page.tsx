@@ -24,7 +24,7 @@ export default function Home() {
       <main>
         <Hero />
         <What
-          title="A Content Creation Agency for Technical Writing"
+          title="Technical Content Marketing by Subject Matter Experts"
           subtitleBold="Transform your technical marketing"
           subtitleRegular="with expert-written content that resonates with developers and generates qualified leads."
           features={[
@@ -57,22 +57,22 @@ export default function Home() {
               title: 'Subject Matter Experts',
               description:
                 'We create expert-driven technical content for software professionals. Our global network of developers and subject matter experts delivers in-depth coverage across diverse technologies.',
-              linkText: 'Our Vetted Technical Writers',
-              linkHref: '/expert-writers',
+              linkText: 'How we build trust with technical audiences',
+              linkHref: '/build-trust',
             },
             {
               title: 'Consistent Quality and Style',
               description:
                 "If you've worked with freelancers before, you know the quality can vary. Our editors ensure that every piece of content is technically accurate, meets our quality standards, and has a consistent style.",
-              linkText: 'Our Quality-Focused Content',
-              linkHref: '/content-quality',
+              linkText: 'What our clients say about our work',
+              linkHref: '/case-studies',
             },
             {
               title: 'Content You Can Count On',
               description:
                 "Never worry about whether you'll have a new post ready for your blog again. When you work with Draft.dev, you'll get ready-to-publish blog posts or videos every 1-2 weeks depending on your needs.",
-              linkText: 'Our delivery process',
-              linkHref: '/delivery-process',
+              linkText: 'How we predictably generate demand',
+              linkHref: '/drive-awareness',
             },
           ]}
         />
@@ -103,7 +103,7 @@ export default function Home() {
           ]}
           disclaimerOne="Six Month Minimum"
           disclaimerTwo="Delivery starts after initial planning period"
-          disclaimerThree="Draft.dev recommends supporting the content with promotional campaign to drive traffic"
+          disclaimerThree="Draft.dev recommends supporting the content with promotional campaigns to drive traffic"
         />
 
         {/* <Testimonial

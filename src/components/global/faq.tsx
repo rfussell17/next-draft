@@ -58,7 +58,7 @@ export default function FAQ(): JSX.Element {
             </span>{' '}
             Reach out to our support team by{' '}
             <Link
-              href="#"
+              href="mailto:sales@draft.dev"
               className="hover:text-gradient-brand font-semibold text-secondary underline"
             >
               sending us an email

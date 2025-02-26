@@ -12,11 +12,11 @@ const Hero: React.FC = () => {
             <div className="mx-auto w-full lg:flex lg:items-center lg:justify-between">
               <div className="relative max-w-2xl lg:shrink-0">
                 <h1 className="sm:header-light mb-6 pb-4 font-code text-3xl font-semibold text-white">
-                  The Leader in Developer Marketing
+                  We are a Content Creation Agency for Technical Companies
                 </h1>
                 <p className="sm:paragraph-light pb-6 text-base text-gray-100 sm:pb-0">
-                  We are a technical content marketing agency helping Marketing
-                  and Developer Relations teams in Tech Companies drive
+                  Draft.dev helps Marketing
+                  and Developer Relations teams in tech businesses drive
                   awareness, capture leads, and build trust.
                 </p>
                 <div className="mt-6 flex flex-col items-start gap-x-6 sm:mt-16 sm:flex-row sm:items-center">

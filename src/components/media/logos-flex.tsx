@@ -16,7 +16,7 @@ export function LogosFlex({
     <div className="text-white">
       <div className="mb-5">
         <h3 className="subheader-mobile-light pb-3 font-semibold sm:pb-0 sm:text-left sm:text-base">
-          Trusted by 100+ developer tools companies
+          Trusted by 100+ tech companies
         </h3>
       </div>
       <div className="rounded-lg px-4 py-8 sm:bg-white/5">
