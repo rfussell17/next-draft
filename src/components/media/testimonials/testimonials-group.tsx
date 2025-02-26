@@ -3,6 +3,10 @@ import Image from 'next/image'
 import randall from '/public/media/testimonials-sm/randall_degges_snyk_draft_dev.jpg'
 import rich from '/public/media/testimonials-sm/rich_burroughs_loft_labs_draft_dev.jpg'
 import robert from '/public/media/testimonials-sm/robert_gibb_fabric_draft_dev.jpg'
+import tony from '/public/media/testimonials-sm/tony_chan_cloudforecast_draft_dev.jpg'
+import abhishek from '/public/media/testimonials-sm/abhishek_iyer_descope_draft_dev.png'
+import emily from '/public/media/testimonials-sm/emily_blitstein_sinch_mailgun_draft_dev.png'
+import jenny from '/public/media/testimonials-sm/jenny_medeiros_redpanda_draft_dev.png'
 
 type Testimonial = {
   body: string
@@ -19,30 +23,30 @@ const testimonials: Testimonial[] = [
     author: {
       name: 'Emily Blitstein',
       company: 'SINCH MAILGUN',
-      imageUrl: rich.src,
+      imageUrl: emily.src,
     },
   },
   {
     body: 'Partnering with Draft.dev has accelerated our technical content output while also extending the bandwidth of our developer relations team to focus more on core product activities. It is truly high-quality content written by devs for devs, helping devs in the process.',
     author: {
       name: 'Abhishek Iyer',
-      company: 'DESCOPE',
-      imageUrl: robert.src,
+      company: 'Descope',
+      imageUrl: abhishek.src,
     },
   },
   {
     body: 'Draft.dev is our go-to for practical, well-written content that actually resonates with technical audiences and helps us inspire the developer community. It has been invaluable (for our internal team and my sanity) to have their brilliant writers, editors, and PMs in our content corner!',
     author: {
       name: 'Jenny Medeiros',
-      company: 'REDPANDA',
-      imageUrl: randall.src,
+      company: 'Redpanda',
+      imageUrl: jenny.src,
     },
   },
   {
     body: 'Draft.dev has been an amazing partner, helping us scale our content program by creating thoughtful and technically-sound developer content and training materials. We’re constantly iterating to build the best educational materials for developer security and Draft.dev has been instrumental in helping us realize these ambitions.',
     author: {
       name: 'Randall Degges',
-      company: 'SNYK',
+      company: 'Snyk',
       imageUrl: randall.src,
     },
   },
@@ -50,7 +54,7 @@ const testimonials: Testimonial[] = [
     body: "Having draft.dev source quality technical content for the Loft Labs blog has been a competitive advantage. It's given us a steadier flow of content, which has helped our brand's visibility, and some of the posts are among the most popular ones we've published.",
     author: {
       name: 'Rich Burroughs',
-      company: 'LOFT LABS',
+      company: 'Loft Labs',
       imageUrl: rich.src,
     },
   },
@@ -58,8 +62,16 @@ const testimonials: Testimonial[] = [
     body: 'In a matter of weeks, our referral traffic and organic keyword rankings increased by 3x. One post also hit Hacker News which resulted in 5 demo requests in a single day!',
     author: {
       name: 'Robert Gibb',
-      company: 'FABRIC. INC',
+      company: 'fabric. Inc',
       imageUrl: robert.src,
+    },
+  },
+  {
+    body: "We've seen amazing results with the technical content produced from the team at Draft.dev. The attention to technical detail from start to finish has been a huge addition to our content.",
+    author: {
+      name: 'Tony Chan',
+      company: 'cloudforecast',
+      imageUrl: tony.src,
     },
   },
   // Add more testimonials here...
