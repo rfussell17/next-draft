@@ -19,7 +19,7 @@ export const metadata: Metadata = {
       'application/rss+xml': [
         {
           title: 'The Radiant Blog',
-          url: '/blog/feed.xml',
+          url: '/learn/feed.xml',
         },
       ],
     },
@@ -46,7 +46,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${firaSans.variable} ${firaCode.variable} !scroll-smooth`}>
+    <html
+      lang="en"
+      className={`${firaSans.variable} ${firaCode.variable} !scroll-smooth`}
+    >
       <head>
         <meta data-grammarly-disable="true" />
       </head>

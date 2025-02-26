@@ -57,6 +57,16 @@ const nextConfig = {
         hostname: 'tailwindui.com',
         pathname: '/**',
       },
+      {
+        protocol: 'http',
+        hostname: 'draft-migrate-test.local',
+        pathname: '/**',
+      },
+      {
+        protocol: 'http',
+        hostname: 'i.imgur.com',
+        pathname: '/**',
+      },
     ],
   },
 }

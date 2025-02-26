@@ -4,7 +4,7 @@ interface Post {
   id: string
   slug: string
   title: string
-  categories: { id: string; name: string }[] // Updated to handle categories as an array
+  categories: { id: string; name: string }[]
   content: string
   date: string
   featuredImage?: {
@@ -13,6 +13,24 @@ interface Post {
     }
   }
   excerpt: string
+  author?: {
+    name: string
+    avatar?: {
+      url: string
+    }
+  }
+  originalAuthor?: string
+}
+
+interface PageInfo {
+  hasNextPage: boolean
+  endCursor: string | null
+  currentPage: number
+}
+
+interface PostsResponse {
+  posts: Post[]
+  pageInfo: PageInfo
 }
 
 declare global {
@@ -26,10 +44,14 @@ declare global {
   }
 }
 
-// GraphQL queries
+// GraphQL query for fetching multiple posts with pagination
 const ALL_POSTS_QUERY = `
-query AllPosts($first: Int) {
-  posts(first: $first, where: { status: PUBLISH }) {
+query AllPosts($first: Int, $after: String) {
+  posts(first: $first, after: $after, where: { status: PUBLISH }) {
+    pageInfo {
+      hasNextPage
+      endCursor
+    }
     nodes {
       id
       slug
@@ -55,11 +77,13 @@ query AllPosts($first: Int) {
           }
         }
       }
+      originalAuthor: metaValue(key: "original_author")
     }
   }
 }
 `
 
+// GraphQL query for fetching a single post by slug
 const POST_BY_SLUG_QUERY = `
 query PostBySlug($id: ID!) {
   post(id: $id, idType: SLUG) {
@@ -79,11 +103,19 @@ query PostBySlug($id: ID!) {
         sourceUrl
       }
     }
+    author {
+      node {
+        name
+        avatar {
+          url
+        }
+      }
+    }
+    originalAuthor: metaValue(key: "original_author")
   }
 }
 `
 
-// Create auth header with privacy mode
 const getAuthHeader = () => {
   const auth = Buffer.from(
     `${process.env.WORDPRESS_API_USERNAME}:${process.env.WORDPRESS_API_PASSWORD}`,
@@ -91,7 +123,7 @@ const getAuthHeader = () => {
   return `Basic ${auth}`
 }
 
-async function fetchGraphQL(query: string, variables = {}) {
+export async function fetchGraphQL(query: string, variables = {}) {
   const baseUrl = process.env.WORDPRESS_API_URL
   if (!baseUrl) {
     throw new Error('WORDPRESS_API_URL is not defined')
@@ -114,7 +146,7 @@ async function fetchGraphQL(query: string, variables = {}) {
       headers,
       body: JSON.stringify({ query, variables }),
       cache: 'no-store',
-      next: { tags: ['posts'] }, // Add this for better cache control
+      next: { tags: ['posts'] },
     })
 
     if (!response.ok) {
@@ -141,36 +173,45 @@ async function fetchGraphQL(query: string, variables = {}) {
   }
 }
 
-// Cache functions
-export const getWpPosts = cache(async (first = 10) => {
-  const data = await fetchGraphQL(ALL_POSTS_QUERY, { first })
+export const getWpPosts = cache(
+  async (
+    first = 10,
+    after: string | null = null,
+    currentPage = 1,
+  ): Promise<PostsResponse> => {
+    const data = await fetchGraphQL(ALL_POSTS_QUERY, { first, after })
 
-  if (!data?.posts?.nodes) {
-    return []
-  }
+    if (!data?.posts?.nodes) {
+      return {
+        posts: [],
+        pageInfo: {
+          hasNextPage: false,
+          endCursor: null,
+          currentPage,
+        },
+      }
+    }
 
-  return data.posts.nodes.map(
-    (post: {
-      id: any
-      slug: any
-      title: any
-      categories: { nodes: { id: string; name: string }[] }
-      excerpt: any
-      date: any
-      featuredImage: any
-      author: { node: any }
-    }) => ({
-      id: post.id,
-      slug: post.slug,
-      title: post.title,
-      categories: post.categories.nodes, // Map categories
-      excerpt: post.excerpt,
-      date: post.date,
-      featuredImage: post.featuredImage,
-      author: post.author?.node,
-    }),
-  )
-})
+    return {
+      posts: data.posts.nodes.map((post: any) => ({
+        id: post.id,
+        slug: post.slug,
+        title: post.title,
+        categories: post.categories?.nodes || [],
+        excerpt: post.excerpt,
+        date: post.date,
+        featuredImage: post.featuredImage,
+        author: post.author?.node,
+        originalAuthor: post.originalAuthor || null,
+      })),
+      pageInfo: {
+        hasNextPage: data.posts.pageInfo.hasNextPage,
+        endCursor: data.posts.pageInfo.endCursor,
+        currentPage,
+      },
+    }
+  },
+)
 
 export const getWpPost = cache(async (slug: string) => {
   if (!slug) {
@@ -188,7 +229,8 @@ export const getWpPost = cache(async (slug: string) => {
 
     return {
       ...post,
-      categories: post.categories?.nodes || [], // Map categories
+      categories: post.categories?.nodes || [],
+      originalAuthor: post.originalAuthor || null,
     }
   } catch (error) {
     console.error('Error fetching post:', error)
@@ -196,4 +238,4 @@ export const getWpPost = cache(async (slug: string) => {
   }
 })
 
-export type { Post }
+export type { PageInfo, Post, PostsResponse }

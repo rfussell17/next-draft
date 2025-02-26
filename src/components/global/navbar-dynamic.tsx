@@ -17,6 +17,7 @@ import {
 } from '@heroicons/react/24/outline'
 import { Bars2Icon, ChevronDownIcon } from '@heroicons/react/24/solid'
 import Image from 'next/image'
+import { usePathname } from 'next/navigation'
 import React, { useEffect, useState } from 'react'
 import { Link } from './link'
 
@@ -64,7 +65,7 @@ const NAVIGATION_CONFIG = {
     { href: '/why-us', label: 'Why Us?' },
     { href: './#lead-generation-package', label: 'Lead Generation' },
     { href: '/case-studies', label: 'Case Studies' },
-    { href: '/blog', label: 'Blog' },
+    { href: '/learn', label: 'Blog' },
     { href: '/playbook', label: 'Content Playbook' },
     { href: '/about', label: 'Company' },
     { href: '/call', label: 'Book Discovery Call' },
@@ -80,14 +81,27 @@ const STYLES = {
   menuIcon: 'h-6 w-6 flex-none text-gray-700',
 }
 
-const getNavStyles = (hasScrolled: boolean) => ({
-  text: `text-gray-800 ${hasScrolled ? 'tablet:text-gray-800' : 'tablet:text-white'}`,
-  background: `bg-white ${hasScrolled ? 'tablet:bg-white/95 tablet:backdrop-blur-sm tablet:shadow-md' : 'tablet:bg-transparent'}`,
-  hoverBg: `hover:bg-gray-100/80 ${hasScrolled ? 'tablet:hover:bg-gray-100/80' : 'tablet:hover:bg-white/10'}`,
-  logo: hasScrolled
-    ? '/draft/logos/draftlogo_main_filled.svg'
-    : '/draft/logos/draftlogo_base_white.svg',
-})
+const getNavStyles = (hasScrolled: boolean, isSlug: boolean = false) => {
+  // If it's a slug page, always return the "scrolled" styles
+  if (isSlug) {
+    return {
+      text: 'tablet:text-gray-800',
+      background:
+        'bg-white tablet:bg-white/95 tablet:backdrop-blur-sm tablet:shadow-md',
+      hoverBg: 'hover:bg-gray-100/80 tablet:hover:bg-gray-100/80',
+      logo: '/draft/logos/draftlogo_main_filled.svg',
+    }
+  }
+
+  return {
+    text: `text-gray-800 ${hasScrolled ? 'tablet:text-gray-800' : 'tablet:text-white'}`,
+    background: `bg-white ${hasScrolled ? 'tablet:bg-white/95 tablet:backdrop-blur-sm tablet:shadow-md' : 'tablet:bg-transparent'}`,
+    hoverBg: `hover:bg-gray-100/80 ${hasScrolled ? 'tablet:hover:bg-gray-100/80' : 'tablet:hover:bg-white/10'}`,
+    logo: hasScrolled
+      ? '/draft/logos/draftlogo_main_filled.svg'
+      : '/draft/logos/draftlogo_base_white.svg',
+  }
+}
 
 interface NavbarProps {
   banner?: React.ReactNode
@@ -95,7 +109,9 @@ interface NavbarProps {
 
 export function DynamicNavbar({ banner }: NavbarProps) {
   const [hasScrolled, setHasScrolled] = useState(false)
-  const styles = getNavStyles(hasScrolled)
+  const pathname = usePathname()
+  const isSlug = pathname?.startsWith('/learn/')
+  const styles = getNavStyles(hasScrolled, isSlug)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -232,50 +248,54 @@ export function DynamicNavbar({ banner }: NavbarProps) {
   )
 
   return (
-    <Disclosure
-      as="header"
-      className={`fixed left-0 right-0 top-0 z-50 ${styles.background} ${STYLES.transition}`}
-    >
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between py-3">
-          <div className="flex items-center">
-            <Link href="/" title="Home" className="block tablet:hidden">
-              <Image
-                src="/draft/logos/draftlogo_main_filled.svg"
-                alt="Logo"
-                width={180}
-                height={72}
-                priority
-              />
-            </Link>
-            <Link href="/" title="Home" className="hidden tablet:block">
-              <Image
-                src={styles.logo}
-                alt="Logo"
-                width={180}
-                height={72}
-                priority
-                className={STYLES.transition}
-              />
-            </Link>
-            {banner && (
-              <div className="hidden items-center tablet:flex">{banner}</div>
-            )}
+    <>
+      {isSlug && <div className="h-16"></div>}
+
+      <Disclosure
+        as="header"
+        className={`fixed left-0 right-0 top-0 z-50 ${styles.background} ${STYLES.transition}`}
+      >
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between py-3">
+            <div className="flex items-center">
+              <Link href="/" title="Home" className="block tablet:hidden">
+                <Image
+                  src="/draft/logos/draftlogo_main_filled.svg"
+                  alt="Logo"
+                  width={180}
+                  height={72}
+                  priority
+                />
+              </Link>
+              <Link href="/" title="Home" className="hidden tablet:block">
+                <Image
+                  src={styles.logo}
+                  alt="Logo"
+                  width={180}
+                  height={72}
+                  priority
+                  className={STYLES.transition}
+                />
+              </Link>
+              {banner && (
+                <div className="hidden items-center tablet:flex">{banner}</div>
+              )}
+            </div>
+
+            <DesktopNav />
+
+            <DisclosureButton
+              className="flex h-12 w-12 items-center justify-center rounded-lg text-gray-800 hover:bg-gray-100/80 lg:hidden"
+              aria-label="Open main menu"
+            >
+              <Bars2Icon className="h-6 w-6" />
+            </DisclosureButton>
           </div>
 
-          <DesktopNav />
-
-          <DisclosureButton
-            className="flex h-12 w-12 items-center justify-center rounded-lg text-gray-800 hover:bg-gray-100/80 lg:hidden"
-            aria-label="Open main menu"
-          >
-            <Bars2Icon className="h-6 w-6" />
-          </DisclosureButton>
+          <MobileNav />
         </div>
-
-        <MobileNav />
-      </div>
-    </Disclosure>
+      </Disclosure>
+    </>
   )
 }
 
