@@ -24,7 +24,7 @@ interface PageProps {
 }
 
 export default async function PostPage({ params }: PageProps) {
-  const { slug } = await params
+  const { slug } = params
   const post = await getWpPost(slug)
   if (!post) {
     notFound()

@@ -9,14 +9,10 @@ const nextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'optimistic-insurance.localsite.io',
+        hostname: 'https://candid-cookie.flywheelsites.com/',
         pathname: '/**',
       },
-      {
-        protocol: 'https',
-        hostname: 'heartfelt-parfait-e90b6d.netlify.app',
-        pathname: '/**',
-      },
+
       {
         protocol: 'https',
         hostname: 'nextdraft.netlify.app',
