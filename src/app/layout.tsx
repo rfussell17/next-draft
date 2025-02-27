@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     types: {
       'application/rss+xml': [
         {
-          title: 'The Radiant Blog',
+          title: 'Draft.dev Blog',
           url: '/learn/feed.xml',
         },
       ],

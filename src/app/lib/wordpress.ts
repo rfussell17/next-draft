@@ -1,6 +1,7 @@
+// app/lib/wordpress.ts
 import { cache } from 'react'
 
-interface Post {
+export interface Post {
   id: string
   slug: string
   title: string
@@ -14,21 +15,23 @@ interface Post {
   }
   excerpt: string
   author?: {
-    name: string
-    avatar?: {
-      url: string
+    node: {
+      name: string
+      avatar?: {
+        url: string
+      }
     }
   }
-  originalAuthor?: string
+  originalAuthor?: string | null
 }
 
-interface PageInfo {
+export interface PageInfo {
   hasNextPage: boolean
   endCursor: string | null
   currentPage: number
 }
 
-interface PostsResponse {
+export interface PostsResponse {
   posts: Post[]
   pageInfo: PageInfo
 }
@@ -85,8 +88,8 @@ query AllPosts($first: Int, $after: String) {
 
 // GraphQL query for fetching a single post by slug
 const POST_BY_SLUG_QUERY = `
-query PostBySlug($id: ID!) {
-  post(id: $id, idType: SLUG) {
+query PostBySlug($slug: ID!) {
+  post(id: $slug, idType: SLUG) {
     id
     slug
     title
@@ -116,7 +119,7 @@ query PostBySlug($id: ID!) {
 }
 `
 
-const getAuthHeader = () => {
+function getAuthHeader() {
   const auth = Buffer.from(
     `${process.env.WORDPRESS_API_USERNAME}:${process.env.WORDPRESS_API_PASSWORD}`,
   ).toString('base64')
@@ -139,8 +142,6 @@ export async function fetchGraphQL(query: string, variables = {}) {
       headers.append('X-WP-Privacy', process.env.WORDPRESS_PRIVACY_PASSWORD)
     }
 
-    console.log('Attempting to fetch from:', baseUrl)
-
     const response = await fetch(baseUrl, {
       method: 'POST',
       headers,
@@ -150,25 +151,19 @@ export async function fetchGraphQL(query: string, variables = {}) {
     })
 
     if (!response.ok) {
-      console.error('Response not OK:', response.status, response.statusText)
       throw new Error(`HTTP error! status: ${response.status}`)
     }
 
     const text = await response.text()
+    const json = JSON.parse(text)
 
-    try {
-      const json = JSON.parse(text)
-      if (json.errors) {
-        console.error('GraphQL Errors:', json.errors)
-        throw new Error(json.errors[0].message)
-      }
-      return json.data
-    } catch (error) {
-      console.error('Response Parsing Error:', text)
-      throw new Error('Failed to parse WordPress response')
+    if (json.errors) {
+      throw new Error(json.errors[0].message)
     }
+
+    return json.data
   } catch (error) {
-    console.error('Fetch error:', error)
+    console.error('WordPress API Error:', error)
     throw error
   }
 }
@@ -179,9 +174,43 @@ export const getWpPosts = cache(
     after: string | null = null,
     currentPage = 1,
   ): Promise<PostsResponse> => {
-    const data = await fetchGraphQL(ALL_POSTS_QUERY, { first, after })
+    try {
+      const data = await fetchGraphQL(ALL_POSTS_QUERY, { first, after })
+      if (!data?.posts?.nodes || !data.posts.pageInfo) {
+        return {
+          posts: [],
+          pageInfo: {
+            hasNextPage: false,
+            endCursor: null,
+            currentPage,
+          },
+        }
+      }
 
-    if (!data?.posts?.nodes) {
+      return {
+        posts: data.posts.nodes.map((post: any) => ({
+          id: post.id,
+          slug: post.slug,
+          title: post.title,
+          categories: post.categories?.nodes || [],
+          excerpt: post.excerpt,
+          date: post.date,
+          featuredImage: post.featuredImage,
+          author: post.author?.node
+            ? {
+                node: post.author.node,
+              }
+            : undefined,
+          originalAuthor: post.originalAuthor || null,
+        })),
+        pageInfo: {
+          hasNextPage: data.posts.pageInfo.hasNextPage,
+          endCursor: data.posts.pageInfo.endCursor,
+          currentPage,
+        },
+      }
+    } catch (error) {
+      console.error('Error fetching posts:', error)
       return {
         posts: [],
         pageInfo: {
@@ -190,25 +219,6 @@ export const getWpPosts = cache(
           currentPage,
         },
       }
-    }
-
-    return {
-      posts: data.posts.nodes.map((post: any) => ({
-        id: post.id,
-        slug: post.slug,
-        title: post.title,
-        categories: post.categories?.nodes || [],
-        excerpt: post.excerpt,
-        date: post.date,
-        featuredImage: post.featuredImage,
-        author: post.author?.node,
-        originalAuthor: post.originalAuthor || null,
-      })),
-      pageInfo: {
-        hasNextPage: data.posts.pageInfo.hasNextPage,
-        endCursor: data.posts.pageInfo.endCursor,
-        currentPage,
-      },
     }
   },
 )
@@ -219,7 +229,7 @@ export const getWpPost = cache(async (slug: string) => {
   }
 
   try {
-    const data = await fetchGraphQL(POST_BY_SLUG_QUERY, { id: slug })
+    const data = await fetchGraphQL(POST_BY_SLUG_QUERY, { slug })
 
     if (!data?.post) {
       return null
@@ -230,6 +240,11 @@ export const getWpPost = cache(async (slug: string) => {
     return {
       ...post,
       categories: post.categories?.nodes || [],
+      author: post.author?.node
+        ? {
+            node: post.author.node,
+          }
+        : undefined,
       originalAuthor: post.originalAuthor || null,
     }
   } catch (error) {
@@ -237,5 +252,3 @@ export const getWpPost = cache(async (slug: string) => {
     return null
   }
 })
-
-export type { PageInfo, Post, PostsResponse }

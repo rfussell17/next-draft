@@ -67,6 +67,16 @@ const nextConfig = {
         hostname: 'i.imgur.com',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'i.imgur.com',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'no-cache.hubspot.com',
+        pathname: '/**',
+      },
     ],
   },
 }

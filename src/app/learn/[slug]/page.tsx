@@ -1,4 +1,4 @@
-// File: app/learn/[slug]/page.tsx
+// app/learn/[slug]/page.tsx
 import { getWpPost } from '@/app/lib/wordpress'
 import parse, { type DOMNode } from 'html-react-parser'
 import type { Metadata } from 'next'
@@ -23,20 +23,18 @@ interface PageProps {
   searchParams: { [key: string]: string | string[] | undefined }
 }
 
-export default async function PostPage({ params, searchParams }: PageProps) {
-  const { slug } = params
+export default async function PostPage({ params }: PageProps) {
+  const { slug } = await params
   const post = await getWpPost(slug)
-
   if (!post) {
     notFound()
   }
-
   const transform = (domNode: DOMNode) => {
     if (domNode.type === 'tag' && domNode.name === 'img' && domNode.attribs) {
       const { src, alt } = domNode.attribs
       return (
         <Image
-          src={src || '/default-image.jpg'}
+          src={src || '/site/med-landscape/write_draft_dev.jpg'}
           alt={alt || 'Blog image'}
           width={768}
           height={450}
@@ -57,14 +55,14 @@ export default async function PostPage({ params, searchParams }: PageProps) {
   })
 
   // Determine which author name to display
-  const displayAuthor = post.originalAuthor || post.author?.name || 'Draft.dev'
+  const displayAuthor =
+    post.originalAuthor || post.author?.node?.name || 'Draft.dev'
 
   return (
     <div className="bg-white">
-      {/* Main content */}
       <div className="mx-auto max-w-3xl px-6 py-36 lg:px-8">
         <article className="prose prose-lg prose-blue mx-auto max-w-none">
-          <h1 className="mb-5 text-4xl font-bold tracking-tight text-gray-900">
+          <h1 className="mb-5 text-4xl font-bold tracking-tight text-gray-700">
             {post.title}
           </h1>
 
@@ -88,7 +86,7 @@ export default async function PostPage({ params, searchParams }: PageProps) {
                 <span>•</span>
                 <Link
                   href={`/categories/${String(post.categories[0].name).toLowerCase()}`}
-                  className="text-blue-600 hover:underline"
+                  className="text-primary hover:underline"
                 >
                   {post.categories[0].name}
                 </Link>
@@ -97,22 +95,24 @@ export default async function PostPage({ params, searchParams }: PageProps) {
 
             <span>•</span>
             <div className="flex items-center">
-              <span className="font-medium text-gray-900">{displayAuthor}</span>
+              <span className="font-medium text-gray-700">{displayAuthor}</span>
             </div>
           </div>
+
           {post.featuredImage && (
             <div className="mb-10 overflow-hidden rounded-xl">
               <Image
                 src={post.featuredImage.node.sourceUrl}
                 alt={String(post.title)}
                 className="w-full object-cover"
-                width={1200}
-                height={300}
+                width={768}
+                height={450}
                 priority
               />
             </div>
           )}
-          {/* Post content */}
+
+          {/* Render sanitized post content */}
           {parse(sanitizedContent, { replace: transform })}
         </article>
       </div>
