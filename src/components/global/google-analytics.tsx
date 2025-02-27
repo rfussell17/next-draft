@@ -1,4 +1,5 @@
 'use client'
+// components/global/GoogleAnalytics.tsx
 
 import { usePathname, useSearchParams } from 'next/navigation'
 import Script from 'next/script'
@@ -18,6 +19,7 @@ export default function GoogleAnalytics() {
 
   return (
     <>
+      {/* Global Site Tag (gtag.js) - Google Analytics */}
       <Script
         strategy="afterInteractive"
         src="https://www.googletagmanager.com/gtag/js?id=G-N4PJMERESN"
