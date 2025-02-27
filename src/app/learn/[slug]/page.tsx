@@ -1,4 +1,3 @@
-// app/learn/[slug]/page.tsx
 import { getWpPost } from '@/app/lib/wordpress'
 import parse, { type DOMNode } from 'html-react-parser'
 import type { Metadata } from 'next'
@@ -18,12 +17,11 @@ export const metadata: Metadata = {
 export const dynamic = 'force-dynamic'
 export const revalidate = 0
 
-interface PageProps {
+export default async function PostPage({
+  params,
+}: {
   params: { slug: string }
-  searchParams: { [key: string]: string | string[] | undefined }
-}
-
-export default async function PostPage({ params }: PageProps) {
+}) {
   const { slug } = params
   const post = await getWpPost(slug)
   if (!post) {
@@ -54,7 +52,6 @@ export default async function PostPage({ params }: PageProps) {
     },
   })
 
-  // Determine which author name to display
   const displayAuthor =
     post.originalAuthor || post.author?.node?.name || 'Draft.dev'
 
@@ -111,8 +108,6 @@ export default async function PostPage({ params }: PageProps) {
               />
             </div>
           )}
-
-          {/* Render sanitized post content */}
           {parse(sanitizedContent, { replace: transform })}
         </article>
       </div>
