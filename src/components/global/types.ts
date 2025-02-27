@@ -5,3 +5,18 @@ export type Data = {
   date: string
   description?: string
 }
+
+declare global {
+  interface Window {
+    gtag: (
+      command: 'config' | 'event' | 'js' | 'set' | 'consent',
+      targetId: string | Date,
+      config?: {
+        [key: string]: any
+      },
+    ) => void
+    dataLayer: any[]
+  }
+}
+
+export {}
