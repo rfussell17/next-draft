@@ -27,7 +27,7 @@ export default function GoogleAnalytics() {
       {/* Global Site Tag (gtag.js) - Google Analytics */}
       <Script
         strategy="afterInteractive"
-        src="https://www.googletagmanager.com/gtag/js?id=G-N4PJMERESN"
+        src="https://www.googletagmanager.com/gtag/js?id=GTM-5W5755G3"
       />
       <Script
         id="gtag-init"
