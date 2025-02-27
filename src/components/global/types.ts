@@ -1,3 +1,5 @@
+// types/global.d.ts
+
 export type Data = {
   id: string
   title: string
@@ -16,6 +18,7 @@ declare global {
       },
     ) => void
     dataLayer: any[]
+    gtmDidInit: boolean
   }
 }
 
