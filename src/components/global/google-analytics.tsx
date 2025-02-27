@@ -1,11 +1,12 @@
 'use client'
-// components/global/GoogleAnalytics.tsx
+// components/global/google-analytics.tsx
 
 import { usePathname, useSearchParams } from 'next/navigation'
 import Script from 'next/script'
-import { useEffect } from 'react'
+import { Suspense, useEffect } from 'react'
 
-export default function GoogleAnalytics() {
+// This component uses searchParams and needs to be wrapped in Suspense
+function AnalyticsPathTracker() {
   const pathname = usePathname()
   const searchParams = useSearchParams()
 
@@ -17,6 +18,10 @@ export default function GoogleAnalytics() {
     }
   }, [pathname, searchParams])
 
+  return null
+}
+
+export default function GoogleAnalytics() {
   return (
     <>
       {/* Global Site Tag (gtag.js) - Google Analytics */}
@@ -36,6 +41,9 @@ export default function GoogleAnalytics() {
           `,
         }}
       />
+      <Suspense fallback={null}>
+        <AnalyticsPathTracker />
+      </Suspense>
     </>
   )
 }
