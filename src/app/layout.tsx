@@ -2,6 +2,7 @@ import { BookDiscoveryCall } from '@/components/global/cta/book-discovery-call'
 import FAQ from '@/components/global/faq'
 import { Footer } from '@/components/global/footer'
 import GoogleAnalytics from '@/components/global/google-analytics'
+import GoogleTagManagerNoScript from '@/components/global/gtm-noscript'
 
 import DynamicNavbar from '@/components/global/navbar-dynamic'
 import '@/styles/tailwind.css'
@@ -56,6 +57,7 @@ export default function RootLayout({
         <meta data-grammarly-disable="true" />
       </head>
       <body className="bg-white antialiased">
+        <GoogleTagManagerNoScript />
         <GoogleAnalytics />
         <DynamicNavbar />
         <div className="flex min-h-screen flex-col">
